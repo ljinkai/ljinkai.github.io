@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2021-02-10T04:14:58.343Z</updated>
+  <updated>2021-03-03T15:14:18.311Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2021年10款优质Chrome浏览器插件推荐</title>
+    <link href="http://liujinkai.com/2021/03/03/chrome-extension-recommend-2021/"/>
+    <id>http://liujinkai.com/2021/03/03/chrome-extension-recommend-2021/</id>
+    <published>2021-03-03T15:02:24.000Z</published>
+    <updated>2021-03-03T15:14:18.311Z</updated>
+    
+    <summary type="html">
+    
+      Chrome插件像一个个小帮手，帮我们提升效率，完成一些有价值的事情。其实有很多这样的优质实用插件，很多人并不知道它们的存在，下面就特意为大家整理10款非常有用的插件
+    
+    </summary>
+    
+      <category term="工具" scheme="http://liujinkai.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="工具" scheme="http://liujinkai.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>Sahil创建十亿美金公司的失败反思 - 人物志22篇</title>
@@ -391,26 +411,6 @@
     
     
       <category term="工具" scheme="http://liujinkai.com/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>被动收入：什么也不做也能每年收入40000美金</title>
-    <link href="http://liujinkai.com/2019/08/05/tech-lead-4000-dollar/"/>
-    <id>http://liujinkai.com/2019/08/05/tech-lead-4000-dollar/</id>
-    <published>2019-08-05T00:23:28.000Z</published>
-    <updated>2019-08-05T00:27:24.591Z</updated>
-    
-    <summary type="html">
-    
-      Alvaro Trig的fullpage.js项目，从一开始的免费到盈利，有作者多年的经验分享，也有踩坑总结，对于技术人员做产品的很有帮助。
-    
-    </summary>
-    
-      <category term="Indie Maker" scheme="http://liujinkai.com/categories/Indie-Maker/"/>
-    
-    
-      <category term="Indie Maker" scheme="http://liujinkai.com/tags/Indie-Maker/"/>
     
   </entry>
   
