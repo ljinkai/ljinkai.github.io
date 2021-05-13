@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://liujinkai.com/"/>
-  <updated>2021-03-03T15:14:18.311Z</updated>
+  <updated>2021-05-13T06:17:53.991Z</updated>
   <id>http://liujinkai.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Nick Fogle - Wavve这个产品是如何卖了几百万美金的？</title>
+    <link href="http://liujinkai.com/2021/05/13/indie-maker-nick-figle-wavve-sale-for-millions/"/>
+    <id>http://liujinkai.com/2021/05/13/indie-maker-nick-figle-wavve-sale-for-millions/</id>
+    <published>2021-05-13T04:29:24.000Z</published>
+    <updated>2021-05-13T06:17:53.991Z</updated>
+    
+    <summary type="html">
+    
+      他还分享了自己的这段经历，在收到第一个报价后，并没有急于出售产品，而是冷静的分析；在遇到新冠疫情的影响下，更加的专注，逆势增长；解决用户流失问题等等
+    
+    </summary>
+    
+      <category term="Indie Maker" scheme="http://liujinkai.com/categories/Indie-Maker/"/>
+    
+    
+      <category term="Indie Maker" scheme="http://liujinkai.com/tags/Indie-Maker/"/>
+    
+  </entry>
   
   <entry>
     <title>2021年10款优质Chrome浏览器插件推荐</title>
@@ -391,26 +411,6 @@
     
     
       <category term="Indie Maker" scheme="http://liujinkai.com/tags/Indie-Maker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>背单词神器- 当Anki遇上麦克米伦7000</title>
-    <link href="http://liujinkai.com/2019/08/16/anki-macmillan-7000/"/>
-    <id>http://liujinkai.com/2019/08/16/anki-macmillan-7000/</id>
-    <published>2019-08-16T09:26:10.000Z</published>
-    <updated>2019-08-16T10:24:21.475Z</updated>
-    
-    <summary type="html">
-    
-      Anki是一个使记忆变得容易的学习软件。从哪里可以获取到这7000个基础词汇呢？《麦克米伦高阶英语词典》里就有最常用的7500个基础词汇。
-    
-    </summary>
-    
-      <category term="Web工具" scheme="http://liujinkai.com/categories/Web%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="工具" scheme="http://liujinkai.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
