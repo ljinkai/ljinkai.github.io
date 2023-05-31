@@ -1,0 +1,603 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>什么是TMD的MVP(最小可行性产品)? - 凯凯刘</title>
+  <meta name="author" content="凯凯刘">
+  
+  <meta name="description" content="No, 今天我们说的不是詹姆斯。而是,Minimum Viable Product(MVP) – 最小可实行产品">
+  
+  <meta name="keywords" content="MVP,Minimum Viable Product,最小可行性产品">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="什么是TMD的MVP(最小可行性产品)?"/>
+  <meta property="og:site_name" content="凯凯刘"/>
+
+  
+    <meta property="og:image" content="/img/300L.png"/>
+  
+
+  <meta name="google-site-verification" content="iIzqxT8FAfRGM8f4sr97VvjhDsk3QJQ-a2LMdn0DtXU" />
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="alternate" href="/atom.xml" title="凯凯刘" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/styleNew.css?x=6" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/gitment.css">
+  <script src="/js/qrcode.min.js"></script>
+
+  <!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+  <!--<script>-->
+      <!--(adsbygoogle = window.adsbygoogle || []).push({-->
+          <!--google_ad_client: "ca-pub-3023100525130189",-->
+          <!--enable_page_level_ads: true-->
+      <!--});-->
+  <!--</script>-->
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+    <h1><a href="/">凯凯刘</a></h1>
+    <h2><a href="/">
+            
+            Indie Maker、认知、技术、变现
+            
+        </a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+    <ul>
+        
+        <li><a href="/" onclick="ga('send', 'event', 'nav_top', '首页');">首页</a></li>
+        
+        <li><a href="/categories/Web技术/" onclick="ga('send', 'event', 'nav_top', 'Web技术');">Web技术</a></li>
+        
+        <li><a href="/categories/浏览器扩展插件/" onclick="ga('send', 'event', 'nav_top', '浏览器扩展插件');">浏览器扩展插件</a></li>
+        
+        <li><a href="/categories/区块链/" onclick="ga('send', 'event', 'nav_top', '区块链');">区块链</a></li>
+        
+        <li><a href="/categories/%E8%AE%A4%E7%9F%A5/" onclick="ga('send', 'event', 'nav_top', '认知');">认知</a></li>
+        
+        <li><a href="/categories/%E8%AF%BB%E4%B9%A6/" onclick="ga('send', 'event', 'nav_top', '读书');">读书</a></li>
+        
+        <li><a href="/categories/%E6%B5%81%E9%87%8F/" onclick="ga('send', 'event', 'nav_top', '流量');">流量</a></li>
+        
+        <li><a href="/categories/%E5%8F%98%E7%8E%B0/" onclick="ga('send', 'event', 'nav_top', '变现');">变现</a></li>
+        
+        <li><a href="/categories/%E7%94%9F%E6%B4%BB/" onclick="ga('send', 'event', 'nav_top', '生活');">生活</a></li>
+        
+        <li><a href="/2015/03/01/link-friends/" onclick="ga('send', 'event', 'nav_top', '友链');">友链</a></li>
+        
+        <li><a href="/2015/02/28/new/" onclick="ga('send', 'event', 'nav_top', '关于');">关于</a></li>
+        
+        <li><a href="/atom.xml" class="menu_rss" target="_blank" title="RSS订阅"></a></li>
+    </ul>
+    <div class="clearfix"></div>
+    <!--<div class="nav_zhibo" style="position: absolute;top : 120px;left: 40px;color: blue;">-->
+        <!--<a style="color: blue;cursor: pointer;" href="https://m.qlchat.com/topic/360000033244498.htm?preview=Y&intoPreview=Y"-->
+           <!--onclick="ga('send', 'event', 'nav_zhibo', 'qianliao');"-->
+           <!--target="_blank">我的千聊直播(周三)：比特币的挖矿与共识-->
+        <!--</a>-->
+    <!--</div>-->
+
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft">
+
+      <div class="ads_banner">
+        <!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+        <!-- banner -->
+        <!--<ins class="adsbygoogle"-->
+             <!--style="display:block"-->
+             <!--data-ad-client="ca-pub-4018032316880050"-->
+             <!--data-ad-slot="3550377487"-->
+             <!--data-ad-format="auto"></ins>-->
+        <!--<script>-->
+          <!--(adsbygoogle = window.adsbygoogle || []).push({});-->
+        <!--</script>-->
+
+        <!-- <div>
+          <a href="https://t.zsxq.com/ybIuBaA" target="_blank">
+            <img style="width: 100%" src="http://qiniu.gafata.com/2019-06-11-indiemaker_dlbx_1800x180.jpg?imageView2/2/w/1800"/>
+          </a>
+        </div> -->
+
+        <div class="banner-top" style="background-color: #032535;color:white;padding: 15px;font-size: 15px;">
+          「每日看板-Tabhub」浏览器新标签页，独立变现、新闻、日历、待办、RSS、股票等丰富组件
+          <a href="https://www.tabhub.app/?utm_source=blog" target="_blank" style="word-break: break-all;background-color:#c2007c;margin-left:10px;display:inline-block;width: 70px;padding:4px 4px;border-radius: 4px;color:white;text-align: center;" 
+          onclick="ga('send', 'event', 'ads', 'tabhub');" >免费使用</a>
+          <!--星云开发者开放注册啦，提交一个DApp即可获得100个NAS(大约7000元）,更有周、月度大额奖金等你拿！开发者今年最大的机会, 会JavaScript即可。<br>-->
+          <!--注册链接：<a target="_blank" style="word-break: break-all;" onclick="ga('send', 'event', 'ads', 'nebulas');" href="https://incentive.nebulas.io/cn/signup.html?invite=HjuhT">https://incentive.nebulas.io/cn/signup.html?invite=HjuhT</a>-->
+          <!--<span style="color: red">阿里云双11红包来啦，拼购1折起, 官方推荐1折团！</span><a href="https://m.aliyun.com/act/team1111/#/share?params=N.qYnY8sp2fK.kkb39ote" target="_blank" style="" onclick="ga('send', 'event', 'ads', 'aliyun');">马上参团>></a>-->
+
+        </div>
+      </div>
+
+      <div id="wrapper">
+    
+    <div style="display: none">
+        <img src="/img/300L.png" />
+    </div>
+
+
+
+<article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title">什么是TMD的MVP(最小可行性产品)?</h1>
+  
+
+      
+        <div class="icon"></div>
+        <div class="article_head_extend">
+          <time datetime="2021-01-25T04:34:03.000Z"><a href="/2021/01/25/what-is-mvp/">Jan 25 2021</a>
+            
+          </time>
+          <div class="qrcode_con">
+            <div class="qrcode_text">扫描二维码</div>
+            <div id="Mon Jan 25 2021 12:34:03 GMT+0800 (China Standard Time)" class="qrcode_img"></div>
+            <script>
+              var qrcode = new QRCode(document.getElementById("Mon Jan 25 2021 12:34:03 GMT+0800 (China Standard Time)"), {
+                width : 100,
+                height : 100
+              });
+              qrcode.makeCode("http://liujinkai.com//2021/01/25/what-is-mvp/?utm_medium=blog&utm_source=qrcode");
+            </script>
+          </div>
+        </div>
+
+      
+    </header>
+    <div></div>
+    <div class="entry">
+      
+        <p><img src="http://qiniu.gafata.com/2021-01-25-Untitled.png?imageView2/2/w/600" alt=""></p>
+<p>No, 今天我们说的不是詹姆斯。</p>
+<p>而是</p>
+<p>Minimum Viable Product(MVP) – 最小可实行产品</p>
+<a id="more"></a>
+<p><img src="http://qiniu.gafata.com/2021-01-25-Untitled%201.png?imageView2/2/w/600" alt=""></p>
+<p>这张图很流行，在很多地方都能看到。很多人也是看完之后会心一笑，但却很少人真的能遵循这样的MVP原则来开发自己的产品。下面我们就来解释下图片背后到底是在说什么？</p>
+<h1 id="第一种示例：错误的方式"><a href="#第一种示例：错误的方式" class="headerlink" title="第一种示例：错误的方式"></a>第一种示例：错误的方式</h1><p><img src="http://qiniu.gafata.com/2021-01-25-Untitled%202.png?imageView2/2/w/600" alt=""></p>
+<p>第一排的图片是错误的方式开发产品</p>
+<p>很多的项目的失败是因为直到产品100%完成之后才发布。然而，人们普遍会产生疑问-谁会花钱买个半成品？</p>
+<p>“先生，这是我们的第一个版本的产品，一个轮子，你觉得怎么样？”</p>
+<p><img src="http://qiniu.gafata.com/2021-01-25-Untitled%203.png?imageView2/2/w/600" alt=""></p>
+<p>用户肯定会说“你为什么给我的是一个车轮子？我要的是一辆汽车！你让我那个车轮子当独轮车吗？”</p>
+<p><img src="http://qiniu.gafata.com/2021-01-25-Untitled%204.png?imageView2/2/w/600" alt=""></p>
+<p>当每次的产品接近完成的时候，用户会很生气的使用你的产品。因为这些只是车零件的一部分。</p>
+<p><img src="http://qiniu.gafata.com/2021-01-25-Untitled%205.png?imageView2/2/w/600" alt=""></p>
+<p>在这个例子里，用户最终很高兴得到了他的汽车。但现实情况却往往不是这样的。过程中，大部分时间里是没有经过用户的使用测试的，最终做出来的产品很可能不是用户需要的。所以，这个笑脸只是理想中的情况。</p>
+<p>不管怎样，第一排的过程是错误的。理论上是渐进迭代式的，但是由于缺少实际的反馈，因此风险很大-而且并不灵活。</p>
+<h1 id="第二种示例-应该是这样"><a href="#第二种示例-应该是这样" class="headerlink" title="第二种示例 - 应该是这样"></a>第二种示例 - 应该是这样</h1><p><img src="http://qiniu.gafata.com/2021-01-25-Untitled%206.png?imageView2/2/w/600" alt=""></p>
+<p>现在我们来用不同的方式。我们还是同样的需求 - 用户订购了一辆车。但是这次我们不仅仅是造一辆车。取而代之的是我们以满足用户潜在需求为出发点。事实证明，他的基本需求是“我需要更快地从A到达B”，而汽车只是解决这一问题的一种可能。汽车只是一个隐喻，你可以认为是任何一种定制产品的开发情况。</p>
+<p>因此，团队应该提供他们能想到的最小的东西，从而使客户进行测试并得到反馈。有人可能将其称为MVP（最小可行性产品），但将其称为最早可测试产品更贴切。</p>
+<p><img src="http://qiniu.gafata.com/2021-01-25-Untitled%207.png?imageView2/2/w/600" alt=""></p>
+<p>随便你叫它什么（根据这个隐喻……有人称他们的第一个版本为产品的“滑板版本”）。</p>
+<p>客户不太可能对此感到满意。这离他订购的汽车很远。没关系！这是关键-目前我们不希望使客户满意。我们可能会让一些早期使用者感到高兴，但目前我们的主要目标只是学习。理想情况下，会事先向客户明确说明这一点，因此用户也不会太失望。</p>
+<p>但是，与第一种情况中的车轮不一样，滑板实际上是一种可用的产品，可以帮助客户从A转到B。虽然不是很好，但总比没有好。因此，我们告诉客户“不用担心，项目尚未完成，这只是许多迭代中的第一个。我们仍然打算制造一辆汽车，但与此同时，请尝试一下并希望给我们反馈。”大胆思考，但以实用可行性的产品迭代交付。</p>
+<p>我们可能会学到一些真正令人惊讶的东西。 假设客户说他讨厌滑板，我们问为什么，然后他说“我讨厌颜色”。 我们就像“呃…。 颜色？ 就这样？”。 客户说：“是的，把它变蓝！ 除此之外，还可以！”。 </p>
+<p>关键问题是“我们开始思考最便宜，最快捷的方式是什么？” 我们能比滑板早交付一些东西吗？ 汽车票可以吗？</p>
+<p><img src="http://qiniu.gafata.com/2021-01-25-Untitled%208.png?imageView2/2/w/600" alt=""></p>
+<p>这会帮助解决客户的问题吗？ 也许（也许不是），但是我们一定会通过将其交到实际用户手中来学习一些东西。 精益创业提供了一个很好的模型，该模型基于列出有关用户的实际假设，然后系统地进行验证。</p>
+<p>你不需要在所有用户上测试产品，也不需要构建产品来测试某些产品。 即使在单个用户上测试原型，也将教给你更多的知识。</p>
+<p>但是，回到滑板示例。</p>
+<p>在办公室里玩了一会滑板之后，客户说：“好吧，很有趣，它的确使我更快的去到咖啡机旁边。但这很不稳定。 我太容易掉下来了。”</p>
+<p>因此，下一次迭代我们将尝试解决该问题，或者至少了解更多有关它的信息。</p>
+<p><img src="http://qiniu.gafata.com/2021-01-25-Untitled%209.png?imageView2/2/w/600" alt=""></p>
+<p>客户现在可以在办公室附近闲逛而不会掉下来！</p>
+<p>用户快乐吗？并非如此，他仍然有点想要那辆车。但与此同时，他实际上正在使用该产品，并向我们提供了反馈。他最大的抱怨是，由于车轮小且没有间断，很难在建筑物之间走更长的距离。因此，下一次发布时，产品变成了自行车。</p>
+<p><img src="http://qiniu.gafata.com/2021-01-25-Untitled%2010.png?imageView2/2/w/600" alt=""></p>
+<p>现在，客户可以在建筑物之间进行活动。 Yiihaaa！</p>
+<p>我们在这个过程中了解到了一些东西：客户喜欢新鲜空气的感觉。客户主要是在建筑物之间四处走动。</p>
+<p>自行车可能比最初设想的汽车是更好的产品。实际上，在测试该产品时，我们可能会发现对于汽车而言，路径太窄了。我们只是节省了客户大量的时间和金钱，并在更少的时间内为他提供了更好的产品！</p>
+<p>现在你可能在想：“我们可以通过对客户背景和需求的前期分析？”想法不错，但是在我所见过的大多数实际产品开发场景中，无论你进行了多少前期分析，当将第一个实际发行版交到真实用户手中时，你仍然会感到惊讶，而且跟你想象的甚至完全相反。</p>
+<p>是的，进行一些前期分析，在开始开发之前尽可能多地发现问。但是，不要花太多时间在上面，也不要过于相信分析 - 开始进行原型设计和发布，这是真正的有价值的东西。</p>
+<p>无论如何，回到故事。也许客户想要更多。有时他需要去另一个城市，而自行车骑行太慢且出汗。因此，在下一次迭代中，我们添加了一个引擎。</p>
+<p><img src="http://qiniu.gafata.com/2021-01-25-Untitled%2011.png?imageView2/2/w/600" alt=""></p>
+<p>该模型特别适用于软件产品，因为软件很“软”。可以随时随地“变形”产品，而不是每次都必须重建硬件。但是，即使在硬件项目中，提供原型来观察和学习客户如何使用你的产品也有巨大的好处。只是迭代趋向于更长一些（几个月而不是几周）。甚至像丰田和特斯拉这样的实际汽车公司在开发新汽车模型之前也进行了大量原型设计（草图，3D模型，全尺寸粘土模型等）。</p>
+<p>那么现在怎么办？同样，也许顾客对摩托车感到满意。我们可以比计划提前结束项目。大多数产品到处都是没人使用的复杂性和功能。迭代方法实际上是一种更少交付，并用最简单的、便宜的方法解决用户问题。从而不断的趋向于完美。</p>
+<p>再一次，客户可以选择是否继续修改需求而继续。实际上，我们最终可能会得到与最初设想的完全相同的汽车。但是，在此过程中，我们会获得重要的见识，而最终得到一些稍有不同的东西。像这样：</p>
+<p><img src="http://qiniu.gafata.com/2021-01-25-Untitled%2012.png?imageView2/2/w/600" alt=""></p>
+<p>顾客喜出望外！ 为什么？ 因为我们过程中了解到他喜欢新鲜空气，所以最终得到了一辆敞篷车。 毕竟他确实得到了一辆车，但是比原先计划的要好！</p>
+<p>因此，让我们思考一下。</p>
+<p>”你的滑板是什么？“<br>最上面的情景（轮胎的交付方式）很糟糕，因为我们一直在交付客户根本无法使用的东西。除非你知道自己在做什么-你的产品几乎没有什么复杂性和风险，也许你已经完成了数百次此类工作-然后从头再来，在一切准备就绪之后交付。</p>
+<p>但是，我见过的大多数产品开发工作都过于复杂且冒险，”完美的产品”方法经常导致巨大的昂贵失败。所以关键的问题是你的“滑板”是什么？</p>
+<p>在产品开发中，应该做的第一件事（在描述了您要为谁解决的问题之后）是确定你的滑板对应的产出对象。可以将滑板视为比喻为最小的东西，你可以将其交给实际用户并获得真实的反馈。</p>
+<p>这将为你提供急需的反馈循环，并为你和客户提供对项目的控制权-你可以过程中不断学习和进行更改，而不仅仅是遵循计划并希望最终会有一个好结果。</p>
+<p>让我们来看一些真实的例子。</p>
+<h1 id="例子1：Spotify音乐播放器"><a href="#例子1：Spotify音乐播放器" class="headerlink" title="例子1：Spotify音乐播放器"></a>例子1：Spotify音乐播放器</h1><p>Spotify现在是一款非常漂亮的产品。 但开始不是这样的。</p>
+<p><img src="http://qiniu.gafata.com/2021-01-25-Untitled%2013.png?imageView2/2/w/600" alt=""></p>
+<p>作为2006年的一家初创公司，Spotify的建立基于一些关键假设：人们喜欢流媒体音乐，唱片公司和艺术家希望人们合法地使用音乐，并且从技术上来说，快速稳定的流媒体是可行的。记住，这是在2006年，当时播放器（如Real Player）是一种非常糟糕的体验，而盗版音乐随处可见。 挑战的技术部分是：“当按下‘播放’按钮时，是否有可能使客户立即播放音乐？ 是否有可能摆脱令人讨厌的‘缓冲’进度条？”</p>
+<p>从小处开始并不意味着你不能从大处着想。 这是他们构想的早期草图之一：</p>
+<p><img src="http://qiniu.gafata.com/2021-01-25-Untitled%2014.png?imageView2/2/w/600" alt=""></p>
+<p>Spotify没有花非常多时间在打造一个完整的产品，从假设是否成立出发，坐下来来并Hack了一个技术原型，放入笔记本电脑上的任何翻录音乐，然后开始进行疯狂的实验以寻找方法来使播放快速稳定。交付指标是“从按下播放到听到音乐需要多少毫秒？”。效果是它应该立即播放，并继续流畅播放而不会出现卡顿现象！</p>
+<p>“我们无聊地花了很多时间来关注延迟，因为没人关心，因为我们一心想让你感觉硬盘上拥有世界上所有音乐。对小细节的痴迷有时会使一切变得不同。我认为这是对最小可行产品概念的最大误解。这就是MVP中的V。” -Daniel Ek，Spotify联合创始人兼首席执行官</p>
+<p>一旦他们有了能看的过去的东西，他们就开始对自己，家人和朋友进行测试。</p>
+<p><img src="http://qiniu.gafata.com/2021-01-25-Untitled%2015.png?imageView2/2/w/600" alt=""></p>
+<p>最初的版本无法发布给更多的听众，它完全没有打磨，除了能够找到和播放一些硬编码的歌曲外，基本上没有其他功能，也没有法律协议或商业模式。 那是他们的“滑板”。</p>
+<p>但是他们无耻地将滑板交到了真正的用户（朋友和家人）手中，他们很快就得到了所需的答案。是的，这在技术上是可能的。是的，人们绝对喜欢这个产品（或更喜欢这个产品将来的样子）！ 假设得到验证！ 这个运行中的原型帮助说服了音乐唱片公司和投资者。</p>
+<h1 id="例子2：LinkedIn"><a href="#例子2：LinkedIn" class="headerlink" title="例子2：LinkedIn"></a>例子2：LinkedIn</h1><p>LinkedIn于2003年5月5日成立，创建于联合创始人Reid Hoffman的客厅。 在一个月内，有4,500位用户注册。 现在，它已经被微软收购，在全球拥有5亿名用户。 而这是他们的第一个版本。</p>
+<p><img src="http://qiniu.gafata.com/2021-01-25-Untitled%2016.png?imageView2/2/w/600" alt=""></p>
+<h1 id="例子3：Facebook"><a href="#例子3：Facebook" class="headerlink" title="例子3：Facebook"></a>例子3：Facebook</h1><p>Facebook在全球拥有19.4亿用户，这是地球上最受欢迎的社交网络，另外还有两个主要平台Instagram和WhatsApp。 创始人马克·扎克伯格（Mark Zuckerberg）于2004年在哈佛大学的宿舍里和几个朋友一起创立了Facebook。早期的版本看起来并不像每天使用的Facebook一样多，但足以吸引纽约广告公司和硅谷投资者的注意力。</p>
+<p><img src="http://qiniu.gafata.com/2021-01-25-Untitled%2017.png?imageView2/2/w/600" alt=""></p>
+<p><img src="http://qiniu.gafata.com/2021-01-25-Untitled%2018.png?imageView2/2/w/600" alt=""></p>
+<h1 id="例子4：Airbnb"><a href="#例子4：Airbnb" class="headerlink" title="例子4：Airbnb"></a>例子4：Airbnb</h1><p>成立于2008年，Airbnb希望提供一种替代酒店住宿的方式，并为房主在其房屋空置时赚钱提供一种途径。 现在，Airbnb在65,000个城镇和城市中拥有超过300万个房源，迄今已有1.6亿客人次，并以310亿美元的估值筹集了34亿美元的资金。 这就是Airbnb早期的样子。</p>
+<p><img src="http://qiniu.gafata.com/2021-01-25-Untitled%2019.png?imageView2/2/w/600" alt=""></p>
+<p>好了，以上就是全部内容，我们来总结下。</p>
+<ul>
+<li>MVP只是一个术语，有各种各样的说法，明白其背后的意思，怎么说并不重要。</li>
+<li>避免使用“完美”的交付，进行复杂，创新的产品开发。而要迭代地和增量地进行。</li>
+<li>首先确定你的“滑板”-最早的可测试产品。志存高远，但要收起你的骄傲，做好你的“滑板”。</li>
+</ul>
+<center><br><img src="http://qiniu.gafata.com/2020-11-20-indiemaker.jpeg?imageView2/2/w/800" width="400px"><br><span>和我一起做独立变现产品吧</span><br></center>
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/产品/">产品</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/产品/">产品</a>
+  </div>
+
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+    
+    <div class="links">
+        <div class="links_title">推荐阅读</div>
+    
+            <li ><a href="/2021/01/17/indie-maker-aliabdaal/" title="1个人独立变现6种途径收入130万美金在2020年 - 人物志21篇">1个人独立变现6种途径收入130万美金在2020年 - 人物志21篇</a></li>
+       
+            <li ><a href="/2020/11/20/dig-make-money/" title="如何从日常发现中挖掘赚钱产品？">如何从日常发现中挖掘赚钱产品？</a></li>
+       
+            <li ><a href="/2020/11/09/the-7-day-startup/" title="《The 7 Day Startup》7天构建一个赚钱产品">《The 7 Day Startup》7天构建一个赚钱产品</a></li>
+       
+    </div>
+    
+
+
+
+<section id="comment">
+    <div id="gitalk-container"></div>
+    <!--<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>-->
+    <!--<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>-->
+    <!--<script>-->
+        <!--var cloudTieConfig = {-->
+            <!--url: document.location.href,-->
+            <!--sourceId: "",-->
+            <!--productKey: "a65a1e5ea58d4c3a8ea1fef77d0371db",-->
+            <!--target: "cloud-tie-wrapper"-->
+        <!--};-->
+        <!--var yunManualLoad = true;-->
+        <!--Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);-->
+    <!--</script>-->
+    <!--PC和WAP自适应版-->
+    <!--<div id="SOHUCS" ></div>-->
+    <!--<script type="text/javascript">-->
+        <!--(function(){-->
+            <!--var appid = 'cyt6v35LM';-->
+            <!--var conf = 'prod_82a0b7686345b309fbcbcae5ae75c45e';-->
+            <!--var width = window.innerWidth || document.documentElement.clientWidth;-->
+            <!--if (width < 960) {-->
+                <!--window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>-->
+
+</section>
+<!--<script src="/js/gitment.browser.js"></script>-->
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<script>
+    // const gitment = new Gitment({
+    //     owner: 'ljinkai',
+    //     repo: 'ljinkai.github.io',
+    //     oauth: {
+    //         client_id: '1e0bbf087995295c53aa',
+    //         client_secret: '7aaf0001f26a5f16ddd7769384d549f317244720',
+    //     }
+    // })
+    // gitment.render('comment')
+
+    const gitalk = new Gitalk({
+        clientID: '1e0bbf087995295c53aa',
+        clientSecret: '7aaf0001f26a5f16ddd7769384d549f317244720',
+        repo: 'ljinkai.github.io',
+        owner: 'ljinkai',
+        admin: ['ljinkai'],
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    })
+
+    gitalk.render('gitalk-container')
+
+</script>
+
+
+
+
+
+</div>
+    </div>
+    <aside id="sidebar" class="alignright">
+  <div class="widget tag" style="padding: 16px;">
+
+      <div style="color: black;font-size: 16px;">
+          <div style="width: 100%;text-align: center;margin-bottom: 10px;margin-top: 0px;">我的知识星球</div>
+          
+          <a style="width: 100%;display: block;text-decoration: none;" href="https://mp.weixin.qq.com/s/LIzhjGGRqiqYnMhIxtFYAw" target="_blank"
+             onclick="ga('send', 'event', 'zsxq_11_blog', 'zsxq');">
+              <img src="https://qiniu.gafata.com/zsxq.jpeg" width="100%"/>
+          </a>
+          <div style="width: 100%;text-align: center;margin-bottom: 10px;margin-top: 0px;">我的在线课程</div>
+          <a style="width: 100%;display: block;text-decoration: none;" href="https://m.qlchat.com/wechat/page/channel-intro?channelId=2000018572922685" target="_blank"
+             onclick="ga('send', 'event', 'my_course', 'live_20170720');">
+              <img src="https://qiniu.gafata.com/chrome-extension-qianliao-2.png" width="100%"/>
+          </a>
+      </div>
+</div>
+
+
+  <div class="widget tag about_fix_none" id="about_fix">
+
+  <ul class="entry" style="text-align: center;font-size: 14px;font-weight: bold;">
+    <li>微信公众号：凯凯而谈</li>
+    <li style="font-weight: normal;font-size: 12px;">这里有我的分享和思考，我们一起知道做到</li>
+    <li><img src='http://qiniu.gafata.com/2019-03-17-web-bear.jpg?imageView2/2/w/600' width='180px' style="margin: 0px auto;display: block;"></li>
+  </ul>
+</div>
+<div class="widget tag">
+  <div class="about_banner">
+    <div class="about_profile">
+      <a href="/2015/02/28/new/">
+        <img class="about_img" src="http://qiniu.gafata.com/2019-03-25-WechatIMG1128.jpeg?imageView2/2/w/200">
+      </a>
+    </div>
+  </div>
+  <ul class="entry" style="text-align: center;">
+    <li>认知、技术、变现</li>
+    <li>微博：<a href="http://weibo.com/jieyingbei" target="_blank" onclick="ga('send', 'event', 'widget_about', 'weibo')">@凯凯刘</a></li>
+    <li>微信公众号：凯凯而谈</li>
+    <li><img src='http://qiniu.gafata.com/2019-03-17-web-bear.jpg?imageView2/2/w/600' width='160px' style="margin: 0px auto;display: block;"></li>
+    <li>Web、Indie Maker</li>
+  </ul>
+  <script>
+    function getPageTopLeft(el) {
+      var rect = el.getBoundingClientRect();
+      var docEl = document.documentElement;
+      return {
+        left: rect.left + (window.pageXOffset || docEl.scrollLeft || 0),
+        top: rect.top + (window.pageYOffset || docEl.scrollTop || 0)
+      };
+    }
+    // window.addEventListener('scroll',function() {
+    //   var winWid = document.body.clientWidth;
+    //   if (winWid > 900) {
+    //     var anchorTop = getPageTopLeft(document.getElementById("anchorTop")).top;
+    //     var scrollTop = window.pageYOffset|| document.documentElement.scrollTop || document.body.scrollTop;
+
+    //     if (anchorTop < scrollTop) {
+    //       document.getElementById("about_fix").className = "widget tag about_fix";
+    //     } else {
+    //       document.getElementById("about_fix").className = "widget tag about_fix_none";
+    //     }
+    //   }
+    // });
+  </script>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/Indie-Maker/" onclick="ga('send', 'event', 'widget_category', 'Indie Maker');">Indie Maker</a><small>20</small></li>
+  
+    <li><a href="/categories/Shopify/" onclick="ga('send', 'event', 'widget_category', 'Shopify');">Shopify</a><small>1</small></li>
+  
+    <li><a href="/categories/Web工具/" onclick="ga('send', 'event', 'widget_category', 'Web工具');">Web工具</a><small>19</small></li>
+  
+    <li><a href="/categories/Web技术/" onclick="ga('send', 'event', 'widget_category', 'Web技术');">Web技术</a><small>51</small></li>
+  
+    <li><a href="/categories/产品/" onclick="ga('send', 'event', 'widget_category', '产品');">产品</a><small>6</small></li>
+  
+    <li><a href="/categories/区块链/" onclick="ga('send', 'event', 'widget_category', '区块链');">区块链</a><small>8</small></li>
+  
+    <li><a href="/categories/变现/" onclick="ga('send', 'event', 'widget_category', '变现');">变现</a><small>12</small></li>
+  
+    <li><a href="/categories/工具/" onclick="ga('send', 'event', 'widget_category', '工具');">工具</a><small>3</small></li>
+  
+    <li><a href="/categories/极客番茄/" onclick="ga('send', 'event', 'widget_category', '极客番茄');">极客番茄</a><small>7</small></li>
+  
+    <li><a href="/categories/流量/" onclick="ga('send', 'event', 'widget_category', '流量');">流量</a><small>3</small></li>
+  
+    <li><a href="/categories/浏览器扩展插件/" onclick="ga('send', 'event', 'widget_category', '浏览器扩展插件');">浏览器扩展插件</a><small>3</small></li>
+  
+    <li><a href="/categories/清单/" onclick="ga('send', 'event', 'widget_category', '清单');">清单</a><small>3</small></li>
+  
+    <li><a href="/categories/生活/" onclick="ga('send', 'event', 'widget_category', '生活');">生活</a><small>9</small></li>
+  
+    <li><a href="/categories/直播/" onclick="ga('send', 'event', 'widget_category', '直播');">直播</a><small>1</small></li>
+  
+    <li><a href="/categories/认知/" onclick="ga('send', 'event', 'widget_category', '认知');">认知</a><small>15</small></li>
+  
+    <li><a href="/categories/训练营/" onclick="ga('send', 'event', 'widget_category', '训练营');">训练营</a><small>1</small></li>
+  
+    <li><a href="/categories/读书/" onclick="ga('send', 'event', 'widget_category', '读书');">读书</a><small>4</small></li>
+  
+    <li><a href="/categories/课程/" onclick="ga('send', 'event', 'widget_category', '课程');">课程</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">标签</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/CSS3/">CSS3</a><small>4</small></li>
+  
+    <li><a href="/tags/Chrome/">Chrome</a><small>7</small></li>
+  
+    <li><a href="/tags/EOS/">EOS</a><small>1</small></li>
+  
+    <li><a href="/tags/ETH/">ETH</a><small>1</small></li>
+  
+    <li><a href="/tags/Facebook/">Facebook</a><small>1</small></li>
+  
+    <li><a href="/tags/Google/">Google</a><small>8</small></li>
+  
+    <li><a href="/tags/HTML5/">HTML5</a><small>15</small></li>
+  
+    <li><a href="/tags/HTTPS/">HTTPS</a><small>2</small></li>
+  
+    <li><a href="/tags/Hybrid-App/">Hybrid App</a><small>2</small></li>
+  
+    <li><a href="/tags/Indie-Maker/">Indie Maker</a><small>20</small></li>
+  
+    <li><a href="/tags/JavaScript/">JavaScript</a><small>12</small></li>
+  
+    <li><a href="/tags/Markdown/">Markdown</a><small>1</small></li>
+  
+    <li><a href="/tags/Node-js/">Node.js</a><small>2</small></li>
+  
+    <li><a href="/tags/PWA/">PWA</a><small>1</small></li>
+  
+    <li><a href="/tags/Shopify/">Shopify</a><small>1</small></li>
+  
+    <li><a href="/tags/github/">github</a><small>2</small></li>
+  
+    <li><a href="/tags/临界知识/">临界知识</a><small>1</small></li>
+  
+    <li><a href="/tags/产品/">产品</a><small>7</small></li>
+  
+    <li><a href="/tags/人工智能/">人工智能</a><small>2</small></li>
+  
+    <li><a href="/tags/健康/">健康</a><small>2</small></li>
+  
+    <li><a href="/tags/增长/">增长</a><small>7</small></li>
+  
+    <li><a href="/tags/工具/">工具</a><small>15</small></li>
+  
+    <li><a href="/tags/插件/">插件</a><small>9</small></li>
+  
+    <li><a href="/tags/方法论/">方法论</a><small>20</small></li>
+  
+    <li><a href="/tags/木匠/">木匠</a><small>2</small></li>
+  
+    <li><a href="/tags/极客番茄/">极客番茄</a><small>7</small></li>
+  
+    <li><a href="/tags/框架/">框架</a><small>6</small></li>
+  
+    <li><a href="/tags/案例/">案例</a><small>2</small></li>
+  
+    <li><a href="/tags/概念/">概念</a><small>3</small></li>
+  
+    <li><a href="/tags/比特币/">比特币</a><small>3</small></li>
+  
+    <li><a href="/tags/浏览器扩展插件/">浏览器扩展插件</a><small>3</small></li>
+  
+    <li><a href="/tags/游戏/">游戏</a><small>2</small></li>
+  
+    <li><a href="/tags/认知/">认知</a><small>7</small></li>
+  
+    <li><a href="/tags/训练营/">训练营</a><small>1</small></li>
+  
+    <li><a href="/tags/课程/">课程</a><small>3</small></li>
+  
+    <li><a href="/tags/资源/">资源</a><small>9</small></li>
+  
+    <li><a href="/tags/路线图/">路线图</a><small>2</small></li>
+  
+    <li><a href="/tags/面试题/">面试题</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  <div class="widget hot">
+  <h3 class="title">热文推荐</h3>
+  <ul class="entry">
+    <li><a href="/2017/06/01/start-small-stay-small/" title="《Start Small, Stay Small》着眼小众市场，程序员的微型创业项目指南">《Start Small, Stay Small》着眼小众市场，程序员的微型创业项目指南</a></li>
+    <li><a href="/2017/02/08/how-to-read-a-book/" title="怎样读一本书V5.0 ?(译)">怎样读一本书V5.0 ?(译)</a></li>
+    <li><a href="/2015/06/06/mobile-web-skill/" title="移动端web开发技巧">移动端web开发技巧</a></li>
+    <li><a href="/2017/12/09/gafata-online/" title="www.gafata.com上线">www.gafata.com上线</a></li>
+    <li><a href="/2017/04/19/deliberate-practice/" title="刻意练习">刻意练习</a></li>
+    <li><a href="/2016/04/27/progressive-web-app/" title="Web新技术：PWA-Progressive Web App">Web新技术：PWA-Progressive Web App</a></li>
+    <li><a href="/2017/08/16/bitcoin-mining-consensus/" title="比特币的挖矿与共识">比特币的挖矿与共识</a></li>
+  </ul>
+</div>
+
+
+  <div class="widget tag" style="width:270px;border-top: 0px red solid;line-height: 0px;">
+
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2015-2023 <a href="/2015/02/28/new/">凯凯刘</a>
+  
+  &nbsp;
+  <a href="http://www.ezindie.com/" target="_blank" title="Easy Indie">Ezindie</a>
+  <a href="http://www.qunheying.com" target="_blank" title="微信群合影" style="margin-left: 10px">微信群合影</a>
+  <a href="http://md2vid.com" target="_blank" title="Markdown转视频" style="margin-left: 10px">Markdown转视频</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="/atom.xml" class="menu_rss menu_rss_bottom" target="_blank" title="RSS订阅"></a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  Powered by <a href="http://hexo.io/">Hexo</a>
+</div>
+<div class="clearfix"></div>
+
+<!--<script>-->
+    <!--var _hmt = _hmt || [];-->
+    <!--(function() {-->
+        <!--var hm = document.createElement("script");-->
+        <!--hm.src = "//hm.baidu.com/hm.js?1e92fed8a761c1224623815e3b960447";-->
+        <!--var s = document.getElementsByTagName("script")[0];-->
+        <!--s.parentNode.insertBefore(hm, s);-->
+    <!--})();-->
+<!--</script>-->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-85358197-2', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+
+</footer>
+  <!--<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>-->
+<!--<script src="<- config.root >js/jquery.imagesloaded.min.js"></script>-->
+<!--<script src="<- config.root >js/gallery.js"></script>-->
+
+
+
+
+</body>
+</html>

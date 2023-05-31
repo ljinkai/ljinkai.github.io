@@ -1,0 +1,549 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>2015值得关注的的技术 - 凯凯刘</title>
+  <meta name="author" content="凯凯刘">
+  
+  <meta name="description" content="HTTP2在今年中应该就可以定稿，这无疑是web界的一个大事。HTTP2从google的SPDY中借鉴了很多特性，重点改善了之前HTTP协议在当前的网络环境下的性能。简单地来讲，HTTP2更快。">
+  
+  <meta name="keywords" content="ECMAScript6,Immutable js and React,Realtime web,html5,博客">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="2015值得关注的的技术"/>
+  <meta property="og:site_name" content="凯凯刘"/>
+
+  
+    <meta property="og:image" content="/img/300L.png"/>
+  
+
+  <meta name="google-site-verification" content="iIzqxT8FAfRGM8f4sr97VvjhDsk3QJQ-a2LMdn0DtXU" />
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="alternate" href="/atom.xml" title="凯凯刘" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/styleNew.css?x=6" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/gitment.css">
+  <script src="/js/qrcode.min.js"></script>
+
+  <!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+  <!--<script>-->
+      <!--(adsbygoogle = window.adsbygoogle || []).push({-->
+          <!--google_ad_client: "ca-pub-3023100525130189",-->
+          <!--enable_page_level_ads: true-->
+      <!--});-->
+  <!--</script>-->
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+    <h1><a href="/">凯凯刘</a></h1>
+    <h2><a href="/">
+            
+            Indie Maker、认知、技术、变现
+            
+        </a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+    <ul>
+        
+        <li><a href="/" onclick="ga('send', 'event', 'nav_top', '首页');">首页</a></li>
+        
+        <li><a href="/categories/Web技术/" onclick="ga('send', 'event', 'nav_top', 'Web技术');">Web技术</a></li>
+        
+        <li><a href="/categories/浏览器扩展插件/" onclick="ga('send', 'event', 'nav_top', '浏览器扩展插件');">浏览器扩展插件</a></li>
+        
+        <li><a href="/categories/区块链/" onclick="ga('send', 'event', 'nav_top', '区块链');">区块链</a></li>
+        
+        <li><a href="/categories/%E8%AE%A4%E7%9F%A5/" onclick="ga('send', 'event', 'nav_top', '认知');">认知</a></li>
+        
+        <li><a href="/categories/%E8%AF%BB%E4%B9%A6/" onclick="ga('send', 'event', 'nav_top', '读书');">读书</a></li>
+        
+        <li><a href="/categories/%E6%B5%81%E9%87%8F/" onclick="ga('send', 'event', 'nav_top', '流量');">流量</a></li>
+        
+        <li><a href="/categories/%E5%8F%98%E7%8E%B0/" onclick="ga('send', 'event', 'nav_top', '变现');">变现</a></li>
+        
+        <li><a href="/categories/%E7%94%9F%E6%B4%BB/" onclick="ga('send', 'event', 'nav_top', '生活');">生活</a></li>
+        
+        <li><a href="/2015/03/01/link-friends/" onclick="ga('send', 'event', 'nav_top', '友链');">友链</a></li>
+        
+        <li><a href="/2015/02/28/new/" onclick="ga('send', 'event', 'nav_top', '关于');">关于</a></li>
+        
+        <li><a href="/atom.xml" class="menu_rss" target="_blank" title="RSS订阅"></a></li>
+    </ul>
+    <div class="clearfix"></div>
+    <!--<div class="nav_zhibo" style="position: absolute;top : 120px;left: 40px;color: blue;">-->
+        <!--<a style="color: blue;cursor: pointer;" href="https://m.qlchat.com/topic/360000033244498.htm?preview=Y&intoPreview=Y"-->
+           <!--onclick="ga('send', 'event', 'nav_zhibo', 'qianliao');"-->
+           <!--target="_blank">我的千聊直播(周三)：比特币的挖矿与共识-->
+        <!--</a>-->
+    <!--</div>-->
+
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft">
+
+      <div class="ads_banner">
+        <!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+        <!-- banner -->
+        <!--<ins class="adsbygoogle"-->
+             <!--style="display:block"-->
+             <!--data-ad-client="ca-pub-4018032316880050"-->
+             <!--data-ad-slot="3550377487"-->
+             <!--data-ad-format="auto"></ins>-->
+        <!--<script>-->
+          <!--(adsbygoogle = window.adsbygoogle || []).push({});-->
+        <!--</script>-->
+
+        <!-- <div>
+          <a href="https://t.zsxq.com/ybIuBaA" target="_blank">
+            <img style="width: 100%" src="http://qiniu.gafata.com/2019-06-11-indiemaker_dlbx_1800x180.jpg?imageView2/2/w/1800"/>
+          </a>
+        </div> -->
+
+        <div class="banner-top" style="background-color: #032535;color:white;padding: 15px;font-size: 15px;">
+          「每日看板-Tabhub」浏览器新标签页，独立变现、新闻、日历、待办、RSS、股票等丰富组件
+          <a href="https://www.tabhub.app/?utm_source=blog" target="_blank" style="word-break: break-all;background-color:#c2007c;margin-left:10px;display:inline-block;width: 70px;padding:4px 4px;border-radius: 4px;color:white;text-align: center;" 
+          onclick="ga('send', 'event', 'ads', 'tabhub');" >免费使用</a>
+          <!--星云开发者开放注册啦，提交一个DApp即可获得100个NAS(大约7000元）,更有周、月度大额奖金等你拿！开发者今年最大的机会, 会JavaScript即可。<br>-->
+          <!--注册链接：<a target="_blank" style="word-break: break-all;" onclick="ga('send', 'event', 'ads', 'nebulas');" href="https://incentive.nebulas.io/cn/signup.html?invite=HjuhT">https://incentive.nebulas.io/cn/signup.html?invite=HjuhT</a>-->
+          <!--<span style="color: red">阿里云双11红包来啦，拼购1折起, 官方推荐1折团！</span><a href="https://m.aliyun.com/act/team1111/#/share?params=N.qYnY8sp2fK.kkb39ote" target="_blank" style="" onclick="ga('send', 'event', 'ads', 'aliyun');">马上参团>></a>-->
+
+        </div>
+      </div>
+
+      <div id="wrapper">
+    
+    <div style="display: none">
+        <img src="/img/300L.png" />
+    </div>
+
+
+
+<article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title">2015值得关注的的技术</h1>
+  
+
+      
+        <div class="icon"></div>
+        <div class="article_head_extend">
+          <time datetime="2015-03-05T04:56:08.000Z"><a href="/2015/03/05/2015-need-to-know/">Mar 5 2015</a>
+            
+          </time>
+          <div class="qrcode_con">
+            <div class="qrcode_text">扫描二维码</div>
+            <div id="Thu Mar 05 2015 12:56:08 GMT+0800 (China Standard Time)" class="qrcode_img"></div>
+            <script>
+              var qrcode = new QRCode(document.getElementById("Thu Mar 05 2015 12:56:08 GMT+0800 (China Standard Time)"), {
+                width : 100,
+                height : 100
+              });
+              qrcode.makeCode("http://liujinkai.com//2015/03/05/2015-need-to-know/?utm_medium=blog&utm_source=qrcode");
+            </script>
+          </div>
+        </div>
+
+      
+    </header>
+    <div></div>
+    <div class="entry">
+      
+        <h2 id="HTTP2"><a href="#HTTP2" class="headerlink" title="HTTP2"></a>HTTP2</h2><p>HTTP2在今年中应该就可以定稿，这无疑是web界的一个大事。HTTP2从google的SPDY中借鉴了很多特性，重点改善了之前HTTP协议在当前的网络环境下的性能。简单地来讲，HTTP2更快。为什么呢，有几个主要改变：</p>
+<ul>
+<li>首先是来自于同一个domain的HTTP请求可以共享同一个TCP连接了，这样可以很大程度上解决网络延时带来的性能问题。比如你有很多图片，现在也不用sprite化了，因为反正它们会用同一个连接的。HTTP2的出现让之前的很多web前端优化技术可能不再需要了。<br>HTTP2不再是纯文本的了，而是二进制的协议了，这样协议的解析也更简单，而传输也更快。缺点是debug的时候需要费点功夫了。</li>
+<li>HTTP2还有其他一些特性，例如header压缩等，大家可以到这里集中<a href="http://daniel.haxx.se/http2/" target="_blank" rel="external">学习一下</a>。或者看看这个FAQ。<a id="more"></a>
+</li>
+</ul>
+<p>Firefox已经开始支持HTTP2，不少浏览器包括chrome之前就支持SPDY，估计对HTTP2的支持也会迅速开始，而nginx目前已经支持SPDY，就看什么时候各大主流web服务器开始支持HTTP2了。</p>
+<p>一个不太好的现状就是开发人员可能得面临HTTP2和HTTP 1.1的同时存在。如果享受HTTP2的好处，同时又能向后兼容HTTP1.1，可能是今后开发人员必须长期面临的问题了。</p>
+<h2 id="ECMAScript6"><a href="#ECMAScript6" class="headerlink" title="ECMAScript6"></a>ECMAScript6</h2><p>我们现在用的javascript（注意，是javascript语言本身，不包含DOM等其他东西）背后的标准是ECMA-262，也叫ECMAScript 5。它的下一个版本ECMAScript 6（简称es6），已经基本上快定稿了。这个版本里加入了很多开发过程中需要的一些功能，例如：</p>
+<p>类定义语法，包括super，继承<br>lambda风格的函数定义，<code>=&gt;</code> block level函数定义内的lexical scope的<code>this</code>，默认参数，rest参数等<br>destructuring, 类似于ruby里的 <code>[a, b, c] = [1, 2, 3]</code>，同时也适用于map和set，以及函数参数<br>symbol<br>iterator迭代器和generator，以及新的<code>for of</code>循环语法<br>template string，从此可以像在ruby和shell里一样使用多行字符串<br>module语法，从语言层面上支持了模块<br>另外还有一系列新东西例如promise，proxy，unicode支持等<br>目前chrome和firefox已经开始逐步<a href="http://kangax.github.io/compat-table/es6/" target="_blank" rel="external">支持es6</a>。不过你不用等到所有浏览器都开始支持es6后才可以使用它，因为目前已经有很多把es6代码编译成es5代码的工具，例如<a href="https://babeljs.io/" target="_blank" rel="external">babel</a>和t<a href="https://github.com/google/traceur-compiler" target="_blank" rel="external">raceur</a>等。有很多js的库已经开始使用es6的各种功能了，其中包括angular 2.0。</p>
+<p>很多人应该在用coffeescript，es6的很多功能弥补了之前es5的缺陷，吸收了很多coffeescript的功能，也许以后我们就可以不用coffeescript了，除非你不喜欢大括号小括号，而喜欢python的语法。不过如果coffeescript不进行升级，估计就享受不到将来es6带来的好处，也难以适应HTML5时代各种数值计算的需求。</p>
+<p>最后给大家一个比较不错的<a href="https://leanpub.com/understandinges6/read" target="_blank" rel="external">es6学习资源</a>，这本书写得很细，现在还是在线免费的。</p>
+<h2 id="Immutable-js-and-React"><a href="#Immutable-js-and-React" class="headerlink" title="Immutable js and React"></a>Immutable js and React</h2><p>React相信大家已经不陌生了，它是facebook开源的一个前端view框架，这里之所以提到它是因为它背后的理念所带动的一些技术。React本身虽然只是一个view框架，但是背后的virtual dom以及随之带来的性能优势是吸引人的地方，另外就是它采用的类似web component的封装概念。这里有一个比较js前端框架性能的试验，虽然不是很准确，但是可以作一个参考。</p>
+<p>React的virtual dom以及它管理前端控件数据的方法，和immutable数据结构（<a href="https://github.com/facebook/immutable-js" target="_blank" rel="external">immuatble js</a>， <a href="https://github.com/elierotenberg/remutable" target="_blank" rel="external">remutable</a>）、functional programming是可以很容易结合起来使用的。clojurescript的<a href="https://github.com/omcljs/om" target="_blank" rel="external">om框架</a>就是一个例子。想象一下所有的状态都是不可变的，并且统一数据存储（flux架构例如<a href="http://martyjs.org/" target="_blank" rel="external">marty</a>），每次数据的更新都可以很容易只传递<a href="https://blog.rotenberg.io/flux-over-the-wire-3/" target="_blank" rel="external">diff</a>（event source模式），整个数据在前端的流动都是单向的，不仅变成模型变得简单，而且因为所有的历史数据都没有被实际修改过，所以undo和redo的实现也会变得很容易。</p>
+<p>React通过virtual dom实现了immediate模式的UI编程，低成本和快速的UI刷新也带了人们更多启发，并且React这种封装方式也变得不局限于dom view了。例如flipboard团队基于React的封装风格在canvas上封装了一层<a href="http://engineering.flipboard.com/2015/02/mobile-web/" target="_blank" rel="external">UI</a>，可以实现精细的动画效果，保证web版和移动版的体验一致。facebook的React团队最近在React会议上也发布了一个可以用js和React API进行原生移动<a href="http://jlongster.com/First-Impressions-using-React-Native" target="_blank" rel="external">开发的框架</a>。</p>
+<p>React也许只是另外一个web view框架，但是我喜欢它给我带来的一些新想法，这些想法也许可以让我们在前端开发上更容易些。</p>
+<h2 id="Realtime-web（实时web技术）"><a href="#Realtime-web（实时web技术）" class="headerlink" title="Realtime web（实时web技术）"></a>Realtime web（实时web技术）</h2><p>现在的web对实时性要求越来越高，这不光是由于现在的技术可以更好地支持实时性，也是由于用户体验的驱动。实时性不光是体现在聊天这种需求上；我们在手机上的操作，web浏览器上最好能够实时体现出来，即便我们不刷新页面，页面也应该能够实时得到更新。</p>
+<p>前端由于HTML5的出现对于实时需求有了更好的技术支持，例如新的WebSocket、WebRTC，long polling以及server push技术。而后端则早就出现了async IO编程技术，能够同时支持大量长连接。但是这些技术的进步从来没有停止过，这里给大家随便介绍几个。</p>
+<p><a href="http://pushpin.org/" target="_blank" rel="external">pushpin</a>是fanout最近开源的一个高性能实时web后端技术，不同于其它的技术，它是一个proxy，本身不提供API编程框架，而是和已有的web API结合起来，让它们变成支持大量长连接的API。从设计概念上，它把维护大量长连接这个功能和实际的API业务功能分离开来，让前一个功能通过proxy的形式来实现，因此对实际API的框架和语言没有要求，如果要支持更多长连接，也可以通过横向扩展这个proxy来实现，而不一定要改动后端API。</p>
+<p><a href="http://sockjs.org/" target="_blank" rel="external">sockjs</a>，是一个websocket的模拟，在支持websocket的浏览器上就会使用原生websocket，而在老的浏览器上则提供替代技术。但是它不止是一个前端js库，它也同时提供了后端的编程框架，目前支持的语言和框架挺多了。</p>
+<p><a href="http://websocketd.com/" target="_blank" rel="external">websocketd</a>是一个有意思的东西，它可以把任何符合接口的程序编程一个websocket后端，你甚至可以用shell来写API。</p>
+<p>很多的web框架都支持异步编程模式，因而可以支持大量并发长连接。也有类似于meteor这种提供整体解决方案的，还有很多近期的firebase，大家有兴趣可以自己去找找看。</p>
+<p><a href="http://www.jianshu.com/p/d31cc869bd54" target="_blank" rel="external">原文</a></p>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/Web技术/">Web技术</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/HTML5/">HTML5</a>
+  </div>
+
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+    
+    <div class="links">
+        <div class="links_title">推荐阅读</div>
+    
+            <li ><a href="2015/07/06/2015-frameworkds-need-to-learn/" title="2015年需要了解的前端框架和语言">2015年需要了解的前端框架和语言</a></li>
+       
+            <li ><a href="/2015/06/06/mobile-web-skill/" title="移动端web开发技巧">移动端web开发技巧</a></li>
+       
+            <li ><a href="/2015/05/15/https-1/" title="https原理">https原理</a></li>
+       
+            <li ><a href="/2015/03/19/react-rss-reader/" title="React.js基础学习之实现移动RSS阅读器实例">React.js基础学习之实现移动RSS阅读器实例</a></li>
+       
+    </div>
+    
+
+
+
+<section id="comment">
+    <div id="gitalk-container"></div>
+    <!--<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>-->
+    <!--<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>-->
+    <!--<script>-->
+        <!--var cloudTieConfig = {-->
+            <!--url: document.location.href,-->
+            <!--sourceId: "",-->
+            <!--productKey: "a65a1e5ea58d4c3a8ea1fef77d0371db",-->
+            <!--target: "cloud-tie-wrapper"-->
+        <!--};-->
+        <!--var yunManualLoad = true;-->
+        <!--Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);-->
+    <!--</script>-->
+    <!--PC和WAP自适应版-->
+    <!--<div id="SOHUCS" ></div>-->
+    <!--<script type="text/javascript">-->
+        <!--(function(){-->
+            <!--var appid = 'cyt6v35LM';-->
+            <!--var conf = 'prod_82a0b7686345b309fbcbcae5ae75c45e';-->
+            <!--var width = window.innerWidth || document.documentElement.clientWidth;-->
+            <!--if (width < 960) {-->
+                <!--window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>-->
+
+</section>
+<!--<script src="/js/gitment.browser.js"></script>-->
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<script>
+    // const gitment = new Gitment({
+    //     owner: 'ljinkai',
+    //     repo: 'ljinkai.github.io',
+    //     oauth: {
+    //         client_id: '1e0bbf087995295c53aa',
+    //         client_secret: '7aaf0001f26a5f16ddd7769384d549f317244720',
+    //     }
+    // })
+    // gitment.render('comment')
+
+    const gitalk = new Gitalk({
+        clientID: '1e0bbf087995295c53aa',
+        clientSecret: '7aaf0001f26a5f16ddd7769384d549f317244720',
+        repo: 'ljinkai.github.io',
+        owner: 'ljinkai',
+        admin: ['ljinkai'],
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    })
+
+    gitalk.render('gitalk-container')
+
+</script>
+
+
+
+
+
+</div>
+    </div>
+    <aside id="sidebar" class="alignright">
+  <div class="widget tag" style="padding: 16px;">
+
+      <div style="color: black;font-size: 16px;">
+          <div style="width: 100%;text-align: center;margin-bottom: 10px;margin-top: 0px;">我的知识星球</div>
+          
+          <a style="width: 100%;display: block;text-decoration: none;" href="https://mp.weixin.qq.com/s/LIzhjGGRqiqYnMhIxtFYAw" target="_blank"
+             onclick="ga('send', 'event', 'zsxq_11_blog', 'zsxq');">
+              <img src="https://qiniu.gafata.com/zsxq.jpeg" width="100%"/>
+          </a>
+          <div style="width: 100%;text-align: center;margin-bottom: 10px;margin-top: 0px;">我的在线课程</div>
+          <a style="width: 100%;display: block;text-decoration: none;" href="https://m.qlchat.com/wechat/page/channel-intro?channelId=2000018572922685" target="_blank"
+             onclick="ga('send', 'event', 'my_course', 'live_20170720');">
+              <img src="https://qiniu.gafata.com/chrome-extension-qianliao-2.png" width="100%"/>
+          </a>
+      </div>
+</div>
+
+
+  <div class="widget tag about_fix_none" id="about_fix">
+
+  <ul class="entry" style="text-align: center;font-size: 14px;font-weight: bold;">
+    <li>微信公众号：凯凯而谈</li>
+    <li style="font-weight: normal;font-size: 12px;">这里有我的分享和思考，我们一起知道做到</li>
+    <li><img src='http://qiniu.gafata.com/2019-03-17-web-bear.jpg?imageView2/2/w/600' width='180px' style="margin: 0px auto;display: block;"></li>
+  </ul>
+</div>
+<div class="widget tag">
+  <div class="about_banner">
+    <div class="about_profile">
+      <a href="/2015/02/28/new/">
+        <img class="about_img" src="http://qiniu.gafata.com/2019-03-25-WechatIMG1128.jpeg?imageView2/2/w/200">
+      </a>
+    </div>
+  </div>
+  <ul class="entry" style="text-align: center;">
+    <li>认知、技术、变现</li>
+    <li>微博：<a href="http://weibo.com/jieyingbei" target="_blank" onclick="ga('send', 'event', 'widget_about', 'weibo')">@凯凯刘</a></li>
+    <li>微信公众号：凯凯而谈</li>
+    <li><img src='http://qiniu.gafata.com/2019-03-17-web-bear.jpg?imageView2/2/w/600' width='160px' style="margin: 0px auto;display: block;"></li>
+    <li>Web、Indie Maker</li>
+  </ul>
+  <script>
+    function getPageTopLeft(el) {
+      var rect = el.getBoundingClientRect();
+      var docEl = document.documentElement;
+      return {
+        left: rect.left + (window.pageXOffset || docEl.scrollLeft || 0),
+        top: rect.top + (window.pageYOffset || docEl.scrollTop || 0)
+      };
+    }
+    // window.addEventListener('scroll',function() {
+    //   var winWid = document.body.clientWidth;
+    //   if (winWid > 900) {
+    //     var anchorTop = getPageTopLeft(document.getElementById("anchorTop")).top;
+    //     var scrollTop = window.pageYOffset|| document.documentElement.scrollTop || document.body.scrollTop;
+
+    //     if (anchorTop < scrollTop) {
+    //       document.getElementById("about_fix").className = "widget tag about_fix";
+    //     } else {
+    //       document.getElementById("about_fix").className = "widget tag about_fix_none";
+    //     }
+    //   }
+    // });
+  </script>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/Indie-Maker/" onclick="ga('send', 'event', 'widget_category', 'Indie Maker');">Indie Maker</a><small>20</small></li>
+  
+    <li><a href="/categories/Shopify/" onclick="ga('send', 'event', 'widget_category', 'Shopify');">Shopify</a><small>1</small></li>
+  
+    <li><a href="/categories/Web工具/" onclick="ga('send', 'event', 'widget_category', 'Web工具');">Web工具</a><small>19</small></li>
+  
+    <li><a href="/categories/Web技术/" onclick="ga('send', 'event', 'widget_category', 'Web技术');">Web技术</a><small>51</small></li>
+  
+    <li><a href="/categories/产品/" onclick="ga('send', 'event', 'widget_category', '产品');">产品</a><small>6</small></li>
+  
+    <li><a href="/categories/区块链/" onclick="ga('send', 'event', 'widget_category', '区块链');">区块链</a><small>8</small></li>
+  
+    <li><a href="/categories/变现/" onclick="ga('send', 'event', 'widget_category', '变现');">变现</a><small>12</small></li>
+  
+    <li><a href="/categories/工具/" onclick="ga('send', 'event', 'widget_category', '工具');">工具</a><small>3</small></li>
+  
+    <li><a href="/categories/极客番茄/" onclick="ga('send', 'event', 'widget_category', '极客番茄');">极客番茄</a><small>7</small></li>
+  
+    <li><a href="/categories/流量/" onclick="ga('send', 'event', 'widget_category', '流量');">流量</a><small>3</small></li>
+  
+    <li><a href="/categories/浏览器扩展插件/" onclick="ga('send', 'event', 'widget_category', '浏览器扩展插件');">浏览器扩展插件</a><small>3</small></li>
+  
+    <li><a href="/categories/清单/" onclick="ga('send', 'event', 'widget_category', '清单');">清单</a><small>3</small></li>
+  
+    <li><a href="/categories/生活/" onclick="ga('send', 'event', 'widget_category', '生活');">生活</a><small>9</small></li>
+  
+    <li><a href="/categories/直播/" onclick="ga('send', 'event', 'widget_category', '直播');">直播</a><small>1</small></li>
+  
+    <li><a href="/categories/认知/" onclick="ga('send', 'event', 'widget_category', '认知');">认知</a><small>15</small></li>
+  
+    <li><a href="/categories/训练营/" onclick="ga('send', 'event', 'widget_category', '训练营');">训练营</a><small>1</small></li>
+  
+    <li><a href="/categories/读书/" onclick="ga('send', 'event', 'widget_category', '读书');">读书</a><small>4</small></li>
+  
+    <li><a href="/categories/课程/" onclick="ga('send', 'event', 'widget_category', '课程');">课程</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">标签</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/CSS3/">CSS3</a><small>4</small></li>
+  
+    <li><a href="/tags/Chrome/">Chrome</a><small>7</small></li>
+  
+    <li><a href="/tags/EOS/">EOS</a><small>1</small></li>
+  
+    <li><a href="/tags/ETH/">ETH</a><small>1</small></li>
+  
+    <li><a href="/tags/Facebook/">Facebook</a><small>1</small></li>
+  
+    <li><a href="/tags/Google/">Google</a><small>8</small></li>
+  
+    <li><a href="/tags/HTML5/">HTML5</a><small>15</small></li>
+  
+    <li><a href="/tags/HTTPS/">HTTPS</a><small>2</small></li>
+  
+    <li><a href="/tags/Hybrid-App/">Hybrid App</a><small>2</small></li>
+  
+    <li><a href="/tags/Indie-Maker/">Indie Maker</a><small>20</small></li>
+  
+    <li><a href="/tags/JavaScript/">JavaScript</a><small>12</small></li>
+  
+    <li><a href="/tags/Markdown/">Markdown</a><small>1</small></li>
+  
+    <li><a href="/tags/Node-js/">Node.js</a><small>2</small></li>
+  
+    <li><a href="/tags/PWA/">PWA</a><small>1</small></li>
+  
+    <li><a href="/tags/Shopify/">Shopify</a><small>1</small></li>
+  
+    <li><a href="/tags/github/">github</a><small>2</small></li>
+  
+    <li><a href="/tags/临界知识/">临界知识</a><small>1</small></li>
+  
+    <li><a href="/tags/产品/">产品</a><small>7</small></li>
+  
+    <li><a href="/tags/人工智能/">人工智能</a><small>2</small></li>
+  
+    <li><a href="/tags/健康/">健康</a><small>2</small></li>
+  
+    <li><a href="/tags/增长/">增长</a><small>7</small></li>
+  
+    <li><a href="/tags/工具/">工具</a><small>15</small></li>
+  
+    <li><a href="/tags/插件/">插件</a><small>9</small></li>
+  
+    <li><a href="/tags/方法论/">方法论</a><small>20</small></li>
+  
+    <li><a href="/tags/木匠/">木匠</a><small>2</small></li>
+  
+    <li><a href="/tags/极客番茄/">极客番茄</a><small>7</small></li>
+  
+    <li><a href="/tags/框架/">框架</a><small>6</small></li>
+  
+    <li><a href="/tags/案例/">案例</a><small>2</small></li>
+  
+    <li><a href="/tags/概念/">概念</a><small>3</small></li>
+  
+    <li><a href="/tags/比特币/">比特币</a><small>3</small></li>
+  
+    <li><a href="/tags/浏览器扩展插件/">浏览器扩展插件</a><small>3</small></li>
+  
+    <li><a href="/tags/游戏/">游戏</a><small>2</small></li>
+  
+    <li><a href="/tags/认知/">认知</a><small>7</small></li>
+  
+    <li><a href="/tags/训练营/">训练营</a><small>1</small></li>
+  
+    <li><a href="/tags/课程/">课程</a><small>3</small></li>
+  
+    <li><a href="/tags/资源/">资源</a><small>9</small></li>
+  
+    <li><a href="/tags/路线图/">路线图</a><small>2</small></li>
+  
+    <li><a href="/tags/面试题/">面试题</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  <div class="widget hot">
+  <h3 class="title">热文推荐</h3>
+  <ul class="entry">
+    <li><a href="/2017/06/01/start-small-stay-small/" title="《Start Small, Stay Small》着眼小众市场，程序员的微型创业项目指南">《Start Small, Stay Small》着眼小众市场，程序员的微型创业项目指南</a></li>
+    <li><a href="/2017/02/08/how-to-read-a-book/" title="怎样读一本书V5.0 ?(译)">怎样读一本书V5.0 ?(译)</a></li>
+    <li><a href="/2015/06/06/mobile-web-skill/" title="移动端web开发技巧">移动端web开发技巧</a></li>
+    <li><a href="/2017/12/09/gafata-online/" title="www.gafata.com上线">www.gafata.com上线</a></li>
+    <li><a href="/2017/04/19/deliberate-practice/" title="刻意练习">刻意练习</a></li>
+    <li><a href="/2016/04/27/progressive-web-app/" title="Web新技术：PWA-Progressive Web App">Web新技术：PWA-Progressive Web App</a></li>
+    <li><a href="/2017/08/16/bitcoin-mining-consensus/" title="比特币的挖矿与共识">比特币的挖矿与共识</a></li>
+  </ul>
+</div>
+
+
+  <div class="widget tag" style="width:270px;border-top: 0px red solid;line-height: 0px;">
+
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2015-2023 <a href="/2015/02/28/new/">凯凯刘</a>
+  
+  &nbsp;
+  <a href="http://www.ezindie.com/" target="_blank" title="Easy Indie">Ezindie</a>
+  <a href="http://www.qunheying.com" target="_blank" title="微信群合影" style="margin-left: 10px">微信群合影</a>
+  <a href="http://md2vid.com" target="_blank" title="Markdown转视频" style="margin-left: 10px">Markdown转视频</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="/atom.xml" class="menu_rss menu_rss_bottom" target="_blank" title="RSS订阅"></a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  Powered by <a href="http://hexo.io/">Hexo</a>
+</div>
+<div class="clearfix"></div>
+
+<!--<script>-->
+    <!--var _hmt = _hmt || [];-->
+    <!--(function() {-->
+        <!--var hm = document.createElement("script");-->
+        <!--hm.src = "//hm.baidu.com/hm.js?1e92fed8a761c1224623815e3b960447";-->
+        <!--var s = document.getElementsByTagName("script")[0];-->
+        <!--s.parentNode.insertBefore(hm, s);-->
+    <!--})();-->
+<!--</script>-->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-85358197-2', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+
+</footer>
+  <!--<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>-->
+<!--<script src="<- config.root >js/jquery.imagesloaded.min.js"></script>-->
+<!--<script src="<- config.root >js/gallery.js"></script>-->
+
+
+
+
+</body>
+</html>

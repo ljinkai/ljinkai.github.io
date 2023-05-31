@@ -1,0 +1,573 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>HTTP 缓存 - 凯凯刘</title>
+  <meta name="author" content="凯凯刘">
+  
+  <meta name="description" content="通过网络获取内容既缓慢，成本又高：大的响应需要在客户端和服务器之间进行多次往返通信，这拖延了浏览器可以使用和处理内容的时间，同时也增加了访问者的数据成本。因此，缓存和重用以前获取的资源的能力成为优化性能很关键的一个方面。">
+  
+  <meta name="keywords" content="缓存,ETag,http,Cache-Control,no-cache,no-store">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="HTTP 缓存"/>
+  <meta property="og:site_name" content="凯凯刘"/>
+
+  
+    <meta property="og:image" content="/img/300L.png"/>
+  
+
+  <meta name="google-site-verification" content="iIzqxT8FAfRGM8f4sr97VvjhDsk3QJQ-a2LMdn0DtXU" />
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="alternate" href="/atom.xml" title="凯凯刘" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/styleNew.css?x=6" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/gitment.css">
+  <script src="/js/qrcode.min.js"></script>
+
+  <!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+  <!--<script>-->
+      <!--(adsbygoogle = window.adsbygoogle || []).push({-->
+          <!--google_ad_client: "ca-pub-3023100525130189",-->
+          <!--enable_page_level_ads: true-->
+      <!--});-->
+  <!--</script>-->
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+    <h1><a href="/">凯凯刘</a></h1>
+    <h2><a href="/">
+            
+            Indie Maker、认知、技术、变现
+            
+        </a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+    <ul>
+        
+        <li><a href="/" onclick="ga('send', 'event', 'nav_top', '首页');">首页</a></li>
+        
+        <li><a href="/categories/Web技术/" onclick="ga('send', 'event', 'nav_top', 'Web技术');">Web技术</a></li>
+        
+        <li><a href="/categories/浏览器扩展插件/" onclick="ga('send', 'event', 'nav_top', '浏览器扩展插件');">浏览器扩展插件</a></li>
+        
+        <li><a href="/categories/区块链/" onclick="ga('send', 'event', 'nav_top', '区块链');">区块链</a></li>
+        
+        <li><a href="/categories/%E8%AE%A4%E7%9F%A5/" onclick="ga('send', 'event', 'nav_top', '认知');">认知</a></li>
+        
+        <li><a href="/categories/%E8%AF%BB%E4%B9%A6/" onclick="ga('send', 'event', 'nav_top', '读书');">读书</a></li>
+        
+        <li><a href="/categories/%E6%B5%81%E9%87%8F/" onclick="ga('send', 'event', 'nav_top', '流量');">流量</a></li>
+        
+        <li><a href="/categories/%E5%8F%98%E7%8E%B0/" onclick="ga('send', 'event', 'nav_top', '变现');">变现</a></li>
+        
+        <li><a href="/categories/%E7%94%9F%E6%B4%BB/" onclick="ga('send', 'event', 'nav_top', '生活');">生活</a></li>
+        
+        <li><a href="/2015/03/01/link-friends/" onclick="ga('send', 'event', 'nav_top', '友链');">友链</a></li>
+        
+        <li><a href="/2015/02/28/new/" onclick="ga('send', 'event', 'nav_top', '关于');">关于</a></li>
+        
+        <li><a href="/atom.xml" class="menu_rss" target="_blank" title="RSS订阅"></a></li>
+    </ul>
+    <div class="clearfix"></div>
+    <!--<div class="nav_zhibo" style="position: absolute;top : 120px;left: 40px;color: blue;">-->
+        <!--<a style="color: blue;cursor: pointer;" href="https://m.qlchat.com/topic/360000033244498.htm?preview=Y&intoPreview=Y"-->
+           <!--onclick="ga('send', 'event', 'nav_zhibo', 'qianliao');"-->
+           <!--target="_blank">我的千聊直播(周三)：比特币的挖矿与共识-->
+        <!--</a>-->
+    <!--</div>-->
+
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft">
+
+      <div class="ads_banner">
+        <!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+        <!-- banner -->
+        <!--<ins class="adsbygoogle"-->
+             <!--style="display:block"-->
+             <!--data-ad-client="ca-pub-4018032316880050"-->
+             <!--data-ad-slot="3550377487"-->
+             <!--data-ad-format="auto"></ins>-->
+        <!--<script>-->
+          <!--(adsbygoogle = window.adsbygoogle || []).push({});-->
+        <!--</script>-->
+
+        <!-- <div>
+          <a href="https://t.zsxq.com/ybIuBaA" target="_blank">
+            <img style="width: 100%" src="http://qiniu.gafata.com/2019-06-11-indiemaker_dlbx_1800x180.jpg?imageView2/2/w/1800"/>
+          </a>
+        </div> -->
+
+        <div class="banner-top" style="background-color: #032535;color:white;padding: 15px;font-size: 15px;">
+          「每日看板-Tabhub」浏览器新标签页，独立变现、新闻、日历、待办、RSS、股票等丰富组件
+          <a href="https://www.tabhub.app/?utm_source=blog" target="_blank" style="word-break: break-all;background-color:#c2007c;margin-left:10px;display:inline-block;width: 70px;padding:4px 4px;border-radius: 4px;color:white;text-align: center;" 
+          onclick="ga('send', 'event', 'ads', 'tabhub');" >免费使用</a>
+          <!--星云开发者开放注册啦，提交一个DApp即可获得100个NAS(大约7000元）,更有周、月度大额奖金等你拿！开发者今年最大的机会, 会JavaScript即可。<br>-->
+          <!--注册链接：<a target="_blank" style="word-break: break-all;" onclick="ga('send', 'event', 'ads', 'nebulas');" href="https://incentive.nebulas.io/cn/signup.html?invite=HjuhT">https://incentive.nebulas.io/cn/signup.html?invite=HjuhT</a>-->
+          <!--<span style="color: red">阿里云双11红包来啦，拼购1折起, 官方推荐1折团！</span><a href="https://m.aliyun.com/act/team1111/#/share?params=N.qYnY8sp2fK.kkb39ote" target="_blank" style="" onclick="ga('send', 'event', 'ads', 'aliyun');">马上参团>></a>-->
+
+        </div>
+      </div>
+
+      <div id="wrapper">
+    
+    <div style="display: none">
+        <img src="/img/300L.png" />
+    </div>
+
+
+
+<article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title">HTTP 缓存</h1>
+  
+
+      
+        <div class="icon"></div>
+        <div class="article_head_extend">
+          <time datetime="2015-08-13T08:33:37.000Z"><a href="/2015/08/13/http-cache/">Aug 13 2015</a>
+            
+          </time>
+          <div class="qrcode_con">
+            <div class="qrcode_text">扫描二维码</div>
+            <div id="Thu Aug 13 2015 16:33:37 GMT+0800 (China Standard Time)" class="qrcode_img"></div>
+            <script>
+              var qrcode = new QRCode(document.getElementById("Thu Aug 13 2015 16:33:37 GMT+0800 (China Standard Time)"), {
+                width : 100,
+                height : 100
+              });
+              qrcode.makeCode("http://liujinkai.com//2015/08/13/http-cache/?utm_medium=blog&utm_source=qrcode");
+            </script>
+          </div>
+        </div>
+
+      
+    </header>
+    <div></div>
+    <div class="entry">
+      
+        <p>通过网络获取内容既缓慢，成本又高：大的响应需要在客户端和服务器之间进行多次往返通信，这拖延了浏览器可以使用和处理内容的时间，同时也增加了访问者的数据成本。因此，缓存和重用以前获取的资源的能力成为优化性能很关键的一个方面。</p>
+<h3 id="在这篇指南中"><a href="#在这篇指南中" class="headerlink" title="在这篇指南中"></a>在这篇指南中</h3><ul>
+<li>使用 ETag 验证缓存的响应</li>
+<li>Cache-Control</li>
+<li>定义最优 Cache-Control 策略</li>
+<li>废弃和更新已缓存的响应</li>
+<li>缓存检查表</li>
+</ul>
+<p>好消息是每个浏览器都实现了 HTTP 缓存！ 我们所要做的就是，确保每个服务器响应都提供正确的 HTTP 头指令，以指导浏览器何时可以缓存响应以及可以缓存多久。</p>
+<a id="more"></a>
+<p><code>如果在应用中使用 Webview 来获取和显示网页内容，可能需要提供额外的配置标志，以确保启用了 HTTP 缓存，并根据用途设置了合理的缓存大小，同时，确保缓存持久化。查看平台文档并确认您的设置！</code></p>
+<p><img src="http://qiniu.gafata.com/blog_http-request.png" alt=""></p>
+<p>服务器在返回响应时，还会发出一组 HTTP 头，用来描述内容类型、长度、缓存指令、验证令牌等。例如，在上图的交互中，服务器返回了一个 1024 字节的响应，指导客户端缓存响应长达 120 秒，并提供验证令牌（<code>x234dff</code>），在响应过期之后，可以用来验证资源是否被修改。</p>
+<p>##使用 ETag 验证缓存的响应</p>
+<ul>
+<li>服务器通过 ETag HTTP 头传递验证令牌</li>
+<li>通过验证令牌可以进行高效的资源更新检查：如果资源未更改，则不会传输任何数据。</li>
+</ul>
+<p>让我们假设在首次获取资源 120 秒之后，浏览器又对该资源发起了新请求。首先，浏览器会检查本地缓存并找到之前的响应，不幸的是，这个响应现在已经’过期’，无法在使用。此时，浏览器也可以直接发出新请求，获取新的完整响应，但是这样做效率较低，因为如果资源未被更改过，我们就没有理由再去下载与缓存中已有的完全相同的字节。<br>这就是 ETag 头中指定的验证令牌所要解决的问题：服务器会生成并返回一个随机令牌，通常是文件内容的哈希值或者某个其他指纹码。客户端不必了解指纹码是如何生成的，只需要在下一个请求中将其发送给服务器：如果指纹码仍然一致，说明资源未被修改，我们就可以跳过下载。</p>
+<p><img src="http://qiniu.gafata.com/blog_http-cache-control.png" alt=""></p>
+<p>在上面的例子中，客户端自动在<code>If-None-MatchHTTP</code> 请求头中提供 ETag 令牌，服务器针对当前的资源检查令牌，如果未被修改过，则返回<code>304 Not Modified</code>响应，告诉浏览器缓存中的响应未被修改过，可以再延用 120 秒。注意，我们不必再次下载响应 - 这节约了时间和带宽。<br>作为网络开发人员，您如何利用高效的重新验证？ 浏览器代替我们完成了所有的工作：自动检测是否已指定了验证令牌，并会将验证令牌附加到发出的请求上，根据从服务器收到的响应，在必要时更新缓存时间戳。<strong>实际上，我们唯一要做的就是确保服务器提供必要的 ETag 令牌：查看服务器文档中是否有必要的配置标志。</strong></p>
+<p><strong>注意</strong></p>
+<ul>
+<li>提示：HTML5 Boilerplate 项目包含了所有最流行的服务器的<a href="https://github.com/h5bp/server-configs" target="_blank" rel="external">配置文件样例</a>，并且为每个配置标志和设置都提供了详细的注释：在列表中找到您喜欢的服务器，查找适合的设置，然后复制/确认您的服务器配置了推荐的设置。</li>
+</ul>
+<h2 id="Cache-Control"><a href="#Cache-Control" class="headerlink" title="Cache-Control"></a>Cache-Control</h2><p>每个资源都可以通过 Cache-Control HTTP 头来定义自己的缓存策略<br>Cache-Control 指令控制谁在什么条件下可以缓存响应以及可以缓存多久<br>最好的请求是不必与服务器进行通信的请求：通过响应的本地副本，我们可以避免所有的网络延迟以及数据传输的数据成本。为此，HTTP 规范允许服务器返回 <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9" target="_blank" rel="external">一系列不同的 Cache-Control 指令</a>，控制浏览器或者其他中继缓存如何缓存某个响应以及缓存多长时间。</p>
+<p><strong>注意</strong></p>
+<ul>
+<li>Cache-Control 头在 HTTP/1.1 规范中定义，取代了之前用来定义响应缓存策略的头（例如 Expires）。当前的所有浏览器都支持 Cache-Control，因此，使用它就够了。</li>
+</ul>
+<p><img src="http://qiniu.gafata.com/blog_http-cache-control-highlight.png" alt=""></p>
+<h3 id="no-cache-和-no-store"><a href="#no-cache-和-no-store" class="headerlink" title="no-cache 和 no-store"></a>no-cache 和 no-store</h3><p><code>no-cache</code>表示必须先与服务器确认返回的响应是否被更改，然后才能使用该响应来满足后续对同一个网址的请求。因此，如果存在合适的验证令牌 (ETag)，no-cache 会发起往返通信来验证缓存的响应，如果资源未被更改，可以避免下载。<br>相比之下，<code>no-store</code>更加简单，直接禁止浏览器和所有中继缓存存储返回的任何版本的响应 - 例如：一个包含个人隐私数据或银行数据的响应。每次用户请求该资源时，都会向服务器发送一个请求，每次都会下载完整的响应。</p>
+<h3 id="public和-private"><a href="#public和-private" class="headerlink" title="public和 private"></a>public和 private</h3><p>如果响应被标记为public，即使有关联的 HTTP 认证，甚至响应状态码无法正常缓存，响应也可以被缓存。大多数情况下，public不是必须的，因为明确的缓存信息（例如max-age）已表示 响应可以被缓存。<br>相比之下，浏览器可以缓存private响应，但是通常只为单个用户缓存，因此，不允许任何中继缓存对其进行缓存 - 例如，用户浏览器可以缓存包含用户私人信息的 HTML 网页，但是 CDN 不能缓存。</p>
+<p>###max-age###<br>该指令指定从当前请求开始，允许获取的响应被重用的最长时间（单位为秒） - 例如：<code>max-age=60</code>表示响应可以再缓存和重用 60 秒。</p>
+<h2 id="定义最优-Cache-Control-策略"><a href="#定义最优-Cache-Control-策略" class="headerlink" title="定义最优 Cache-Control 策略"></a>定义最优 Cache-Control 策略</h2><p><img src="http://qiniu.gafata.com/blog_http-cache-decision-tree.png" alt=""></p>
+<p>按照上面的决策树来确定您的应用使用的特定资源或一组资源的最优缓存策略。理想情况下，目标应该是在客户端上缓存尽可能多的响应、缓存尽可能长的时间，并且为每个响应提供验证令牌，以便进行高效的重新验证。</p>
+<table border="1"><tr><td>Cache-Control指令</td><td>说明</td></tr><tr><td>max-age=86400</td><td>浏览器和任何中继缓存均可以将响应（如果是<code>public</code>的）<br>缓存长达一天（60 秒 x 60 分 x 24 小时）</td></tr><tr><td>private, max-age=600</td><td>客户端浏览器只能将响应缓存最长 10 分钟（60 秒 x 10 分）</td></tr><tr><td>no-store</td><td>不允许缓存响应，每个请求必须获取完整的响应。</td></tr></table>
+
+
+<p>根据 HTTP Archive，在排名最高的 300,000 个网站中（Alexa 排名），<a href="http://httparchive.org/trends.php#maxage0" target="_blank" rel="external">所有下载的响应中，几乎有半数可以由浏览器进行缓存，</a>对于重复性网页浏览和访问来说，这是一个巨大的节省！ 当然，这并不意味着特定的应用会有 50% 的资源可以被缓存：有些网站可以缓存 90% 以上的资源， 而有些网站有许多私密的或者时间要求苛刻的数据，根本无法被缓存。</p>
+<p><strong>审查您的网页，确定哪些资源可以被缓存，并确保可以返回正确的 Cache-Control 和 ETag 头。</strong></p>
+<p>##废弃和更新已缓存的响应</p>
+<pre><code>* 在资源&quot;过期&quot;之前，将一直使用本地缓存的响应
+* 通过将文件内容指纹码嵌入网址，我们可以强制客户端更新到新版的响应
+* 为了获得最佳性能，每个应用需要定义自己的缓存层级
+</code></pre><p>浏览器发出的所有 HTTP 请求会首先被路由到浏览器的缓存，以查看是否缓存了可以用于实现请求的有效响应。如果有匹配的响应，会直接从缓存中读取响应，这样就避免了网络延迟以及传输产生的数据成本。<strong>然而，如果我们希望更新或废弃已缓存的响应，该怎么办？</strong></p>
+<p>例如，假设我们已经告诉访问者某个 CSS 样式表缓存长达 24 小时 (max-age=86400)，但是设计人员刚刚提交了一个更新，我们希望所有用户都能使用。我们该如何通知所有访问者缓存的 CSS 副本已过时，需要更新缓存？ 这是一个欺骗性的问题 - 实际上，至少在不更改资源网址的情况下，我们做不到。</p>
+<p>一旦浏览器缓存了响应，在过期以前，将一直使用缓存的版本，这是由 max-age 或者 expires 指定的，或者直到因为某些原因从缓存中删除，例如用户清除了浏览器缓存。因此，在构建网页时，不同的用户可能使用的是文件的不同版本；刚获取该资源的用户将使用新版本，而缓存过之前副本（但是依然有效）的用户将继续使用旧版本的响应。</p>
+<p>所以，我们如何才能鱼和熊掌兼得：客户端缓存和快速更新？ 很简单，在资源内容更改时，我们可以更改资源的网址，强制用户下载新响应。通常情况下，可以通过在文件名中嵌入文件的指纹码（或版本号）来实现 - 例如 style.<code>x234dff</code>.css。</p>
+<p><img src="http://qiniu.gafata.com/blog_http-cache-hierarchy.png" alt=""></p>
+<p>因为能够定义每个资源的缓存策略，所以，我们可以定义’缓存层级’，这样，不但可以控制每个响应的缓存时间，还可以控制访问者看到新版本的速度。例如，我们一起分析一下上面的例子：</p>
+<pre><code>* HTML 被标记成no-cache，这意味着浏览器在每次请求时都会重新验证文档，如果内容更改，会获取最新版本。同时，在 HTML 标记中，我们在 CSS 和 JavaScript 资源的网址中嵌入指纹码：如果这些文件的内容更改，网页的 HTML 也会随之更改，并将下载 HTML 响应的新副本。
+* 允许浏览器和中继缓存（例如 CDN）缓存 CSS，过期时间设置为 1 年。注意，我们可以放心地使用 1 年的’远期过期’，因为我们在文件名中嵌入了文件指纹码：如果 CSS 更新，网址也会随之更改。
+* JavaScript 过期时间也设置为 1 年，但是被标记为 private，也许是因为包含了 CDN 不应缓存的一些用户私人数据。
+* 缓存图片时不包含版本或唯一指纹码，过期时间设置为 1 天。
+</code></pre><p>组合使用 ETag、Cache-Control 和唯一网址，我们可以提供最佳的方案：较长的过期时间，控制可以缓存响应的位置，以及按需更新。</p>
+<h2 id="缓存检查表"><a href="#缓存检查表" class="headerlink" title="缓存检查表"></a>缓存检查表</h2><p>不存在最佳的缓存策略。根据您的通信模式、提供的数据类型以及应用特定的数据更新要求，必须定义和配置每个资源最适合的设置以及整体的’缓存层级’。</p>
+<p>在定义缓存策略时，要记住下列技巧和方法：</p>
+<p>1、<strong>使用一致的网址</strong>：如果您在不同的网址上提供相同的内容，将会多次获取和存储该内容。提示：注意，<a href="http://www.w3.org/TR/WD-html40-970708/htmlweb.html" target="_blank" rel="external">网址区分大小写</a>！<br>2、<strong>确保服务器提供验证令牌 (ETag)</strong>：通过验证令牌，如果服务器上的资源未被更改，就不必传输相同的字节。<br>3、<strong>确定中继缓存可以缓存哪些资源</strong>：对所有用户的响应完全相同的资源很适合由 CDN 或其他中继缓存进行缓存。<br>4、<strong>确定每个资源的最优缓存周期</strong>：不同的资源可能有不同的更新要求。审查并确定每个资源适合的 max-age。<br>5、<strong>确定网站的最佳缓存层级</strong>：对 HTML 文档组合使用包含内容指纹码的资源网址以及短时间或 no-cache 的生命周期，可以控制客户端获取更新的速度。<br>6、<strong>搅动最小化</strong>：有些资源的更新比其他资源频繁。如果资源的特定部分（例如 JavaScript 函数或一组 CSS 样式）会经常更新，应考虑将其代码作为单独的文件提供。这样，每次获取更新时，剩余内容（例如不会频繁更新的库代码）可以从缓存中获取，确保下载的内容量最少。</p>
+<p><a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching?hl=zh-cn#section-1" target="_blank" rel="external">原文链接</a></p>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/Web技术/">Web技术</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/HTML5/">HTML5</a>
+  </div>
+
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+    
+
+
+
+<section id="comment">
+    <div id="gitalk-container"></div>
+    <!--<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>-->
+    <!--<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>-->
+    <!--<script>-->
+        <!--var cloudTieConfig = {-->
+            <!--url: document.location.href,-->
+            <!--sourceId: "",-->
+            <!--productKey: "a65a1e5ea58d4c3a8ea1fef77d0371db",-->
+            <!--target: "cloud-tie-wrapper"-->
+        <!--};-->
+        <!--var yunManualLoad = true;-->
+        <!--Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);-->
+    <!--</script>-->
+    <!--PC和WAP自适应版-->
+    <!--<div id="SOHUCS" ></div>-->
+    <!--<script type="text/javascript">-->
+        <!--(function(){-->
+            <!--var appid = 'cyt6v35LM';-->
+            <!--var conf = 'prod_82a0b7686345b309fbcbcae5ae75c45e';-->
+            <!--var width = window.innerWidth || document.documentElement.clientWidth;-->
+            <!--if (width < 960) {-->
+                <!--window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>-->
+
+</section>
+<!--<script src="/js/gitment.browser.js"></script>-->
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<script>
+    // const gitment = new Gitment({
+    //     owner: 'ljinkai',
+    //     repo: 'ljinkai.github.io',
+    //     oauth: {
+    //         client_id: '1e0bbf087995295c53aa',
+    //         client_secret: '7aaf0001f26a5f16ddd7769384d549f317244720',
+    //     }
+    // })
+    // gitment.render('comment')
+
+    const gitalk = new Gitalk({
+        clientID: '1e0bbf087995295c53aa',
+        clientSecret: '7aaf0001f26a5f16ddd7769384d549f317244720',
+        repo: 'ljinkai.github.io',
+        owner: 'ljinkai',
+        admin: ['ljinkai'],
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    })
+
+    gitalk.render('gitalk-container')
+
+</script>
+
+
+
+
+
+</div>
+    </div>
+    <aside id="sidebar" class="alignright">
+  <div class="widget tag" style="padding: 16px;">
+
+      <div style="color: black;font-size: 16px;">
+          <div style="width: 100%;text-align: center;margin-bottom: 10px;margin-top: 0px;">我的知识星球</div>
+          
+          <a style="width: 100%;display: block;text-decoration: none;" href="https://mp.weixin.qq.com/s/LIzhjGGRqiqYnMhIxtFYAw" target="_blank"
+             onclick="ga('send', 'event', 'zsxq_11_blog', 'zsxq');">
+              <img src="https://qiniu.gafata.com/zsxq.jpeg" width="100%"/>
+          </a>
+          <div style="width: 100%;text-align: center;margin-bottom: 10px;margin-top: 0px;">我的在线课程</div>
+          <a style="width: 100%;display: block;text-decoration: none;" href="https://m.qlchat.com/wechat/page/channel-intro?channelId=2000018572922685" target="_blank"
+             onclick="ga('send', 'event', 'my_course', 'live_20170720');">
+              <img src="https://qiniu.gafata.com/chrome-extension-qianliao-2.png" width="100%"/>
+          </a>
+      </div>
+</div>
+
+
+  <div class="widget tag about_fix_none" id="about_fix">
+
+  <ul class="entry" style="text-align: center;font-size: 14px;font-weight: bold;">
+    <li>微信公众号：凯凯而谈</li>
+    <li style="font-weight: normal;font-size: 12px;">这里有我的分享和思考，我们一起知道做到</li>
+    <li><img src='http://qiniu.gafata.com/2019-03-17-web-bear.jpg?imageView2/2/w/600' width='180px' style="margin: 0px auto;display: block;"></li>
+  </ul>
+</div>
+<div class="widget tag">
+  <div class="about_banner">
+    <div class="about_profile">
+      <a href="/2015/02/28/new/">
+        <img class="about_img" src="http://qiniu.gafata.com/2019-03-25-WechatIMG1128.jpeg?imageView2/2/w/200">
+      </a>
+    </div>
+  </div>
+  <ul class="entry" style="text-align: center;">
+    <li>认知、技术、变现</li>
+    <li>微博：<a href="http://weibo.com/jieyingbei" target="_blank" onclick="ga('send', 'event', 'widget_about', 'weibo')">@凯凯刘</a></li>
+    <li>微信公众号：凯凯而谈</li>
+    <li><img src='http://qiniu.gafata.com/2019-03-17-web-bear.jpg?imageView2/2/w/600' width='160px' style="margin: 0px auto;display: block;"></li>
+    <li>Web、Indie Maker</li>
+  </ul>
+  <script>
+    function getPageTopLeft(el) {
+      var rect = el.getBoundingClientRect();
+      var docEl = document.documentElement;
+      return {
+        left: rect.left + (window.pageXOffset || docEl.scrollLeft || 0),
+        top: rect.top + (window.pageYOffset || docEl.scrollTop || 0)
+      };
+    }
+    // window.addEventListener('scroll',function() {
+    //   var winWid = document.body.clientWidth;
+    //   if (winWid > 900) {
+    //     var anchorTop = getPageTopLeft(document.getElementById("anchorTop")).top;
+    //     var scrollTop = window.pageYOffset|| document.documentElement.scrollTop || document.body.scrollTop;
+
+    //     if (anchorTop < scrollTop) {
+    //       document.getElementById("about_fix").className = "widget tag about_fix";
+    //     } else {
+    //       document.getElementById("about_fix").className = "widget tag about_fix_none";
+    //     }
+    //   }
+    // });
+  </script>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/Indie-Maker/" onclick="ga('send', 'event', 'widget_category', 'Indie Maker');">Indie Maker</a><small>20</small></li>
+  
+    <li><a href="/categories/Shopify/" onclick="ga('send', 'event', 'widget_category', 'Shopify');">Shopify</a><small>1</small></li>
+  
+    <li><a href="/categories/Web工具/" onclick="ga('send', 'event', 'widget_category', 'Web工具');">Web工具</a><small>19</small></li>
+  
+    <li><a href="/categories/Web技术/" onclick="ga('send', 'event', 'widget_category', 'Web技术');">Web技术</a><small>51</small></li>
+  
+    <li><a href="/categories/产品/" onclick="ga('send', 'event', 'widget_category', '产品');">产品</a><small>6</small></li>
+  
+    <li><a href="/categories/区块链/" onclick="ga('send', 'event', 'widget_category', '区块链');">区块链</a><small>8</small></li>
+  
+    <li><a href="/categories/变现/" onclick="ga('send', 'event', 'widget_category', '变现');">变现</a><small>12</small></li>
+  
+    <li><a href="/categories/工具/" onclick="ga('send', 'event', 'widget_category', '工具');">工具</a><small>3</small></li>
+  
+    <li><a href="/categories/极客番茄/" onclick="ga('send', 'event', 'widget_category', '极客番茄');">极客番茄</a><small>7</small></li>
+  
+    <li><a href="/categories/流量/" onclick="ga('send', 'event', 'widget_category', '流量');">流量</a><small>3</small></li>
+  
+    <li><a href="/categories/浏览器扩展插件/" onclick="ga('send', 'event', 'widget_category', '浏览器扩展插件');">浏览器扩展插件</a><small>3</small></li>
+  
+    <li><a href="/categories/清单/" onclick="ga('send', 'event', 'widget_category', '清单');">清单</a><small>3</small></li>
+  
+    <li><a href="/categories/生活/" onclick="ga('send', 'event', 'widget_category', '生活');">生活</a><small>9</small></li>
+  
+    <li><a href="/categories/直播/" onclick="ga('send', 'event', 'widget_category', '直播');">直播</a><small>1</small></li>
+  
+    <li><a href="/categories/认知/" onclick="ga('send', 'event', 'widget_category', '认知');">认知</a><small>15</small></li>
+  
+    <li><a href="/categories/训练营/" onclick="ga('send', 'event', 'widget_category', '训练营');">训练营</a><small>1</small></li>
+  
+    <li><a href="/categories/读书/" onclick="ga('send', 'event', 'widget_category', '读书');">读书</a><small>4</small></li>
+  
+    <li><a href="/categories/课程/" onclick="ga('send', 'event', 'widget_category', '课程');">课程</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">标签</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/CSS3/">CSS3</a><small>4</small></li>
+  
+    <li><a href="/tags/Chrome/">Chrome</a><small>7</small></li>
+  
+    <li><a href="/tags/EOS/">EOS</a><small>1</small></li>
+  
+    <li><a href="/tags/ETH/">ETH</a><small>1</small></li>
+  
+    <li><a href="/tags/Facebook/">Facebook</a><small>1</small></li>
+  
+    <li><a href="/tags/Google/">Google</a><small>8</small></li>
+  
+    <li><a href="/tags/HTML5/">HTML5</a><small>15</small></li>
+  
+    <li><a href="/tags/HTTPS/">HTTPS</a><small>2</small></li>
+  
+    <li><a href="/tags/Hybrid-App/">Hybrid App</a><small>2</small></li>
+  
+    <li><a href="/tags/Indie-Maker/">Indie Maker</a><small>20</small></li>
+  
+    <li><a href="/tags/JavaScript/">JavaScript</a><small>12</small></li>
+  
+    <li><a href="/tags/Markdown/">Markdown</a><small>1</small></li>
+  
+    <li><a href="/tags/Node-js/">Node.js</a><small>2</small></li>
+  
+    <li><a href="/tags/PWA/">PWA</a><small>1</small></li>
+  
+    <li><a href="/tags/Shopify/">Shopify</a><small>1</small></li>
+  
+    <li><a href="/tags/github/">github</a><small>2</small></li>
+  
+    <li><a href="/tags/临界知识/">临界知识</a><small>1</small></li>
+  
+    <li><a href="/tags/产品/">产品</a><small>7</small></li>
+  
+    <li><a href="/tags/人工智能/">人工智能</a><small>2</small></li>
+  
+    <li><a href="/tags/健康/">健康</a><small>2</small></li>
+  
+    <li><a href="/tags/增长/">增长</a><small>7</small></li>
+  
+    <li><a href="/tags/工具/">工具</a><small>15</small></li>
+  
+    <li><a href="/tags/插件/">插件</a><small>9</small></li>
+  
+    <li><a href="/tags/方法论/">方法论</a><small>20</small></li>
+  
+    <li><a href="/tags/木匠/">木匠</a><small>2</small></li>
+  
+    <li><a href="/tags/极客番茄/">极客番茄</a><small>7</small></li>
+  
+    <li><a href="/tags/框架/">框架</a><small>6</small></li>
+  
+    <li><a href="/tags/案例/">案例</a><small>2</small></li>
+  
+    <li><a href="/tags/概念/">概念</a><small>3</small></li>
+  
+    <li><a href="/tags/比特币/">比特币</a><small>3</small></li>
+  
+    <li><a href="/tags/浏览器扩展插件/">浏览器扩展插件</a><small>3</small></li>
+  
+    <li><a href="/tags/游戏/">游戏</a><small>2</small></li>
+  
+    <li><a href="/tags/认知/">认知</a><small>7</small></li>
+  
+    <li><a href="/tags/训练营/">训练营</a><small>1</small></li>
+  
+    <li><a href="/tags/课程/">课程</a><small>3</small></li>
+  
+    <li><a href="/tags/资源/">资源</a><small>9</small></li>
+  
+    <li><a href="/tags/路线图/">路线图</a><small>2</small></li>
+  
+    <li><a href="/tags/面试题/">面试题</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  <div class="widget hot">
+  <h3 class="title">热文推荐</h3>
+  <ul class="entry">
+    <li><a href="/2017/06/01/start-small-stay-small/" title="《Start Small, Stay Small》着眼小众市场，程序员的微型创业项目指南">《Start Small, Stay Small》着眼小众市场，程序员的微型创业项目指南</a></li>
+    <li><a href="/2017/02/08/how-to-read-a-book/" title="怎样读一本书V5.0 ?(译)">怎样读一本书V5.0 ?(译)</a></li>
+    <li><a href="/2015/06/06/mobile-web-skill/" title="移动端web开发技巧">移动端web开发技巧</a></li>
+    <li><a href="/2017/12/09/gafata-online/" title="www.gafata.com上线">www.gafata.com上线</a></li>
+    <li><a href="/2017/04/19/deliberate-practice/" title="刻意练习">刻意练习</a></li>
+    <li><a href="/2016/04/27/progressive-web-app/" title="Web新技术：PWA-Progressive Web App">Web新技术：PWA-Progressive Web App</a></li>
+    <li><a href="/2017/08/16/bitcoin-mining-consensus/" title="比特币的挖矿与共识">比特币的挖矿与共识</a></li>
+  </ul>
+</div>
+
+
+  <div class="widget tag" style="width:270px;border-top: 0px red solid;line-height: 0px;">
+
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2015-2023 <a href="/2015/02/28/new/">凯凯刘</a>
+  
+  &nbsp;
+  <a href="http://www.ezindie.com/" target="_blank" title="Easy Indie">Ezindie</a>
+  <a href="http://www.qunheying.com" target="_blank" title="微信群合影" style="margin-left: 10px">微信群合影</a>
+  <a href="http://md2vid.com" target="_blank" title="Markdown转视频" style="margin-left: 10px">Markdown转视频</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="/atom.xml" class="menu_rss menu_rss_bottom" target="_blank" title="RSS订阅"></a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  Powered by <a href="http://hexo.io/">Hexo</a>
+</div>
+<div class="clearfix"></div>
+
+<!--<script>-->
+    <!--var _hmt = _hmt || [];-->
+    <!--(function() {-->
+        <!--var hm = document.createElement("script");-->
+        <!--hm.src = "//hm.baidu.com/hm.js?1e92fed8a761c1224623815e3b960447";-->
+        <!--var s = document.getElementsByTagName("script")[0];-->
+        <!--s.parentNode.insertBefore(hm, s);-->
+    <!--})();-->
+<!--</script>-->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-85358197-2', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+
+</footer>
+  <!--<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>-->
+<!--<script src="<- config.root >js/jquery.imagesloaded.min.js"></script>-->
+<!--<script src="<- config.root >js/gallery.js"></script>-->
+
+
+
+
+</body>
+</html>

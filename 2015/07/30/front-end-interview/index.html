@@ -1,0 +1,1361 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>web前端面试题集锦 - 凯凯刘</title>
+  <meta name="author" content="凯凯刘">
+  
+  <meta name="description" content="HTML&amp;CSS：  对Web标准的理解、浏览器内核差异、兼容性、hack、CSS基本功：布局、盒子模型、选择器优先级及使用、HTML5、CSS3、移动端适应。">
+  
+  <meta name="keywords" content="web前端面试题,前端笔试题,前端面试题2016,腾讯前端面试题,前端开发笔试题,js笔试题,阿里前端面试题,html面试题,angularjs面试题,star面试法,jquery面试题">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="web前端面试题集锦"/>
+  <meta property="og:site_name" content="凯凯刘"/>
+
+  
+    <meta property="og:image" content="/img/300L.png"/>
+  
+
+  <meta name="google-site-verification" content="iIzqxT8FAfRGM8f4sr97VvjhDsk3QJQ-a2LMdn0DtXU" />
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="alternate" href="/atom.xml" title="凯凯刘" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/styleNew.css?x=6" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/gitment.css">
+  <script src="/js/qrcode.min.js"></script>
+
+  <!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+  <!--<script>-->
+      <!--(adsbygoogle = window.adsbygoogle || []).push({-->
+          <!--google_ad_client: "ca-pub-3023100525130189",-->
+          <!--enable_page_level_ads: true-->
+      <!--});-->
+  <!--</script>-->
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+    <h1><a href="/">凯凯刘</a></h1>
+    <h2><a href="/">
+            
+            Indie Maker、认知、技术、变现
+            
+        </a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+    <ul>
+        
+        <li><a href="/" onclick="ga('send', 'event', 'nav_top', '首页');">首页</a></li>
+        
+        <li><a href="/categories/Web技术/" onclick="ga('send', 'event', 'nav_top', 'Web技术');">Web技术</a></li>
+        
+        <li><a href="/categories/浏览器扩展插件/" onclick="ga('send', 'event', 'nav_top', '浏览器扩展插件');">浏览器扩展插件</a></li>
+        
+        <li><a href="/categories/区块链/" onclick="ga('send', 'event', 'nav_top', '区块链');">区块链</a></li>
+        
+        <li><a href="/categories/%E8%AE%A4%E7%9F%A5/" onclick="ga('send', 'event', 'nav_top', '认知');">认知</a></li>
+        
+        <li><a href="/categories/%E8%AF%BB%E4%B9%A6/" onclick="ga('send', 'event', 'nav_top', '读书');">读书</a></li>
+        
+        <li><a href="/categories/%E6%B5%81%E9%87%8F/" onclick="ga('send', 'event', 'nav_top', '流量');">流量</a></li>
+        
+        <li><a href="/categories/%E5%8F%98%E7%8E%B0/" onclick="ga('send', 'event', 'nav_top', '变现');">变现</a></li>
+        
+        <li><a href="/categories/%E7%94%9F%E6%B4%BB/" onclick="ga('send', 'event', 'nav_top', '生活');">生活</a></li>
+        
+        <li><a href="/2015/03/01/link-friends/" onclick="ga('send', 'event', 'nav_top', '友链');">友链</a></li>
+        
+        <li><a href="/2015/02/28/new/" onclick="ga('send', 'event', 'nav_top', '关于');">关于</a></li>
+        
+        <li><a href="/atom.xml" class="menu_rss" target="_blank" title="RSS订阅"></a></li>
+    </ul>
+    <div class="clearfix"></div>
+    <!--<div class="nav_zhibo" style="position: absolute;top : 120px;left: 40px;color: blue;">-->
+        <!--<a style="color: blue;cursor: pointer;" href="https://m.qlchat.com/topic/360000033244498.htm?preview=Y&intoPreview=Y"-->
+           <!--onclick="ga('send', 'event', 'nav_zhibo', 'qianliao');"-->
+           <!--target="_blank">我的千聊直播(周三)：比特币的挖矿与共识-->
+        <!--</a>-->
+    <!--</div>-->
+
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft">
+
+      <div class="ads_banner">
+        <!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+        <!-- banner -->
+        <!--<ins class="adsbygoogle"-->
+             <!--style="display:block"-->
+             <!--data-ad-client="ca-pub-4018032316880050"-->
+             <!--data-ad-slot="3550377487"-->
+             <!--data-ad-format="auto"></ins>-->
+        <!--<script>-->
+          <!--(adsbygoogle = window.adsbygoogle || []).push({});-->
+        <!--</script>-->
+
+        <!-- <div>
+          <a href="https://t.zsxq.com/ybIuBaA" target="_blank">
+            <img style="width: 100%" src="http://qiniu.gafata.com/2019-06-11-indiemaker_dlbx_1800x180.jpg?imageView2/2/w/1800"/>
+          </a>
+        </div> -->
+
+        <div class="banner-top" style="background-color: #032535;color:white;padding: 15px;font-size: 15px;">
+          「每日看板-Tabhub」浏览器新标签页，独立变现、新闻、日历、待办、RSS、股票等丰富组件
+          <a href="https://www.tabhub.app/?utm_source=blog" target="_blank" style="word-break: break-all;background-color:#c2007c;margin-left:10px;display:inline-block;width: 70px;padding:4px 4px;border-radius: 4px;color:white;text-align: center;" 
+          onclick="ga('send', 'event', 'ads', 'tabhub');" >免费使用</a>
+          <!--星云开发者开放注册啦，提交一个DApp即可获得100个NAS(大约7000元）,更有周、月度大额奖金等你拿！开发者今年最大的机会, 会JavaScript即可。<br>-->
+          <!--注册链接：<a target="_blank" style="word-break: break-all;" onclick="ga('send', 'event', 'ads', 'nebulas');" href="https://incentive.nebulas.io/cn/signup.html?invite=HjuhT">https://incentive.nebulas.io/cn/signup.html?invite=HjuhT</a>-->
+          <!--<span style="color: red">阿里云双11红包来啦，拼购1折起, 官方推荐1折团！</span><a href="https://m.aliyun.com/act/team1111/#/share?params=N.qYnY8sp2fK.kkb39ote" target="_blank" style="" onclick="ga('send', 'event', 'ads', 'aliyun');">马上参团>></a>-->
+
+        </div>
+      </div>
+
+      <div id="wrapper">
+    
+    <div style="display: none">
+        <img src="/img/300L.png" />
+    </div>
+
+
+
+<article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title">web前端面试题集锦</h1>
+  
+
+      
+        <div class="icon"></div>
+        <div class="article_head_extend">
+          <time datetime="2015-07-30T04:06:35.000Z"><a href="/2015/07/30/front-end-interview/">Jul 30 2015</a>
+            
+          </time>
+          <div class="qrcode_con">
+            <div class="qrcode_text">扫描二维码</div>
+            <div id="Thu Jul 30 2015 12:06:35 GMT+0800 (China Standard Time)" class="qrcode_img"></div>
+            <script>
+              var qrcode = new QRCode(document.getElementById("Thu Jul 30 2015 12:06:35 GMT+0800 (China Standard Time)"), {
+                width : 100,
+                height : 100
+              });
+              qrcode.makeCode("http://liujinkai.com//2015/07/30/front-end-interview/?utm_medium=blog&utm_source=qrcode");
+            </script>
+          </div>
+        </div>
+
+      
+    </header>
+    <div></div>
+    <div class="entry">
+      
+        <h2 id="前端开发面试知识点大纲："><a href="#前端开发面试知识点大纲：" class="headerlink" title="前端开发面试知识点大纲："></a>前端开发面试知识点大纲：</h2><pre><code>HTML&amp;CSS：  对Web标准的理解、浏览器内核差异、兼容性、hack、CSS基本功：布局、盒子模型、选择器优先级及使用、HTML5、CSS3、移动端适应。
+
+JavaScript：   数据类型、面向对象、继承、闭包、插件、作用域、跨域、原型链、模块化、自定义事件、内存泄漏、事件机制、异步装载回调、模板引擎、Nodejs、JSON、ajax等。
+
+其他：  HTTP、安全、正则、优化、重构、响应式、移动端、团队协作、可维护、SEO、UED、架构、职业生涯
+</code></pre><a id="more"></a>
+<h2 id="1-请你谈谈Cookie的弊端"><a href="#1-请你谈谈Cookie的弊端" class="headerlink" title="1.请你谈谈Cookie的弊端"></a>1.请你谈谈Cookie的弊端</h2><p><code>cookie</code>虽然在持久保存客户端数据提供了方便，分担了服务器存储的负担，但还是有很多局限性的。<br>第一：每个特定的域名下最多生成20个<code>cookie</code></p>
+<pre><code>1.IE6或更低版本最多20个cookie
+2.IE7和之后的版本最后可以有50个cookie。
+3.Firefox最多50个cookie
+4.chrome和Safari没有做硬性限制
+</code></pre><p><code>IE</code>和<code>Opera</code> 会清理近期最少使用的<code>cookie</code>，<code>Firefox</code>会随机清理<code>cookie</code>。</p>
+<p><code>cookie</code>的最大大约为<code>4096</code>字节，为了兼容性，一般不能超过<code>4095</code>字节。</p>
+<p>IE 提供了一种存储可以持久化用户数据，叫做<code>uerData</code>，从<code>IE5.0</code>就开始支持。每个数据最多128K，每个域名下最多1M。这个持久化数据放在缓存中，如果缓存没有清理，那么会一直存在。</p>
+<p>###优点：极高的扩展性和可用性</p>
+<pre><code>1.通过良好的编程，控制保存在cookie中的session对象的大小。
+2.通过加密和安全传输技术（SSL），减少cookie被破解的可能性。
+3.只在cookie中存放不敏感数据，即使被盗也不会有重大损失。
+4.控制cookie的生命期，使之不会永远有效。偷盗者很可能拿到一个过期的cookie。
+</code></pre><p>###缺点：</p>
+<pre><code>1.`Cookie`数量和长度的限制。每个domain最多只能有20条cookie，每个cookie长度不能超过4KB，否则会被截掉。
+
+2.安全性问题。如果cookie被人拦截了，那人就可以取得所有的session信息。即使加密也与事无补，因为拦截者并不需要知道cookie的意义，他只要原样转发cookie就可以达到目的了。
+
+3.有些状态不可能保存在客户端。例如，为了防止重复提交表单，我们需要在服务器端保存一个计数器。如果我们把这个计数器保存在客户端，那么它起不到任何作用。
+</code></pre><h2 id="2-浏览器本地存储"><a href="#2-浏览器本地存储" class="headerlink" title="2.浏览器本地存储"></a>2.浏览器本地存储</h2><p>在较高版本的浏览器中，<code>js</code>提供了<code>sessionStorage</code>和<code>globalStorage</code>。在<code>HTML5</code>中提供了<code>localStorage</code>来取代<code>globalStorage</code>。</p>
+<p><code>html5</code>中的<code>Web Storage</code>包括了两种存储方式：<code>sessionStorage</code>和<code>localStorage</code>。</p>
+<p><code>sessionStorage</code>用于本地存储一个会话（session）中的数据，这些数据只有在同一个会话中的页面才能访问并且当会话结束后数据也随之销毁。因此<code>sessionStorage</code>不是一种持久化的本地存储，仅仅是会话级别的存储。</p>
+<p>而<code>localStorage</code>用于持久化的本地存储，除非主动删除数据，否则数据是永远不会过期的。</p>
+<h2 id="3-web-storage和cookie的区别"><a href="#3-web-storage和cookie的区别" class="headerlink" title="3.web storage和cookie的区别"></a>3.web storage和cookie的区别</h2><p><code>Web Storage</code>的概念和<code>cookie</code>相似，区别是它是为了更大容量存储设计的。<code>Cookie</code>的大小是受限的，并且每次你请求一个新的页面的时候<code>Cookie</code>都会被发送过去，这样无形中浪费了带宽，另外<code>cookie</code>还需要指定作用域，不可以跨域调用。</p>
+<p>除此之外，<code>Web Storage</code>拥有<code>setItem,getItem,removeItem,clear</code>等方法，不像<code>cookie</code>需要前端开发者自己封装<code>setCookie，getCookie</code>。</p>
+<p>但是<code>Cookie</code>也是不可以或缺的：<code>Cookie</code>的作用是与服务器进行交互，作为<code>HTTP</code>规范的一部分而存在 ，而<code>Web Storage</code>仅仅是为了在本地“存储”数据而生</p>
+<p>浏览器的支持除了<code>IE７</code>及以下不支持外，其他标准浏览器都完全支持(ie及FF需在web服务器里运行)，值得一提的是IE总是办好事，例如IE7、IE6中的<code>UserData</code>其实就是<code>javascript</code>本地存储的解决方案。通过简单的代码封装可以统一到所有的浏览器都支持<code>web storage</code>。</p>
+<p><code>localStorage</code>和<code>sessionStorage</code>都具有相同的操作方法，例如<code>setItem、getItem</code>和<code>removeItem</code>等</p>
+<h2 id="4-CSS-相关问题"><a href="#4-CSS-相关问题" class="headerlink" title="4.CSS 相关问题"></a>4.CSS 相关问题</h2><p>###display:none和visibility:hidden的区别？</p>
+<pre><code>display:none  隐藏对应的元素，在文档布局中不再给它分配空间，它各边的元素会合拢，
+就当他从来不存在。
+
+visibility:hidden  隐藏对应的元素，但是在文档布局中仍保留原来的空间。
+</code></pre><p>###CSS中 link 和@import 的区别是？</p>
+<pre><code>A：(1) link属于HTML标签，而@import是CSS提供的; (2) 页面被加载的时，link会同时被加载，而@import引用的CSS会等到页面被加载完再加载;(3) import只在IE5以上才能识别，而link是HTML标签，无兼容问题; (4) link方式的样式的权重 高于@import的权重.
+</code></pre><p>###position的absolute与fixed共同点与不同点</p>
+<pre><code>A：共同点：
+1.改变行内元素的呈现方式，display被置为block；2.让元素脱离普通流，不占据空间；3.默认会覆盖到非定位元素上
+
+B不同点：
+absolute的”根元素“是可以设置的，而fixed的”根元素“固定为浏览器窗口。当你滚动网页，fixed元素与浏览器窗口之间的距离是不变的。
+</code></pre><p>###介绍一下CSS的盒子模型？</p>
+<pre><code>1）有两种， IE 盒子模型、标准 W3C 盒子模型；IE的content部分包含了 border 和 pading;
+
+2）盒模型： 内容(content)、填充(padding)、边界(margin)、 边框(border).
+</code></pre><p> <img src="http://qiniu.gafata.com/blog_csshezimoxing.png" alt="CSS盒子模型"></p>
+<p>###CSS 选择符有哪些？哪些属性可以继承？优先级算法如何计算？ CSS3新增伪类有那些？</p>
+<pre><code>   *   1.id选择器（ # myid）
+        2.类选择器（.myclassname）
+        3.标签选择器（div, h1, p）
+        4.相邻选择器（h1 + p）
+        5.子选择器（ul &gt; li）
+        6.后代选择器（li a）
+        7.通配符选择器（ * ）
+        8.属性选择器（a[rel = &quot;external&quot;]）
+        9.伪类选择器（a: hover, li:nth-child）
+
+    *   可继承的样式： font-size font-family color, text-indent;
+
+    *   不可继承的样式：border padding margin width height ;
+
+    *   优先级就近原则，同权重情况下样式定义最近者为准;
+
+    *   载入样式以最后载入的定位为准;
+
+优先级为:
+
+
+   !important &gt;  id &gt; class &gt; tag
+
+   important 比 内联优先级高,但内联比 id 要高
+
+CSS3新增伪类举例：
+
+
+p:first-of-type 选择属于其父元素的首个 &lt;p&gt; 元素的每个 &lt;p&gt; 元素。
+p:last-of-type  选择属于其父元素的最后 &lt;p&gt; 元素的每个 &lt;p&gt; 元素。
+p:only-of-type  选择属于其父元素唯一的 &lt;p&gt; 元素的每个 &lt;p&gt; 元素。
+p:only-child    选择属于其父元素的唯一子元素的每个 &lt;p&gt; 元素。
+p:nth-child(2)  选择属于其父元素的第二个子元素的每个 &lt;p&gt; 元素。
+:enabled  :disabled 控制表单控件的禁用状态。
+:checked        单选框或复选框被选中。
+</code></pre><p>###列出display的值，说明他们的作用。position的值， relative和absolute分别是相对于谁进行定位的？</p>
+<pre><code>1.
+  block 象块类型元素一样显示。
+  inline 缺省值。象行内元素类型一样显示。
+  inline-block 象行内元素一样显示，但其内容象块类型元素一样显示。
+  list-item 象块类型元素一样显示，并添加样式列表标记。
+
+  2.
+  *absolute
+        生成绝对定位的元素，相对于 static 定位以外的第一个祖先元素进行定位。
+
+  *fixed （老IE不支持）
+        生成绝对定位的元素，相对于浏览器窗口进行定位。
+
+  *relative
+        生成相对定位的元素，相对于其在普通流中的位置进行定位。
+
+  * static  默认值。没有定位，元素出现在正常的流中
+  *（忽略 top, bottom, left, right z-index 声明）。
+
+  * inherit 规定从父元素继承 position 属性的值。
+</code></pre><p>###CSS3有哪些新特性？</p>
+<pre><code>CSS3实现圆角（border-radius），阴影（box-shadow），
+对文字加特效（text-shadow、），线性渐变（gradient），旋转（transform）
+transform:rotate(9deg) scale(0.85,0.90) translate(0px,-30px) skew(-9deg,0deg);//旋转,缩放,定位,倾斜
+增加了更多的CSS选择器  多背景 rgba
+在CSS3中唯一引入的伪元素是::selection.
+媒体查询，多栏布局
+border-image
+</code></pre><p>###为什么要初始化CSS样式。</p>
+<pre><code>    因为浏览器的兼容问题，不同浏览器对有些标签的默认值是不同的，如果没对CSS初始化往往会出现浏览器之间的页面显示差异。
+
+    当然，初始化样式会对SEO有一定的影响，但鱼和熊掌不可兼得，但力求影响最小的情况下初始化。
+
+*最简单的初始化方法就是： * {padding: 0; margin: 0;} （不建议）
+
+    淘宝的样式初始化：
+    body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; }
+    body, button, input, select, textarea { font:12px/1.5tahoma, arial, \5b8b\4f53; }
+    h1, h2, h3, h4, h5, h6{ font-size:100%; }
+    address, cite, dfn, em, var { font-style:normal; }
+    code, kbd, pre, samp { font-family:couriernew, courier, monospace; }
+    small{ font-size:12px; }
+    ul, ol { list-style:none; }
+    a { text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    sup { vertical-align:text-top; }
+    sub{ vertical-align:text-bottom; }
+    legend { color:#000; }
+    fieldset, img { border:0; }
+    button, input, select, textarea { font-size:100%; }
+    table { border-collapse:collapse; border-spacing:0; }
+</code></pre><p>###对BFC规范的理解？<br>          BFC，块级格式化上下文，一个创建了新的BFC的盒子是独立布局的，盒子里面的子元素的样式不会影响到外面的元素。在同一个BFC中的两个毗邻的块级盒在垂直方向（和布局方向有关系）的margin会发生折叠。<br>        （W3C CSS 2.1 规范中的一个概念，它决定了元素如何对其内容进行布局，以及与其他元素的关系和相互作用。）</p>
+<p>###解释下 CSS sprites，以及你要如何在页面或网站中使用它。</p>
+<pre><code>CSS Sprites其实就是把网页中一些背景图片整合到一张图片文件中，再利用CSS的“background-image”，“background- repeat”，“background-position”的组合进行背景定位，background-position可以用数字能精确的定位出背景图片的位置。这样可以减少很多图片请求的开销，因为请求耗时比较长；请求虽然可以并发，但是也有限制，一般浏览器都是6个。对于未来而言，就不需要这样做了，因为有了`http2`。
+</code></pre><h2 id="5-html部分"><a href="#5-html部分" class="headerlink" title="5.html部分"></a>5.html部分</h2><p>###说说你对语义化的理解？</p>
+<pre><code>1，去掉或者丢失样式的时候能够让页面呈现出清晰的结构
+2，有利于SEO：和搜索引擎建立良好沟通，有助于爬虫抓取更多的有效信息：爬虫依赖于标签来确定上下文和各个关键字的权重；
+3，方便其他设备解析（如屏幕阅读器、盲人阅读器、移动设备）以意义的方式来渲染网页；
+4，便于团队开发和维护，语义化更具可读性，是下一步吧网页的重要动向，遵循W3C标准的团队都遵循这个标准，可以减少差异化。
+</code></pre><p>###Doctype作用? 严格模式与混杂模式如何区分？它们有何意义?</p>
+<pre><code>（1）、&lt;!DOCTYPE&gt; 声明位于文档中的最前面，处于 &lt;html&gt; 标签之前。告知浏览器以何种模式来渲染文档。
+
+（2）、严格模式的排版和 JS 运作模式是  以该浏览器支持的最高标准运行。
+
+（3）、在混杂模式中，页面以宽松的向后兼容的方式显示。模拟老式浏览器的行为以防止站点无法工作。
+
+（4）、DOCTYPE不存在或格式不正确会导致文档以混杂模式呈现。
+</code></pre><p>###你知道多少种Doctype文档类型？</p>
+<pre><code> 该标签可声明三种 DTD 类型，分别表示严格版本、过渡版本以及基于框架的 HTML 文档。
+ HTML 4.01 规定了三种文档类型：Strict、Transitional 以及 Frameset。
+ XHTML 1.0 规定了三种 XML 文档类型：Strict、Transitional 以及 Frameset。
+Standards （标准）模式（也就是严格呈现模式）用于呈现遵循最新标准的网页，而 Quirks
+ （包容）模式（也就是松散呈现模式或者兼容模式）用于呈现为传统浏览器而设计的网页。
+</code></pre><h2 id="6-HTML与XHTML——二者有什么区别"><a href="#6-HTML与XHTML——二者有什么区别" class="headerlink" title="6.HTML与XHTML——二者有什么区别"></a>6.HTML与XHTML——二者有什么区别</h2><pre><code>区别：
+1.所有的标记都必须要有一个相应的结束标记
+2.所有标签的元素和属性的名字都必须使用小写
+3.所有的XML标记都必须合理嵌套
+4.所有的属性必须用引号&quot;&quot;括起来
+5.把所有&lt;和&amp;特殊符号用编码表示
+6.给所有属性赋一个值
+7.不要在注释内容中使“--”
+8.图片必须有说明文字
+</code></pre><h2 id="7-常见兼容性问题？"><a href="#7-常见兼容性问题？" class="headerlink" title="7.常见兼容性问题？"></a>7.常见兼容性问题？</h2><pre><code>* png24位的图片在iE6浏览器上出现背景，解决方案是做成PNG8.也可以引用一段脚本处理.
+
+* 浏览器默认的margin和padding不同。解决方案是加一个全局的*{margin:0;padding:0;}来统一。
+
+* IE6双边距bug:块属性标签float后，又有横行的margin情况下，在ie6显示margin比设置的大。
+
+* 浮动ie产生的双倍距离（IE6双边距问题：在IE6下，如果对元素设置了浮动，同时又设置了margin-left或margin-right，margin值会加倍。）
+  #box{ float:left; width:10px; margin:0 0 0 100px;}
+
+ 这种情况之下IE会产生20px的距离，解决方案是在float的标签样式控制中加入 ——_display:inline;将其转化为行内属性。(_这个符号只有ie6会识别)
+
+*  渐进识别的方式，从总体中逐渐排除局部。
+
+  首先，巧妙的使用“\9”这一标记，将IE游览器从所有情况中分离出来。
+  接着，再次使用“+”将IE8和IE7、IE6分离开来，这样IE8已经独立识别。
+
+  css
+      .bb{
+       background-color:#f1ee18;/*所有识别*/
+      .background-color:#00deff\9; /*IE6、7、8识别*/
+      +background-color:#a200ff;/*IE6、7识别*/
+      _background-color:#1e0bd1;/*IE6识别*/
+      }
+
+*  IE下,可以使用获取常规属性的方法来获取自定义属性,
+   也可以使用getAttribute()获取自定义属性;
+   Firefox下,只能使用getAttribute()获取自定义属性.
+   解决方法:统一通过getAttribute()获取自定义属性.
+
+* IE下,event对象有x,y属性,但是没有pageX,pageY属性;
+  Firefox下,event对象有pageX,pageY属性,但是没有x,y属性.
+
+* 解决方法：（条件注释）缺点是在IE浏览器下可能会增加额外的HTTP请求数。
+
+* Chrome 中文界面下默认会将小于 12px 的文本强制按照 12px 显示,
+  可通过加入 CSS 属性 -webkit-text-size-adjust: none; 解决.
+
+* 超链接访问过后hover样式就不出现了 被点击访问过的超链接样式不在具有hover和active了解决方法是改变CSS属性的排列顺序:
+L-V-H-A :  a:link {} a:visited {} a:hover {} a:active {}
+
+* 怪异模式问题：漏写DTD声明，Firefox仍然会按照标准模式来解析网页，但在IE中会触发怪异模式。为避免怪异模式给我们带来不必要的麻烦，最好养成书写DTD声明的好习惯。现在可以使用[html5](http://www.w3.org/TR/html5/single-page.html)推荐的写法：`&lt;doctype html&gt;`
+
+* 上下margin重合问题
+ie和ff都存在，相邻的两个div的margin-left和margin-right不会重合，但是margin-top和margin-bottom却会发生重合。
+解决方法，养成良好的代码编写习惯，同时采用margin-top或者同时采用margin-bottom。
+* ie6对png图片格式支持不好(引用一段脚本处理)
+</code></pre><p>###解释下浮动和它的工作原理？清除浮动的技巧</p>
+<pre><code>浮动元素脱离文档流，不占据空间。浮动元素碰到包含它的边框或者浮动元素的边框停留。
+
+1.使用空标签清除浮动。
+   这种方法是在所有浮动标签后面添加一个空标签 定义css clear:both. 弊端就是增加了无意义标签。
+2.使用overflow。
+   给包含浮动元素的父标签添加css属性 overflow:auto; zoom:1; zoom:1用于兼容IE6。
+3.使用after伪对象清除浮动。
+   该方法只适用于非IE浏览器。具体写法可参照以下示例。使用中需注意以下几点。一、该方法中必须为需要清除浮动元素的伪对象中设置 height:0，否则该元素会比实际高出若干像素；
+</code></pre><p>###浮动元素引起的问题和解决办法？</p>
+<pre><code>浮动元素引起的问题：
+（1）父元素的高度无法被撑开，影响与父元素同级的元素
+（2）与浮动元素同级的非浮动元素会跟随其后
+（3）若非第一个元素浮动，则该元素之前的元素也需要浮动，否则会影响页面显示的结构
+</code></pre><p>解决方法：<br>使用<code>CSS</code>中的<code>clear:both</code>;属性来清除元素的浮动可解决2、3问题，对于问题1，添加如下样式，给父元素添加<code>clearfix</code>样式：</p>
+<pre><code>.clearfix:after{content: &quot;.&quot;;display: block;height: 0;clear: both;visibility: hidden;}
+.clearfix{display: inline-block;} /* for IE/Mac */
+</code></pre><p><strong>清除浮动的几种方法：</strong></p>
+<pre><code>1，额外标签法，&lt;div style=&quot;clear:both;&quot;&gt;&lt;/div&gt;（缺点：不过这个办法会增加额外的标签使HTML结构看起来不够简洁。）
+2，使用after伪类
+
+#parent:after{
+    content:&quot;.&quot;;
+    height:0;
+    visibility:hidden;
+    display:block;
+    clear:both;
+    }
+
+3,浮动外部元素
+4,设置`overflow`为`hidden`或者auto
+</code></pre><p>###IE 8以下版本的浏览器中的盒模型有什么不同</p>
+<pre><code>IE8以下浏览器的盒模型中定义的元素的宽高不包括内边距和边框
+</code></pre><p>###DOM操作——怎样添加、移除、移动、复制、创建和查找节点。</p>
+<pre><code>（1）创建新节点
+
+      createDocumentFragment()    //创建一个DOM片段
+
+      createElement()   //创建一个具体的元素
+
+      createTextNode()   //创建一个文本节点
+
+（2）添加、移除、替换、插入
+
+      appendChild()
+
+      removeChild()
+
+      replaceChild()
+
+      insertBefore() //在已有的子节点前插入一个新的子节点
+
+（3）查找
+
+      getElementsByTagName()    //通过标签名称
+
+      getElementsByName()    //通过元素的Name属性的值(IE容错能力较强，会得到一个数组，其中包括id等于name值的)
+
+      getElementById()    //通过元素Id，唯一性
+</code></pre><p>###html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分 HTML 和 HTML5？</p>
+<pre><code>* HTML5 现在已经不是 SGML 的子集，主要是关于图像，位置，存储，多任务等功能的增加。
+
+* 拖拽释放(Drag and drop) API
+  语义化更好的内容标签（header,nav,footer,aside,article,section）
+  音频、视频API(audio,video)
+  画布(Canvas) API
+  地理(Geolocation) API
+  本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失；
+  sessionStorage 的数据在浏览器关闭后自动删除
+
+  表单控件，calendar、date、time、email、url、search
+  新的技术webworker, websocket, Geolocation
+
+* 移除的元素
+
+纯表现的元素：basefont，big，center，font, s，strike，tt，u；
+
+对可用性产生负面影响的元素：frame，frameset，noframes；
+
+支持HTML5新标签：
+
+* IE8/IE7/IE6支持通过document.createElement方法产生的标签，
+  可以利用这一特性让这些浏览器支持HTML5新标签，
+
+  浏览器支持新标签后，还需要添加标签默认的样式：
+
+* 当然最好的方式是直接使用成熟的框架、使用最多的是html5shim框架
+   &lt;!--[if lt IE 9]&gt;
+   &lt;script&gt; src=&quot;http://html5shim.googlecode.com/svn/trunk/html5.js&quot;&lt;/script&gt;
+   &lt;![endif]--&gt;
+如何区分： DOCTYPE声明\新增的结构元素\功能元素
+</code></pre><h2 id="8-iframe的优缺点？"><a href="#8-iframe的优缺点？" class="headerlink" title="8.iframe的优缺点？"></a>8.iframe的优缺点？</h2><pre><code>1.&lt;iframe&gt;优点：
+
+    解决加载缓慢的第三方内容如图标和广告等的加载问题
+    Security sandbox
+    并行加载脚本
+
+2.&lt;iframe&gt;的缺点：
+
+
+    *iframe会阻塞主页面的Onload事件；
+
+    *即时内容为空，加载也需要时间
+    *没有语意
+</code></pre><h2 id="9-如何实现浏览器内多个标签页之间的通信"><a href="#9-如何实现浏览器内多个标签页之间的通信" class="headerlink" title="9.如何实现浏览器内多个标签页之间的通信?"></a>9.如何实现浏览器内多个标签页之间的通信?</h2><pre><code>调用localstorge、cookies等本地存储方式
+</code></pre><h2 id="10-webSocket如何兼容低浏览器？"><a href="#10-webSocket如何兼容低浏览器？" class="headerlink" title="10.webSocket如何兼容低浏览器？"></a>10.webSocket如何兼容低浏览器？</h2><pre><code>Adobe Flash Socket 、 ActiveX HTMLFile (IE) 、 基于 multipart 编码发送 XHR 、 基于长轮询的 XHR
+</code></pre><h2 id="11-线程与进程的区别"><a href="#11-线程与进程的区别" class="headerlink" title="11.线程与进程的区别"></a>11.线程与进程的区别</h2><pre><code>一个程序至少有一个进程,一个进程至少有一个线程.
+线程的划分尺度小于进程，使得多线程程序的并发性高。
+另外，进程在执行过程中拥有独立的内存单元，而多个线程共享内存，从而极大地提高了程序的运行效率。
+线程在执行过程中与进程还是有区别的。每个独立的线程有一个程序运行的入口、顺序执行序列和程序的出口。但是线程不能够独立执行，必须依存在应用程序中，由应用程序提供多个线程执行控制。
+从逻辑角度来看，多线程的意义在于一个应用程序中，有多个执行部分可以同时执行。但操作系统并没有将多个线程看做多个独立的应用，来实现进程的调度和管理以及资源分配。这就是进程和线程的重要区别。
+</code></pre><h2 id="12-你如何对网站的文件和资源进行优化？"><a href="#12-你如何对网站的文件和资源进行优化？" class="headerlink" title="12.你如何对网站的文件和资源进行优化？"></a>12.你如何对网站的文件和资源进行优化？</h2><pre><code>期待的解决方案包括：
+ 文件合并
+ 文件最小化/文件压缩
+ 使用 CDN 托管
+ 缓存的使用（多个域名来提供缓存）
+ 其他
+</code></pre><h2 id="13-请说出三种减少页面加载时间的方法。"><a href="#13-请说出三种减少页面加载时间的方法。" class="headerlink" title="13.请说出三种减少页面加载时间的方法。"></a>13.请说出三种减少页面加载时间的方法。</h2><pre><code> 1.优化图片
+ 2.图像格式的选择（GIF：提供的颜色较少，可用在一些对颜色要求不高的地方）
+ 3.优化CSS（压缩合并css，如margin-top,margin-left...)
+ 4.网址后加斜杠（如www.campr.com/目录，会判断这个“目录是什么文件类型，或者是目录。）
+ 5.标明高度和宽度（如果浏览器没有找到这两个参数，它需要一边下载图片一边计算大小，如果图片很多，浏览器需要不断地调整页面。这不但影响速度，也影响浏览体验。
+当浏览器知道了高度和宽度参数后，即使图片暂时无法显示，页面上也会腾出图片的空位，然后继续加载后面的内容。从而加载时间快了，浏览体验也更好了。）
+
+6.减少http请求（合并文件，合并图片）。
+</code></pre><h2 id="14-你都使用哪些工具来测试代码的性能？"><a href="#14-你都使用哪些工具来测试代码的性能？" class="headerlink" title="14.你都使用哪些工具来测试代码的性能？"></a>14.你都使用哪些工具来测试代码的性能？</h2><pre><code>Profiler, JSPerf（http://jsperf.com/nexttick-vs-setzerotimeout-vs-settimeout）, Dromaeo
+</code></pre><h2 id="15-什么是-FOUC（无样式内容闪烁）？你如何来避免-FOUC？"><a href="#15-什么是-FOUC（无样式内容闪烁）？你如何来避免-FOUC？" class="headerlink" title="15.什么是 FOUC（无样式内容闪烁）？你如何来避免 FOUC？"></a>15.什么是 FOUC（无样式内容闪烁）？你如何来避免 FOUC？</h2><pre><code> FOUC - Flash Of Unstyled Content 文档样式闪烁
+ &lt;style type=&quot;text/css&quot; media=&quot;all&quot;&gt;@import &quot;../fouc.css&quot;;&lt;/style&gt;
+而引用CSS文件的@import就是造成这个问题的罪魁祸首。IE会先加载整个HTML文档的DOM，然后再去导入外部的CSS文件，因此，在页面DOM加载完成到CSS导入完成中间会有一段时间页面上的内容是没有样式的，这段时间的长短跟网速，电脑速度都有关系。
+ 解决方法简单的出奇，只要在&lt;head&gt;之间加入一个&lt;link&gt;或者&lt;script&gt;元素就可以了。
+</code></pre><h2 id="16-null和undefined的区别？"><a href="#16-null和undefined的区别？" class="headerlink" title="16.null和undefined的区别？"></a>16.null和undefined的区别？</h2><p><code>null</code>是一个表示”无”的对象，转为数值时为0；<code>undefined</code>是一个表示”无”的原始值，转为数值时为<code>NaN</code>。</p>
+<p>当声明的变量还未被初始化时，变量的默认值为<code>undefined</code>。<br><code>null</code>用来表示尚未存在的对象，常用来表示函数企图返回一个不存在的对象。</p>
+<p><code>undefined</code>表示”缺少值”，就是此处应该有一个值，但是还没有定义。典型用法是：</p>
+<pre><code>（1）变量被声明了，但没有赋值时，就等于undefined。
+
+（2) 调用函数时，应该提供的参数没有提供，该参数等于undefined。
+
+（3）对象没有赋值的属性，该属性的值为undefined。
+
+（4）函数没有返回值时，默认返回undefined。
+</code></pre><p><code>null</code>表示”没有对象”，即该处不应该有值。典型用法是：</p>
+<pre><code>（1） 作为函数的参数，表示该函数的参数不是对象。
+
+（2） 作为对象原型链的终点。
+</code></pre><h2 id="17-new操作符具体干了什么呢"><a href="#17-new操作符具体干了什么呢" class="headerlink" title="17.new操作符具体干了什么呢?"></a>17.new操作符具体干了什么呢?</h2><pre><code>   1、创建一个空对象，并且 this 变量引用该对象，同时还继承了该函数的原型。
+   2、属性和方法被加入到 this 引用的对象中。
+   3、新创建的对象由 this 所引用，并且最后隐式的返回 this 。
+
+var obj  = {};
+obj.__proto__ = Base.prototype;
+Base.call(obj);
+</code></pre><h2 id="18-JSON-的了解？"><a href="#18-JSON-的了解？" class="headerlink" title="18.JSON 的了解？"></a>18.JSON 的了解？</h2><pre><code>JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式。
+它是基于JavaScript的一个子集。数据格式简单, 易于读写, 占用带宽小
+{&#39;age&#39;:&#39;12&#39;, &#39;name&#39;:&#39;back&#39;}
+</code></pre><h2 id="19-js延迟加载的方式有哪些？"><a href="#19-js延迟加载的方式有哪些？" class="headerlink" title="19.js延迟加载的方式有哪些？"></a>19.js延迟加载的方式有哪些？</h2><pre><code>defer和async、动态创建DOM方式（创建script，插入到DOM中，加载完毕后callBack）、按需异步载入js
+</code></pre><h2 id="20-如何解决跨域问题"><a href="#20-如何解决跨域问题" class="headerlink" title="20.如何解决跨域问题?"></a>20.如何解决跨域问题?</h2><pre><code>    jsonp、 document.domain+iframe、window.name、window.postMessage、服务器上设置代理页面
+
+jsonp的原理是动态插入script标签
+</code></pre><p>具体参见：<a href="http://segmentfault.com/blog/trigkit4/1190000000718840" target="_blank" rel="external">详解js跨域问题</a></p>
+<h2 id="21-documen-write和-innerHTML的区别"><a href="#21-documen-write和-innerHTML的区别" class="headerlink" title="21.documen.write和 innerHTML的区别"></a>21.documen.write和 innerHTML的区别</h2><pre><code>document.write只能重绘整个页面
+
+innerHTML可以重绘页面的一部分
+</code></pre><h2 id="22-call-和-apply-的区别和作用？"><a href="#22-call-和-apply-的区别和作用？" class="headerlink" title="22. .call() 和 .apply() 的区别和作用？"></a>22. .call() 和 .apply() 的区别和作用？</h2><p>作用：动态改变某个类的某个方法的运行环境。<br>区别参见：<a href="http://segmentfault.com/blog/trigkit4/1190000000660786#articleHeader15" target="_blank" rel="external">JavaScript学习总结（四）function函数部分</a></p>
+<h2 id="23-哪些操作会造成内存泄漏？"><a href="#23-哪些操作会造成内存泄漏？" class="headerlink" title="23.哪些操作会造成内存泄漏？"></a>23.哪些操作会造成内存泄漏？</h2><pre><code>内存泄漏指任何对象在您不再拥有或需要它之后仍然存在。
+垃圾回收器定期扫描对象，并计算引用了每个对象的其他对象的数量。如果一个对象的引用数量为 0（没有其他对象引用过该对象），或对该对象的惟一引用是循环的，那么该对象的内存即可回收。
+
+setTimeout 的第一个参数使用字符串而非函数的话，会引发内存泄漏。
+闭包、控制台日志、循环（在两个对象彼此引用且彼此保留时，就会产生一个循环）
+</code></pre><p>详见：<a href="http://segmentfault.com/blog/trigkit4/1190000000687844" target="_blank" rel="external">详解js变量、作用域及内存</a></p>
+<h2 id="24-JavaScript中的作用域与变量声明提升？"><a href="#24-JavaScript中的作用域与变量声明提升？" class="headerlink" title="24.JavaScript中的作用域与变量声明提升？"></a>24.JavaScript中的作用域与变量声明提升？</h2><p>详见：<a href="http://segmentfault.com/blog/trigkit4/1190000000758184#articleHeader5" target="_blank" rel="external">详解JavaScript函数模式</a></p>
+<h2 id="25-如何判断当前脚本运行在浏览器还是node环境中？"><a href="#25-如何判断当前脚本运行在浏览器还是node环境中？" class="headerlink" title="25.如何判断当前脚本运行在浏览器还是node环境中？"></a>25.如何判断当前脚本运行在浏览器还是node环境中？</h2><pre><code>通过判断Global对象是否为window，如果不为window，当前脚本没有运行在浏览器中
+</code></pre><h2 id="26-其他问题？"><a href="#26-其他问题？" class="headerlink" title="26.其他问题？"></a>26.其他问题？</h2><p>###99%的网站都需要被重构是那本书上写的？</p>
+<pre><code>* 网站重构：应用web标准进行设计（第2版）
+</code></pre><p>###什么叫优雅降级和渐进增强？</p>
+<pre><code>优雅降级：Web站点在所有新式浏览器中都能正常工作，如果用户使用的是老式浏览器，则代码会检查以确认它们是否能正常工作。由于IE独特的盒模型布局问题，针对不同版本的IE的hack实践过优雅降级了,为那些无法支持功能的浏览器增加候选方案，使之在旧式浏览器上以某种形式降级体验却不至于完全失效.
+
+渐进增强：从被所有浏览器支持的基本功能开始，逐步地添加那些只有新式浏览器才支持的功能,向页面增加无害于基础浏览器的额外样式和功能的。当浏览器支持时，它们会自动地呈现出来并发挥作用。
+</code></pre><p>详见：<a href="http://segmentfault.com/blog/trigkit4/1190000000800711#articleHeader30" target="_blank" rel="external">css学习归纳总结（一）</a></p>
+<p>###对Node的优点和缺点提出了自己的看法？</p>
+<pre><code>*（优点）因为Node是基于事件驱动和无阻塞的，所以非常适合处理并发请求，
+  因此构建在Node上的代理服务器相比其他技术实现（如Ruby）的服务器表现要好得多。
+  此外，与Node代理服务器交互的客户端代码是由javascript语言编写的，
+  因此客户端和服务器端都用同一种语言编写，这是非常美妙的事情。
+
+*（缺点）Node是一个相对新的开源项目，所以不太稳定，它总是一直在变，
+  而且缺少足够多的第三方库支持。看起来，就像是Ruby/Rails当年的样子。
+</code></pre><p>###对前端界面工程师这个职位是怎么样理解的？它的前景会怎么样？</p>
+<pre><code>前端是最贴近用户的程序员，比后端、数据库、产品经理、运营、安全都近。
+    1、实现界面交互
+    2、提升用户体验
+    3、有了Node.js，前端可以实现服务端的一些事情
+
+
+前端是最贴近用户的程序员，前端的能力就是能让产品从 90分进化到 100 分，甚至更好，
+
+ 参与项目，快速高质量完成实现效果图，精确到1px；
+
+ 与团队成员，UI设计，产品经理的沟通；
+
+ 做好的页面结构，页面重构和用户体验；
+
+ 处理hack，兼容、写出优美的代码格式；
+
+ 针对服务器的优化、拥抱最新前端技术。
+</code></pre><h2 id="27-你有哪些性能优化的方法？"><a href="#27-你有哪些性能优化的方法？" class="headerlink" title="27.你有哪些性能优化的方法？"></a>27.你有哪些性能优化的方法？</h2><p> （<a href="http://segmentfault.com/blog/trigkit4/1190000000656717" target="_blank" rel="external">详情请看雅虎14条性能优化原则</a>）。</p>
+<pre><code>  （1） 减少http请求次数：CSS Sprites, JS、CSS源码压缩、图片大小控制合适；网页Gzip，CDN托管，data缓存 ，图片服务器。
+
+  （2） 前端模板 JS+数据，减少由于HTML标签导致的带宽浪费，前端用变量保存AJAX请求结果，每次操作本地变量，不用请求，减少请求次数
+
+  （3） 用innerHTML代替DOM操作，减少DOM操作次数，优化javascript性能。
+
+  （4） 当需要设置的样式很多时设置className而不是直接操作style。
+
+  （5） 少用全局变量、缓存DOM节点查找的结果。减少IO读取操作。
+
+  （6） 避免使用CSS Expression（css表达式)又称Dynamic properties(动态属性)。
+
+  （7） 图片预加载，将样式表放在顶部，将脚本放在底部  加上时间戳。
+</code></pre><h2 id="28-http状态码有那些？分别代表是什么意思？"><a href="#28-http状态码有那些？分别代表是什么意思？" class="headerlink" title="28.http状态码有那些？分别代表是什么意思？"></a>28.http状态码有那些？分别代表是什么意思？</h2><pre><code>100-199 用于指定客户端应相应的某些动作。
+200-299 用于表示请求成功。
+300-399 用于已经移动的文件并且常被包含在定位头信息中指定新的地址信息。
+400-499 用于指出客户端的错误。400    1、语义有误，当前请求无法被服务器理解。401   当前请求需要用户验证 403  服务器已经理解请求，但是拒绝执行它。
+500-599 用于支持服务器错误。 503 – 服务不可用
+</code></pre><p>详情：<a href="http://segmentfault.com/blog/trigkit4/1190000000691919" target="_blank" rel="external">http://segmentfault.com/blog/trigkit4/1190000000691919</a></p>
+<h2 id="29-一个页面从输入-URL-到页面加载显示完成，这个过程中都发生了什么？"><a href="#29-一个页面从输入-URL-到页面加载显示完成，这个过程中都发生了什么？" class="headerlink" title="29.一个页面从输入 URL 到页面加载显示完成，这个过程中都发生了什么？"></a>29.一个页面从输入 URL 到页面加载显示完成，这个过程中都发生了什么？</h2><pre><code>    分为4个步骤：
+    （1），当发送一个URL请求时，不管这个URL是Web页面的URL还是Web页面上每个资源的URL，浏览器都会开启一个线程来处理这个请求，同时在远程DNS服务器上启动一个DNS查询。这能使浏览器获得请求对应的IP地址。
+    （2）， 浏览器与远程Web服务器通过TCP三次握手协商来建立一个TCP/IP连接。该握手包括一个同步报文，一个同步-应答报文和一个应答报文，这三个报文在 浏览器和服务器之间传递。该握手首先由客户端尝试建立起通信，而后服务器应答并接受客户端的请求，最后由客户端发出该请求已经被接受的报文。
+    （3），一旦TCP/IP连接建立，浏览器会通过该连接向远程服务器发送HTTP的GET请求。远程服务器找到资源并使用HTTP响应返回该资源，值为200的HTTP响应状态表示一个正确的响应。
+    （4），此时，Web服务器提供资源服务，客户端开始下载资源。
+
+请求返回后，便进入了我们关注的前端模块
+简单来说，浏览器会解析HTML生成DOM Tree，其次会根据CSS生成CSS Rule Tree，而javascript又可以根据DOM API操作DOM
+</code></pre><p>详情：<a href="http://segmentfault.com/blog/trigkit4/1190000000697254" target="_blank" rel="external">从输入 URL 到浏览器接收的过程中发生了什么事情？</a></p>
+<h2 id="30-平时如何管理你的项目？"><a href="#30-平时如何管理你的项目？" class="headerlink" title="30.平时如何管理你的项目？"></a>30.平时如何管理你的项目？</h2><pre><code>先期团队必须确定好全局样式（globe.css），编码模式(utf-8) 等；
+
+        编写习惯必须一致（例如都是采用继承式的写法，单样式都写成一行）；
+
+        标注样式编写人，各模块都及时标注（标注关键样式调用的地方）；
+
+        页面进行标注（例如 页面 模块 开始和结束）；
+
+        CSS跟HTML 分文件夹并行存放，命名都得统一（例如style.css）；
+
+        JS 分文件夹存放 命名以该JS功能为准的英文翻译。
+
+        图片采用整合的 images.png png8 格式文件使用 尽量整合在一起使用方便将来的管理
+</code></pre><h2 id="31-说说最近最流行的一些东西吧？常去哪些网站？"><a href="#31-说说最近最流行的一些东西吧？常去哪些网站？" class="headerlink" title="31.说说最近最流行的一些东西吧？常去哪些网站？"></a>31.说说最近最流行的一些东西吧？常去哪些网站？</h2><pre><code>Node.js、Mongodb、npm、MVVM、MEAN、three.js,React 。
+网站：w3cfuns,sf,hacknews,CSDN,慕课，博客园，InfoQ,w3cplus等
+</code></pre><h2 id="32-javascript对象的几种创建方式"><a href="#32-javascript对象的几种创建方式" class="headerlink" title="32.javascript对象的几种创建方式"></a>32.javascript对象的几种创建方式</h2><pre><code>1，工厂模式
+2，构造函数模式
+3，原型模式
+4，混合构造函数和原型模式
+5，动态原型模式
+6，寄生构造函数模式
+7，稳妥构造函数模式
+</code></pre><h2 id="33-javascript继承的6种方法"><a href="#33-javascript继承的6种方法" class="headerlink" title="33.javascript继承的6种方法"></a>33.javascript继承的6种方法</h2><pre><code>1，原型链继承
+2，借用构造函数继承
+3，组合继承(原型+借用构造)
+4，原型式继承
+5，寄生式继承
+6，寄生组合式继承
+</code></pre><p>详情：<a href="http://segmentfault.com/blog/trigkit4/1190000002440502" target="_blank" rel="external">JavaScript继承方式详解</a></p>
+<h2 id="34-ajax过程"><a href="#34-ajax过程" class="headerlink" title="34.ajax过程"></a>34.ajax过程</h2><pre><code>(1)创建XMLHttpRequest对象,也就是创建一个异步调用对象.
+
+(2)创建一个新的HTTP请求,并指定该HTTP请求的方法、URL及验证信息.
+
+(3)设置响应HTTP请求状态变化的函数.
+
+(4)发送HTTP请求.
+
+(5)获取异步调用返回的数据.
+
+(6)使用JavaScript和DOM实现局部刷新.
+</code></pre><p>详情：<a href="http://segmentfault.com/blog/trigkit4/1190000000691919" target="_blank" rel="external">JavaScript学习总结（七）Ajax和Http状态字</a></p>
+<h2 id="35-异步加载和延迟加载"><a href="#35-异步加载和延迟加载" class="headerlink" title="35.异步加载和延迟加载"></a>35.异步加载和延迟加载</h2><pre><code>1.异步加载的方案： 动态插入script标签
+2.通过ajax去获取js代码，然后通过eval执行
+3.script标签上添加defer或者async属性
+4.创建并插入iframe，让它异步执行js
+5.延迟加载：有些 js 代码并不是页面初始化的时候就立刻需要的，而稍后的某些情况才需要的。
+</code></pre><h2 id="36-前端安全问题？"><a href="#36-前端安全问题？" class="headerlink" title="36.前端安全问题？"></a>36.前端安全问题？</h2><pre><code>    （XSS，sql注入，CSRF）
+CSRF：是跨站请求伪造，很明显根据刚刚的解释，他的核心也就是请求伪造，通过伪造身份提交POST和GET请求来进行跨域的攻击。
+
+**完成CSRF需要两个步骤：**
+
+1.登陆受信任的网站A，在本地生成COOKIE
+
+2.在不登出A的情况下，或者本地COOKIE没有过期的情况下，访问危险网站B。
+</code></pre><h2 id="37-ie各版本和chrome可以并行下载多少个资源"><a href="#37-ie各版本和chrome可以并行下载多少个资源" class="headerlink" title="37.ie各版本和chrome可以并行下载多少个资源"></a>37.ie各版本和chrome可以并行下载多少个资源</h2><pre><code>IE6 两个并发，iE7升级之后的6个并发，之后版本也是6个
+
+Firefox，chrome也是6个
+</code></pre><h2 id="38-javascript里面的继承怎么实现，如何避免原型链上面的对象共享"><a href="#38-javascript里面的继承怎么实现，如何避免原型链上面的对象共享" class="headerlink" title="38.javascript里面的继承怎么实现，如何避免原型链上面的对象共享"></a>38.javascript里面的继承怎么实现，如何避免原型链上面的对象共享</h2><pre><code>用构造函数和原型链的混合模式去实现继承，避免对象共享可以参考经典的extend()函数，很多前端框架都有封装的，就是用一个空函数当做中间变量
+</code></pre><h2 id="39-grunt，-YUI-compressor-和-google-clojure用来进行代码压缩的用法。"><a href="#39-grunt，-YUI-compressor-和-google-clojure用来进行代码压缩的用法。" class="headerlink" title="39.grunt， YUI compressor 和 google clojure用来进行代码压缩的用法。"></a>39.grunt， YUI compressor 和 google clojure用来进行代码压缩的用法。</h2><pre><code>YUI Compressor 是一个用来压缩 JS 和 CSS 文件的工具，采用Java开发。
+
+使用方法：
+
+//压缩JS
+java -jar yuicompressor-2.4.2.jar --type js --charset utf-8 -v src.js &gt; packed.js
+//压缩CSS
+java -jar yuicompressor-2.4.2.jar --type css --charset utf-8 -v src.css &gt; packed.css
+</code></pre><p>详情请见：<a href="http://segmentfault.com/blog/trigkit4/1190000002585760" target="_blank" rel="external">你需要掌握的前端代码性能优化工具</a></p>
+<h2 id="40-Flash、Ajax各自的优缺点，在使用中如何取舍？"><a href="#40-Flash、Ajax各自的优缺点，在使用中如何取舍？" class="headerlink" title="40.Flash、Ajax各自的优缺点，在使用中如何取舍？"></a>40.Flash、Ajax各自的优缺点，在使用中如何取舍？</h2><pre><code>1、Flash ajax对比
+Flash适合处理多媒体、矢量图形、访问机器；对CSS、处理文本上不足，不容易被搜索。
+Ajax对CSS、文本支持很好，支持搜索；多媒体、矢量图形、机器访问不足。
+共同点：与服务器的无刷新传递消息、用户离线和在线状态、操作DOM
+</code></pre><h2 id="41-请解释一下-JavaScript-的同源策略。"><a href="#41-请解释一下-JavaScript-的同源策略。" class="headerlink" title="41.请解释一下 JavaScript 的同源策略。"></a>41.请解释一下 JavaScript 的同源策略。</h2><p>概念:同源策略是客户端脚本（尤其是<code>Javascript</code>）的重要的安全度量标准。它最早出自<code>Netscape Navigator2.0</code>，其目的是防止某个文档或脚本从多个不同源装载。</p>
+<p>这里的同源策略指的是：协议，域名，端口相同，同源策略是一种安全协议。<br>指一段脚本只能读取来自同一来源的窗口和文档的属性。</p>
+<p>###为什么要有同源限制？<br>   我们举例说明：比如一个黑客程序，他利用<code>Iframe</code>把真正的银行登录页面嵌到他的页面上，当你使用真实的用户名，密码登录时，他的页面就可以通过<code>Javascript</code>读取到你的表单中<code>input</code>中的内容，这样用户名，密码就轻松到手了。</p>
+<h2 id="42-什么是-“use-strict”-使用它的好处和坏处分别是什么？"><a href="#42-什么是-“use-strict”-使用它的好处和坏处分别是什么？" class="headerlink" title="42.什么是 “use strict”; ? 使用它的好处和坏处分别是什么？"></a>42.什么是 “use strict”; ? 使用它的好处和坏处分别是什么？</h2><p><code>ECMAscript 5</code>添加了第二种运行模式：”严格模式”（strict mode）。顾名思义，这种模式使得<code>Javascript</code>在更严格的条件下运行。</p>
+<p>设立”严格模式”的目的，主要有以下几个：</p>
+<pre><code>- 消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为;
+- 消除代码运行的一些不安全之处，保证代码运行的安全；
+- 提高编译器效率，增加运行速度；
+- 为未来新版本的Javascript做好铺垫。
+</code></pre><p>注：经过测试<code>IE6,7,8,9</code>均不支持严格模式。</p>
+<p>缺点：<br>现在网站的<code>JS</code> 都会进行压缩，一些文件用了严格模式，而另一些没有。这时这些本来是严格模式的文件，被 <code>merge</code> 后，这个串就到了文件的中间，不仅没有指示严格模式，反而在压缩后浪费了字节。</p>
+<h2 id="43-GET和POST的区别，何时使用POST？"><a href="#43-GET和POST的区别，何时使用POST？" class="headerlink" title="43.GET和POST的区别，何时使用POST？"></a>43.GET和POST的区别，何时使用POST？</h2><pre><code>    GET：一般用于信息获取，使用URL传递参数，对所发送信息的数量也有限制，一般在2000个字符
+    POST：一般用于修改服务器上的资源，对所发送的信息没有限制。
+
+    GET方式需要使用Request.QueryString来取得变量的值，而POST方式通过Request.Form来获取变量的值，
+    也就是说Get是通过地址栏来传值，而Post是通过提交表单来传值。
+
+然而，在以下情况中，请使用 POST 请求：
+无法使用缓存文件（更新服务器上的文件或数据库）
+向服务器发送大量数据（POST 没有数据量限制）
+发送包含未知字符的用户输入时，POST 比 GET 更稳定也更可靠
+</code></pre><h2 id="44-哪些地方会出现css阻塞，哪些地方会出现js阻塞？"><a href="#44-哪些地方会出现css阻塞，哪些地方会出现js阻塞？" class="headerlink" title="44.哪些地方会出现css阻塞，哪些地方会出现js阻塞？"></a>44.哪些地方会出现css阻塞，哪些地方会出现js阻塞？</h2><p><strong>js的阻塞特性：</strong>所有浏览器在下载<code>JS</code>的时候，会阻止一切其他活动，比如其他资源的下载，内容的呈现等等。直到<code>JS</code>下载、解析、执行完毕后才开始继续<code>并行下载</code>其他资源并呈现内容。为了提高用户体验，新一代浏览器都支持并行下载<code>JS</code>，但是<code>JS</code>下载仍然会阻塞其它资源的下载（例如.图片，css文件等）。</p>
+<p>由于浏览器为了防止出现<code>JS</code>修改<code>DOM</code>树，需要重新构建<code>DOM</code>树的情况，所以就会阻塞其他的下载和呈现。</p>
+<p>嵌入<code>JS</code>会阻塞所有内容的呈现，而外部<code>JS</code>只会阻塞其后内容的显示，2种方式都会阻塞其后资源的下载。也就是说外部样式不会阻塞外部脚本的加载，但会阻塞外部脚本的执行。</p>
+<p><code>CSS</code>怎么会阻塞加载了？<code>CSS</code>本来是可以并行下载的，在什么情况下会出现阻塞加载了(在测试观察中，<code>IE6</code>下<code>CSS</code>都是阻塞加载）</p>
+<p>当<code>CSS</code>后面跟着嵌入的<code>JS</code>的时候，该<code>CSS</code>就会出现阻塞后面资源下载的情况。而当把嵌入<code>JS</code>放到<code>CSS</code>前面，就不会出现阻塞的情况了。</p>
+<p> 根本原因：因为浏览器会维持<code>html</code>中<code>css</code>和<code>js</code>的顺序，样式表必须在嵌入的JS执行前先加载、解析完。而嵌入的<code>JS</code>会阻塞后面的资源加载，所以就会出现上面<code>CSS</code>阻塞下载的情况。</p>
+<p>嵌入<code>JS</code>应该放在什么位置？</p>
+<pre><code>   1、放在底部，虽然放在底部照样会阻塞所有呈现，但不会阻塞资源下载。
+
+   2、如果嵌入JS放在head中，请把嵌入JS放在CSS头部。
+
+   3、使用defer（只支持IE）
+
+   4、不要在嵌入的JS中调用运行时间较长的函数，如果一定要用，可以用`setTimeout`来调用
+</code></pre><p>###Javascript无阻塞加载具体方式</p>
+<ul>
+<li><strong>将脚本放在底部。</strong><code>&lt;link&gt;</code>还是放在<code>head</code>中，用以保证在<code>js</code>加载前，能加载出正常显示的页面。<code>&lt;script&gt;</code>标签放在<code>&lt;/body&gt;</code>前。</li>
+<li><strong>成组脚本</strong>：由于每个<code>&lt;script&gt;</code>标签下载时阻塞页面解析过程，所以限制页面的<code>&lt;script&gt;</code>总数也可以改善性能。适用于内联脚本和外部脚本。</li>
+</ul>
+<ul>
+<li><strong>非阻塞脚本</strong>：等页面完成加载后，再加载<code>js</code>代码。也就是，在<code>window.onload</code>事件发出后开始下载代码。<br> （1）<code>defer</code>属性：支持IE4和<code>fierfox3.5</code>更高版本浏览器<br> （2）动态脚本元素：文档对象模型（DOM）允许你使用js动态创建<code>HTML</code>的几乎全部文档内容。代码如下：</li>
+</ul>
+<p><br></p>
+<pre><code>&lt;script&gt;
+var script=document.createElement(&quot;script&quot;);
+script.type=&quot;text/javascript&quot;;
+script.src=&quot;file.js&quot;;
+document.getElementsByTagName(&quot;head&quot;)[0].appendChild(script);
+&lt;/script&gt;
+</code></pre><p> 此技术的重点在于：无论在何处启动下载，文件额下载和运行都不会阻塞其他页面处理过程。即使在head里（除了用于下载文件的http链接）。</p>
+<h2 id="45-闭包相关问题？"><a href="#45-闭包相关问题？" class="headerlink" title="45.闭包相关问题？"></a>45.闭包相关问题？</h2><p>详情请见：<a href="http://segmentfault.com/blog/trigkit4/1190000000652891" target="_blank" rel="external">详解js闭包</a></p>
+<h2 id="46-js事件处理程序问题？"><a href="#46-js事件处理程序问题？" class="headerlink" title="46.js事件处理程序问题？"></a>46.js事件处理程序问题？</h2><p>详情请见：<a href="http://segmentfault.com/blog/trigkit4/1190000002174034" target="_blank" rel="external">JavaScript学习总结（九）事件详解</a></p>
+<h2 id="47-eval是做什么的？"><a href="#47-eval是做什么的？" class="headerlink" title="47.eval是做什么的？"></a>47.eval是做什么的？</h2><pre><code>它的功能是把对应的字符串解析成JS代码并运行；
+应该避免使用eval，不安全，非常耗性能（2次，一次解析成js语句，一次执行）。
+</code></pre><h2 id="48-写一个通用的事件侦听器函数"><a href="#48-写一个通用的事件侦听器函数" class="headerlink" title="48.写一个通用的事件侦听器函数?"></a>48.写一个通用的事件侦听器函数?</h2><pre><code>// event(事件)工具集，来源：github.com/markyun
+    markyun.Event = {
+        // 页面加载完成后
+        readyEvent : function(fn) {
+            if (fn==null) {
+                fn=document;
+            }
+            var oldonload = window.onload;
+            if (typeof window.onload != &#39;function&#39;) {
+                window.onload = fn;
+            } else {
+                window.onload = function() {
+                    oldonload();
+                    fn();
+                };
+            }
+        },
+        // 视能力分别使用dom0||dom2||IE方式 来绑定事件
+        // 参数： 操作的元素,事件名称 ,事件处理程序
+        addEvent : function(element, type, handler) {
+            if (element.addEventListener) {
+                //事件类型、需要执行的函数、是否捕捉
+                element.addEventListener(type, handler, false);
+            } else if (element.attachEvent) {
+                element.attachEvent(&#39;on&#39; + type, function() {
+                    handler.call(element);
+                });
+            } else {
+                element[&#39;on&#39; + type] = handler;
+            }
+        },
+        // 移除事件
+        removeEvent : function(element, type, handler) {
+            if (element.removeEnentListener) {
+                element.removeEnentListener(type, handler, false);
+            } else if (element.datachEvent) {
+                element.detachEvent(&#39;on&#39; + type, handler);
+            } else {
+                element[&#39;on&#39; + type] = null;
+            }
+        },
+        // 阻止事件 (主要是事件冒泡，因为IE不支持事件捕获)
+        stopPropagation : function(ev) {
+            if (ev.stopPropagation) {
+                ev.stopPropagation();
+            } else {
+                ev.cancelBubble = true;
+            }
+        },
+        // 取消事件的默认行为
+        preventDefault : function(event) {
+            if (event.preventDefault) {
+                event.preventDefault();
+            } else {
+                event.returnValue = false;
+            }
+        },
+        // 获取事件目标
+        getTarget : function(event) {
+            return event.target || event.srcElement;
+        },
+        // 获取event对象的引用，取到事件的所有信息，确保随时能使用event；
+        getEvent : function(e) {
+            var ev = e || window.event;
+            if (!ev) {
+                var c = this.getEvent.caller;
+                while (c) {
+                    ev = c.arguments[0];
+                    if (ev &amp;&amp; Event == ev.constructor) {
+                        break;
+                    }
+                    c = c.caller;
+                }
+            }
+            return ev;
+        }
+    };
+</code></pre><h2 id="49-Node-js的适用场景？"><a href="#49-Node-js的适用场景？" class="headerlink" title="49.Node.js的适用场景？"></a>49.Node.js的适用场景？</h2><pre><code>高并发、聊天、实时消息推送
+</code></pre><h2 id="50-JavaScript原型，原型链-有什么特点？"><a href="#50-JavaScript原型，原型链-有什么特点？" class="headerlink" title="50.JavaScript原型，原型链 ? 有什么特点？"></a>50.JavaScript原型，原型链 ? 有什么特点？</h2><pre><code>*  原型对象也是普通的对象，是对象一个自带隐式的 __proto__ 属性，原型也有可能有自己的原型，如果一个原型对象的原型不为null的话，我们就称之为原型链。
+*  原型链是由一些用来继承和共享属性的对象组成的（有限的）对象链。
+</code></pre><h2 id="51-页面重构怎么操作？"><a href="#51-页面重构怎么操作？" class="headerlink" title="51.页面重构怎么操作？"></a>51.页面重构怎么操作？</h2><pre><code>编写 CSS、让页面结构更合理化，提升用户体验，实现良好的页面效果和提升性能。
+</code></pre><h2 id="52-WEB应用从服务器主动推送Data到客户端有那些方式？"><a href="#52-WEB应用从服务器主动推送Data到客户端有那些方式？" class="headerlink" title="52.WEB应用从服务器主动推送Data到客户端有那些方式？"></a>52.WEB应用从服务器主动推送Data到客户端有那些方式？</h2><pre><code>html5 websoket
+    WebSocket通过Flash
+    XHR长时间连接
+    XHR Multipart Streaming
+    不可见的Iframe
+    &lt;script&gt;标签的长时间连接(可跨域)
+</code></pre><h2 id="53-事件、IE与火狐的事件机制有什么区别？-如何阻止冒泡？"><a href="#53-事件、IE与火狐的事件机制有什么区别？-如何阻止冒泡？" class="headerlink" title="53.事件、IE与火狐的事件机制有什么区别？ 如何阻止冒泡？"></a>53.事件、IE与火狐的事件机制有什么区别？ 如何阻止冒泡？</h2><pre><code> 1. 我们在网页中的某个操作（有的操作对应多个事件）。例如：当我们点击一个按钮就会产生一个事件。是可以被 JavaScript 侦测到的行为。
+ 2. 事件处理机制：IE是事件冒泡、firefox同时支持两种事件模型，也就是：捕获型事件和冒泡型事件。；
+ 3.  ev.stopPropagation();注意旧ie的方法 ev.cancelBubble = true;
+</code></pre><h2 id="54-ajax-是什么-ajax-的交互模型-同步和异步的区别-如何解决跨域问题"><a href="#54-ajax-是什么-ajax-的交互模型-同步和异步的区别-如何解决跨域问题" class="headerlink" title="54.ajax 是什么?ajax 的交互模型?同步和异步的区别?如何解决跨域问题?"></a>54.ajax 是什么?ajax 的交互模型?同步和异步的区别?如何解决跨域问题?</h2><p>详情请见：<a href="http://segmentfault.com/blog/trigkit4/1190000000691919" target="_blank" rel="external">JavaScript学习总结（七）Ajax和Http状态字</a></p>
+<pre><code>1. 通过异步模式，提升了用户体验
+
+  2. 优化了浏览器和服务器之间的传输，减少不必要的数据往返，减少了带宽占用
+
+  3. Ajax在客户端运行，承担了一部分本来由服务器承担的工作，减少了大用户量下的服务器负载。
+
+  2. Ajax的最大的特点是什么。
+
+  Ajax可以实现动态不刷新（局部刷新）
+  readyState属性 状态 有5个可取值： 0=未初始化 ，1=启动 2=发送，3=接收，4=完成
+
+ajax的缺点
+
+  1、ajax不支持浏览器back按钮。
+
+  2、安全问题 AJAX暴露了与服务器交互的细节。
+
+  3、对搜索引擎的支持比较弱。
+
+  4、破坏了程序的异常机制。
+
+  5、不容易调试。
+
+跨域： jsonp、 iframe、window.name、window.postMessage、服务器上设置代理页面
+</code></pre><h2 id="55-js对象的深度克隆"><a href="#55-js对象的深度克隆" class="headerlink" title="55.js对象的深度克隆"></a>55.js对象的深度克隆</h2><pre><code>  function clone(Obj) {
+        var buf;
+        if (Obj instanceof Array) {
+            buf = [];  //创建一个空的数组
+            var i = Obj.length;
+            while (i--) {
+                buf[i] = clone(Obj[i]);
+            }
+            return buf;
+        }else if (Obj instanceof Object){
+            buf = {};  //创建一个空对象
+            for (var k in Obj) {  //为这个对象添加新的属性
+                buf[k] = clone(Obj[k]);
+            }
+            return buf;
+        }else{
+            return Obj;
+        }
+    }
+</code></pre><h2 id="56-AMD和CMD-规范的区别？"><a href="#56-AMD和CMD-规范的区别？" class="headerlink" title="56.AMD和CMD 规范的区别？"></a>56.AMD和CMD 规范的区别？</h2><p>详情请见：<a href="http://segmentfault.com/blog/trigkit4/1190000000733959" target="_blank" rel="external">详解JavaScript模块化开发</a></p>
+<h2 id="57-网站重构的理解？"><a href="#57-网站重构的理解？" class="headerlink" title="57.网站重构的理解？"></a>57.网站重构的理解？</h2><pre><code>网站重构：在不改变外部行为的前提下，简化结构、添加可读性，而在网站前端保持一致的行为。也就是说是在不改变UI的情况下，对网站进行优化，在扩展的同时保持一致的UI。
+
+对于传统的网站来说重构通常是：
+
+表格(table)布局改为DIV+CSS
+使网站前端兼容于现代浏览器(针对于不合规范的CSS、如对IE6有效的)
+对于移动平台的优化
+针对于SEO进行优化
+深层次的网站重构应该考虑的方面
+
+减少代码间的耦合
+让代码保持弹性
+严格按规范编写代码
+设计可扩展的API
+代替旧有的框架、语言(如VB)
+增强用户体验
+通常来说对于速度的优化也包含在重构中
+
+压缩JS、CSS、image等前端资源(通常是由服务器来解决)
+程序的性能优化(如数据读写)
+采用CDN来加速资源加载
+对于JS DOM的优化
+HTTP服务器的文件缓存
+</code></pre><h2 id="58-如何获取UA？"><a href="#58-如何获取UA？" class="headerlink" title="58.如何获取UA？"></a>58.如何获取UA？</h2><pre><code>&lt;script&gt;
+    function whatBrowser() {
+        document.Browser.Name.value=navigator.appName;
+        document.Browser.Version.value=navigator.appVersion;
+        document.Browser.Code.value=navigator.appCodeName;
+        document.Browser.Agent.value=navigator.userAgent;
+    }
+&lt;/script&gt;
+</code></pre><h2 id="59-js数组去重"><a href="#59-js数组去重" class="headerlink" title="59.js数组去重"></a>59.js数组去重</h2><p>以下是数组去重的三种方法：</p>
+<pre><code>Array.prototype.unique1 = function () {
+  var n = []; //一个新的临时数组
+  for (var i = 0; i &lt; this.length; i++) //遍历当前数组
+  {
+    //如果当前数组的第i已经保存进了临时数组，那么跳过，
+    //否则把当前项push到临时数组里面
+    if (n.indexOf(this[i]) == -1) n.push(this[i]);
+  }
+  return n;
+}
+
+Array.prototype.unique2 = function()
+{
+    var n = {},r=[]; //n为hash表，r为临时数组
+    for(var i = 0; i &lt; this.length; i++) //遍历当前数组
+    {
+        if (!n[this[i]]) //如果hash表中没有当前项
+        {
+            n[this[i]] = true; //存入hash表
+            r.push(this[i]); //把当前数组的当前项push到临时数组里面
+        }
+    }
+    return r;
+}
+
+Array.prototype.unique3 = function()
+{
+    var n = [this[0]]; //结果数组
+    for(var i = 1; i &lt; this.length; i++) //从第二项开始遍历
+    {
+        //如果当前数组的第i项在当前数组中第一次出现的位置不是i，
+        //那么表示第i项是重复的，忽略掉。否则存入结果数组
+        if (this.indexOf(this[i]) == i) n.push(this[i]);
+    }
+    return n;
+}
+</code></pre><h2 id="60-HTTP状态码"><a href="#60-HTTP状态码" class="headerlink" title="60.HTTP状态码"></a>60.HTTP状态码</h2><pre><code>100  Continue  继续，一般在发送post请求时，已发送了http header之后服务端将返回此信息，表示确认，之后发送具体参数信息
+200  OK   正常返回信息
+201  Created  请求成功并且服务器创建了新的资源
+202  Accepted  服务器已接受请求，但尚未处理
+301  Moved Permanently  请求的网页已永久移动到新位置。
+302 Found  临时性重定向。
+303 See Other  临时性重定向，且总是使用 GET 请求新的 URI。
+304  Not Modified  自从上次请求后，请求的网页未修改过。
+
+400 Bad Request  服务器无法理解请求的格式，客户端不应当尝试再次使用相同的内容发起请求。
+401 Unauthorized  请求未授权。
+403 Forbidden  禁止访问。
+404 Not Found  找不到如何与 URI 相匹配的资源。
+
+500 Internal Server Error  最常见的服务器端错误。
+503 Service Unavailable 服务器端暂时无法处理请求（可能是过载或维护）。
+</code></pre><h2 id="61-cache-control"><a href="#61-cache-control" class="headerlink" title="61.cache-control"></a>61.cache-control</h2><p>网页的缓存是由HTTP消息头中的<code>“Cache-control”</code>来控制的，常见的取值有<code>private、no-cache、max-age、must-revalidate</code>等，默认为<code>private</code>。</p>
+<p><code>Expires</code> 头部字段提供一个日期和时间，响应在该日期和时间后被认为失效。允许客户端在这个时间之前不去检查（发请求），等同<code>max-age</code>的效果。但是如果同时存在，则被<code>Cache-Control</code>的<code>max-age</code>覆盖。</p>
+<pre><code>Expires = &quot;Expires&quot; &quot;:&quot; HTTP-date
+</code></pre><p>例如</p>
+<pre><code>Expires: Thu, 01 Dec 1994 16:00:00 GMT （必须是GMT格式）
+</code></pre><p>如果把它设置为<code>-1</code>，则表示立即过期</p>
+<p><code>Expires</code>和<code>max-age</code>都可以用来指定文档的过期时间，但是二者有一些细微差别</p>
+<pre><code>1.Expires在HTTP/1.0中已经定义，Cache-Control:max-age在HTTP/1.1中才有定义，为了向下兼容，仅使用max-age不够；
+2.Expires指定一个绝对的过期时间(GMT格式),这么做会导致至少2个问题：1)客户端和服务器时间不同步导致Expires的配置出现问题。 2）很容易在配置后忘记具体的过期时间，导致过期来临出现浪涌现象；
+
+3.max-age 指定的是从文档被访问后的存活时间，这个时间是个相对值(比如:3600s),相对的是文档第一次被请求时服务器记录的Request_time(请求时间)
+
+4.Expires指定的时间可以是相对文件的最后访问时间(Atime)或者修改时间(MTime),而max-age相对对的是文档的请求时间(Atime)
+
+如果值为no-cache,那么每次都会访问服务器。如果值为max-age,则在过期之前不会重复访问服务器。
+</code></pre><h2 id="62-js操作获取和设置cookie"><a href="#62-js操作获取和设置cookie" class="headerlink" title="62.js操作获取和设置cookie"></a>62.js操作获取和设置cookie</h2><pre><code>//创建cookie
+function setCookie(name, value, expires, path, domain, secure) {
+    var cookieText = encodeURIComponent(name) + &#39;=&#39; + encodeURIComponent(value);
+    if (expires instanceof Date) {
+        cookieText += &#39;; expires=&#39; + expires;
+    }
+    if (path) {
+        cookieText += &#39;; expires=&#39; + expires;
+    }
+    if (domain) {
+        cookieText += &#39;; domain=&#39; + domain;
+    }
+    if (secure) {
+        cookieText += &#39;; secure&#39;;
+    }
+    document.cookie = cookieText;
+}
+
+//获取cookie
+function getCookie(name) {
+    var cookieName = encodeURIComponent(name) + &#39;=&#39;;
+    var cookieStart = document.cookie.indexOf(cookieName);
+    var cookieValue = null;
+    if (cookieStart &gt; -1) {
+        var cookieEnd = document.cookie.indexOf(&#39;;&#39;, cookieStart);
+        if (cookieEnd == -1) {
+            cookieEnd = document.cookie.length;
+        }
+        cookieValue = decodeURIComponent(document.cookie.substring(cookieStart + cookieName.length, cookieEnd));
+    }
+    return cookieValue;
+}
+
+//删除cookie
+function unsetCookie(name) {
+    document.cookie = name + &quot;= ; expires=&quot; + new Date(0);
+}
+</code></pre><p><em>原文地址：<code>https://github.com/hawx1993/Front-end-Interview-questions</code></em></p>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/Web技术/">Web技术</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/面试题/">面试题</a>
+  </div>
+
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+    
+
+
+
+<section id="comment">
+    <div id="gitalk-container"></div>
+    <!--<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>-->
+    <!--<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>-->
+    <!--<script>-->
+        <!--var cloudTieConfig = {-->
+            <!--url: document.location.href,-->
+            <!--sourceId: "",-->
+            <!--productKey: "a65a1e5ea58d4c3a8ea1fef77d0371db",-->
+            <!--target: "cloud-tie-wrapper"-->
+        <!--};-->
+        <!--var yunManualLoad = true;-->
+        <!--Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);-->
+    <!--</script>-->
+    <!--PC和WAP自适应版-->
+    <!--<div id="SOHUCS" ></div>-->
+    <!--<script type="text/javascript">-->
+        <!--(function(){-->
+            <!--var appid = 'cyt6v35LM';-->
+            <!--var conf = 'prod_82a0b7686345b309fbcbcae5ae75c45e';-->
+            <!--var width = window.innerWidth || document.documentElement.clientWidth;-->
+            <!--if (width < 960) {-->
+                <!--window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>-->
+
+</section>
+<!--<script src="/js/gitment.browser.js"></script>-->
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<script>
+    // const gitment = new Gitment({
+    //     owner: 'ljinkai',
+    //     repo: 'ljinkai.github.io',
+    //     oauth: {
+    //         client_id: '1e0bbf087995295c53aa',
+    //         client_secret: '7aaf0001f26a5f16ddd7769384d549f317244720',
+    //     }
+    // })
+    // gitment.render('comment')
+
+    const gitalk = new Gitalk({
+        clientID: '1e0bbf087995295c53aa',
+        clientSecret: '7aaf0001f26a5f16ddd7769384d549f317244720',
+        repo: 'ljinkai.github.io',
+        owner: 'ljinkai',
+        admin: ['ljinkai'],
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    })
+
+    gitalk.render('gitalk-container')
+
+</script>
+
+
+
+
+
+</div>
+    </div>
+    <aside id="sidebar" class="alignright">
+  <div class="widget tag" style="padding: 16px;">
+
+      <div style="color: black;font-size: 16px;">
+          <div style="width: 100%;text-align: center;margin-bottom: 10px;margin-top: 0px;">我的知识星球</div>
+          
+          <a style="width: 100%;display: block;text-decoration: none;" href="https://mp.weixin.qq.com/s/LIzhjGGRqiqYnMhIxtFYAw" target="_blank"
+             onclick="ga('send', 'event', 'zsxq_11_blog', 'zsxq');">
+              <img src="https://qiniu.gafata.com/zsxq.jpeg" width="100%"/>
+          </a>
+          <div style="width: 100%;text-align: center;margin-bottom: 10px;margin-top: 0px;">我的在线课程</div>
+          <a style="width: 100%;display: block;text-decoration: none;" href="https://m.qlchat.com/wechat/page/channel-intro?channelId=2000018572922685" target="_blank"
+             onclick="ga('send', 'event', 'my_course', 'live_20170720');">
+              <img src="https://qiniu.gafata.com/chrome-extension-qianliao-2.png" width="100%"/>
+          </a>
+      </div>
+</div>
+
+
+  <div class="widget tag about_fix_none" id="about_fix">
+
+  <ul class="entry" style="text-align: center;font-size: 14px;font-weight: bold;">
+    <li>微信公众号：凯凯而谈</li>
+    <li style="font-weight: normal;font-size: 12px;">这里有我的分享和思考，我们一起知道做到</li>
+    <li><img src='http://qiniu.gafata.com/2019-03-17-web-bear.jpg?imageView2/2/w/600' width='180px' style="margin: 0px auto;display: block;"></li>
+  </ul>
+</div>
+<div class="widget tag">
+  <div class="about_banner">
+    <div class="about_profile">
+      <a href="/2015/02/28/new/">
+        <img class="about_img" src="http://qiniu.gafata.com/2019-03-25-WechatIMG1128.jpeg?imageView2/2/w/200">
+      </a>
+    </div>
+  </div>
+  <ul class="entry" style="text-align: center;">
+    <li>认知、技术、变现</li>
+    <li>微博：<a href="http://weibo.com/jieyingbei" target="_blank" onclick="ga('send', 'event', 'widget_about', 'weibo')">@凯凯刘</a></li>
+    <li>微信公众号：凯凯而谈</li>
+    <li><img src='http://qiniu.gafata.com/2019-03-17-web-bear.jpg?imageView2/2/w/600' width='160px' style="margin: 0px auto;display: block;"></li>
+    <li>Web、Indie Maker</li>
+  </ul>
+  <script>
+    function getPageTopLeft(el) {
+      var rect = el.getBoundingClientRect();
+      var docEl = document.documentElement;
+      return {
+        left: rect.left + (window.pageXOffset || docEl.scrollLeft || 0),
+        top: rect.top + (window.pageYOffset || docEl.scrollTop || 0)
+      };
+    }
+    // window.addEventListener('scroll',function() {
+    //   var winWid = document.body.clientWidth;
+    //   if (winWid > 900) {
+    //     var anchorTop = getPageTopLeft(document.getElementById("anchorTop")).top;
+    //     var scrollTop = window.pageYOffset|| document.documentElement.scrollTop || document.body.scrollTop;
+
+    //     if (anchorTop < scrollTop) {
+    //       document.getElementById("about_fix").className = "widget tag about_fix";
+    //     } else {
+    //       document.getElementById("about_fix").className = "widget tag about_fix_none";
+    //     }
+    //   }
+    // });
+  </script>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/Indie-Maker/" onclick="ga('send', 'event', 'widget_category', 'Indie Maker');">Indie Maker</a><small>20</small></li>
+  
+    <li><a href="/categories/Shopify/" onclick="ga('send', 'event', 'widget_category', 'Shopify');">Shopify</a><small>1</small></li>
+  
+    <li><a href="/categories/Web工具/" onclick="ga('send', 'event', 'widget_category', 'Web工具');">Web工具</a><small>19</small></li>
+  
+    <li><a href="/categories/Web技术/" onclick="ga('send', 'event', 'widget_category', 'Web技术');">Web技术</a><small>51</small></li>
+  
+    <li><a href="/categories/产品/" onclick="ga('send', 'event', 'widget_category', '产品');">产品</a><small>6</small></li>
+  
+    <li><a href="/categories/区块链/" onclick="ga('send', 'event', 'widget_category', '区块链');">区块链</a><small>8</small></li>
+  
+    <li><a href="/categories/变现/" onclick="ga('send', 'event', 'widget_category', '变现');">变现</a><small>12</small></li>
+  
+    <li><a href="/categories/工具/" onclick="ga('send', 'event', 'widget_category', '工具');">工具</a><small>3</small></li>
+  
+    <li><a href="/categories/极客番茄/" onclick="ga('send', 'event', 'widget_category', '极客番茄');">极客番茄</a><small>7</small></li>
+  
+    <li><a href="/categories/流量/" onclick="ga('send', 'event', 'widget_category', '流量');">流量</a><small>3</small></li>
+  
+    <li><a href="/categories/浏览器扩展插件/" onclick="ga('send', 'event', 'widget_category', '浏览器扩展插件');">浏览器扩展插件</a><small>3</small></li>
+  
+    <li><a href="/categories/清单/" onclick="ga('send', 'event', 'widget_category', '清单');">清单</a><small>3</small></li>
+  
+    <li><a href="/categories/生活/" onclick="ga('send', 'event', 'widget_category', '生活');">生活</a><small>9</small></li>
+  
+    <li><a href="/categories/直播/" onclick="ga('send', 'event', 'widget_category', '直播');">直播</a><small>1</small></li>
+  
+    <li><a href="/categories/认知/" onclick="ga('send', 'event', 'widget_category', '认知');">认知</a><small>15</small></li>
+  
+    <li><a href="/categories/训练营/" onclick="ga('send', 'event', 'widget_category', '训练营');">训练营</a><small>1</small></li>
+  
+    <li><a href="/categories/读书/" onclick="ga('send', 'event', 'widget_category', '读书');">读书</a><small>4</small></li>
+  
+    <li><a href="/categories/课程/" onclick="ga('send', 'event', 'widget_category', '课程');">课程</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">标签</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/CSS3/">CSS3</a><small>4</small></li>
+  
+    <li><a href="/tags/Chrome/">Chrome</a><small>7</small></li>
+  
+    <li><a href="/tags/EOS/">EOS</a><small>1</small></li>
+  
+    <li><a href="/tags/ETH/">ETH</a><small>1</small></li>
+  
+    <li><a href="/tags/Facebook/">Facebook</a><small>1</small></li>
+  
+    <li><a href="/tags/Google/">Google</a><small>8</small></li>
+  
+    <li><a href="/tags/HTML5/">HTML5</a><small>15</small></li>
+  
+    <li><a href="/tags/HTTPS/">HTTPS</a><small>2</small></li>
+  
+    <li><a href="/tags/Hybrid-App/">Hybrid App</a><small>2</small></li>
+  
+    <li><a href="/tags/Indie-Maker/">Indie Maker</a><small>20</small></li>
+  
+    <li><a href="/tags/JavaScript/">JavaScript</a><small>12</small></li>
+  
+    <li><a href="/tags/Markdown/">Markdown</a><small>1</small></li>
+  
+    <li><a href="/tags/Node-js/">Node.js</a><small>2</small></li>
+  
+    <li><a href="/tags/PWA/">PWA</a><small>1</small></li>
+  
+    <li><a href="/tags/Shopify/">Shopify</a><small>1</small></li>
+  
+    <li><a href="/tags/github/">github</a><small>2</small></li>
+  
+    <li><a href="/tags/临界知识/">临界知识</a><small>1</small></li>
+  
+    <li><a href="/tags/产品/">产品</a><small>7</small></li>
+  
+    <li><a href="/tags/人工智能/">人工智能</a><small>2</small></li>
+  
+    <li><a href="/tags/健康/">健康</a><small>2</small></li>
+  
+    <li><a href="/tags/增长/">增长</a><small>7</small></li>
+  
+    <li><a href="/tags/工具/">工具</a><small>15</small></li>
+  
+    <li><a href="/tags/插件/">插件</a><small>9</small></li>
+  
+    <li><a href="/tags/方法论/">方法论</a><small>20</small></li>
+  
+    <li><a href="/tags/木匠/">木匠</a><small>2</small></li>
+  
+    <li><a href="/tags/极客番茄/">极客番茄</a><small>7</small></li>
+  
+    <li><a href="/tags/框架/">框架</a><small>6</small></li>
+  
+    <li><a href="/tags/案例/">案例</a><small>2</small></li>
+  
+    <li><a href="/tags/概念/">概念</a><small>3</small></li>
+  
+    <li><a href="/tags/比特币/">比特币</a><small>3</small></li>
+  
+    <li><a href="/tags/浏览器扩展插件/">浏览器扩展插件</a><small>3</small></li>
+  
+    <li><a href="/tags/游戏/">游戏</a><small>2</small></li>
+  
+    <li><a href="/tags/认知/">认知</a><small>7</small></li>
+  
+    <li><a href="/tags/训练营/">训练营</a><small>1</small></li>
+  
+    <li><a href="/tags/课程/">课程</a><small>3</small></li>
+  
+    <li><a href="/tags/资源/">资源</a><small>9</small></li>
+  
+    <li><a href="/tags/路线图/">路线图</a><small>2</small></li>
+  
+    <li><a href="/tags/面试题/">面试题</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  <div class="widget hot">
+  <h3 class="title">热文推荐</h3>
+  <ul class="entry">
+    <li><a href="/2017/06/01/start-small-stay-small/" title="《Start Small, Stay Small》着眼小众市场，程序员的微型创业项目指南">《Start Small, Stay Small》着眼小众市场，程序员的微型创业项目指南</a></li>
+    <li><a href="/2017/02/08/how-to-read-a-book/" title="怎样读一本书V5.0 ?(译)">怎样读一本书V5.0 ?(译)</a></li>
+    <li><a href="/2015/06/06/mobile-web-skill/" title="移动端web开发技巧">移动端web开发技巧</a></li>
+    <li><a href="/2017/12/09/gafata-online/" title="www.gafata.com上线">www.gafata.com上线</a></li>
+    <li><a href="/2017/04/19/deliberate-practice/" title="刻意练习">刻意练习</a></li>
+    <li><a href="/2016/04/27/progressive-web-app/" title="Web新技术：PWA-Progressive Web App">Web新技术：PWA-Progressive Web App</a></li>
+    <li><a href="/2017/08/16/bitcoin-mining-consensus/" title="比特币的挖矿与共识">比特币的挖矿与共识</a></li>
+  </ul>
+</div>
+
+
+  <div class="widget tag" style="width:270px;border-top: 0px red solid;line-height: 0px;">
+
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2015-2023 <a href="/2015/02/28/new/">凯凯刘</a>
+  
+  &nbsp;
+  <a href="http://www.ezindie.com/" target="_blank" title="Easy Indie">Ezindie</a>
+  <a href="http://www.qunheying.com" target="_blank" title="微信群合影" style="margin-left: 10px">微信群合影</a>
+  <a href="http://md2vid.com" target="_blank" title="Markdown转视频" style="margin-left: 10px">Markdown转视频</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="/atom.xml" class="menu_rss menu_rss_bottom" target="_blank" title="RSS订阅"></a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  Powered by <a href="http://hexo.io/">Hexo</a>
+</div>
+<div class="clearfix"></div>
+
+<!--<script>-->
+    <!--var _hmt = _hmt || [];-->
+    <!--(function() {-->
+        <!--var hm = document.createElement("script");-->
+        <!--hm.src = "//hm.baidu.com/hm.js?1e92fed8a761c1224623815e3b960447";-->
+        <!--var s = document.getElementsByTagName("script")[0];-->
+        <!--s.parentNode.insertBefore(hm, s);-->
+    <!--})();-->
+<!--</script>-->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-85358197-2', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+
+</footer>
+  <!--<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>-->
+<!--<script src="<- config.root >js/jquery.imagesloaded.min.js"></script>-->
+<!--<script src="<- config.root >js/gallery.js"></script>-->
+
+
+
+
+</body>
+</html>

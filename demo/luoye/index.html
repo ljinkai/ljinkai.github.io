@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <title>H5落叶动画-前端开发知识</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
+    <!-- 获取更多知识，一起学习，关注微信公众号【前端开发知识】 -->
+    <link rel="stylesheet" href="leaves.css" type="text/css" media="screen" charset="utf-8">
+    <link href="assets/animate.css" rel="stylesheet">
+    <style type="text/css">
+      @media screen and (min-width: 1025px) {
+        .qr_code_pc {
+        position: absolute;
+        right: 10px;
+      top: 0;
+      padding: 16px;
+      border: 1px solid #d9dadc;
+      background-color: #fff;
+      font-size: 12px;
+      text-align: center;
+      }
+      }
+      .qr_code_pc_img {width: 100px;height: 100px;}
+    </style>
+    <script src="leaves.js" type="text/javascript" charset="utf-8"></script>
+    </head>
+  <body>
+
+    <div id="container">
+      <div id="leafContainer"></div>
+      <div id="message">
+      <div class="tlt">
+              <ul class="texts" style="display: none;">
+                <li>落叶 孔绍安</li>
+                <li>早秋惊落叶，飘零似客心</li>
+                <li>翻飞未肯下，犹言惜故林</li>
+              </ul>
+      </div>
+      <div id="all" style="display:none;line-height:40px;margin-top:20%;">
+          <ul style="padding:0px;margin:0px;">
+          <li style="list-style:none;">落叶 孔绍安</li>
+          <li style="list-style:none;">早秋惊落叶，飘零似客心</li>
+          <li style="list-style:none;">翻飞未肯下，犹言惜故林</li>
+          </ul>
+      </div>
+      </div>
+    </div>
+</div>
+<script src="http://cdn.staticfile.org/jquery/1.9.0/jquery.min.js"></script>
+<script src="assets/jquery.fittext.js"></script>
+<script src="assets/jquery.lettering.js"></script>
+<script src="assets/highlight.min.js"></script>
+<script src="assets/jquery.textillate.js"></script>
+<script>
+  $(function (){
+    // 获取更多知识，一起学习，关注微信公众号【前端开发知识】 -->
+    $('.tlt').textillate({ in: { effect: 'swing' },callback: function () {
+      $(".tlt").hide();
+      $("#all").show("slow");
+    }});
+  });
+  </script>
+  <div class="qr_code_pc">                        
+      <img id="js_pc_qr_code_img" class="qr_code_pc_img" src="http://qiniu.gafata.com/h5_qrcode_for_gh_0fd5deb0e08b_430.jpg">    
+      <p>微信扫一扫<br>获得更多内容</p>                   
+  </div>
+  </body>
+</html>

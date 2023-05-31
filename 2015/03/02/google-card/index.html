@@ -1,0 +1,524 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>设计-Google Card - 凯凯刘</title>
+  <meta name="author" content="凯凯刘">
+  
+  <meta name="description" content="在Android甚至是Google都在改变(谷歌开始重视设计)的前提下，我们看到了Google新的设计元素–卡片。卡片的设计我们可以认为出自Matias Duarte之手，可以认为它的思想来自于WebOS。">
+  
+  <meta name="keywords" content="google card,移动应用,移动设计,Android,卡片,Google Now">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="设计-Google Card"/>
+  <meta property="og:site_name" content="凯凯刘"/>
+
+  
+    <meta property="og:image" content="/img/300L.png"/>
+  
+
+  <meta name="google-site-verification" content="iIzqxT8FAfRGM8f4sr97VvjhDsk3QJQ-a2LMdn0DtXU" />
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="alternate" href="/atom.xml" title="凯凯刘" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/styleNew.css?x=6" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/gitment.css">
+  <script src="/js/qrcode.min.js"></script>
+
+  <!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+  <!--<script>-->
+      <!--(adsbygoogle = window.adsbygoogle || []).push({-->
+          <!--google_ad_client: "ca-pub-3023100525130189",-->
+          <!--enable_page_level_ads: true-->
+      <!--});-->
+  <!--</script>-->
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+    <h1><a href="/">凯凯刘</a></h1>
+    <h2><a href="/">
+            
+            Indie Maker、认知、技术、变现
+            
+        </a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+    <ul>
+        
+        <li><a href="/" onclick="ga('send', 'event', 'nav_top', '首页');">首页</a></li>
+        
+        <li><a href="/categories/Web技术/" onclick="ga('send', 'event', 'nav_top', 'Web技术');">Web技术</a></li>
+        
+        <li><a href="/categories/浏览器扩展插件/" onclick="ga('send', 'event', 'nav_top', '浏览器扩展插件');">浏览器扩展插件</a></li>
+        
+        <li><a href="/categories/区块链/" onclick="ga('send', 'event', 'nav_top', '区块链');">区块链</a></li>
+        
+        <li><a href="/categories/%E8%AE%A4%E7%9F%A5/" onclick="ga('send', 'event', 'nav_top', '认知');">认知</a></li>
+        
+        <li><a href="/categories/%E8%AF%BB%E4%B9%A6/" onclick="ga('send', 'event', 'nav_top', '读书');">读书</a></li>
+        
+        <li><a href="/categories/%E6%B5%81%E9%87%8F/" onclick="ga('send', 'event', 'nav_top', '流量');">流量</a></li>
+        
+        <li><a href="/categories/%E5%8F%98%E7%8E%B0/" onclick="ga('send', 'event', 'nav_top', '变现');">变现</a></li>
+        
+        <li><a href="/categories/%E7%94%9F%E6%B4%BB/" onclick="ga('send', 'event', 'nav_top', '生活');">生活</a></li>
+        
+        <li><a href="/2015/03/01/link-friends/" onclick="ga('send', 'event', 'nav_top', '友链');">友链</a></li>
+        
+        <li><a href="/2015/02/28/new/" onclick="ga('send', 'event', 'nav_top', '关于');">关于</a></li>
+        
+        <li><a href="/atom.xml" class="menu_rss" target="_blank" title="RSS订阅"></a></li>
+    </ul>
+    <div class="clearfix"></div>
+    <!--<div class="nav_zhibo" style="position: absolute;top : 120px;left: 40px;color: blue;">-->
+        <!--<a style="color: blue;cursor: pointer;" href="https://m.qlchat.com/topic/360000033244498.htm?preview=Y&intoPreview=Y"-->
+           <!--onclick="ga('send', 'event', 'nav_zhibo', 'qianliao');"-->
+           <!--target="_blank">我的千聊直播(周三)：比特币的挖矿与共识-->
+        <!--</a>-->
+    <!--</div>-->
+
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft">
+
+      <div class="ads_banner">
+        <!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+        <!-- banner -->
+        <!--<ins class="adsbygoogle"-->
+             <!--style="display:block"-->
+             <!--data-ad-client="ca-pub-4018032316880050"-->
+             <!--data-ad-slot="3550377487"-->
+             <!--data-ad-format="auto"></ins>-->
+        <!--<script>-->
+          <!--(adsbygoogle = window.adsbygoogle || []).push({});-->
+        <!--</script>-->
+
+        <!-- <div>
+          <a href="https://t.zsxq.com/ybIuBaA" target="_blank">
+            <img style="width: 100%" src="http://qiniu.gafata.com/2019-06-11-indiemaker_dlbx_1800x180.jpg?imageView2/2/w/1800"/>
+          </a>
+        </div> -->
+
+        <div class="banner-top" style="background-color: #032535;color:white;padding: 15px;font-size: 15px;">
+          「每日看板-Tabhub」浏览器新标签页，独立变现、新闻、日历、待办、RSS、股票等丰富组件
+          <a href="https://www.tabhub.app/?utm_source=blog" target="_blank" style="word-break: break-all;background-color:#c2007c;margin-left:10px;display:inline-block;width: 70px;padding:4px 4px;border-radius: 4px;color:white;text-align: center;" 
+          onclick="ga('send', 'event', 'ads', 'tabhub');" >免费使用</a>
+          <!--星云开发者开放注册啦，提交一个DApp即可获得100个NAS(大约7000元）,更有周、月度大额奖金等你拿！开发者今年最大的机会, 会JavaScript即可。<br>-->
+          <!--注册链接：<a target="_blank" style="word-break: break-all;" onclick="ga('send', 'event', 'ads', 'nebulas');" href="https://incentive.nebulas.io/cn/signup.html?invite=HjuhT">https://incentive.nebulas.io/cn/signup.html?invite=HjuhT</a>-->
+          <!--<span style="color: red">阿里云双11红包来啦，拼购1折起, 官方推荐1折团！</span><a href="https://m.aliyun.com/act/team1111/#/share?params=N.qYnY8sp2fK.kkb39ote" target="_blank" style="" onclick="ga('send', 'event', 'ads', 'aliyun');">马上参团>></a>-->
+
+        </div>
+      </div>
+
+      <div id="wrapper">
+    
+    <div style="display: none">
+        <img src="/img/300L.png" />
+    </div>
+
+
+
+<article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title">设计-Google Card</h1>
+  
+
+      
+        <div class="icon"></div>
+        <div class="article_head_extend">
+          <time datetime="2015-03-02T02:26:14.000Z"><a href="/2015/03/02/google-card/">Mar 2 2015</a>
+            
+          </time>
+          <div class="qrcode_con">
+            <div class="qrcode_text">扫描二维码</div>
+            <div id="Mon Mar 02 2015 10:26:14 GMT+0800 (China Standard Time)" class="qrcode_img"></div>
+            <script>
+              var qrcode = new QRCode(document.getElementById("Mon Mar 02 2015 10:26:14 GMT+0800 (China Standard Time)"), {
+                width : 100,
+                height : 100
+              });
+              qrcode.makeCode("http://liujinkai.com//2015/03/02/google-card/?utm_medium=blog&utm_source=qrcode");
+            </script>
+          </div>
+        </div>
+
+      
+    </header>
+    <div></div>
+    <div class="entry">
+      
+        <p>关键字：Android 移动应用 设计 移动设计 卡片<br>在Android甚至是Google都在改变(谷歌开始重视设计)的前提下，我们看到了Google新的设计元素–卡片。卡片的设计我们可以认为出自Matias Duarte之手，可以认为它的思想来自于WebOS。<br><a id="more"></a></p>
+<p><img src="http://qiniu.gafata.com/blog_mobile_android_card_1.jpg" alt=""></p>
+<p>卡片第一次正式走入大家视线是Google Now的真正式发布，伴随着Google Now，我们知道了即时贴也就是Now Card。当时这种配色和外观设计，以及内容呈现方式，在我看来非常新奇，我非常喜欢。在此所说的卡片，暂时命名为Android Card。<br>Android Card：说其卡片设计就要说些其它的东西。回到最开始就是扁平化和拟物，在这里存在两种激进的设计，过度的扁平和过度拟物。<br>首先说拟物(拟物与拟真到底有什么区别在此就不多做说明)，拟物非常好理解。拟物是对现实事物的模仿，从用户已有的认知和操作习惯过度到新的界面和交互上，降低用户的心里接受门槛和学习成本。另外一点非常重要的是在手机现实界面这个二维平面上使用拟物的设计风格，我们就可以摆脱横纵左边的平面限制，使用纹理、材质、质感这种更加丰富的表现方式展示自己设计初衷，更容易的向用户表达出自己的设计意图。<br>扁平的个人理解是源自排版的需求，重视排版就意味着重视内容。在这里我可以下一个比较偏执的结论，拟物重视的是用户的引导和功能设计，扁平更加强调的是排版和内容的呈现。扁平化的设计实际上是突出向用户展示内容，而不是暗示用户执行某些操作。<br>但是话又说回来了两者各有优缺点，就个人而言不喜欢过度的拟物。过度的模仿现实事物会产生过多的界面冗余，甚至会觉得界面过于“沉重”，有时会给人带来“压力”的感觉。扁平化之后会使几面显得简单，整洁，首先给人的直观感受是“轻量”，压迫感消失了。但是又暴露了交互困难的问题，所以两者的取舍也考验着设计师们。</p>
+<p><img src="http://qiniu.gafata.com/blog_mobile_android_card_2.jpg" alt=""></p>
+<p>那么回到开始，Android Card属于什么设计思想？首先很多人会觉得它看起来非常简单、简洁，但是我说这并不能说明什么。Android Card不是真正的扁平化设计，也不是直观的拟物化设计，而是一种介于两者之间的象征式设计。首先Card的设计本质是卡片，更直接的说是便签。一个便签中我们可以承载很多信息，不仅仅是量的多，更重要的是种类的多。在表现形式上是一种悬浮于灰色底纹的白色区块，给人最直观的感受是，可以操作，可以点击，甚至是可以整理。从内容和板式上来看，在同一个矩形区域通过一定的划分就可以表现出更多的信息，但是从整体来看，每个卡片的表现形式却又非常高度的统一。<br>与其说卡片表现出更加直观的操作，不如说它带来的是排版便利性。对于界面的适配在移动设备中尤为重要，卡片可以在兼顾内容的同时可以非常好的达到在不同大小的屏幕上表现出同样的效果。<br>区块与留白。界面的留白不是道从什么时候开始悄然兴起，同样这可以理解为是一种排版问题。留白叫上区块也是渐渐兴起的界面风格，即应用有一个统一的背景色，很多情况下是灰色，甚至可以允许自定义。然后各个功能和内容展示是一个个块状区域，使用边框和背景进行区分，同时边框周围对外有一定的填充距离。个人非常喜欢这种设计，从文字排版上说，这是一种分段。表达是是内容的相对独立性。加上填充距离后可以使界面不同元素加以区分。<br>—– 我是境界的分割线 —-<br>但是卡片也存在一定的局限性。<br>一、导航。很明显卡片本身不具备路径标识功能。它单个的独立性和可整理性意味着层的单一性。<br>二、结构化。卡片我们很容易和列表联系起来，通过把列表项的文字标题加上一些说明性文字，甚至是二级功能预览，我们很容易将一个列表视图转变为卡片视图。但是就如同第一条所讲的那样，如果是一个树形结构，卡片是无法进行深度的路径定位的。<br>三、界面统一性。卡片是一个相对来说比较突兀的界面风格，一旦你使用了它在其他功能上就需要与其保持风格的统一性。<br>接下来的卡片叫做Google Card。</p>
+<p><img src="http://qiniu.gafata.com/blog_mobile_android_card_3.jpg" alt=""></p>
+<p>在今年的Google I/O上，我们发现卡片正在被提升到新的高度。它已经被Google内部大部分设计师所认同，卡片的功能得到进一步加强。于是我们看到了卡片全线推广的势头，那就是Google +的再一次改版。</p>
+<p><img src="http://qiniu.gafata.com/blog_mobile_android_card_4.jpg" alt=""></p>
+<p>Google +的这次改版将卡片直接推广到桌面版，通过它我们可以发现Google 对卡片的更生层次的认识。首先的路径跳转问题。Google+的信息流是一个一维结构，那么如何进行层次的切换呢？如图左侧为一个单独的一条信息，在点击标签之后这个卡片进行反转式的切换，切换到一个此便签下的目录，在目录中可以横向切换不同的信息。此时这个卡片的操作应独立与整个信息流。</p>
+<p><img src="http://qiniu.gafata.com/blog_mobile_android_card_5.jpg" alt=""></p>
+<p>同样在不切换界面的前提下查看这个独立信息的其他消息，如用户操作。也会进行卡片反转，这时候右上角的图标告诉我们可以切换回来。<br>接下里是我对Google+这次改版的看法，首先是给予很大的肯定，算是成功的，至少比上个版本好很多。但是目前我对桌面的卡片化比较抵制，我觉得为了进行界面风格的统一，就换上卡片确实有待商榷，至少在桌面上，卡片不见得是最好的方案。另外我觉得以上这两种操作虽然在一定程度上解决得了我之前说的卡片存在的问题，但是这种操作方式我还是认为极客化。看起来非常有特色，但是我对他的交互思想不敢认同。<br>另外，Google+的一种翻页方式是什么？J键和K键，J键向下滚动，K键向上滚动… …不知道你想到了什么，对那就是vi的快捷键… …这种浓浓的开发者风格是怎么回事？另外就是Google+首页的信息流改成了卡片之后，由于卡片具有良好的内容整合性，于是… ..他们把几乎所有消息都放在了信息流中，不管是完善个人信息提示、生日提示、好友推荐等等，全部都放到信息流中。毕竟我不是美术和设计出身，也不能妄加评论这个些，但是我觉得这个真的不混乱吗？用户不想看时看到了，想看时又去哪里找？<br>卡片的使用到目前还没有完全发掘出来，这点我们可以尽管的期待好了。在Matias Duarte推动Android的变化中，我们可以看到这些正在慢慢的影响着Google的其它产品。虽然目前Google的很多东西已经不能让人感到满意，但是它正在改变不是吗？让我们一起期待将来一个更加“美丽”的Google。</p>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/Web技术/">Web技术</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/Google/">Google</a>
+  </div>
+
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+    
+
+
+
+<section id="comment">
+    <div id="gitalk-container"></div>
+    <!--<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>-->
+    <!--<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>-->
+    <!--<script>-->
+        <!--var cloudTieConfig = {-->
+            <!--url: document.location.href,-->
+            <!--sourceId: "",-->
+            <!--productKey: "a65a1e5ea58d4c3a8ea1fef77d0371db",-->
+            <!--target: "cloud-tie-wrapper"-->
+        <!--};-->
+        <!--var yunManualLoad = true;-->
+        <!--Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);-->
+    <!--</script>-->
+    <!--PC和WAP自适应版-->
+    <!--<div id="SOHUCS" ></div>-->
+    <!--<script type="text/javascript">-->
+        <!--(function(){-->
+            <!--var appid = 'cyt6v35LM';-->
+            <!--var conf = 'prod_82a0b7686345b309fbcbcae5ae75c45e';-->
+            <!--var width = window.innerWidth || document.documentElement.clientWidth;-->
+            <!--if (width < 960) {-->
+                <!--window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>-->
+
+</section>
+<!--<script src="/js/gitment.browser.js"></script>-->
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<script>
+    // const gitment = new Gitment({
+    //     owner: 'ljinkai',
+    //     repo: 'ljinkai.github.io',
+    //     oauth: {
+    //         client_id: '1e0bbf087995295c53aa',
+    //         client_secret: '7aaf0001f26a5f16ddd7769384d549f317244720',
+    //     }
+    // })
+    // gitment.render('comment')
+
+    const gitalk = new Gitalk({
+        clientID: '1e0bbf087995295c53aa',
+        clientSecret: '7aaf0001f26a5f16ddd7769384d549f317244720',
+        repo: 'ljinkai.github.io',
+        owner: 'ljinkai',
+        admin: ['ljinkai'],
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    })
+
+    gitalk.render('gitalk-container')
+
+</script>
+
+
+
+
+
+</div>
+    </div>
+    <aside id="sidebar" class="alignright">
+  <div class="widget tag" style="padding: 16px;">
+
+      <div style="color: black;font-size: 16px;">
+          <div style="width: 100%;text-align: center;margin-bottom: 10px;margin-top: 0px;">我的知识星球</div>
+          
+          <a style="width: 100%;display: block;text-decoration: none;" href="https://mp.weixin.qq.com/s/LIzhjGGRqiqYnMhIxtFYAw" target="_blank"
+             onclick="ga('send', 'event', 'zsxq_11_blog', 'zsxq');">
+              <img src="https://qiniu.gafata.com/zsxq.jpeg" width="100%"/>
+          </a>
+          <div style="width: 100%;text-align: center;margin-bottom: 10px;margin-top: 0px;">我的在线课程</div>
+          <a style="width: 100%;display: block;text-decoration: none;" href="https://m.qlchat.com/wechat/page/channel-intro?channelId=2000018572922685" target="_blank"
+             onclick="ga('send', 'event', 'my_course', 'live_20170720');">
+              <img src="https://qiniu.gafata.com/chrome-extension-qianliao-2.png" width="100%"/>
+          </a>
+      </div>
+</div>
+
+
+  <div class="widget tag about_fix_none" id="about_fix">
+
+  <ul class="entry" style="text-align: center;font-size: 14px;font-weight: bold;">
+    <li>微信公众号：凯凯而谈</li>
+    <li style="font-weight: normal;font-size: 12px;">这里有我的分享和思考，我们一起知道做到</li>
+    <li><img src='http://qiniu.gafata.com/2019-03-17-web-bear.jpg?imageView2/2/w/600' width='180px' style="margin: 0px auto;display: block;"></li>
+  </ul>
+</div>
+<div class="widget tag">
+  <div class="about_banner">
+    <div class="about_profile">
+      <a href="/2015/02/28/new/">
+        <img class="about_img" src="http://qiniu.gafata.com/2019-03-25-WechatIMG1128.jpeg?imageView2/2/w/200">
+      </a>
+    </div>
+  </div>
+  <ul class="entry" style="text-align: center;">
+    <li>认知、技术、变现</li>
+    <li>微博：<a href="http://weibo.com/jieyingbei" target="_blank" onclick="ga('send', 'event', 'widget_about', 'weibo')">@凯凯刘</a></li>
+    <li>微信公众号：凯凯而谈</li>
+    <li><img src='http://qiniu.gafata.com/2019-03-17-web-bear.jpg?imageView2/2/w/600' width='160px' style="margin: 0px auto;display: block;"></li>
+    <li>Web、Indie Maker</li>
+  </ul>
+  <script>
+    function getPageTopLeft(el) {
+      var rect = el.getBoundingClientRect();
+      var docEl = document.documentElement;
+      return {
+        left: rect.left + (window.pageXOffset || docEl.scrollLeft || 0),
+        top: rect.top + (window.pageYOffset || docEl.scrollTop || 0)
+      };
+    }
+    // window.addEventListener('scroll',function() {
+    //   var winWid = document.body.clientWidth;
+    //   if (winWid > 900) {
+    //     var anchorTop = getPageTopLeft(document.getElementById("anchorTop")).top;
+    //     var scrollTop = window.pageYOffset|| document.documentElement.scrollTop || document.body.scrollTop;
+
+    //     if (anchorTop < scrollTop) {
+    //       document.getElementById("about_fix").className = "widget tag about_fix";
+    //     } else {
+    //       document.getElementById("about_fix").className = "widget tag about_fix_none";
+    //     }
+    //   }
+    // });
+  </script>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/Indie-Maker/" onclick="ga('send', 'event', 'widget_category', 'Indie Maker');">Indie Maker</a><small>20</small></li>
+  
+    <li><a href="/categories/Shopify/" onclick="ga('send', 'event', 'widget_category', 'Shopify');">Shopify</a><small>1</small></li>
+  
+    <li><a href="/categories/Web工具/" onclick="ga('send', 'event', 'widget_category', 'Web工具');">Web工具</a><small>19</small></li>
+  
+    <li><a href="/categories/Web技术/" onclick="ga('send', 'event', 'widget_category', 'Web技术');">Web技术</a><small>51</small></li>
+  
+    <li><a href="/categories/产品/" onclick="ga('send', 'event', 'widget_category', '产品');">产品</a><small>6</small></li>
+  
+    <li><a href="/categories/区块链/" onclick="ga('send', 'event', 'widget_category', '区块链');">区块链</a><small>8</small></li>
+  
+    <li><a href="/categories/变现/" onclick="ga('send', 'event', 'widget_category', '变现');">变现</a><small>12</small></li>
+  
+    <li><a href="/categories/工具/" onclick="ga('send', 'event', 'widget_category', '工具');">工具</a><small>3</small></li>
+  
+    <li><a href="/categories/极客番茄/" onclick="ga('send', 'event', 'widget_category', '极客番茄');">极客番茄</a><small>7</small></li>
+  
+    <li><a href="/categories/流量/" onclick="ga('send', 'event', 'widget_category', '流量');">流量</a><small>3</small></li>
+  
+    <li><a href="/categories/浏览器扩展插件/" onclick="ga('send', 'event', 'widget_category', '浏览器扩展插件');">浏览器扩展插件</a><small>3</small></li>
+  
+    <li><a href="/categories/清单/" onclick="ga('send', 'event', 'widget_category', '清单');">清单</a><small>3</small></li>
+  
+    <li><a href="/categories/生活/" onclick="ga('send', 'event', 'widget_category', '生活');">生活</a><small>9</small></li>
+  
+    <li><a href="/categories/直播/" onclick="ga('send', 'event', 'widget_category', '直播');">直播</a><small>1</small></li>
+  
+    <li><a href="/categories/认知/" onclick="ga('send', 'event', 'widget_category', '认知');">认知</a><small>15</small></li>
+  
+    <li><a href="/categories/训练营/" onclick="ga('send', 'event', 'widget_category', '训练营');">训练营</a><small>1</small></li>
+  
+    <li><a href="/categories/读书/" onclick="ga('send', 'event', 'widget_category', '读书');">读书</a><small>4</small></li>
+  
+    <li><a href="/categories/课程/" onclick="ga('send', 'event', 'widget_category', '课程');">课程</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">标签</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/CSS3/">CSS3</a><small>4</small></li>
+  
+    <li><a href="/tags/Chrome/">Chrome</a><small>7</small></li>
+  
+    <li><a href="/tags/EOS/">EOS</a><small>1</small></li>
+  
+    <li><a href="/tags/ETH/">ETH</a><small>1</small></li>
+  
+    <li><a href="/tags/Facebook/">Facebook</a><small>1</small></li>
+  
+    <li><a href="/tags/Google/">Google</a><small>8</small></li>
+  
+    <li><a href="/tags/HTML5/">HTML5</a><small>15</small></li>
+  
+    <li><a href="/tags/HTTPS/">HTTPS</a><small>2</small></li>
+  
+    <li><a href="/tags/Hybrid-App/">Hybrid App</a><small>2</small></li>
+  
+    <li><a href="/tags/Indie-Maker/">Indie Maker</a><small>20</small></li>
+  
+    <li><a href="/tags/JavaScript/">JavaScript</a><small>12</small></li>
+  
+    <li><a href="/tags/Markdown/">Markdown</a><small>1</small></li>
+  
+    <li><a href="/tags/Node-js/">Node.js</a><small>2</small></li>
+  
+    <li><a href="/tags/PWA/">PWA</a><small>1</small></li>
+  
+    <li><a href="/tags/Shopify/">Shopify</a><small>1</small></li>
+  
+    <li><a href="/tags/github/">github</a><small>2</small></li>
+  
+    <li><a href="/tags/临界知识/">临界知识</a><small>1</small></li>
+  
+    <li><a href="/tags/产品/">产品</a><small>7</small></li>
+  
+    <li><a href="/tags/人工智能/">人工智能</a><small>2</small></li>
+  
+    <li><a href="/tags/健康/">健康</a><small>2</small></li>
+  
+    <li><a href="/tags/增长/">增长</a><small>7</small></li>
+  
+    <li><a href="/tags/工具/">工具</a><small>15</small></li>
+  
+    <li><a href="/tags/插件/">插件</a><small>9</small></li>
+  
+    <li><a href="/tags/方法论/">方法论</a><small>20</small></li>
+  
+    <li><a href="/tags/木匠/">木匠</a><small>2</small></li>
+  
+    <li><a href="/tags/极客番茄/">极客番茄</a><small>7</small></li>
+  
+    <li><a href="/tags/框架/">框架</a><small>6</small></li>
+  
+    <li><a href="/tags/案例/">案例</a><small>2</small></li>
+  
+    <li><a href="/tags/概念/">概念</a><small>3</small></li>
+  
+    <li><a href="/tags/比特币/">比特币</a><small>3</small></li>
+  
+    <li><a href="/tags/浏览器扩展插件/">浏览器扩展插件</a><small>3</small></li>
+  
+    <li><a href="/tags/游戏/">游戏</a><small>2</small></li>
+  
+    <li><a href="/tags/认知/">认知</a><small>7</small></li>
+  
+    <li><a href="/tags/训练营/">训练营</a><small>1</small></li>
+  
+    <li><a href="/tags/课程/">课程</a><small>3</small></li>
+  
+    <li><a href="/tags/资源/">资源</a><small>9</small></li>
+  
+    <li><a href="/tags/路线图/">路线图</a><small>2</small></li>
+  
+    <li><a href="/tags/面试题/">面试题</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  <div class="widget hot">
+  <h3 class="title">热文推荐</h3>
+  <ul class="entry">
+    <li><a href="/2017/06/01/start-small-stay-small/" title="《Start Small, Stay Small》着眼小众市场，程序员的微型创业项目指南">《Start Small, Stay Small》着眼小众市场，程序员的微型创业项目指南</a></li>
+    <li><a href="/2017/02/08/how-to-read-a-book/" title="怎样读一本书V5.0 ?(译)">怎样读一本书V5.0 ?(译)</a></li>
+    <li><a href="/2015/06/06/mobile-web-skill/" title="移动端web开发技巧">移动端web开发技巧</a></li>
+    <li><a href="/2017/12/09/gafata-online/" title="www.gafata.com上线">www.gafata.com上线</a></li>
+    <li><a href="/2017/04/19/deliberate-practice/" title="刻意练习">刻意练习</a></li>
+    <li><a href="/2016/04/27/progressive-web-app/" title="Web新技术：PWA-Progressive Web App">Web新技术：PWA-Progressive Web App</a></li>
+    <li><a href="/2017/08/16/bitcoin-mining-consensus/" title="比特币的挖矿与共识">比特币的挖矿与共识</a></li>
+  </ul>
+</div>
+
+
+  <div class="widget tag" style="width:270px;border-top: 0px red solid;line-height: 0px;">
+
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2015-2023 <a href="/2015/02/28/new/">凯凯刘</a>
+  
+  &nbsp;
+  <a href="http://www.ezindie.com/" target="_blank" title="Easy Indie">Ezindie</a>
+  <a href="http://www.qunheying.com" target="_blank" title="微信群合影" style="margin-left: 10px">微信群合影</a>
+  <a href="http://md2vid.com" target="_blank" title="Markdown转视频" style="margin-left: 10px">Markdown转视频</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="/atom.xml" class="menu_rss menu_rss_bottom" target="_blank" title="RSS订阅"></a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  Powered by <a href="http://hexo.io/">Hexo</a>
+</div>
+<div class="clearfix"></div>
+
+<!--<script>-->
+    <!--var _hmt = _hmt || [];-->
+    <!--(function() {-->
+        <!--var hm = document.createElement("script");-->
+        <!--hm.src = "//hm.baidu.com/hm.js?1e92fed8a761c1224623815e3b960447";-->
+        <!--var s = document.getElementsByTagName("script")[0];-->
+        <!--s.parentNode.insertBefore(hm, s);-->
+    <!--})();-->
+<!--</script>-->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-85358197-2', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+
+</footer>
+  <!--<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>-->
+<!--<script src="<- config.root >js/jquery.imagesloaded.min.js"></script>-->
+<!--<script src="<- config.root >js/gallery.js"></script>-->
+
+
+
+
+</body>
+</html>

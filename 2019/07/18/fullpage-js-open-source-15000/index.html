@@ -1,0 +1,608 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>fullpage.js这个开源项目怎样从免费到每月$15000 - 凯凯刘</title>
+  <meta name="author" content="凯凯刘">
+  
+  <meta name="description" content="Alvaro Trig的fullpage.js项目，从一开始的免费到盈利，有作者多年的经验分享，也有踩坑总结，对于技术人员做产品的很有帮助。">
+  
+  <meta name="keywords" content="fullPage.js,开源,独立变现,盈利">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="fullpage.js这个开源项目怎样从免费到每月$15000"/>
+  <meta property="og:site_name" content="凯凯刘"/>
+
+  
+    <meta property="og:image" content="/img/300L.png"/>
+  
+
+  <meta name="google-site-verification" content="iIzqxT8FAfRGM8f4sr97VvjhDsk3QJQ-a2LMdn0DtXU" />
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="alternate" href="/atom.xml" title="凯凯刘" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/styleNew.css?x=6" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/gitment.css">
+  <script src="/js/qrcode.min.js"></script>
+
+  <!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+  <!--<script>-->
+      <!--(adsbygoogle = window.adsbygoogle || []).push({-->
+          <!--google_ad_client: "ca-pub-3023100525130189",-->
+          <!--enable_page_level_ads: true-->
+      <!--});-->
+  <!--</script>-->
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+    <h1><a href="/">凯凯刘</a></h1>
+    <h2><a href="/">
+            
+            Indie Maker、认知、技术、变现
+            
+        </a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+    <ul>
+        
+        <li><a href="/" onclick="ga('send', 'event', 'nav_top', '首页');">首页</a></li>
+        
+        <li><a href="/categories/Web技术/" onclick="ga('send', 'event', 'nav_top', 'Web技术');">Web技术</a></li>
+        
+        <li><a href="/categories/浏览器扩展插件/" onclick="ga('send', 'event', 'nav_top', '浏览器扩展插件');">浏览器扩展插件</a></li>
+        
+        <li><a href="/categories/区块链/" onclick="ga('send', 'event', 'nav_top', '区块链');">区块链</a></li>
+        
+        <li><a href="/categories/%E8%AE%A4%E7%9F%A5/" onclick="ga('send', 'event', 'nav_top', '认知');">认知</a></li>
+        
+        <li><a href="/categories/%E8%AF%BB%E4%B9%A6/" onclick="ga('send', 'event', 'nav_top', '读书');">读书</a></li>
+        
+        <li><a href="/categories/%E6%B5%81%E9%87%8F/" onclick="ga('send', 'event', 'nav_top', '流量');">流量</a></li>
+        
+        <li><a href="/categories/%E5%8F%98%E7%8E%B0/" onclick="ga('send', 'event', 'nav_top', '变现');">变现</a></li>
+        
+        <li><a href="/categories/%E7%94%9F%E6%B4%BB/" onclick="ga('send', 'event', 'nav_top', '生活');">生活</a></li>
+        
+        <li><a href="/2015/03/01/link-friends/" onclick="ga('send', 'event', 'nav_top', '友链');">友链</a></li>
+        
+        <li><a href="/2015/02/28/new/" onclick="ga('send', 'event', 'nav_top', '关于');">关于</a></li>
+        
+        <li><a href="/atom.xml" class="menu_rss" target="_blank" title="RSS订阅"></a></li>
+    </ul>
+    <div class="clearfix"></div>
+    <!--<div class="nav_zhibo" style="position: absolute;top : 120px;left: 40px;color: blue;">-->
+        <!--<a style="color: blue;cursor: pointer;" href="https://m.qlchat.com/topic/360000033244498.htm?preview=Y&intoPreview=Y"-->
+           <!--onclick="ga('send', 'event', 'nav_zhibo', 'qianliao');"-->
+           <!--target="_blank">我的千聊直播(周三)：比特币的挖矿与共识-->
+        <!--</a>-->
+    <!--</div>-->
+
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft">
+
+      <div class="ads_banner">
+        <!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+        <!-- banner -->
+        <!--<ins class="adsbygoogle"-->
+             <!--style="display:block"-->
+             <!--data-ad-client="ca-pub-4018032316880050"-->
+             <!--data-ad-slot="3550377487"-->
+             <!--data-ad-format="auto"></ins>-->
+        <!--<script>-->
+          <!--(adsbygoogle = window.adsbygoogle || []).push({});-->
+        <!--</script>-->
+
+        <!-- <div>
+          <a href="https://t.zsxq.com/ybIuBaA" target="_blank">
+            <img style="width: 100%" src="http://qiniu.gafata.com/2019-06-11-indiemaker_dlbx_1800x180.jpg?imageView2/2/w/1800"/>
+          </a>
+        </div> -->
+
+        <div class="banner-top" style="background-color: #032535;color:white;padding: 15px;font-size: 15px;">
+          「每日看板-Tabhub」浏览器新标签页，独立变现、新闻、日历、待办、RSS、股票等丰富组件
+          <a href="https://www.tabhub.app/?utm_source=blog" target="_blank" style="word-break: break-all;background-color:#c2007c;margin-left:10px;display:inline-block;width: 70px;padding:4px 4px;border-radius: 4px;color:white;text-align: center;" 
+          onclick="ga('send', 'event', 'ads', 'tabhub');" >免费使用</a>
+          <!--星云开发者开放注册啦，提交一个DApp即可获得100个NAS(大约7000元）,更有周、月度大额奖金等你拿！开发者今年最大的机会, 会JavaScript即可。<br>-->
+          <!--注册链接：<a target="_blank" style="word-break: break-all;" onclick="ga('send', 'event', 'ads', 'nebulas');" href="https://incentive.nebulas.io/cn/signup.html?invite=HjuhT">https://incentive.nebulas.io/cn/signup.html?invite=HjuhT</a>-->
+          <!--<span style="color: red">阿里云双11红包来啦，拼购1折起, 官方推荐1折团！</span><a href="https://m.aliyun.com/act/team1111/#/share?params=N.qYnY8sp2fK.kkb39ote" target="_blank" style="" onclick="ga('send', 'event', 'ads', 'aliyun');">马上参团>></a>-->
+
+        </div>
+      </div>
+
+      <div id="wrapper">
+    
+    <div style="display: none">
+        <img src="/img/300L.png" />
+    </div>
+
+
+
+<article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title">fullpage.js这个开源项目怎样从免费到每月$15000</h1>
+  
+
+      
+        <div class="icon"></div>
+        <div class="article_head_extend">
+          <time datetime="2019-07-18T01:03:02.000Z"><a href="/2019/07/18/fullpage-js-open-source-15000/">Jul 18 2019</a>
+            
+          </time>
+          <div class="qrcode_con">
+            <div class="qrcode_text">扫描二维码</div>
+            <div id="Thu Jul 18 2019 09:03:02 GMT+0800 (China Standard Time)" class="qrcode_img"></div>
+            <script>
+              var qrcode = new QRCode(document.getElementById("Thu Jul 18 2019 09:03:02 GMT+0800 (China Standard Time)"), {
+                width : 100,
+                height : 100
+              });
+              qrcode.makeCode("http://liujinkai.com//2019/07/18/fullpage-js-open-source-15000/?utm_medium=blog&utm_source=qrcode");
+            </script>
+          </div>
+        </div>
+
+      
+    </header>
+    <div></div>
+    <div class="entry">
+      
+        <blockquote>
+<p>此文是一篇译文，也是「IndieMaker独立变现」人物志系列文章之一<br>原作者：Alvaro Trigo，fullPage.js 创作者<br>原文：<a href="https://www.indiehackers.com/interview/making-15k-month-by-switching-my-freemium-product-to-paid-2771241389" target="_blank" rel="external">https://www.indiehackers.com/interview/making-15k-month-by-switching-my-freemium-product-to-paid-2771241389</a></p>
+</blockquote>
+<h2 id="你的背景是什么，你在做什么？"><a href="#你的背景是什么，你在做什么？" class="headerlink" title="你的背景是什么，你在做什么？"></a>你的背景是什么，你在做什么？</h2><p>大家好，我叫Alvaro Trigo。现在全职在fullPage.js这个项目-一个Javascript的开源组件，帮助开发者创建全屏的幻灯片展示效果。已经被Google, eBay, McDonald’s, Coca Cola等大公司使用了。在过去的几个月了，我已经有了$15,000/月的收入。我现在是Javascript优秀开发者榜单的英国第5名，世界范围内容的第84名，来自git-awards.com的统计。</p>
+<a id="more"></a>
+<p>当我16岁的时候我就用Microsoft Word做了第一个网站。我的兴趣就是Web技术，之后在西班牙获取了计算机科学的学位。之后，在英国的剑桥得到了一份工作。在8个人的小公司里全职工作了5年时间。fullPage.js是我的一个业余项目，始于2013年。在创造了fullPage.js之后的第3年，我开始尝试附加功能的收费；6个月之后，在我的业余收入超过我的本职工作的时候，我辞掉了我的全职工作。</p>
+<h2 id="是什么促使你开始了fullPage-js？"><a href="#是什么促使你开始了fullPage-js？" class="headerlink" title="是什么促使你开始了fullPage.js？"></a>是什么促使你开始了fullPage.js？</h2><p>学习新东西并做一些对别人有用的是我一直渴望做的事。听起来有点假，不过这是我的真心话。当看到人们真的在用你创造的产品的时候，内心是非常开心的，这也是我的动力所在，也是我为什么能在前3年里一直迭代，但是没有收取一分钱的原因。作为一个创作者，我们希望别人认可我们的价值；这推动我们继续提升产品的功能。就像教练一直让你挑战自己直到你变的越来越好。</p>
+<p>fullPage.js的灵感来自我必须要做一个全屏幻灯片效果的网站。那时候，还没有一个组件能完成这个功能，所以我就只能自己来做。</p>
+<p>我一直想尝试做一个jQuery的插件，但是一直想不到做什么。当我完成全屏幻灯片效果网站之后，我想我可以把这个做成一个jQuery插件。这样其它的开发者就不用造重复的轮子了。</p>
+<p>我在Github上建了一个开源的仓库并上传了代码。把Github上的链接和我的网站进行了宣传。一个星期之后，已经有了几百个Star并有很多开发者提交issue。这就是一切的开始。</p>
+<h2 id="构建初始产品做了哪些工作？"><a href="#构建初始产品做了哪些工作？" class="headerlink" title="构建初始产品做了哪些工作？"></a>构建初始产品做了哪些工作？</h2><p>我记不清确切花多少时间发布的第一个免费产品，可能是一个或者两个星期，大概300行代码。那时候我还有Web开发的全职工作，所以我只能用业余时间来做。那正是我需要的东西，没有资金的支持，我所需要的就是有时间来敲代码。</p>
+<p>一开始，我脑子里想的是怎样更简单的来使用，对于经验不多的开发者更友好。我已经烦透了那些开源项目糟糕的文档说明。所以我想让产品尽可能的使用简单。</p>
+<p>我决定不添加没必要的功能，并且我文档上有对细节的详细说明。有的时候，用户会询问现有产品里没有的功能。那时候我意识到可以对额外的工作可以收取一定的费用。</p>
+<p>大约为用户定制开发了一年后，我决定对这些额外功能收取费用。我花了大约一到两个月时间研究收费模式，授权许可模式，怎样保证代码不被窃取。我也调研了其它的Javascript插件是如何来实现收费策略的。</p>
+<p>我记得和Dave DeSandro有过交流，他全职做了一些web产品。我们在Twitter上有一些私信的交流。给了我很多有用的建议：我询问了老板是否可以利用业余时间做我自己的产品，并获得了HR的允许。一些天后，我联系了税务顾问并注册了个体经营。</p>
+<p>FullPage.js一开始是一个jQuery插件，之后变成了独立的Javascript组件。我还扩展到支持Vue.js, React.js和Anugular. 我现在和另外一个开发者合作做了WordPress的插件。</p>
+<h2 id="你是如何吸引用户和并保持fullPage-js增长的？"><a href="#你是如何吸引用户和并保持fullPage-js增长的？" class="headerlink" title="你是如何吸引用户和并保持fullPage.js增长的？"></a>你是如何吸引用户和并保持fullPage.js增长的？</h2><p>在我创建了Github项目之后我觉得将来是能够盈利的并能给用户提供价值。</p>
+<p>所以：<br>1、我创建了一个落地页作为一个演示Demo.<br>2、我写了Blog文章。<br>3、我快速收集了一些web开发者和设计师的博客，web资源站，jQuery插件站点。给他们发邮件，发送我产品的相关信息，询问他们是否有兴趣发布一篇文章。我时不时的会做这样的事。<br>4、我也提交到web资源站，像：<a href="http://www.unheap.com/" target="_blank" rel="external">http://www.unheap.com/</a><br>5、我在stackoverflow.com上回答相关问题，并推荐我的免费产品。(这个策略帮助其他人搜索相关内容的时候，也能发现我的产品。)</p>
+<p>雪球越滚越大，人们的口碑传播，Github上的Star也越来越多。Github甚至优选我的产品。</p>
+<p>但是我没有停下来。在接下来的几年里继续提升我的产品。我为BindPress写了很多文章。在Youtube上发布了不少指导视频，保持在StackOverflow和Twitter上的互动。我也通过文章或者博客的形式参与一些采访。</p>
+<p><strong>一直到今天，我也会Google我的产品，看看什么地方能增加市场(或者获取用户来使用我的产品)。</strong>我想听到他们的问题，提供解决方案，考虑潜在的新的机会。</p>
+<p>我曾经尝试Google广告和Facebook的广告，但是效果不好。可能是我的SEO做的很好，人们通常不需要广告就能找到我的产品。这就是很多网站指向我的文章的好处吧。</p>
+<h2 id="你的商业模式是什么？你如何增加收入？"><a href="#你的商业模式是什么？你如何增加收入？" class="headerlink" title="你的商业模式是什么？你如何增加收入？"></a>你的商业模式是什么？你如何增加收入？</h2><p>最初，我无意将项目商业化，因为该产品完全免费且开源。 大约三年后，我开始考虑商业化。 一旦我将产品定位为市场上这些组件的来源，我就能更加游刃有余，来满足那些想要通过没有的某些特定功能来增强代码的人的请求。现在我有更多时间，向他们提供产品定制版本。</p>
+<p>这样我做了一段时间，我先很多人会向我询问同样的功能。每次的定制化会花很多的时间，而且花在沟通上会很多时间。来回的在邮件、加油、附件、解释等等。</p>
+<p>我想如果能摆脱这种人工操作会好很多，我就把这些定制功能放到网站上，我不需要做任何事，没有邮件，指导，价格讨论，支付问题等等…</p>
+<p>大约一年半之后，我决定开始对产品收费(从原始版本上增加了定制扩展)看看会怎么样。我对团队和公司增加了一个低价的$11,包括2个打包项和一个授权。今天这项销售占了我收入的50%还多。</p>
+<p>现在我的收入类型有：</p>
+<ul>
+<li>fullPage.js扩展的销售</li>
+<li>fullPage.js的授权销售</li>
+<li>Affiliate链接到WordPress主题</li>
+</ul>
+<p>我用Gumroad平台销售我的扩展。用了Stripe和Paypal来解决支付问题。</p>
+<p>我也用了WordPress Theme 提供的affiliate链接，通过我的购买链接，我能获得40%的佣金收入。</p>
+<p>所有这些加在一起平均能达到$15000/月收入，但也不是一直如此。</p>
+<p><img src="http://qiniu.gafata.com/2019-07-13-WX20190714-075139%402x.png?imageView2/2/w/600" alt=""></p>
+<p>从2018年我决定从免费模式到授权模式(对GPLv3还是免费的)。我的收入饭了一倍。</p>
+<p>我的支出主要有网站的托管，VPN, 税务顾问，通信，广告，安全支出。</p>
+<p>我的建议？开始的时候就要考虑收费；当然这取决于你的产品。以我的产品为例，全世界的Javascript开发者使用我的组件都是免费的，一开始就增长很快。在市场中占有一席之地，建立自己的品牌，让其他人帮你口碑传播。一旦你有了一定数量的用户，你就可以考虑收费。</p>
+<p>就我而言，如果从第一天开始收费，竞争对手就可以相对轻松地获得市场份额。 在免费提供某些东西时，为自己和产品建立品牌会更容易。 但同样，这可能是市场预期软件大部分都是免费的结果。</p>
+<p>关于定价套餐，尝试使用不同的名称和方式来呈现它们。 这里有许多心理学和营销学。 在阅读这篇关于Stripe( <a href="https://stripe.com/atlas/guides/saas-pricing" target="_blank" rel="external">https://stripe.com/atlas/guides/saas-pricing</a> ) by @ patio11的精彩文章时，给了我很多的启发。</p>
+<p><img src="http://qiniu.gafata.com/2019-07-14-WX20190714-080225%402x.png?imageView2/2/w/600" alt=""></p>
+<h2 id="你未来的目标是什么？"><a href="#你未来的目标是什么？" class="headerlink" title="你未来的目标是什么？"></a>你未来的目标是什么？</h2><p>在收入方法，我的目标是今年达到$20k/月。为了达到这个目标，我脑子里有这么几件事会做：</p>
+<ul>
+<li>为产品增加新的扩展</li>
+<li>基于产品开始售卖HTML模板</li>
+<li>为产品增加编辑器</li>
+<li>找到一种方式来实现订阅付费来保证可预期的一些收入</li>
+<li>开始一些新的项目/产品(我已经有一些初步的想法)</li>
+</ul>
+<p>我还与另一个人合作为fullpage.js创建一个WordPress插件。 我不太了解Wordpress社区，我不知道结果会怎样，但我希望它会有所帮助。</p>
+<p>我也试着把重点放在我认为的“所有目标的目标”上，这样才能保持增长。 有时候我过于专注于日常工作，比如客户支持，修复错误，处理技术问题……我觉得我不再真正创新了。 我不是在为我的产品构建新东西或增加任何价值。 我认为重要的是不时退后一步，看一看大局，制定一个新目标的路线图，这不仅会带来更好的产品，也会带来更广阔的市场和收入增长。 这是Patrick Bet-David( <a href="https://www.youtube.com/watch?v=2jG6lJLcToA" target="_blank" rel="external">https://www.youtube.com/watch?v=2jG6lJLcToA</a> )在几个有趣的视频中谈到的内容。</p>
+<p>在个人层面上，我想继续享受我现在的生活; 工作不是负担，我可以随时随地旅行或休息。 我不想牺牲自己的生命和空闲时间来增加收入。</p>
+<h2 id="您遇到的最大挑战是什么？您遇到的障碍是什么？-如果你不得不重新开始，你会采取哪些不同的做法？"><a href="#您遇到的最大挑战是什么？您遇到的障碍是什么？-如果你不得不重新开始，你会采取哪些不同的做法？" class="headerlink" title="您遇到的最大挑战是什么？您遇到的障碍是什么？ 如果你不得不重新开始，你会采取哪些不同的做法？"></a>您遇到的最大挑战是什么？您遇到的障碍是什么？ 如果你不得不重新开始，你会采取哪些不同的做法？</h2><p>因为我的产品是一个开源的Javascript组件，我遇到的最大问题就是不得不与开发人员“争吵”，他们认为每个客户端产品都应该对所有人免费。 这就是为什么当我开始销售扩展时，我必须明确表示它们不是开源的。</p>
+<p>客户端代码不是100％安全，我敢肯定仍然有很多人非法使用一些Trick。 当我们销售产品时，我们前端的开发人员受到的保护远不如盗版开发商或服务提供商那么多。 公司通常更关心许可，但独立开发人员和自由职业者并不总是如此。 最近，当我发现有人在没有相应许可证的情况下分发产品时，我不得不向某个软件市场发送DMCA删除通知。 当别人说B2B商业模式更容易时，我想这是真的！</p>
+<p><img src="http://qiniu.gafata.com/2019-07-14-WX20190714-081540%402x.png?imageView2/2/w/600" alt=""></p>
+<p>“反滚动劫持”运动是我仍然需要处理的另一场战斗。 基本上，我们相信在任何情况下都不应该“劫持”预期的滚动行为, 并用非默认滚动行为覆盖它。 我在某种程度上理解这一点，我坚信没有好的或坏的技术，而是技术的好坏。</p>
+<p>我遇到的另一个挑战是其他开发人员也开始创建类似的组件。 有些人拥有相当不错的营销和良好的开发人员，我看到其中一些项目在Github上比我的更受欢迎。 跟上市场并努力生存是一个巨大的考验。 我更加努力地尝试开发新功能以使自己与众不同。 马不停蹄，我认为这才会最终有所作为。</p>
+<p>就我可能错过的机会而言，有些人会说我应该早点开始收费。 但我认为我在那里做了正确的事。 客户端世界充满了免费的东西，我不得不在市场上占有一席之地。 立即为我的产品收费可能会减缓其增长速度，并为其他免费解决方案腾出空间。</p>
+<p>我感到遗憾的是，从一开始就没有为WordPress创建一个插件，因为我知道那里有一个很大的市场。我应该学习WordPress的技能，或者聘请别人为我做。</p>
+<p>除此之外，可能有许多我错过了，永远不会意识到的事情。 从我自己注意这些事情并不总是那么容易。 到目前为止，我做得很好，这对我来说很重要。 现在我正在努力关注长期增长方面。</p>
+<h2 id="你找到了特别有用或有利的东西吗？"><a href="#你找到了特别有用或有利的东西吗？" class="headerlink" title="你找到了特别有用或有利的东西吗？"></a>你找到了特别有用或有利的东西吗？</h2><p>我认为我早期产品的部分成功归功于Apple发布的iPhone 5C网站，其行为与我的产品实现的网站非常相似。 我在Apple推出iPhone5C几天后推出了它。 自从我在fullPage.js发布之前就已经开始了工作，这完全是巧合。</p>
+<p>事实上，我的产品在Github上非常受欢迎，这有助于建立信任并提高我项目的知名度。 一些博客和网站开始讨论它并制作教程，我的网站在Google等搜索引擎中排名也很高。 在寻找用于创建全屏网站的Web组件时，最终会落地到我的网站上。 正如我之前所说，如果我的产品在开始时并非完全免费且开源，我认为不会发生这种情况。</p>
+<p>当我开始销售我的产品的扩展时，我还决定创建一个电子邮件列表。 我从经验中知道，这是与客户保持联系并让他们了解新功能或产品的好方法。</p>
+<h2 id="对刚刚开始的独立黑客有什么建议？"><a href="#对刚刚开始的独立黑客有什么建议？" class="headerlink" title="对刚刚开始的独立黑客有什么建议？"></a>对刚刚开始的独立黑客有什么建议？</h2><p>一些建议：</p>
+<ul>
+<li>做你喜欢的东西。</li>
+<li>快速构建一些东西并快速验证市场，如精益创业中所述。</li>
+<li>不要在技术方面浪费太多时间。设置发布日期并进行操作。去掉所有不必要的东西。</li>
+<li>几乎没有技术也可以制造出优秀的产品。不要浪费时间去学习一切的知识或参加每个会议。 Pieter Levels的视频( <a href="https://www.youtube.com/watch?v=6reLWfFNer0" target="_blank" rel="external">https://www.youtube.com/watch?v=6reLWfFNer0</a> )有谈到这一点。(译者注：我之前的一篇文章也有介绍：<a href="http://liujinkai.com/2019/03/17/indie-maker/">http://liujinkai.com/2019/03/17/indie-maker/</a>)</li>
+<li>如果你一个人独立创作，建立你的个人品牌。在Twitter上获得关注者并创建内容以将自己定位为值得信赖的人。</li>
+<li>回答电子邮件并自己做支持，至少在开始的时候。它有助于了解潜在市场，新机遇以及哪些方面有改进空间。</li>
+<li>永远对客户好。像老板一样对待他们。无论他们做什么，都要礼貌的对待。</li>
+<li>认真思考并设定合理的目标。建立一些你可以自己开始构建的东西，不要一开始寻找投资者，或者认为你应该聘请50个人来实现你的想法。否则，你会被困在幻想之中。实现它！</li>
+</ul>
+<h2 id="我们在哪里可以了解更多信息？"><a href="#我们在哪里可以了解更多信息？" class="headerlink" title="我们在哪里可以了解更多信息？"></a>我们在哪里可以了解更多信息？</h2><p>了解fullPage.js更多内容：<a href="https://alvarotrigo.com/fullPage/" target="_blank" rel="external">https://alvarotrigo.com/fullPage/</a><br>Twitter：<a href="https://twitter.com/imac2" target="_blank" rel="external">https://twitter.com/imac2</a><br>Blog: <a href="https://alvarotrigo.com/blog/" target="_blank" rel="external">https://alvarotrigo.com/blog/</a></p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><br></h2><p>欢迎加入「<strong>IndieMaker独立变现</strong>」知识星球，让小产品的独立变现更简单，在这里已经聚集了一批做小产品变现的Maker，在这里你将会得到</p>
+<ul>
+<li>独立变现者及背后的产品逻辑：深挖他们背后的产品及做事方法。</li>
+<li>工具集和小产品商业模式：不断的分享相关的工具和小产品模型。</li>
+<li>学会做小众产品的方法论，做成自己的变现产品。</li>
+<li>《MAKE》中文版的翻译：只在知识星球里放出，用于内部交流学习。</li>
+<li>遇见更优秀的人：在这里比你优秀的人比你更努力</li>
+</ul>
+<center><br><img src="http://qiniu.gafata.com/2019-06-11-zsxq.jpg?imageView2/2/w/500" width="250px"><br></center>
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/Indie-Maker/">Indie Maker</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/Indie-Maker/">Indie Maker</a>
+  </div>
+
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+    
+    <div class="links">
+        <div class="links_title">推荐阅读</div>
+    
+            <li ><a href="/2019/07/01/2019-half-of-year/" title="2019年过半 - 如人生过半">2019年过半 - 如人生过半</a></li>
+       
+            <li ><a href="/2019/06/29/one-paper-changemylife/" title="独立开发 - 一张纸条如何改变了我的人生?">独立开发 - 一张纸条如何改变了我的人生?</a></li>
+       
+            <li ><a href="/2019/06/29/accident-to-number-one/" title="独立开发-小众产品如何从0到750万？">独立开发-小众产品如何从0到750万？</a></li>
+       
+    </div>
+    
+
+
+
+<section id="comment">
+    <div id="gitalk-container"></div>
+    <!--<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>-->
+    <!--<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>-->
+    <!--<script>-->
+        <!--var cloudTieConfig = {-->
+            <!--url: document.location.href,-->
+            <!--sourceId: "",-->
+            <!--productKey: "a65a1e5ea58d4c3a8ea1fef77d0371db",-->
+            <!--target: "cloud-tie-wrapper"-->
+        <!--};-->
+        <!--var yunManualLoad = true;-->
+        <!--Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);-->
+    <!--</script>-->
+    <!--PC和WAP自适应版-->
+    <!--<div id="SOHUCS" ></div>-->
+    <!--<script type="text/javascript">-->
+        <!--(function(){-->
+            <!--var appid = 'cyt6v35LM';-->
+            <!--var conf = 'prod_82a0b7686345b309fbcbcae5ae75c45e';-->
+            <!--var width = window.innerWidth || document.documentElement.clientWidth;-->
+            <!--if (width < 960) {-->
+                <!--window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>-->
+
+</section>
+<!--<script src="/js/gitment.browser.js"></script>-->
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<script>
+    // const gitment = new Gitment({
+    //     owner: 'ljinkai',
+    //     repo: 'ljinkai.github.io',
+    //     oauth: {
+    //         client_id: '1e0bbf087995295c53aa',
+    //         client_secret: '7aaf0001f26a5f16ddd7769384d549f317244720',
+    //     }
+    // })
+    // gitment.render('comment')
+
+    const gitalk = new Gitalk({
+        clientID: '1e0bbf087995295c53aa',
+        clientSecret: '7aaf0001f26a5f16ddd7769384d549f317244720',
+        repo: 'ljinkai.github.io',
+        owner: 'ljinkai',
+        admin: ['ljinkai'],
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    })
+
+    gitalk.render('gitalk-container')
+
+</script>
+
+
+
+
+
+</div>
+    </div>
+    <aside id="sidebar" class="alignright">
+  <div class="widget tag" style="padding: 16px;">
+
+      <div style="color: black;font-size: 16px;">
+          <div style="width: 100%;text-align: center;margin-bottom: 10px;margin-top: 0px;">我的知识星球</div>
+          
+          <a style="width: 100%;display: block;text-decoration: none;" href="https://mp.weixin.qq.com/s/LIzhjGGRqiqYnMhIxtFYAw" target="_blank"
+             onclick="ga('send', 'event', 'zsxq_11_blog', 'zsxq');">
+              <img src="https://qiniu.gafata.com/zsxq.jpeg" width="100%"/>
+          </a>
+          <div style="width: 100%;text-align: center;margin-bottom: 10px;margin-top: 0px;">我的在线课程</div>
+          <a style="width: 100%;display: block;text-decoration: none;" href="https://m.qlchat.com/wechat/page/channel-intro?channelId=2000018572922685" target="_blank"
+             onclick="ga('send', 'event', 'my_course', 'live_20170720');">
+              <img src="https://qiniu.gafata.com/chrome-extension-qianliao-2.png" width="100%"/>
+          </a>
+      </div>
+</div>
+
+
+  <div class="widget tag about_fix_none" id="about_fix">
+
+  <ul class="entry" style="text-align: center;font-size: 14px;font-weight: bold;">
+    <li>微信公众号：凯凯而谈</li>
+    <li style="font-weight: normal;font-size: 12px;">这里有我的分享和思考，我们一起知道做到</li>
+    <li><img src='http://qiniu.gafata.com/2019-03-17-web-bear.jpg?imageView2/2/w/600' width='180px' style="margin: 0px auto;display: block;"></li>
+  </ul>
+</div>
+<div class="widget tag">
+  <div class="about_banner">
+    <div class="about_profile">
+      <a href="/2015/02/28/new/">
+        <img class="about_img" src="http://qiniu.gafata.com/2019-03-25-WechatIMG1128.jpeg?imageView2/2/w/200">
+      </a>
+    </div>
+  </div>
+  <ul class="entry" style="text-align: center;">
+    <li>认知、技术、变现</li>
+    <li>微博：<a href="http://weibo.com/jieyingbei" target="_blank" onclick="ga('send', 'event', 'widget_about', 'weibo')">@凯凯刘</a></li>
+    <li>微信公众号：凯凯而谈</li>
+    <li><img src='http://qiniu.gafata.com/2019-03-17-web-bear.jpg?imageView2/2/w/600' width='160px' style="margin: 0px auto;display: block;"></li>
+    <li>Web、Indie Maker</li>
+  </ul>
+  <script>
+    function getPageTopLeft(el) {
+      var rect = el.getBoundingClientRect();
+      var docEl = document.documentElement;
+      return {
+        left: rect.left + (window.pageXOffset || docEl.scrollLeft || 0),
+        top: rect.top + (window.pageYOffset || docEl.scrollTop || 0)
+      };
+    }
+    // window.addEventListener('scroll',function() {
+    //   var winWid = document.body.clientWidth;
+    //   if (winWid > 900) {
+    //     var anchorTop = getPageTopLeft(document.getElementById("anchorTop")).top;
+    //     var scrollTop = window.pageYOffset|| document.documentElement.scrollTop || document.body.scrollTop;
+
+    //     if (anchorTop < scrollTop) {
+    //       document.getElementById("about_fix").className = "widget tag about_fix";
+    //     } else {
+    //       document.getElementById("about_fix").className = "widget tag about_fix_none";
+    //     }
+    //   }
+    // });
+  </script>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/Indie-Maker/" onclick="ga('send', 'event', 'widget_category', 'Indie Maker');">Indie Maker</a><small>20</small></li>
+  
+    <li><a href="/categories/Shopify/" onclick="ga('send', 'event', 'widget_category', 'Shopify');">Shopify</a><small>1</small></li>
+  
+    <li><a href="/categories/Web工具/" onclick="ga('send', 'event', 'widget_category', 'Web工具');">Web工具</a><small>19</small></li>
+  
+    <li><a href="/categories/Web技术/" onclick="ga('send', 'event', 'widget_category', 'Web技术');">Web技术</a><small>51</small></li>
+  
+    <li><a href="/categories/产品/" onclick="ga('send', 'event', 'widget_category', '产品');">产品</a><small>6</small></li>
+  
+    <li><a href="/categories/区块链/" onclick="ga('send', 'event', 'widget_category', '区块链');">区块链</a><small>8</small></li>
+  
+    <li><a href="/categories/变现/" onclick="ga('send', 'event', 'widget_category', '变现');">变现</a><small>12</small></li>
+  
+    <li><a href="/categories/工具/" onclick="ga('send', 'event', 'widget_category', '工具');">工具</a><small>3</small></li>
+  
+    <li><a href="/categories/极客番茄/" onclick="ga('send', 'event', 'widget_category', '极客番茄');">极客番茄</a><small>7</small></li>
+  
+    <li><a href="/categories/流量/" onclick="ga('send', 'event', 'widget_category', '流量');">流量</a><small>3</small></li>
+  
+    <li><a href="/categories/浏览器扩展插件/" onclick="ga('send', 'event', 'widget_category', '浏览器扩展插件');">浏览器扩展插件</a><small>3</small></li>
+  
+    <li><a href="/categories/清单/" onclick="ga('send', 'event', 'widget_category', '清单');">清单</a><small>3</small></li>
+  
+    <li><a href="/categories/生活/" onclick="ga('send', 'event', 'widget_category', '生活');">生活</a><small>9</small></li>
+  
+    <li><a href="/categories/直播/" onclick="ga('send', 'event', 'widget_category', '直播');">直播</a><small>1</small></li>
+  
+    <li><a href="/categories/认知/" onclick="ga('send', 'event', 'widget_category', '认知');">认知</a><small>15</small></li>
+  
+    <li><a href="/categories/训练营/" onclick="ga('send', 'event', 'widget_category', '训练营');">训练营</a><small>1</small></li>
+  
+    <li><a href="/categories/读书/" onclick="ga('send', 'event', 'widget_category', '读书');">读书</a><small>4</small></li>
+  
+    <li><a href="/categories/课程/" onclick="ga('send', 'event', 'widget_category', '课程');">课程</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">标签</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/CSS3/">CSS3</a><small>4</small></li>
+  
+    <li><a href="/tags/Chrome/">Chrome</a><small>7</small></li>
+  
+    <li><a href="/tags/EOS/">EOS</a><small>1</small></li>
+  
+    <li><a href="/tags/ETH/">ETH</a><small>1</small></li>
+  
+    <li><a href="/tags/Facebook/">Facebook</a><small>1</small></li>
+  
+    <li><a href="/tags/Google/">Google</a><small>8</small></li>
+  
+    <li><a href="/tags/HTML5/">HTML5</a><small>15</small></li>
+  
+    <li><a href="/tags/HTTPS/">HTTPS</a><small>2</small></li>
+  
+    <li><a href="/tags/Hybrid-App/">Hybrid App</a><small>2</small></li>
+  
+    <li><a href="/tags/Indie-Maker/">Indie Maker</a><small>20</small></li>
+  
+    <li><a href="/tags/JavaScript/">JavaScript</a><small>12</small></li>
+  
+    <li><a href="/tags/Markdown/">Markdown</a><small>1</small></li>
+  
+    <li><a href="/tags/Node-js/">Node.js</a><small>2</small></li>
+  
+    <li><a href="/tags/PWA/">PWA</a><small>1</small></li>
+  
+    <li><a href="/tags/Shopify/">Shopify</a><small>1</small></li>
+  
+    <li><a href="/tags/github/">github</a><small>2</small></li>
+  
+    <li><a href="/tags/临界知识/">临界知识</a><small>1</small></li>
+  
+    <li><a href="/tags/产品/">产品</a><small>7</small></li>
+  
+    <li><a href="/tags/人工智能/">人工智能</a><small>2</small></li>
+  
+    <li><a href="/tags/健康/">健康</a><small>2</small></li>
+  
+    <li><a href="/tags/增长/">增长</a><small>7</small></li>
+  
+    <li><a href="/tags/工具/">工具</a><small>15</small></li>
+  
+    <li><a href="/tags/插件/">插件</a><small>9</small></li>
+  
+    <li><a href="/tags/方法论/">方法论</a><small>20</small></li>
+  
+    <li><a href="/tags/木匠/">木匠</a><small>2</small></li>
+  
+    <li><a href="/tags/极客番茄/">极客番茄</a><small>7</small></li>
+  
+    <li><a href="/tags/框架/">框架</a><small>6</small></li>
+  
+    <li><a href="/tags/案例/">案例</a><small>2</small></li>
+  
+    <li><a href="/tags/概念/">概念</a><small>3</small></li>
+  
+    <li><a href="/tags/比特币/">比特币</a><small>3</small></li>
+  
+    <li><a href="/tags/浏览器扩展插件/">浏览器扩展插件</a><small>3</small></li>
+  
+    <li><a href="/tags/游戏/">游戏</a><small>2</small></li>
+  
+    <li><a href="/tags/认知/">认知</a><small>7</small></li>
+  
+    <li><a href="/tags/训练营/">训练营</a><small>1</small></li>
+  
+    <li><a href="/tags/课程/">课程</a><small>3</small></li>
+  
+    <li><a href="/tags/资源/">资源</a><small>9</small></li>
+  
+    <li><a href="/tags/路线图/">路线图</a><small>2</small></li>
+  
+    <li><a href="/tags/面试题/">面试题</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  <div class="widget hot">
+  <h3 class="title">热文推荐</h3>
+  <ul class="entry">
+    <li><a href="/2017/06/01/start-small-stay-small/" title="《Start Small, Stay Small》着眼小众市场，程序员的微型创业项目指南">《Start Small, Stay Small》着眼小众市场，程序员的微型创业项目指南</a></li>
+    <li><a href="/2017/02/08/how-to-read-a-book/" title="怎样读一本书V5.0 ?(译)">怎样读一本书V5.0 ?(译)</a></li>
+    <li><a href="/2015/06/06/mobile-web-skill/" title="移动端web开发技巧">移动端web开发技巧</a></li>
+    <li><a href="/2017/12/09/gafata-online/" title="www.gafata.com上线">www.gafata.com上线</a></li>
+    <li><a href="/2017/04/19/deliberate-practice/" title="刻意练习">刻意练习</a></li>
+    <li><a href="/2016/04/27/progressive-web-app/" title="Web新技术：PWA-Progressive Web App">Web新技术：PWA-Progressive Web App</a></li>
+    <li><a href="/2017/08/16/bitcoin-mining-consensus/" title="比特币的挖矿与共识">比特币的挖矿与共识</a></li>
+  </ul>
+</div>
+
+
+  <div class="widget tag" style="width:270px;border-top: 0px red solid;line-height: 0px;">
+
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2015-2023 <a href="/2015/02/28/new/">凯凯刘</a>
+  
+  &nbsp;
+  <a href="http://www.ezindie.com/" target="_blank" title="Easy Indie">Ezindie</a>
+  <a href="http://www.qunheying.com" target="_blank" title="微信群合影" style="margin-left: 10px">微信群合影</a>
+  <a href="http://md2vid.com" target="_blank" title="Markdown转视频" style="margin-left: 10px">Markdown转视频</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="/atom.xml" class="menu_rss menu_rss_bottom" target="_blank" title="RSS订阅"></a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  Powered by <a href="http://hexo.io/">Hexo</a>
+</div>
+<div class="clearfix"></div>
+
+<!--<script>-->
+    <!--var _hmt = _hmt || [];-->
+    <!--(function() {-->
+        <!--var hm = document.createElement("script");-->
+        <!--hm.src = "//hm.baidu.com/hm.js?1e92fed8a761c1224623815e3b960447";-->
+        <!--var s = document.getElementsByTagName("script")[0];-->
+        <!--s.parentNode.insertBefore(hm, s);-->
+    <!--})();-->
+<!--</script>-->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-85358197-2', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+
+</footer>
+  <!--<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>-->
+<!--<script src="<- config.root >js/jquery.imagesloaded.min.js"></script>-->
+<!--<script src="<- config.root >js/gallery.js"></script>-->
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- saved from url=http://keyup.cn -->
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<title>放烟花喽-前端开发知识</title>
+
+<style type="text/css">
+
+html,body{height:100%;margin:0;padding:0}
+
+ul,li{text-indent:0;text-decoration:none;margin:0;padding:0}
+
+img{border:0}
+
+body{background-color:#0e0b16;color:#999;font:100%/18px helvetica, arial, sans-serif}
+
+canvas{cursor:crosshair;display:block;left:0;position:absolute;top:0;z-index:20}
+
+#header img{width:100%; height:20%;}
+
+#bg img{width:100%; height:80%;}
+
+#header,#bg{position:fixed;left:0;right:0;z-index:10}
+
+#header{top:0}
+
+#bg{position:fixed;z-index:1;bottom:0}
+
+audio{position:fixed;display:none;bottom:0;left:0;right:0;width:100%;z-index:5}
+
+</style>
+
+<link rel="shortcut icon" type="image/x-icon" href="">
+
+<style type="text/css"></style><style id="style-1-cropbar-clipper">
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style>
+<style type="text/css">
+    @media screen and (min-width: 1025px) {
+        .qr_code_pc {
+            position: absolute;
+            right: 10px;
+            top: 0;
+            padding: 16px;
+            border: 1px solid #d9dadc;
+            background-color: #fff;
+            font-size: 12px;
+            text-align: center;
+            z-index: 99;
+        }
+    }
+    .qr_code_pc_img {width: 100px;height: 100px;}
+</style>
+</head>
+<!-- 获取更多知识，一起学习，关注微信公众号【前端开发知识】 -->
+<body>
+<div id="header">轻点或滑动手指可燃放烟花</div>
+<div id="bg"><img id="bgimg" src="bg.png"></div>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="f.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		setTimeout(function() {
+			$("#header").hide("slow");
+		},2000);
+	});
+</script>
+<div class="qr_code_pc">
+    <img id="js_pc_qr_code_img" class="qr_code_pc_img" src="http://qiniu.gafata.com/h5_qrcode_for_gh_0fd5deb0e08b_430.jpg">
+    <p>微信扫一扫<br>获得更多内容</p>
+</div>
+</body>
+</html>

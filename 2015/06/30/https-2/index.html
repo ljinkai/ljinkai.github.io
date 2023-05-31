@@ -1,0 +1,623 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>https的免费申请流程 - 凯凯刘</title>
+  <meta name="author" content="凯凯刘">
+  
+  <meta name="description" content="如何用nodejs创建https服务器；如何免费申请到ssl证书；nginx如何设置https服务器。">
+  
+  <meta name="keywords" content="https免费申请,ssl免费证书,https证书购买,https证书价格,freessl,startssl,let&#39;s encrypt申请,let&#39;s encrypt证书申">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="https的免费申请流程"/>
+  <meta property="og:site_name" content="凯凯刘"/>
+
+  
+    <meta property="og:image" content="/img/300L.png"/>
+  
+
+  <meta name="google-site-verification" content="iIzqxT8FAfRGM8f4sr97VvjhDsk3QJQ-a2LMdn0DtXU" />
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="alternate" href="/atom.xml" title="凯凯刘" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/styleNew.css?x=6" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/gitment.css">
+  <script src="/js/qrcode.min.js"></script>
+
+  <!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+  <!--<script>-->
+      <!--(adsbygoogle = window.adsbygoogle || []).push({-->
+          <!--google_ad_client: "ca-pub-3023100525130189",-->
+          <!--enable_page_level_ads: true-->
+      <!--});-->
+  <!--</script>-->
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+    <h1><a href="/">凯凯刘</a></h1>
+    <h2><a href="/">
+            
+            Indie Maker、认知、技术、变现
+            
+        </a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+    <ul>
+        
+        <li><a href="/" onclick="ga('send', 'event', 'nav_top', '首页');">首页</a></li>
+        
+        <li><a href="/categories/Web技术/" onclick="ga('send', 'event', 'nav_top', 'Web技术');">Web技术</a></li>
+        
+        <li><a href="/categories/浏览器扩展插件/" onclick="ga('send', 'event', 'nav_top', '浏览器扩展插件');">浏览器扩展插件</a></li>
+        
+        <li><a href="/categories/区块链/" onclick="ga('send', 'event', 'nav_top', '区块链');">区块链</a></li>
+        
+        <li><a href="/categories/%E8%AE%A4%E7%9F%A5/" onclick="ga('send', 'event', 'nav_top', '认知');">认知</a></li>
+        
+        <li><a href="/categories/%E8%AF%BB%E4%B9%A6/" onclick="ga('send', 'event', 'nav_top', '读书');">读书</a></li>
+        
+        <li><a href="/categories/%E6%B5%81%E9%87%8F/" onclick="ga('send', 'event', 'nav_top', '流量');">流量</a></li>
+        
+        <li><a href="/categories/%E5%8F%98%E7%8E%B0/" onclick="ga('send', 'event', 'nav_top', '变现');">变现</a></li>
+        
+        <li><a href="/categories/%E7%94%9F%E6%B4%BB/" onclick="ga('send', 'event', 'nav_top', '生活');">生活</a></li>
+        
+        <li><a href="/2015/03/01/link-friends/" onclick="ga('send', 'event', 'nav_top', '友链');">友链</a></li>
+        
+        <li><a href="/2015/02/28/new/" onclick="ga('send', 'event', 'nav_top', '关于');">关于</a></li>
+        
+        <li><a href="/atom.xml" class="menu_rss" target="_blank" title="RSS订阅"></a></li>
+    </ul>
+    <div class="clearfix"></div>
+    <!--<div class="nav_zhibo" style="position: absolute;top : 120px;left: 40px;color: blue;">-->
+        <!--<a style="color: blue;cursor: pointer;" href="https://m.qlchat.com/topic/360000033244498.htm?preview=Y&intoPreview=Y"-->
+           <!--onclick="ga('send', 'event', 'nav_zhibo', 'qianliao');"-->
+           <!--target="_blank">我的千聊直播(周三)：比特币的挖矿与共识-->
+        <!--</a>-->
+    <!--</div>-->
+
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft">
+
+      <div class="ads_banner">
+        <!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+        <!-- banner -->
+        <!--<ins class="adsbygoogle"-->
+             <!--style="display:block"-->
+             <!--data-ad-client="ca-pub-4018032316880050"-->
+             <!--data-ad-slot="3550377487"-->
+             <!--data-ad-format="auto"></ins>-->
+        <!--<script>-->
+          <!--(adsbygoogle = window.adsbygoogle || []).push({});-->
+        <!--</script>-->
+
+        <!-- <div>
+          <a href="https://t.zsxq.com/ybIuBaA" target="_blank">
+            <img style="width: 100%" src="http://qiniu.gafata.com/2019-06-11-indiemaker_dlbx_1800x180.jpg?imageView2/2/w/1800"/>
+          </a>
+        </div> -->
+
+        <div class="banner-top" style="background-color: #032535;color:white;padding: 15px;font-size: 15px;">
+          「每日看板-Tabhub」浏览器新标签页，独立变现、新闻、日历、待办、RSS、股票等丰富组件
+          <a href="https://www.tabhub.app/?utm_source=blog" target="_blank" style="word-break: break-all;background-color:#c2007c;margin-left:10px;display:inline-block;width: 70px;padding:4px 4px;border-radius: 4px;color:white;text-align: center;" 
+          onclick="ga('send', 'event', 'ads', 'tabhub');" >免费使用</a>
+          <!--星云开发者开放注册啦，提交一个DApp即可获得100个NAS(大约7000元）,更有周、月度大额奖金等你拿！开发者今年最大的机会, 会JavaScript即可。<br>-->
+          <!--注册链接：<a target="_blank" style="word-break: break-all;" onclick="ga('send', 'event', 'ads', 'nebulas');" href="https://incentive.nebulas.io/cn/signup.html?invite=HjuhT">https://incentive.nebulas.io/cn/signup.html?invite=HjuhT</a>-->
+          <!--<span style="color: red">阿里云双11红包来啦，拼购1折起, 官方推荐1折团！</span><a href="https://m.aliyun.com/act/team1111/#/share?params=N.qYnY8sp2fK.kkb39ote" target="_blank" style="" onclick="ga('send', 'event', 'ads', 'aliyun');">马上参团>></a>-->
+
+        </div>
+      </div>
+
+      <div id="wrapper">
+    
+    <div style="display: none">
+        <img src="/img/300L.png" />
+    </div>
+
+
+
+<article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title">https的免费申请流程</h1>
+  
+
+      
+        <div class="icon"></div>
+        <div class="article_head_extend">
+          <time datetime="2015-06-30T09:58:25.000Z"><a href="/2015/06/30/https-2/">Jun 30 2015</a>
+            
+          </time>
+          <div class="qrcode_con">
+            <div class="qrcode_text">扫描二维码</div>
+            <div id="Tue Jun 30 2015 17:58:25 GMT+0800 (China Standard Time)" class="qrcode_img"></div>
+            <script>
+              var qrcode = new QRCode(document.getElementById("Tue Jun 30 2015 17:58:25 GMT+0800 (China Standard Time)"), {
+                width : 100,
+                height : 100
+              });
+              qrcode.makeCode("http://liujinkai.com//2015/06/30/https-2/?utm_medium=blog&utm_source=qrcode");
+            </script>
+          </div>
+        </div>
+
+      
+    </header>
+    <div></div>
+    <div class="entry">
+      
+        <p>这篇文章包含3个主要内容：</p>
+<ul>
+<li>如何用nodejs创建https服务器；</li>
+<li>如何免费申请到ssl证书；</li>
+<li>nginx如何设置https服务器。</li>
+</ul>
+<p>如果想了解https原理部分，可以查看之前的文章介绍<a href="/2015/05/15/https-1/">htts原理</a><br><a id="more"></a></p>
+<h1 id="1、用Nodejs创建HTTPS服务器"><a href="#1、用Nodejs创建HTTPS服务器" class="headerlink" title="1、用Nodejs创建HTTPS服务器"></a>1、用Nodejs创建HTTPS服务器</h1><p>在Nodejs中，我们可以通过内置的https库，来实现HTTPS服务器。<br>Nodejs的HTTPS使用文档：<a href="http://nodejs.org/api/https.html" target="_blank" rel="external">http://nodejs.org/api/https.html</a></p>
+<pre><code>~ cd /home/conan/nodejs
+~ sudo npm install
+</code></pre><p>用openssl生成证书文件</p>
+<pre><code>~ openssl version -a
+OpenSSL 1.0.1 14 Mar 2012
+built on: Tue Jun  4 07:26:06 UTC 2013
+platform: debian-amd64
+options:  bn(64,64) rc4(16x,int) des(idx,cisc,16,int) blowfish(idx)
+compiler: cc -fPIC -DOPENSSL_PIC -DZLIB -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -m64 -DL_ENDIAN -DTERMIO -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Wformat-security -Werror=format-security -D_FORTIFY_SOURCE=2 -Wl,-Bsymbolic-functions -Wl,-z,relro -Wa,--noexecstack -Wall -DOPENSSL_NO_TLS1_2_CLIENT -DOPENSSL_MAX_TLS1_2_CIPHER_LENGTH=50 -DMD32_REG_T=int -DOPENSSL_IA32_SSE2 -DOPENSSL_BN_ASM_MONT -DOPENSSL_BN_ASM_MONT5 -DOPENSSL_BN_ASM_GF2m -DSHA1_ASM -DSHA256_ASM -DSHA512_ASM -DMD5_ASM -DAES_ASM -DVPAES_ASM -DBSAES_ASM -DWHIRLPOOL_ASM -DGHASH_ASM
+OPENSSLDIR: &quot;/usr/lib/ssl&quot;
+
+~ openssl genrsa -out privatekey.pem 1024
+~ openssl req -new -key privatekey.pem -out certrequest.csr
+~ openssl x509 -req -in certrequest.csr -signkey privatekey.pem -out certificate.pem
+</code></pre><p>修改文件app.js</p>
+<pre><code>~ vi app.js
+
+//在最下面
+var https = require(&#39;https&#39;)
+    ,fs = require(&quot;fs&quot;);
+
+var options = {
+    key: fs.readFileSync(&#39;./privatekey.pem&#39;),
+    cert: fs.readFileSync(&#39;./certificate.pem&#39;)
+};
+
+https.createServer(options, app).listen(3011, function () {
+    console.log(&#39;Https server listening on port &#39; + 3011);
+});
+</code></pre><p>启动服务器</p>
+<pre><code>~ node app.js
+
+Express server listening on port 3000
+Https server listening on port 3011
+</code></pre><p><img src="http://qiniu.gafata.com/blog_https213EE475-565E-4351-AF23-739C11C4B683.png" alt=""></p>
+<h1 id="2、申请免费的SSL证书"><a href="#2、申请免费的SSL证书" class="headerlink" title="2、申请免费的SSL证书"></a>2、申请免费的SSL证书</h1><p><em>HTTPS和HTTP的区别</em></p>
+<p><code>https协议需要到ca申请证书，一般免费证书很少，需要交费。
+http是超文本传输协议，信息是明文传输，https 则是具有安全性的ssl加密传输协议。
+http和https使用的是完全不同的连接方式，用的端口也不一样，前者是80，后者是443。
+http的连接很简单，是无状态的；HTTPS协议是由SSL+HTTP协议构建的可进行加密传输、身份认证的网络协议，比http协议安全。</code></p>
+<p>目前网上也有一些免费的证书，可以申请的到，下面是通过startssl申请免费一年ssl证书，对于理解整个过程还是很有帮助的。</p>
+<p><a href="http://www.startssl.com/" target="_blank" rel="external">StartSSL</a>（ 网址：<a href="http://www.startssl.com" target="_blank" rel="external">http://www.startssl.com</a>，公司名：StartCom ）也是一家CA机构，它的根证书很 久之前就被一些具有开源背景的浏览器支持（Firefox浏览器、谷歌Chrome浏览器、苹果Safari浏览器等）。</p>
+<h3 id="1、打开http-www-startssl-com"><a href="#1、打开http-www-startssl-com" class="headerlink" title="1、打开http://www.startssl.com/"></a>1、打开<a href="http://www.startssl.com/" target="_blank" rel="external">http://www.startssl.com/</a></h3><h3 id="2、点击StartSSL-Free-Class-1"><a href="#2、点击StartSSL-Free-Class-1" class="headerlink" title="2、点击StartSSL Free(Class 1)"></a>2、点击StartSSL Free(Class 1)</h3><p><img src="http://qiniu.gafata.com/blog_https84D7196A-A620-47EA-91FF-3F7B9B2435C7.png" alt=""></p>
+<h3 id="3、点击Certificate-Control-Panel进入控制面板，或直接访问http-www-startssl-com-app-12也可以。"><a href="#3、点击Certificate-Control-Panel进入控制面板，或直接访问http-www-startssl-com-app-12也可以。" class="headerlink" title="3、点击Certificate Control Panel进入控制面板，或直接访问http://www.startssl.com/?app=12也可以。"></a>3、点击Certificate Control Panel进入控制面板，或直接访问<code>http://www.startssl.com/?app=12</code>也可以。</h3><h3 id="4、点击sign-up注册一个帐号"><a href="#4、点击sign-up注册一个帐号" class="headerlink" title="4、点击sign-up注册一个帐号"></a>4、点击sign-up注册一个帐号</h3><p><img src="http://qiniu.gafata.com/blog_httpsE2F80A09-C82D-415F-A3B7-DEBBAC9D7B89.png" alt=""></p>
+<h3 id="5、填写注册信息，要用英文格式填写"><a href="#5、填写注册信息，要用英文格式填写" class="headerlink" title="5、填写注册信息，要用英文格式填写"></a>5、填写注册信息，要用英文格式填写</h3><p><img src="http://qiniu.gafata.com/blog_httpsABCA0A43-4576-43BC-8215-95A7A8963478.png" alt=""></p>
+<h3 id="6、信息填写完成后，会给注册的邮箱发送一封电子邮件，此时不要关闭startssl的这个页面，检查邮箱输入验证码"><a href="#6、信息填写完成后，会给注册的邮箱发送一封电子邮件，此时不要关闭startssl的这个页面，检查邮箱输入验证码" class="headerlink" title="6、信息填写完成后，会给注册的邮箱发送一封电子邮件，此时不要关闭startssl的这个页面，检查邮箱输入验证码"></a>6、信息填写完成后，会给注册的邮箱发送一封电子邮件，此时不要关闭startssl的这个页面，检查邮箱输入验证码</h3><p><img src="http://qiniu.gafata.com/blog_https80FC431C-0176-4D40-B578-E0B48883CE41.png" alt=""></p>
+<h3 id="7、等待StartComm人工审核注册的个人信息，如果审核成功会收到第二个邮件"><a href="#7、等待StartComm人工审核注册的个人信息，如果审核成功会收到第二个邮件" class="headerlink" title="7、等待StartComm人工审核注册的个人信息，如果审核成功会收到第二个邮件"></a>7、等待StartComm人工审核注册的个人信息，如果审核成功会收到第二个邮件</h3><p>例如：</p>
+<pre><code>StartSSL Account Request
+
+To XXXX,
+Your request for an account at StartSSL (www.startssl.com) has been approved and is available during the next 24 hours at the following location:
+https://www.startssl.com/?app=12&amp;action=release&amp;id=XXXXXX&amp;auth=XXXXXXXXXXXXXXXX
+The verification code in order to continue the process is XXXXXXXXXXXXXXXX
+Thank you!
+</code></pre><p>startssl审批很快，稍等会儿就能收到邮件。访问邮件中的链接地址，再次输入验证码。</p>
+<h3 id="8、建立私钥"><a href="#8、建立私钥" class="headerlink" title="8、建立私钥"></a>8、建立私钥</h3><p><img src="http://qiniu.gafata.com/blog_httpsE2DFF3B0-38D6-4D3B-8DBC-28B59E7B6853.png" alt=""><br>选择高级，点击continue。</p>
+<h3 id="9、安装证书"><a href="#9、安装证书" class="headerlink" title="9、安装证书"></a>9、安装证书</h3><p><img src="http://qiniu.gafata.com/blog_httpsAD7AFB3A-D84F-4E86-AE6F-AA81A2056885.png" alt=""></p>
+<h3 id="10、安装完成"><a href="#10、安装完成" class="headerlink" title="10、安装完成"></a>10、安装完成</h3><p>安装完成后，会有一个提示框：<br><img src="http://qiniu.gafata.com/blog_httpsD1C59C57-3643-459B-B1B1-9E7EE6A8EF95.png" alt=""></p>
+<p>页面会提示：</p>
+<pre><code>Your first client certificate has been installed into your browser. This is a bootstrapping certificate for authentication purpose.
+Backup this certificate to an external media, otherwise you might not be able to regain access to your account. Please read these instructions from our FAQ page on how to do that.
+</code></pre><p>点击页面上的Finish。</p>
+<h3 id="11、随后页面会跳到F-A-Q-页面"><a href="#11、随后页面会跳到F-A-Q-页面" class="headerlink" title="11、随后页面会跳到F.A.Q.页面"></a>11、随后页面会跳到F.A.Q.页面</h3><p>点击How do I backup my client certificates?看下如何备份证书<br>firefox：工具-选项-高级-查看证书-您的证书，下面就有需要备份的证书。以后登录startssl要凭浏览器上前面安装的证书登录。丢失证书后只能重新注册。</p>
+<p>以后要登录，点击Authenticate凭证书登录：<br><img src="http://qiniu.gafata.com/blog_https3DA33F3F-3463-4ED6-8624-D5EB74BF8208.png" alt=""></p>
+<h3 id="12、开始申请免费ssl证书"><a href="#12、开始申请免费ssl证书" class="headerlink" title="12、开始申请免费ssl证书"></a>12、开始申请免费ssl证书</h3><p>回到startssl的控制面板，我们看到有三个选项卡：<br><img src="http://qiniu.gafata.com/blog_https405B4941-3ACE-4660-A23D-5076984BDC63.png" alt=""></p>
+<p>大致流程如下：<br>1）先到Validations Wizard验证域名的所有权<br>2）再到Certificates Wizard选择要申请证书的类型<br>3）再到Tool Box选项卡，使用里面的小工具生成证书</p>
+<h3 id="13、点击Validations-Wizard"><a href="#13、点击Validations-Wizard" class="headerlink" title="13、点击Validations Wizard"></a>13、点击Validations Wizard</h3><p>选择Domain name validation，点击Continue。<br><img src="http://qiniu.gafata.com/blog_https6D16DD47-4585-4285-A585-6E65BEB97C80.png" alt=""></p>
+<p>输入要申请的域名，点击Continue。<br><img src="http://qiniu.gafata.com/blog_httpsB12BFB0D-1985-4088-BAE2-D299D751C5FE.png" alt=""></p>
+<p>选择一个验证的邮箱，有postmaster@域名、hostmaster@域名、webmaster@域名、和注册域名时的邮箱。<br><img src="http://qiniu.gafata.com/blog_https2E0C0469-CB9D-418E-906D-22A08495BAD5.png" alt=""></p>
+<p>检查邮箱，输入验证码：<br><img src="http://qiniu.gafata.com/blog_httpsDE92C674-28E4-4A78-A491-66DA2371B92D.png" alt=""></p>
+<p>验证成功：</p>
+<p><img src="http://qiniu.gafata.com/blog_httpsA2B7AE34-0287-4A76-BF38-73575E45B941.png" alt=""><br>域名验证成功，这次验证在30天内有效，过期了要重新验证。点击Finish回到控制面板。</p>
+<h3 id="14、点击Certificates-Wizard"><a href="#14、点击Certificates-Wizard" class="headerlink" title="14、点击Certificates Wizard"></a>14、点击Certificates Wizard</h3><p>选择WEB Server SSL/TSL Certifites：<br><img src="http://qiniu.gafata.com/blog_httpsB6B3D4CE-CF18-47E4-833F-9900C2E6ACCD.png" alt=""></p>
+<p>生成私钥，为私钥提供一个密码，最少10位，最大32位：<br><img src="http://qiniu.gafata.com/blog_httpsE4814398-AAE8-4D4C-90F3-B2513EFF14B6.png" alt=""></p>
+<p>将显示内容保存为ssl.key（这个私钥是加密的）：<br><img src="http://qiniu.gafata.com/blog_https55F298A6-B6A3-4717-9620-B842C1B713D1.png" alt=""></p>
+<p>选择域名：<br><img src="http://qiniu.gafata.com/blog_https38468FD3-C622-44CD-B6E3-5396DBB39C58.png" alt=""></p>
+<p>输入一个需要ssl证书的子域名：<br><img src="http://qiniu.gafata.com/blog_httpsDAEABA8D-E785-47CC-9C54-B0A9443B3A3C.png" alt=""></p>
+<p>然后确认前面用于申请证书的域名。</p>
+<p>最后会提示：</p>
+<pre><code>Additional Check Required!
+
+You successfully finished the process for your certificate. However your certificate request has been marked for approval by our personnel. Please wait for a mail notification from us within the next 3 hours (the most). We might contact you for further questions or issue the certificate within that time. Thank you for your understanding!
+</code></pre><p>随后就等邮件通知。</p>
+<h3 id="15、收到邮件后点击Tool-Box"><a href="#15、收到邮件后点击Tool-Box" class="headerlink" title="15、收到邮件后点击Tool Box"></a>15、收到邮件后点击Tool Box</h3><p>使用Tool Box - Decrypt Private Key，将前面生成的ssl.key的内容解密。将结果保存为.key文件。比如ssl2.key。</p>
+<p>保存证书：<br>Tool Box - Retrieve Certificate，选择申请证书的域名，将框中的内容保存为.crt文件。比如ssl.crt。这个就是证书文件啦。</p>
+<p><img src="http://qiniu.gafata.com/blog_https5FF89AC4-2ECB-489D-A622-512A600C9E71.png" alt=""></p>
+<h1 id="3、nginx配置ssh证书"><a href="#3、nginx配置ssh证书" class="headerlink" title="3、nginx配置ssh证书"></a>3、nginx配置ssh证书</h1><p>在nginx.conf文件里修改配置位置：</p>
+<pre><code>server {
+    listen       443;
+    server_name  localhost;
+    ssl on;
+    ssl_certificate ssl/ssl2.crt;
+    ssl_certificate_key ssl/ssl2.key;
+ }
+</code></pre><p>https默认是监听443端口的。<br><code>nginx -s reload</code>下如果没有任何提示，就说明配置成功了。</p>
+<p>如果我们需要将原先的http的链接自动跳转到https，可以增加如下配置。</p>
+<pre><code>server {
+    listen 80;
+    server_name coollist.cn;
+    rewrite ^/(.*) https://$server_name/$1 permanent;    #跳转到Https
+}
+</code></pre><p>参考：<br><a href="http://www.startssl.com/" target="_blank" rel="external">http://www.startssl.com/</a><br><a href="http://blog.fens.me/nodejs-https-server/" target="_blank" rel="external">http://blog.fens.me/nodejs-https-server/</a><br><a href="http://www.live-in.org/archives/1296.html" target="_blank" rel="external">http://www.live-in.org/archives/1296.html</a><br><a href="http://blog.sina.com.cn/s/blog_61b0aafd0100wz9z.html" target="_blank" rel="external">http://blog.sina.com.cn/s/blog_61b0aafd0100wz9z.html</a></p>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/Web技术/">Web技术</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/HTTPS/">HTTPS</a>
+  </div>
+
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+    
+
+
+
+<section id="comment">
+    <div id="gitalk-container"></div>
+    <!--<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>-->
+    <!--<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>-->
+    <!--<script>-->
+        <!--var cloudTieConfig = {-->
+            <!--url: document.location.href,-->
+            <!--sourceId: "",-->
+            <!--productKey: "a65a1e5ea58d4c3a8ea1fef77d0371db",-->
+            <!--target: "cloud-tie-wrapper"-->
+        <!--};-->
+        <!--var yunManualLoad = true;-->
+        <!--Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);-->
+    <!--</script>-->
+    <!--PC和WAP自适应版-->
+    <!--<div id="SOHUCS" ></div>-->
+    <!--<script type="text/javascript">-->
+        <!--(function(){-->
+            <!--var appid = 'cyt6v35LM';-->
+            <!--var conf = 'prod_82a0b7686345b309fbcbcae5ae75c45e';-->
+            <!--var width = window.innerWidth || document.documentElement.clientWidth;-->
+            <!--if (width < 960) {-->
+                <!--window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>-->
+
+</section>
+<!--<script src="/js/gitment.browser.js"></script>-->
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<script>
+    // const gitment = new Gitment({
+    //     owner: 'ljinkai',
+    //     repo: 'ljinkai.github.io',
+    //     oauth: {
+    //         client_id: '1e0bbf087995295c53aa',
+    //         client_secret: '7aaf0001f26a5f16ddd7769384d549f317244720',
+    //     }
+    // })
+    // gitment.render('comment')
+
+    const gitalk = new Gitalk({
+        clientID: '1e0bbf087995295c53aa',
+        clientSecret: '7aaf0001f26a5f16ddd7769384d549f317244720',
+        repo: 'ljinkai.github.io',
+        owner: 'ljinkai',
+        admin: ['ljinkai'],
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    })
+
+    gitalk.render('gitalk-container')
+
+</script>
+
+
+
+
+
+</div>
+    </div>
+    <aside id="sidebar" class="alignright">
+  <div class="widget tag" style="padding: 16px;">
+
+      <div style="color: black;font-size: 16px;">
+          <div style="width: 100%;text-align: center;margin-bottom: 10px;margin-top: 0px;">我的知识星球</div>
+          
+          <a style="width: 100%;display: block;text-decoration: none;" href="https://mp.weixin.qq.com/s/LIzhjGGRqiqYnMhIxtFYAw" target="_blank"
+             onclick="ga('send', 'event', 'zsxq_11_blog', 'zsxq');">
+              <img src="https://qiniu.gafata.com/zsxq.jpeg" width="100%"/>
+          </a>
+          <div style="width: 100%;text-align: center;margin-bottom: 10px;margin-top: 0px;">我的在线课程</div>
+          <a style="width: 100%;display: block;text-decoration: none;" href="https://m.qlchat.com/wechat/page/channel-intro?channelId=2000018572922685" target="_blank"
+             onclick="ga('send', 'event', 'my_course', 'live_20170720');">
+              <img src="https://qiniu.gafata.com/chrome-extension-qianliao-2.png" width="100%"/>
+          </a>
+      </div>
+</div>
+
+
+  <div class="widget tag about_fix_none" id="about_fix">
+
+  <ul class="entry" style="text-align: center;font-size: 14px;font-weight: bold;">
+    <li>微信公众号：凯凯而谈</li>
+    <li style="font-weight: normal;font-size: 12px;">这里有我的分享和思考，我们一起知道做到</li>
+    <li><img src='http://qiniu.gafata.com/2019-03-17-web-bear.jpg?imageView2/2/w/600' width='180px' style="margin: 0px auto;display: block;"></li>
+  </ul>
+</div>
+<div class="widget tag">
+  <div class="about_banner">
+    <div class="about_profile">
+      <a href="/2015/02/28/new/">
+        <img class="about_img" src="http://qiniu.gafata.com/2019-03-25-WechatIMG1128.jpeg?imageView2/2/w/200">
+      </a>
+    </div>
+  </div>
+  <ul class="entry" style="text-align: center;">
+    <li>认知、技术、变现</li>
+    <li>微博：<a href="http://weibo.com/jieyingbei" target="_blank" onclick="ga('send', 'event', 'widget_about', 'weibo')">@凯凯刘</a></li>
+    <li>微信公众号：凯凯而谈</li>
+    <li><img src='http://qiniu.gafata.com/2019-03-17-web-bear.jpg?imageView2/2/w/600' width='160px' style="margin: 0px auto;display: block;"></li>
+    <li>Web、Indie Maker</li>
+  </ul>
+  <script>
+    function getPageTopLeft(el) {
+      var rect = el.getBoundingClientRect();
+      var docEl = document.documentElement;
+      return {
+        left: rect.left + (window.pageXOffset || docEl.scrollLeft || 0),
+        top: rect.top + (window.pageYOffset || docEl.scrollTop || 0)
+      };
+    }
+    // window.addEventListener('scroll',function() {
+    //   var winWid = document.body.clientWidth;
+    //   if (winWid > 900) {
+    //     var anchorTop = getPageTopLeft(document.getElementById("anchorTop")).top;
+    //     var scrollTop = window.pageYOffset|| document.documentElement.scrollTop || document.body.scrollTop;
+
+    //     if (anchorTop < scrollTop) {
+    //       document.getElementById("about_fix").className = "widget tag about_fix";
+    //     } else {
+    //       document.getElementById("about_fix").className = "widget tag about_fix_none";
+    //     }
+    //   }
+    // });
+  </script>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/Indie-Maker/" onclick="ga('send', 'event', 'widget_category', 'Indie Maker');">Indie Maker</a><small>20</small></li>
+  
+    <li><a href="/categories/Shopify/" onclick="ga('send', 'event', 'widget_category', 'Shopify');">Shopify</a><small>1</small></li>
+  
+    <li><a href="/categories/Web工具/" onclick="ga('send', 'event', 'widget_category', 'Web工具');">Web工具</a><small>19</small></li>
+  
+    <li><a href="/categories/Web技术/" onclick="ga('send', 'event', 'widget_category', 'Web技术');">Web技术</a><small>51</small></li>
+  
+    <li><a href="/categories/产品/" onclick="ga('send', 'event', 'widget_category', '产品');">产品</a><small>6</small></li>
+  
+    <li><a href="/categories/区块链/" onclick="ga('send', 'event', 'widget_category', '区块链');">区块链</a><small>8</small></li>
+  
+    <li><a href="/categories/变现/" onclick="ga('send', 'event', 'widget_category', '变现');">变现</a><small>12</small></li>
+  
+    <li><a href="/categories/工具/" onclick="ga('send', 'event', 'widget_category', '工具');">工具</a><small>3</small></li>
+  
+    <li><a href="/categories/极客番茄/" onclick="ga('send', 'event', 'widget_category', '极客番茄');">极客番茄</a><small>7</small></li>
+  
+    <li><a href="/categories/流量/" onclick="ga('send', 'event', 'widget_category', '流量');">流量</a><small>3</small></li>
+  
+    <li><a href="/categories/浏览器扩展插件/" onclick="ga('send', 'event', 'widget_category', '浏览器扩展插件');">浏览器扩展插件</a><small>3</small></li>
+  
+    <li><a href="/categories/清单/" onclick="ga('send', 'event', 'widget_category', '清单');">清单</a><small>3</small></li>
+  
+    <li><a href="/categories/生活/" onclick="ga('send', 'event', 'widget_category', '生活');">生活</a><small>9</small></li>
+  
+    <li><a href="/categories/直播/" onclick="ga('send', 'event', 'widget_category', '直播');">直播</a><small>1</small></li>
+  
+    <li><a href="/categories/认知/" onclick="ga('send', 'event', 'widget_category', '认知');">认知</a><small>15</small></li>
+  
+    <li><a href="/categories/训练营/" onclick="ga('send', 'event', 'widget_category', '训练营');">训练营</a><small>1</small></li>
+  
+    <li><a href="/categories/读书/" onclick="ga('send', 'event', 'widget_category', '读书');">读书</a><small>4</small></li>
+  
+    <li><a href="/categories/课程/" onclick="ga('send', 'event', 'widget_category', '课程');">课程</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">标签</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/CSS3/">CSS3</a><small>4</small></li>
+  
+    <li><a href="/tags/Chrome/">Chrome</a><small>7</small></li>
+  
+    <li><a href="/tags/EOS/">EOS</a><small>1</small></li>
+  
+    <li><a href="/tags/ETH/">ETH</a><small>1</small></li>
+  
+    <li><a href="/tags/Facebook/">Facebook</a><small>1</small></li>
+  
+    <li><a href="/tags/Google/">Google</a><small>8</small></li>
+  
+    <li><a href="/tags/HTML5/">HTML5</a><small>15</small></li>
+  
+    <li><a href="/tags/HTTPS/">HTTPS</a><small>2</small></li>
+  
+    <li><a href="/tags/Hybrid-App/">Hybrid App</a><small>2</small></li>
+  
+    <li><a href="/tags/Indie-Maker/">Indie Maker</a><small>20</small></li>
+  
+    <li><a href="/tags/JavaScript/">JavaScript</a><small>12</small></li>
+  
+    <li><a href="/tags/Markdown/">Markdown</a><small>1</small></li>
+  
+    <li><a href="/tags/Node-js/">Node.js</a><small>2</small></li>
+  
+    <li><a href="/tags/PWA/">PWA</a><small>1</small></li>
+  
+    <li><a href="/tags/Shopify/">Shopify</a><small>1</small></li>
+  
+    <li><a href="/tags/github/">github</a><small>2</small></li>
+  
+    <li><a href="/tags/临界知识/">临界知识</a><small>1</small></li>
+  
+    <li><a href="/tags/产品/">产品</a><small>7</small></li>
+  
+    <li><a href="/tags/人工智能/">人工智能</a><small>2</small></li>
+  
+    <li><a href="/tags/健康/">健康</a><small>2</small></li>
+  
+    <li><a href="/tags/增长/">增长</a><small>7</small></li>
+  
+    <li><a href="/tags/工具/">工具</a><small>15</small></li>
+  
+    <li><a href="/tags/插件/">插件</a><small>9</small></li>
+  
+    <li><a href="/tags/方法论/">方法论</a><small>20</small></li>
+  
+    <li><a href="/tags/木匠/">木匠</a><small>2</small></li>
+  
+    <li><a href="/tags/极客番茄/">极客番茄</a><small>7</small></li>
+  
+    <li><a href="/tags/框架/">框架</a><small>6</small></li>
+  
+    <li><a href="/tags/案例/">案例</a><small>2</small></li>
+  
+    <li><a href="/tags/概念/">概念</a><small>3</small></li>
+  
+    <li><a href="/tags/比特币/">比特币</a><small>3</small></li>
+  
+    <li><a href="/tags/浏览器扩展插件/">浏览器扩展插件</a><small>3</small></li>
+  
+    <li><a href="/tags/游戏/">游戏</a><small>2</small></li>
+  
+    <li><a href="/tags/认知/">认知</a><small>7</small></li>
+  
+    <li><a href="/tags/训练营/">训练营</a><small>1</small></li>
+  
+    <li><a href="/tags/课程/">课程</a><small>3</small></li>
+  
+    <li><a href="/tags/资源/">资源</a><small>9</small></li>
+  
+    <li><a href="/tags/路线图/">路线图</a><small>2</small></li>
+  
+    <li><a href="/tags/面试题/">面试题</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  <div class="widget hot">
+  <h3 class="title">热文推荐</h3>
+  <ul class="entry">
+    <li><a href="/2017/06/01/start-small-stay-small/" title="《Start Small, Stay Small》着眼小众市场，程序员的微型创业项目指南">《Start Small, Stay Small》着眼小众市场，程序员的微型创业项目指南</a></li>
+    <li><a href="/2017/02/08/how-to-read-a-book/" title="怎样读一本书V5.0 ?(译)">怎样读一本书V5.0 ?(译)</a></li>
+    <li><a href="/2015/06/06/mobile-web-skill/" title="移动端web开发技巧">移动端web开发技巧</a></li>
+    <li><a href="/2017/12/09/gafata-online/" title="www.gafata.com上线">www.gafata.com上线</a></li>
+    <li><a href="/2017/04/19/deliberate-practice/" title="刻意练习">刻意练习</a></li>
+    <li><a href="/2016/04/27/progressive-web-app/" title="Web新技术：PWA-Progressive Web App">Web新技术：PWA-Progressive Web App</a></li>
+    <li><a href="/2017/08/16/bitcoin-mining-consensus/" title="比特币的挖矿与共识">比特币的挖矿与共识</a></li>
+  </ul>
+</div>
+
+
+  <div class="widget tag" style="width:270px;border-top: 0px red solid;line-height: 0px;">
+
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2015-2023 <a href="/2015/02/28/new/">凯凯刘</a>
+  
+  &nbsp;
+  <a href="http://www.ezindie.com/" target="_blank" title="Easy Indie">Ezindie</a>
+  <a href="http://www.qunheying.com" target="_blank" title="微信群合影" style="margin-left: 10px">微信群合影</a>
+  <a href="http://md2vid.com" target="_blank" title="Markdown转视频" style="margin-left: 10px">Markdown转视频</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="/atom.xml" class="menu_rss menu_rss_bottom" target="_blank" title="RSS订阅"></a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  Powered by <a href="http://hexo.io/">Hexo</a>
+</div>
+<div class="clearfix"></div>
+
+<!--<script>-->
+    <!--var _hmt = _hmt || [];-->
+    <!--(function() {-->
+        <!--var hm = document.createElement("script");-->
+        <!--hm.src = "//hm.baidu.com/hm.js?1e92fed8a761c1224623815e3b960447";-->
+        <!--var s = document.getElementsByTagName("script")[0];-->
+        <!--s.parentNode.insertBefore(hm, s);-->
+    <!--})();-->
+<!--</script>-->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-85358197-2', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+
+</footer>
+  <!--<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>-->
+<!--<script src="<- config.root >js/jquery.imagesloaded.min.js"></script>-->
+<!--<script src="<- config.root >js/gallery.js"></script>-->
+
+
+
+
+</body>
+</html>

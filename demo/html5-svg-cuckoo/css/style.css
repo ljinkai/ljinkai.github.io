@@ -1,0 +1,61 @@
+body {
+  background: #5D917D;
+}
+
+.center, .container, .front-clock, .mill, .figurine, .minute-hand, .hour-hand {
+  position: absolute;
+  left: 50%;
+}
+
+.container {
+  width: 595px;
+  height: 1024px;
+  margin-left: -300px;
+  margin-top: 0;
+}
+
+.front-clock {
+  z-index: 500;
+  margin-top: -1000px;
+  margin-left: -300px;
+}
+
+.mill {
+  z-index: 300;
+  margin-top: -618px;
+  margin-left: 55px;
+}
+
+.figurine {
+  z-index: 1200;
+  margin-top: -625px;
+  margin-left: 140px;
+}
+
+.minute-hand, .hour-hand {
+  z-index: 300;
+  transform: translateZ(0);
+}
+
+.minute-hand {
+  margin-top: 300px;
+  margin-left: -11px;
+}
+
+.hour-hand {
+  margin-top: 317px;
+  margin-left: -14px;
+}
+
+.s0 {
+  stop-color: #52706B;
+  stop-opacity: 0;
+}
+
+.s1 {
+  stop-color: #307057;
+}
+
+#chick {
+  display: hidden;
+}

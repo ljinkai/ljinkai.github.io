@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>凯凯刘</title>
+  <icon>https://www.gravatar.com/avatar/677eb62e5e10128b74345ac17857a09d</icon>
+  <subtitle>Indie Maker、认知、技术、变现</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://liujinkai.com/"/>
+  <updated>2023-05-31T00:05:22.126Z</updated>
+  <id>http://liujinkai.com/</id>
+  
+  <author>
+    <name>凯凯刘</name>
+    <email>ljinkai@126.com</email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>「小产品独立变现实战训练营1期」门票全面开售</title>
+    <link href="http://liujinkai.com/2023/05/31/xuanlianying-1/"/>
+    <id>http://liujinkai.com/2023/05/31/xuanlianying-1/</id>
+    <published>2023-05-30T16:26:33.000Z</published>
+    <updated>2023-05-31T00:05:22.126Z</updated>
+    
+    <summary type="html">
+    
+      我的「小产品独立变现实战训练营1期」门票已经全面开售，方法 + 实战 + 框架 + 源码的方式打造一个赚钱小产品，有免费试听章节。
+    
+    </summary>
+    
+      <category term="训练营" scheme="http://liujinkai.com/categories/%E8%AE%AD%E7%BB%83%E8%90%A5/"/>
+    
+    
+      <category term="训练营" scheme="http://liujinkai.com/tags/%E8%AE%AD%E7%BB%83%E8%90%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>7个基于ChatGPT的有意思小产品</title>
+    <link href="http://liujinkai.com/2022/12/10/chatgpt-demo/"/>
+    <id>http://liujinkai.com/2022/12/10/chatgpt-demo/</id>
+    <published>2022-12-10T13:20:46.000Z</published>
+    <updated>2023-01-07T08:27:02.361Z</updated>
+    
+    <summary type="html">
+    
+      Chatgpt最近有点火热，每天的热榜里也有不少相关内容。其中有一些比较有意思的小产品，大家可以参考下
+    
+    </summary>
+    
+      <category term="Web技术" scheme="http://liujinkai.com/categories/Web%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="人工智能" scheme="http://liujinkai.com/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>个人开发者微信支付宝支付集成</title>
+    <link href="http://liujinkai.com/2022/12/04/zhifu-jicheng/"/>
+    <id>http://liujinkai.com/2022/12/04/zhifu-jicheng/</id>
+    <published>2022-12-04T02:39:14.000Z</published>
+    <updated>2023-01-07T08:28:39.125Z</updated>
+    
+    <summary type="html">
+    
+      国内个人开发者、独立开发者，微信支付宝支付接口集成，被扫码、扫码、公众号、小程序、H5、网站、APP支付场景
+    
+    </summary>
+    
+      <category term="变现" scheme="http://liujinkai.com/categories/%E5%8F%98%E7%8E%B0/"/>
+    
+    
+      <category term="产品" scheme="http://liujinkai.com/tags/%E4%BA%A7%E5%93%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>浏览器扩展课程Manifest V3升级版</title>
+    <link href="http://liujinkai.com/2022/11/27/chrome-extension-develop/"/>
+    <id>http://liujinkai.com/2022/11/27/chrome-extension-develop/</id>
+    <published>2022-11-27T00:51:35.154Z</published>
+    <updated>2023-01-07T09:00:26.467Z</updated>
+    
+    <summary type="html">
+    
+      经过一段时间的整理，我的《浏览器扩展插件开发》视频课程做了全新的升级，支持Manifest V3。
+    
+    </summary>
+    
+      <category term="课程" scheme="http://liujinkai.com/categories/%E8%AF%BE%E7%A8%8B/"/>
+    
+    
+      <category term="课程" scheme="http://liujinkai.com/tags/%E8%AF%BE%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>20+前端常用组件&amp;插件轮子</title>
+    <link href="http://liujinkai.com/2022/10/20/20-fontend-component/"/>
+    <id>http://liujinkai.com/2022/10/20/20-fontend-component/</id>
+    <published>2022-10-20T09:03:27.000Z</published>
+    <updated>2022-10-20T09:32:36.123Z</updated>
+    
+    <summary type="html">
+    
+      对前端开发中常用的组件 &amp; 插件，进行了整理，一个好的插件库可以大大的提升我们开发的效率。更不需要自己再花费时间创造重复的轮子。
+    
+    </summary>
+    
+      <category term="工具" scheme="http://liujinkai.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="工具" scheme="http://liujinkai.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>每日看板Tabhub - 浏览器新标签页，每天离不开的效率神器</title>
+    <link href="http://liujinkai.com/2022/08/11/tabhub-everyday-use/"/>
+    <id>http://liujinkai.com/2022/08/11/tabhub-everyday-use/</id>
+    <published>2022-08-11T00:35:04.000Z</published>
+    <updated>2023-01-31T10:41:12.846Z</updated>
+    
+    <summary type="html">
+    
+      这个产品主要是在新标签页里展示组件化的内容，比如：新闻、待办、RSS订阅、快捷方式、城市天气、日历组件、股票组件等等
+    
+    </summary>
+    
+      <category term="产品" scheme="http://liujinkai.com/categories/%E4%BA%A7%E5%93%81/"/>
+    
+    
+      <category term="产品" scheme="http://liujinkai.com/tags/%E4%BA%A7%E5%93%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>tabhub.app 每日看板 - 浏览器新标签页上线啦</title>
+    <link href="http://liujinkai.com/2022/06/05/tabhub-new-tab/"/>
+    <id>http://liujinkai.com/2022/06/05/tabhub-new-tab/</id>
+    <published>2022-06-05T02:02:04.000Z</published>
+    <updated>2023-01-31T10:41:12.846Z</updated>
+    
+    <summary type="html">
+    
+      跟大家分享下我最近上线的一个新的小产品，tabhub.app 一个浏览器新标签页的扩展插件-每日看板。
+    
+    </summary>
+    
+      <category term="产品" scheme="http://liujinkai.com/categories/%E4%BA%A7%E5%93%81/"/>
+    
+    
+      <category term="产品" scheme="http://liujinkai.com/tags/%E4%BA%A7%E5%93%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Chrome浏览器扩展插件教程:从MV2迁移到Manifest V3</title>
+    <link href="http://liujinkai.com/2022/03/12/chrome-extensions-manifest-v3/"/>
+    <id>http://liujinkai.com/2022/03/12/chrome-extensions-manifest-v3/</id>
+    <published>2022-03-12T02:02:04.000Z</published>
+    <updated>2023-01-07T08:30:28.014Z</updated>
+    
+    <summary type="html">
+    
+      Chrome Web Store于2021年1月已经开始接受Manifest V3扩展的提交。如果你还在使用MV2版本，那么一定要在官方弃用之前，尽快更新到MV3版本。
+    
+    </summary>
+    
+      <category term="浏览器扩展插件" scheme="http://liujinkai.com/categories/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95%E6%8F%92%E4%BB%B6/"/>
+    
+    
+      <category term="浏览器扩展插件" scheme="http://liujinkai.com/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95%E6%8F%92%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2022年最值得关注的Chrome浏览器扩展插件</title>
+    <link href="http://liujinkai.com/2022/03/12/chrome-extensions-recommend-2022/"/>
+    <id>http://liujinkai.com/2022/03/12/chrome-extensions-recommend-2022/</id>
+    <published>2022-03-12T02:02:04.000Z</published>
+    <updated>2023-01-31T10:45:40.127Z</updated>
+    
+    <summary type="html">
+    
+      2022年又有哪些值得关注的扩展呢？我整理了10个最值得关注的浏览器扩展，这些扩展都有很多用户使用，用户评价也非常高，下面就一起来了解下
+    
+    </summary>
+    
+      <category term="浏览器扩展插件" scheme="http://liujinkai.com/categories/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95%E6%8F%92%E4%BB%B6/"/>
+    
+    
+      <category term="浏览器扩展插件" scheme="http://liujinkai.com/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95%E6%8F%92%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Markdown文本转视频在线工具上线 - md2vid.com</title>
+    <link href="http://liujinkai.com/2022/02/28/markdown-to-video/"/>
+    <id>http://liujinkai.com/2022/02/28/markdown-to-video/</id>
+    <published>2022-02-28T15:41:51.000Z</published>
+    <updated>2023-01-31T10:41:12.847Z</updated>
+    
+    <summary type="html">
+    
+      markdown转语音视频在线工具
+    
+    </summary>
+    
+      <category term="产品" scheme="http://liujinkai.com/categories/%E4%BA%A7%E5%93%81/"/>
+    
+    
+      <category term="产品" scheme="http://liujinkai.com/tags/%E4%BA%A7%E5%93%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2021年总结：很多人已经越来越没有耐心做一件长久的事情了</title>
+    <link href="http://liujinkai.com/2022/01/05/2021-summary/"/>
+    <id>http://liujinkai.com/2022/01/05/2021-summary/</id>
+    <published>2022-01-04T16:09:58.000Z</published>
+    <updated>2023-01-07T08:34:11.406Z</updated>
+    
+    <summary type="html">
+    
+      过去的皆为序章。2021年这一年已经翻过，仔细想想，应该为自己的2021年做个总结。既是回顾自己这一年做的事，也能让自己更多的反思下。
+    
+    </summary>
+    
+      <category term="认知" scheme="http://liujinkai.com/categories/%E8%AE%A4%E7%9F%A5/"/>
+    
+    
+      <category term="认知" scheme="http://liujinkai.com/tags/%E8%AE%A4%E7%9F%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git + Webhook + Node.js实现服务器自动化更新部署</title>
+    <link href="http://liujinkai.com/2021/12/10/git-webhook-nodejs/"/>
+    <id>http://liujinkai.com/2021/12/10/git-webhook-nodejs/</id>
+    <published>2021-12-10T11:19:23.000Z</published>
+    <updated>2023-01-31T10:41:12.847Z</updated>
+    
+    <summary type="html">
+    
+      在我们做本地和服务器代码同步的过程中，实现本地push，服务器自动监听更新，并重启应用服务。这个过程需要git+webhook+Node.js来实现。本篇说明仅针对Node.js的监听实现。
+    
+    </summary>
+    
+      <category term="Web工具" scheme="http://liujinkai.com/categories/Web%E5%B7%A5%E5%85%B7/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Electron实战开发在线课程-打造自己的桌面端应用(限时优惠)</title>
+    <link href="http://liujinkai.com/2021/07/18/electron-develop-course/"/>
+    <id>http://liujinkai.com/2021/07/18/electron-develop-course/</id>
+    <published>2021-07-18T02:40:32.000Z</published>
+    <updated>2021-07-18T03:11:02.270Z</updated>
+    
+    <summary type="html">
+    
+      市场上关于Electron介绍的内容不多，也很难找到系统的资料学习。这个课程可以节省你大量的时间，从零开始掌握Electron技术，拓展Web技术边界，打造自己的可持续盈利的桌面端应用。
+    
+    </summary>
+    
+      <category term="课程" scheme="http://liujinkai.com/categories/%E8%AF%BE%E7%A8%8B/"/>
+    
+    
+      <category term="课程" scheme="http://liujinkai.com/tags/%E8%AF%BE%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Nick Fogle - Wavve这个产品是如何卖了几百万美金的？</title>
+    <link href="http://liujinkai.com/2021/05/13/indie-maker-nick-figle-wavve-sale-for-millions/"/>
+    <id>http://liujinkai.com/2021/05/13/indie-maker-nick-figle-wavve-sale-for-millions/</id>
+    <published>2021-05-13T04:29:24.000Z</published>
+    <updated>2021-05-13T06:17:53.991Z</updated>
+    
+    <summary type="html">
+    
+      他还分享了自己的这段经历，在收到第一个报价后，并没有急于出售产品，而是冷静的分析；在遇到新冠疫情的影响下，更加的专注，逆势增长；解决用户流失问题等等
+    
+    </summary>
+    
+      <category term="Indie Maker" scheme="http://liujinkai.com/categories/Indie-Maker/"/>
+    
+    
+      <category term="Indie Maker" scheme="http://liujinkai.com/tags/Indie-Maker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2021年10款优质Chrome浏览器插件推荐</title>
+    <link href="http://liujinkai.com/2021/03/03/chrome-extension-recommend-2021/"/>
+    <id>http://liujinkai.com/2021/03/03/chrome-extension-recommend-2021/</id>
+    <published>2021-03-03T15:02:24.000Z</published>
+    <updated>2022-03-12T02:26:40.552Z</updated>
+    
+    <summary type="html">
+    
+      Chrome插件像一个个小帮手，帮我们提升效率，完成一些有价值的事情。其实有很多这样的优质实用插件，很多人并不知道它们的存在，下面就特意为大家整理10款非常有用的插件
+    
+    </summary>
+    
+      <category term="浏览器扩展插件" scheme="http://liujinkai.com/categories/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95%E6%8F%92%E4%BB%B6/"/>
+    
+    
+      <category term="浏览器扩展插件" scheme="http://liujinkai.com/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95%E6%8F%92%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Sahil创建十亿美金公司的失败反思 - 人物志22篇</title>
+    <link href="http://liujinkai.com/2021/02/10/indie-maker-sahil-lavingia/"/>
+    <id>http://liujinkai.com/2021/02/10/indie-maker-sahil-lavingia/</id>
+    <published>2021-02-10T03:55:09.000Z</published>
+    <updated>2021-02-10T04:14:58.343Z</updated>
+    
+    <summary type="html">
+    
+      Sahil是Pintrest的2号员工，后来离开Pintrest创立了Gumroad，并融资几百万美金。前期高速发展，风光一时，但却遇到了至暗时刻
+    
+    </summary>
+    
+      <category term="Indie Maker" scheme="http://liujinkai.com/categories/Indie-Maker/"/>
+    
+    
+      <category term="Indie Maker" scheme="http://liujinkai.com/tags/Indie-Maker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Chrome扩展插件开发-构建自己的效率工具和盈利产品（在线课程）</title>
+    <link href="http://liujinkai.com/2021/02/02/chrome-extenions-online-course/"/>
+    <id>http://liujinkai.com/2021/02/02/chrome-extenions-online-course/</id>
+    <published>2021-02-02T05:45:13.000Z</published>
+    <updated>2022-11-27T00:53:55.917Z</updated>
+    
+    <summary type="html">
+    
+      Chrome浏览器扩展开发
+    
+    </summary>
+    
+      <category term="课程" scheme="http://liujinkai.com/categories/%E8%AF%BE%E7%A8%8B/"/>
+    
+    
+      <category term="课程" scheme="http://liujinkai.com/tags/%E8%AF%BE%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>什么是TMD的MVP(最小可行性产品)?</title>
+    <link href="http://liujinkai.com/2021/01/25/what-is-mvp/"/>
+    <id>http://liujinkai.com/2021/01/25/what-is-mvp/</id>
+    <published>2021-01-25T04:34:03.000Z</published>
+    <updated>2021-01-25T04:53:12.385Z</updated>
+    
+    <summary type="html">
+    
+      No, 今天我们说的不是詹姆斯。而是,Minimum Viable Product(MVP) – 最小可实行产品
+    
+    </summary>
+    
+      <category term="产品" scheme="http://liujinkai.com/categories/%E4%BA%A7%E5%93%81/"/>
+    
+    
+      <category term="产品" scheme="http://liujinkai.com/tags/%E4%BA%A7%E5%93%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1个人独立变现6种途径收入130万美金在2020年 - 人物志21篇</title>
+    <link href="http://liujinkai.com/2021/01/17/indie-maker-aliabdaal/"/>
+    <id>http://liujinkai.com/2021/01/17/indie-maker-aliabdaal/</id>
+    <published>2021-01-17T08:28:59.000Z</published>
+    <updated>2021-01-17T09:03:43.034Z</updated>
+    
+    <summary type="html">
+    
+      Ali Abdaal2017年从0开始，到2020年这一年的收入达到了130万美金
+    
+    </summary>
+    
+      <category term="Indie Maker" scheme="http://liujinkai.com/categories/Indie-Maker/"/>
+    
+    
+      <category term="Indie Maker" scheme="http://liujinkai.com/tags/Indie-Maker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何从日常发现中挖掘赚钱产品？</title>
+    <link href="http://liujinkai.com/2020/11/20/dig-make-money/"/>
+    <id>http://liujinkai.com/2020/11/20/dig-make-money/</id>
+    <published>2020-11-20T00:34:47.000Z</published>
+    <updated>2020-11-20T10:15:38.948Z</updated>
+    
+    <summary type="html">
+    
+      我们就以实操的心态来分享下我最近的3个发现的赚钱产品案例
+    
+    </summary>
+    
+    
+      <category term="Indie Maker" scheme="http://liujinkai.com/tags/Indie-Maker/"/>
+    
+  </entry>
+  
+</feed>

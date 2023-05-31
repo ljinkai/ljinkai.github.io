@@ -1,0 +1,924 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>移动端web开发技巧 - 凯凯刘</title>
+  <meta name="author" content="凯凯刘">
+  
+  <meta name="description" content="这是一个最好的时代，因为我们站在潮流中；但也是一个最坏的时代，因为我们站在潮头上。">
+  
+  <meta name="keywords" content="web开发技巧,消除transition闪屏,Web app启动动画,移动端字体,摇一摇功能,手机拍照和上传图片,手机号码识别,添加到主屏,移动端touch事件,300ms延迟,禁止文本缩放,webkit表单输入框">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="移动端web开发技巧"/>
+  <meta property="og:site_name" content="凯凯刘"/>
+
+  
+    <meta property="og:image" content="/img/300L.png"/>
+  
+
+  <meta name="google-site-verification" content="iIzqxT8FAfRGM8f4sr97VvjhDsk3QJQ-a2LMdn0DtXU" />
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="alternate" href="/atom.xml" title="凯凯刘" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/styleNew.css?x=6" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/gitment.css">
+  <script src="/js/qrcode.min.js"></script>
+
+  <!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+  <!--<script>-->
+      <!--(adsbygoogle = window.adsbygoogle || []).push({-->
+          <!--google_ad_client: "ca-pub-3023100525130189",-->
+          <!--enable_page_level_ads: true-->
+      <!--});-->
+  <!--</script>-->
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+    <h1><a href="/">凯凯刘</a></h1>
+    <h2><a href="/">
+            
+            Indie Maker、认知、技术、变现
+            
+        </a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+    <ul>
+        
+        <li><a href="/" onclick="ga('send', 'event', 'nav_top', '首页');">首页</a></li>
+        
+        <li><a href="/categories/Web技术/" onclick="ga('send', 'event', 'nav_top', 'Web技术');">Web技术</a></li>
+        
+        <li><a href="/categories/浏览器扩展插件/" onclick="ga('send', 'event', 'nav_top', '浏览器扩展插件');">浏览器扩展插件</a></li>
+        
+        <li><a href="/categories/区块链/" onclick="ga('send', 'event', 'nav_top', '区块链');">区块链</a></li>
+        
+        <li><a href="/categories/%E8%AE%A4%E7%9F%A5/" onclick="ga('send', 'event', 'nav_top', '认知');">认知</a></li>
+        
+        <li><a href="/categories/%E8%AF%BB%E4%B9%A6/" onclick="ga('send', 'event', 'nav_top', '读书');">读书</a></li>
+        
+        <li><a href="/categories/%E6%B5%81%E9%87%8F/" onclick="ga('send', 'event', 'nav_top', '流量');">流量</a></li>
+        
+        <li><a href="/categories/%E5%8F%98%E7%8E%B0/" onclick="ga('send', 'event', 'nav_top', '变现');">变现</a></li>
+        
+        <li><a href="/categories/%E7%94%9F%E6%B4%BB/" onclick="ga('send', 'event', 'nav_top', '生活');">生活</a></li>
+        
+        <li><a href="/2015/03/01/link-friends/" onclick="ga('send', 'event', 'nav_top', '友链');">友链</a></li>
+        
+        <li><a href="/2015/02/28/new/" onclick="ga('send', 'event', 'nav_top', '关于');">关于</a></li>
+        
+        <li><a href="/atom.xml" class="menu_rss" target="_blank" title="RSS订阅"></a></li>
+    </ul>
+    <div class="clearfix"></div>
+    <!--<div class="nav_zhibo" style="position: absolute;top : 120px;left: 40px;color: blue;">-->
+        <!--<a style="color: blue;cursor: pointer;" href="https://m.qlchat.com/topic/360000033244498.htm?preview=Y&intoPreview=Y"-->
+           <!--onclick="ga('send', 'event', 'nav_zhibo', 'qianliao');"-->
+           <!--target="_blank">我的千聊直播(周三)：比特币的挖矿与共识-->
+        <!--</a>-->
+    <!--</div>-->
+
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft">
+
+      <div class="ads_banner">
+        <!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+        <!-- banner -->
+        <!--<ins class="adsbygoogle"-->
+             <!--style="display:block"-->
+             <!--data-ad-client="ca-pub-4018032316880050"-->
+             <!--data-ad-slot="3550377487"-->
+             <!--data-ad-format="auto"></ins>-->
+        <!--<script>-->
+          <!--(adsbygoogle = window.adsbygoogle || []).push({});-->
+        <!--</script>-->
+
+        <!-- <div>
+          <a href="https://t.zsxq.com/ybIuBaA" target="_blank">
+            <img style="width: 100%" src="http://qiniu.gafata.com/2019-06-11-indiemaker_dlbx_1800x180.jpg?imageView2/2/w/1800"/>
+          </a>
+        </div> -->
+
+        <div class="banner-top" style="background-color: #032535;color:white;padding: 15px;font-size: 15px;">
+          「每日看板-Tabhub」浏览器新标签页，独立变现、新闻、日历、待办、RSS、股票等丰富组件
+          <a href="https://www.tabhub.app/?utm_source=blog" target="_blank" style="word-break: break-all;background-color:#c2007c;margin-left:10px;display:inline-block;width: 70px;padding:4px 4px;border-radius: 4px;color:white;text-align: center;" 
+          onclick="ga('send', 'event', 'ads', 'tabhub');" >免费使用</a>
+          <!--星云开发者开放注册啦，提交一个DApp即可获得100个NAS(大约7000元）,更有周、月度大额奖金等你拿！开发者今年最大的机会, 会JavaScript即可。<br>-->
+          <!--注册链接：<a target="_blank" style="word-break: break-all;" onclick="ga('send', 'event', 'ads', 'nebulas');" href="https://incentive.nebulas.io/cn/signup.html?invite=HjuhT">https://incentive.nebulas.io/cn/signup.html?invite=HjuhT</a>-->
+          <!--<span style="color: red">阿里云双11红包来啦，拼购1折起, 官方推荐1折团！</span><a href="https://m.aliyun.com/act/team1111/#/share?params=N.qYnY8sp2fK.kkb39ote" target="_blank" style="" onclick="ga('send', 'event', 'ads', 'aliyun');">马上参团>></a>-->
+
+        </div>
+      </div>
+
+      <div id="wrapper">
+    
+    <div style="display: none">
+        <img src="/img/300L.png" />
+    </div>
+
+
+
+<article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title">移动端web开发技巧</h1>
+  
+
+      
+        <div class="icon"></div>
+        <div class="article_head_extend">
+          <time datetime="2015-06-06T10:14:18.000Z"><a href="/2015/06/06/mobile-web-skill/">Jun 6 2015</a>
+            
+          </time>
+          <div class="qrcode_con">
+            <div class="qrcode_text">扫描二维码</div>
+            <div id="Sat Jun 06 2015 18:14:18 GMT+0800 (China Standard Time)" class="qrcode_img"></div>
+            <script>
+              var qrcode = new QRCode(document.getElementById("Sat Jun 06 2015 18:14:18 GMT+0800 (China Standard Time)"), {
+                width : 100,
+                height : 100
+              });
+              qrcode.makeCode("http://liujinkai.com//2015/06/06/mobile-web-skill/?utm_medium=blog&utm_source=qrcode");
+            </script>
+          </div>
+        </div>
+
+      
+    </header>
+    <div></div>
+    <div class="entry">
+      
+        <p><em><code>这是一个最好的时代，因为我们站在潮流中；但也是一个最坏的时代，因为我们站在潮头上。</code></em></p>
+<h3 id="META相关"><a href="#META相关" class="headerlink" title="META相关"></a>META相关</h3><h4 id="1-添加到主屏后的标题（IOS）"><a href="#1-添加到主屏后的标题（IOS）" class="headerlink" title="1. 添加到主屏后的标题（IOS）"></a>1. 添加到主屏后的标题（IOS）</h4><pre><code>&lt;meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;标题&quot;&gt; 
+</code></pre><h4 id="2-启用-WebApp-全屏模式（IOS）"><a href="#2-启用-WebApp-全屏模式（IOS）" class="headerlink" title="2. 启用 WebApp 全屏模式（IOS）"></a>2. 启用 WebApp 全屏模式（IOS）</h4><p>当网站添加到主屏幕后再点击进行启动时，可隐藏地址栏（从浏览器跳转或输入链接进入并没有此效果）</p>
+<pre><code>&lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot; /&gt; 
+&lt;meta name=&quot;apple-touch-fullscreen&quot; content=&quot;yes&quot; /&gt; 
+</code></pre><a id="more"></a>
+<h4 id="3-百度禁止转码"><a href="#3-百度禁止转码" class="headerlink" title="3. 百度禁止转码"></a>3. 百度禁止转码</h4><p>通过百度手机打开网页时，百度可能会对你的网页进行转码，往你页面贴上它的广告，非常之恶心。不过我们可以通过这个meta标签来禁止它：</p>
+<pre><code>&lt;meta http-equiv=&quot;Cache-Control&quot; content=&quot;no-siteapp&quot; /&gt;
+</code></pre><p><a href="http://m.baidu.com/pub/help.php?pn=22&amp;ssid=0&amp;from=844b&amp;bd_page_type=1" target="_blank" rel="external">百度SiteApp转码声明</a></p>
+<h4 id="4-设置状态栏的背景颜色（IOS）"><a href="#4-设置状态栏的背景颜色（IOS）" class="headerlink" title="4. 设置状态栏的背景颜色（IOS）"></a>4. 设置状态栏的背景颜色（IOS）</h4><p>设置状态栏的背景颜色，只有在 <code>&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot;</code> 时生效</p>
+<pre><code>&lt;meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;black-translucent&quot; /&gt; 
+</code></pre><p>content 参数：</p>
+<ul>
+<li>default ：状态栏背景是白色。</li>
+<li>black ：状态栏背景是黑色。</li>
+<li>black-translucent ：状态栏背景是半透明。 如果设置为 default 或 black ,网页内容从状态栏底部开始。 如果设置为 black-translucent ,网页内容充满整个屏幕，顶部会被状态栏遮挡。</li>
+</ul>
+<h4 id="5-移动端手机号码识别（IOS）"><a href="#5-移动端手机号码识别（IOS）" class="headerlink" title="5. 移动端手机号码识别（IOS）"></a>5. 移动端手机号码识别（IOS）</h4><p>在 iOS Safari （其他浏览器和Android均不会）上会对那些看起来像是电话号码的数字处理为电话链接，比如：</p>
+<ul>
+<li>7位数字，形如：1234567</li>
+<li>带括号及加号的数字，形如：(+86)123456789</li>
+<li>双连接线的数字，形如：00-00-00111</li>
+<li>11位数字，形如：13800138000</li>
+</ul>
+<p><strong>可能还有其他类型的数字也会被识别。我们可以通过如下的meta来关闭电话号码的自动识别：</strong></p>
+<pre><code>&lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no&quot; /&gt;
+</code></pre><p><strong>开启电话功能</strong></p>
+<pre><code>&lt;a href=&quot;tel:123456&quot;&gt;123456&lt;/a&gt;
+</code></pre><p><strong>开启短信功能：</strong></p>
+<pre><code>&lt;a href=&quot;sms:123456&quot;&gt;123456&lt;/a&gt; 
+</code></pre><h4 id="6-移动端邮箱识别（Android）"><a href="#6-移动端邮箱识别（Android）" class="headerlink" title="6. 移动端邮箱识别（Android）"></a>6. 移动端邮箱识别（Android）</h4><p>与电话号码的识别一样，在安卓上会对符合邮箱格式的字符串进行识别，我们可以通过如下的meta来管别邮箱的自动识别：</p>
+<pre><code>&lt;meta content=&quot;email=no&quot; name=&quot;format-detection&quot; /&gt; 
+</code></pre><p>同样地，我们也可以通过标签属性来开启长按邮箱地址弹出邮件发送的功能：</p>
+<pre><code>&lt;a mailto:dooyoe@gmail.com&quot;&gt;dooyoe@gmail.com&lt;/a&gt; 
+</code></pre><h4 id="7-添加智能-App-广告条-Smart-App-Banner（IOS-6-Safari）"><a href="#7-添加智能-App-广告条-Smart-App-Banner（IOS-6-Safari）" class="headerlink" title="7. 添加智能 App 广告条 Smart App Banner（IOS 6+ Safari）"></a>7. 添加智能 App 广告条 Smart App Banner（IOS 6+ Safari）</h4><pre><code>&lt;meta name=&quot;apple-itunes-app&quot; content=&quot;app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL&quot;&gt;
+</code></pre><h4 id="8-IOS-Web-app启动动画"><a href="#8-IOS-Web-app启动动画" class="headerlink" title="8. IOS Web app启动动画"></a>8. IOS Web app启动动画</h4><p>由于iPad 的启动画面是不包括状态栏区域的。所以启动图片需要减去状态栏区域所对应的方向上的20px大小，相应地在retina设备上要减去40px的大小</p>
+<pre><code>&lt;!-- iPhone --&gt;
+&lt;link href=&quot;apple-touch-startup-image-320x460.png&quot; media=&quot;(device-width: 320px)&quot; rel=&quot;apple-touch-startup-image&quot;&gt;
+&lt;!-- iPhone (Retina) --&gt;
+&lt;link href=&quot;apple-touch-startup-image-640x960.png&quot; media=&quot;(device-width: 320px) and (-webkit-device-pixel-ratio: 2)&quot; rel=&quot;apple-touch-startup-image&quot;&gt;
+&lt;!-- iPad (portrait) --&gt;
+&lt;link href=&quot;apple-touch-startup-image-768x1004.png&quot; media=&quot;(device-width: 768px) and (orientation: portrait)&quot; rel=&quot;apple-touch-startup-image&quot;&gt;
+&lt;!-- iPad (landscape) --&gt;
+&lt;link href=&quot;apple-touch-startup-image-748x1024.png&quot; media=&quot;(device-width: 768px) and (orientation: landscape)&quot; rel=&quot;apple-touch-startup-image&quot;&gt;
+&lt;!-- iPad (Retina, portrait) --&gt;
+&lt;link href=&quot;apple-touch-startup-image-1536x2008.png&quot; media=&quot;(device-width: 1536px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)&quot; rel=&quot;apple-touch-startup-image&quot;&gt;
+&lt;!-- iPad (Retina, landscape) --&gt;
+&lt;link href=&quot;apple-touch-startup-image-2048x1496.png&quot; media=&quot;(device-width: 1536px)  and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)&quot; rel=&quot;apple-touch-startup-image&quot;&gt;
+</code></pre><p><code>（landscape：横屏 | portrait：竖屏）</code></p>
+<h4 id="9-添加到主屏后的APP图标"><a href="#9-添加到主屏后的APP图标" class="headerlink" title="9. 添加到主屏后的APP图标"></a>9. 添加到主屏后的APP图标</h4><p>指定web app添加到主屏后的图标路径，有两种略微不同的方式：</p>
+<pre><code>&lt;!-- 设计原图 --&gt;
+&lt;link href=&quot;short_cut_114x114.png&quot; rel=&quot;apple-touch-icon-precomposed&quot;&gt;
+&lt;!-- 添加高光效果 --&gt;
+&lt;link href=&quot;short_cut_114x114.png&quot; rel=&quot;apple-touch-icon&quot;&gt;
+</code></pre><ul>
+<li>apple-touch-icon：在IOS6及以下的版本会自动为图标添加一层高光效果（IOS7开始已使用扁平化的设计风格）</li>
+<li>apple-touch-icon-precomposed：使用“设计原图图标”</li>
+</ul>
+<p><em>效果：</em></p>
+<p> <img src="http://qiniu.gafata.com/blog_142325268767880.png" alt=""></p>
+<p><strong>图标尺寸：</strong></p>
+<p>可通过指定size属性来为不同的设备提供不同的图标（但通常来说，我们只需提供一个114 x 114 pixels大小的图标即可 ）</p>
+<p><em>官方说明如下</em></p>
+<pre><code>Create different sizes of your app icon for different devices. If you’re creating a universal app, you need to supply app icons in all four sizes.
+
+For iPhone and iPod touch both of these sizes are required:
+
+57 x 57 pixels
+
+114 x 114 pixels (high resolution)
+
+For iPad, both of these sizes are required:
+
+72 x 72 pixels
+
+144 x 144 (high resolution)
+</code></pre><h4 id="10-优先使用最新版本-IE-和-Chrome"><a href="#10-优先使用最新版本-IE-和-Chrome" class="headerlink" title="10. 优先使用最新版本 IE 和 Chrome"></a>10. 优先使用最新版本 IE 和 Chrome</h4><pre><code>&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot; /&gt; 
+</code></pre><h4 id="11-viewport模板"><a href="#11-viewport模板" class="headerlink" title="11.viewport模板"></a>11.viewport模板</h4><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta content=&quot;width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no&quot; name=&quot;viewport&quot;&gt;
+&lt;meta content=&quot;yes&quot; name=&quot;apple-mobile-web-app-capable&quot;&gt;
+&lt;meta content=&quot;black&quot; name=&quot;apple-mobile-web-app-status-bar-style&quot;&gt;
+&lt;meta content=&quot;telephone=no&quot; name=&quot;format-detection&quot;&gt;
+&lt;meta content=&quot;email=no&quot; name=&quot;format-detection&quot;&gt;
+&lt;title&gt;标题&lt;/title&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;index.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+这里开始内容
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h3 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h3><h4 id="1、移动端如何定义字体font-family"><a href="#1、移动端如何定义字体font-family" class="headerlink" title="1、移动端如何定义字体font-family"></a>1、移动端如何定义字体font-family</h4><p>三大手机系统的字体： </p>
+<p><strong><em>ios 系统</em></strong></p>
+<ul>
+<li>默认中文字体是Heiti SC</li>
+<li>默认英文字体是Helvetica</li>
+<li>默认数字字体是HelveticaNeue</li>
+<li>无微软雅黑字体</li>
+</ul>
+<p><strong><em>android 系统</em></strong></p>
+<ul>
+<li>默认中文字体是Droidsansfallback</li>
+<li>默认英文和数字字体是Droid Sans</li>
+<li>无微软雅黑字体</li>
+</ul>
+<p><strong><em>winphone 系统</em></strong></p>
+<ul>
+<li>默认中文字体是Dengxian(方正等线体)</li>
+<li>默认英文和数字字体是Segoe</li>
+<li>无微软雅黑字体</li>
+</ul>
+<p>各个手机系统有自己的默认字体，且都不支持微软雅黑<br>如无特殊需求，手机端无需定义中文字体，使用系统默认<br>英文字体和数字字体可使用 Helvetica ，三种系统都支持</p>
+<pre><code>* 移动端定义字体的代码 */
+body{font-family:Helvetica;}
+</code></pre><h4 id="2、移动端字体单位font-size选择px还是rem"><a href="#2、移动端字体单位font-size选择px还是rem" class="headerlink" title="2、移动端字体单位font-size选择px还是rem"></a>2、移动端字体单位font-size选择px还是rem</h4><p>对于只需要适配手机设备，使用px即可</p>
+<p>对于需要适配各种移动设备，使用rem，例如只需要适配iPhone和iPad等分辨率差别比较挺大的设备</p>
+<p>rem配置参考：</p>
+<pre><code>html {font-size:10px}
+@media screen and (min-width:480px) and (max-width:639px) {
+    html {
+        font-size: 15px
+    }
+}
+@media screen and (min-width:640px) and (max-width:719px) {
+    html {
+        font-size: 20px
+    }
+}
+@media screen and (min-width:720px) and (max-width:749px) {
+    html {
+        font-size: 22.5px
+    }
+}
+@media screen and (min-width:750px) and (max-width:799px) {
+    html {
+        font-size: 23.5px
+    }
+}
+@media screen and (min-width:800px) and (max-width:959px) {
+    html {
+        font-size: 25px
+    }
+}
+@media screen and (min-width:960px) and (max-width:1079px) {
+    html {
+        font-size: 30px
+    }
+}
+@media screen and (min-width:1080px) {
+    html {
+        font-size: 32px
+    }
+}
+</code></pre><h4 id="3、移动端touch事件-区分webkit-和-winphone"><a href="#3、移动端touch事件-区分webkit-和-winphone" class="headerlink" title="3、移动端touch事件(区分webkit 和 winphone)"></a>3、移动端touch事件(区分webkit 和 winphone)</h4><p>当用户手指放在移动设备在屏幕上滑动会触发的touch事件</p>
+<p><strong><em>以下支持webkit</em></strong></p>
+<ul>
+<li>touchstart——当手指触碰屏幕时候发生。不管当前有多少只手指</li>
+<li>touchmove——当手指在屏幕上滑动时连续触发。通常我们再滑屏页面，会调用event的preventDefault()可以阻止默认情况的发生：阻止页面滚动</li>
+<li>touchend——当手指离开屏幕时触发</li>
+<li>touchcancel——系统停止跟踪触摸时候会触发。例如在触摸过程中突然页面alert()一个提示框，此时会触发该事件，这个事件比较少用</li>
+</ul>
+<p><strong><em>以下支持winphone 8</em></strong></p>
+<ul>
+<li>MSPointerDown——当手指触碰屏幕时候发生。不管当前有多少只手指</li>
+<li>MSPointerMove——当手指在屏幕上滑动时连续触发。通常我们再滑屏页面，会调用css的html{-ms-touch-action: none;}可以阻止默认情况的发生：阻止页面滚动</li>
+<li>MSPointerUp——当手指离开屏幕时触发</li>
+</ul>
+<h4 id="4、移动端click屏幕产生200-300-ms的延迟响应"><a href="#4、移动端click屏幕产生200-300-ms的延迟响应" class="headerlink" title="4、移动端click屏幕产生200-300 ms的延迟响应"></a>4、移动端click屏幕产生200-300 ms的延迟响应</h4><p>移动设备上的web网页是有300ms延迟的，玩玩会造成按钮点击延迟甚至是点击失效。</p>
+<p>以下是历史原因：</p>
+<p>2007年苹果发布首款iphone上IOS系统搭载的safari为了将适用于PC端上大屏幕的网页能比较好的展示在手机端上，使用了双击缩放(double tap to zoom)的方案，比如你在手机上用浏览器打开一个PC上的网页，你可能在看到页面内容虽然可以撑满整个屏幕，但是字体、图片都很小看不清，此时可以快速双击屏幕上的某一部分，你就能看清该部分放大后的内容，再次双击后能回到原始状态。</p>
+<p>双击缩放是指用手指在屏幕上快速点击两次，iOS 自带的 Safari 浏览器会将网页缩放至原始比例。</p>
+<p>原因就出在浏览器需要如何判断快速点击上，当用户在屏幕上单击某一个元素时候，例如跳转链接<code>&lt;a href=&quot;#&quot;&gt;&lt;/a&gt;</code>，此处浏览器会先捕获该次单击，但浏览器不能决定用户是单纯要点击链接还是要双击该部分区域进行缩放操作，所以，捕获第一次单击后，浏览器会先Hold一段时间t，如果在t时间区间里用户未进行下一次点击，则浏览器会做单击跳转链接的处理，如果t时间里用户进行了第二次单击操作，则浏览器会禁止跳转，转而进行对该部分区域页面的缩放操作。那么这个时间区间t有多少呢？在IOS safari下，大概为300毫秒。这就是延迟的由来。造成的后果用户纯粹单击页面，页面需要过一段时间才响应，给用户慢体验感觉，对于web开发者来说是，页面js捕获click事件的回调函数处理，需要300ms后才生效，也就间接导致影响其他业务逻辑的处理。</p>
+<p><strong>解决方案：</strong></p>
+<ul>
+<li><a href="https://github.com/ftlabs/fastclick" target="_blank" rel="external">fastclick</a>可以解决在手机上点击事件的300ms延迟</li>
+<li>zepto的touch模块，tap事件也是为了解决在click的延迟问题</li>
+</ul>
+<p><strong>触摸事件的响应顺序</strong></p>
+<pre><code>1、ontouchstart 
+2、ontouchmove 
+3、ontouchend 
+4、onclick
+</code></pre><p>解决300ms延迟的问题，也可以通过绑定ontouchstart事件，加快对事件的响应</p>
+<h4 id="5、什么是Retina-显示屏，带来了什么问题"><a href="#5、什么是Retina-显示屏，带来了什么问题" class="headerlink" title="5、什么是Retina 显示屏，带来了什么问题"></a>5、什么是Retina 显示屏，带来了什么问题</h4><p><code>retina</code>：一种具备超高像素密度的液晶屏，同样大小的屏幕上显示的像素点由1个变为多个，如在同样带下的屏幕上，苹果设备的retina显示屏中，像素点1个变为4个</p>
+<p>在高清显示屏中的位图被放大，图片会变得模糊，<code>因此移动端的视觉稿通常会设计为传统PC的2倍</code></p>
+<p>那么，前端的应对方案是：</p>
+<p>设计稿切出来的图片长宽保证为偶数，并使用backgroud-size把图片缩小为原来的1/2</p>
+<pre><code>//例如图片宽高为：200px*200px，那么写法如下
+.css{width:100px;height:100px;background-size:100px 100px;}
+</code></pre><p>其它元素的取值为原来的1/2，例如视觉稿40px的字体，使用样式的写法为20px</p>
+<pre><code>.css{font-size:20px}
+</code></pre><h4 id="6、ios系统中元素被触摸时产生的半透明灰色遮罩怎么去掉"><a href="#6、ios系统中元素被触摸时产生的半透明灰色遮罩怎么去掉" class="headerlink" title="6、ios系统中元素被触摸时产生的半透明灰色遮罩怎么去掉"></a>6、ios系统中元素被触摸时产生的半透明灰色遮罩怎么去掉</h4><p>ios用户点击一个链接，会出现一个半透明灰色遮罩, 如果想要禁用，可设置-webkit-tap-highlight-color的alpha值为0，也就是属性值的最后一位设置为0就可以去除半透明灰色遮罩</p>
+<pre><code>a,button,input,textarea{-webkit-tap-highlight-color: rgba(0,0,0,0)}
+</code></pre><h4 id="7、部分android系统中元素被点击时产生的边框怎么去掉"><a href="#7、部分android系统中元素被点击时产生的边框怎么去掉" class="headerlink" title="7、部分android系统中元素被点击时产生的边框怎么去掉"></a>7、部分android系统中元素被点击时产生的边框怎么去掉</h4><p>android用户点击一个链接，会出现一个边框或者半透明灰色遮罩, 不同生产商定义出来额效果不一样，可设置-webkit-tap-highlight-color的alpha值为0去除部分机器自带的效果</p>
+<pre><code>a,button,input,textarea{
+    -webkit-tap-highlight-color: rgba(0,0,0,0)
+    -webkit-user-modify:read-write-plaintext-only; 
+}
+</code></pre><p><em>-webkit-user-modify有个副作用，就是输入法不再能够输入多个字符</em></p>
+<p>另外，有些机型去除不了，如小米2</p>
+<p>对于按钮类还有个办法，不使用a或者input标签，直接用div标签</p>
+<h4 id="8、winphone系统a、input标签被点击时产生的半透明灰色背景怎么去掉"><a href="#8、winphone系统a、input标签被点击时产生的半透明灰色背景怎么去掉" class="headerlink" title="8、winphone系统a、input标签被点击时产生的半透明灰色背景怎么去掉"></a>8、winphone系统a、input标签被点击时产生的半透明灰色背景怎么去掉</h4><pre><code>&lt;meta name=&quot;msapplication-tap-highlight&quot; content=&quot;no&quot;&gt;
+</code></pre><h4 id="9、webkit表单元素的默认外观怎么重置"><a href="#9、webkit表单元素的默认外观怎么重置" class="headerlink" title="9、webkit表单元素的默认外观怎么重置"></a>9、webkit表单元素的默认外观怎么重置</h4><pre><code>.css{-webkit-appearance:none;}
+</code></pre><h4 id="10、webkit表单输入框placeholder的颜色值能改变么"><a href="#10、webkit表单输入框placeholder的颜色值能改变么" class="headerlink" title="10、webkit表单输入框placeholder的颜色值能改变么"></a>10、webkit表单输入框placeholder的颜色值能改变么</h4><pre><code>input::-webkit-input-placeholder{color:#AAAAAA;}
+input:focus::-webkit-input-placeholder{color:#EEEEEE;}
+</code></pre><h4 id="11、webkit表单输入框placeholder的文字能换行么"><a href="#11、webkit表单输入框placeholder的文字能换行么" class="headerlink" title="11、webkit表单输入框placeholder的文字能换行么"></a>11、webkit表单输入框placeholder的文字能换行么</h4><p><em>ios可以，android不行~</em></p>
+<h4 id="12-关闭iOS键盘首字母自动大写"><a href="#12-关闭iOS键盘首字母自动大写" class="headerlink" title="12. 关闭iOS键盘首字母自动大写"></a>12. 关闭iOS键盘首字母自动大写</h4><p>在iOS中，默认情况下键盘是开启首字母大写的功能的，如果启用这个功能，可以这样：</p>
+<pre><code>&lt;input type=&quot;text&quot; autocapitalize=&quot;off&quot; /&gt;
+</code></pre><h4 id="13-关闭iOS输入自动修正"><a href="#13-关闭iOS输入自动修正" class="headerlink" title="13. 关闭iOS输入自动修正"></a>13. 关闭iOS输入自动修正</h4><p>和英文输入默认自动首字母大写那样，IOS还做了一个功能，默认输入法会开启自动修正输入内容，这样的话，用户经常要操作两次。如果不希望开启此功能，我们可以通过input标签属性来关闭掉：</p>
+<pre><code>&lt;input type=&quot;text&quot; autocorrect=&quot;off&quot; /&gt; 
+</code></pre><h4 id="14-禁止文本缩放"><a href="#14-禁止文本缩放" class="headerlink" title="14. 禁止文本缩放"></a>14. 禁止文本缩放</h4><p>当移动设备横竖屏切换时，文本的大小会重新计算，进行相应的缩放，当我们不需要这种情况时，可以选择禁止：</p>
+<pre><code>html {
+　　        -webkit-text-size-adjust: 100%;
+}
+</code></pre><p>需要注意的是，PC端的该属性已经被移除，该属性在移动端要生效，必须设置 `meta viewport’。</p>
+<h4 id="15-移动端如何清除输入框内阴影"><a href="#15-移动端如何清除输入框内阴影" class="headerlink" title="15. 移动端如何清除输入框内阴影"></a>15. 移动端如何清除输入框内阴影</h4><p>在iOS上，输入框默认有内部阴影，但无法使用 box-shadow 来清除，如果不需要阴影，可以这样关闭：</p>
+<pre><code>input,
+textarea {
+　　border: 0; /* 方法1 */
+　　-webkit-appearance: none; /* 方法2 */
+}
+</code></pre><h4 id="16-快速回弹滚动"><a href="#16-快速回弹滚动" class="headerlink" title="16. 快速回弹滚动"></a>16. 快速回弹滚动</h4><p>我们先来看看回弹滚动在手机浏览器发展的历史：</p>
+<ul>
+<li>早期的时候，移动端的浏览器都不支持非body元素的滚动条，所以一般都借助 iScroll;</li>
+<li>Android 3.0/iOS解决了非body元素的滚动问题，但滚动条不可见，同时iOS上只能通过2个手指进行滚动；</li>
+<li>Android 4.0解决了滚动条不可见及增加了快速回弹滚动效果，不过随后这个特性又被移除；</li>
+<li>iOS从5.0开始解决了滚动条不可见及增加了快速回弹滚动效果</li>
+</ul>
+<p>在iOS上如果你想让一个元素拥有像 Native 的滚动效果，你可以这样做：</p>
+<pre><code>    .xxx {
+        overflow: auto; /* auto | scroll */
+        -webkit-overflow-scrolling: touch;
+    }
+</code></pre><p><em>PS：iScroll用过之后感觉不是很好，有一些诡异的bug，这里推荐另外一个 iDangero Swiper，这个插件集成了滑屏滚动的强大功能（支持3D），而且还有回弹滚动的内置滚动条，官方地址：</em></p>
+<p> <a href="http://www.idangero.us/sliders/swiper/index.php" target="_blank" rel="external">iDangero</a></p>
+<h4 id="17-移动端禁止选中内容"><a href="#17-移动端禁止选中内容" class="headerlink" title="17. 移动端禁止选中内容"></a>17. 移动端禁止选中内容</h4><p>如果你不想用户可以选中页面中的内容，那么你可以在css中禁掉：</p>
+<pre><code>.user-select-none {
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all （移动端不需要） */
+  -ms-user-select: none;      /* IE 10+ */      
+}
+</code></pre><h4 id="18-移动端取消touch高亮效果"><a href="#18-移动端取消touch高亮效果" class="headerlink" title="18. 移动端取消touch高亮效果"></a>18. 移动端取消touch高亮效果</h4><p>在做移动端页面时，会发现所有a标签在触发点击时或者所有设置了伪类 :active 的元素，默认都会在激活状态时，显示高亮框，如果不想要这个高亮，那么你可以通过css以下方法来进行全局的禁止：</p>
+<pre><code>html {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+</code></pre><p>但这个方法在三星的机子上无效，有一种妥协的方法是把页面非真实跳转链接的a标签换成其它标签，可以解决这个问题。</p>
+<h4 id="19-如何禁止保存或拷贝图像（IOS）"><a href="#19-如何禁止保存或拷贝图像（IOS）" class="headerlink" title="19. 如何禁止保存或拷贝图像（IOS）"></a>19. 如何禁止保存或拷贝图像（IOS）</h4><p>通常当你在手机或者pad上长按图像 img ，会弹出选项 存储图像 或者 拷贝图像，如果你不想让用户这么操作，那么你可以通过以下方法来禁止：</p>
+<pre><code>img { -webkit-touch-callout: none; }
+</code></pre><h4 id="20-模拟按钮hover效果"><a href="#20-模拟按钮hover效果" class="headerlink" title="20.模拟按钮hover效果"></a>20.模拟按钮hover效果</h4><p>移动端触摸按钮的效果，可明示用户有些事情正要发生，是一个比较好体验，但是移动设备中并没有鼠标指针，使用css的hover并不能满足我们的需求，还好国外有个激活css的active效果，代码如下，</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta content=&quot;width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no&quot; name=&quot;viewport&quot;&gt;
+&lt;meta content=&quot;yes&quot; name=&quot;apple-mobile-web-app-capable&quot;&gt;
+&lt;meta content=&quot;black&quot; name=&quot;apple-mobile-web-app-status-bar-style&quot;&gt;
+&lt;meta content=&quot;telephone=no&quot; name=&quot;format-detection&quot;&gt;
+&lt;meta content=&quot;email=no&quot; name=&quot;format-detection&quot;&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+a{-webkit-tap-highlight-color: rgba(0,0,0,0);}
+.btn-blue{display:block;height:42px;line-height:42px;text-align:center;border-radius:4px;font-size:18px;color:#FFFFFF;background-color: #4185F3;}
+.btn-blue:active{background-color: #357AE8;}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div class=&quot;btn-blue&quot;&gt;按钮&lt;/div&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+document.addEventListener(&quot;touchstart&quot;, function(){}, true)
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>兼容性ios5+、部分android 4+、winphone 8</p>
+<p>要做到全兼容的办法，可通过绑定ontouchstart和ontouchend来控制按钮的类名</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta content=&quot;width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no&quot; name=&quot;viewport&quot;&gt;
+&lt;meta content=&quot;yes&quot; name=&quot;apple-mobile-web-app-capable&quot;&gt;
+&lt;meta content=&quot;black&quot; name=&quot;apple-mobile-web-app-status-bar-style&quot;&gt;
+&lt;meta content=&quot;telephone=no&quot; name=&quot;format-detection&quot;&gt;
+&lt;meta content=&quot;email=no&quot; name=&quot;format-detection&quot;&gt;
+&lt;style type=&quot;text/css&quot;&gt;
+a{-webkit-tap-highlight-color: rgba(0,0,0,0);}
+.btn-blue{display:block;height:42px;line-height:42px;text-align:center;border-radius:4px;font-size:18px;color:#FFFFFF;background-color: #4185F3;}
+.btn-blue-on{background-color: #357AE8;}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div class=&quot;btn-blue&quot;&gt;按钮&lt;/div&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+var btnBlue = document.querySelector(&quot;.btn-blue&quot;);
+btnBlue.ontouchstart = function(){
+    this.className = &quot;btn-blue btn-blue-on&quot;
+}
+btnBlue.ontouchend = function(){
+    this.className = &quot;btn-blue&quot;
+}
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h4 id="21-屏幕旋转的事件和样式"><a href="#21-屏幕旋转的事件和样式" class="headerlink" title="21.屏幕旋转的事件和样式"></a>21.屏幕旋转的事件和样式</h4><p><strong>事件</strong></p>
+<p>window.orientation，取值：正负90表示横屏模式、0和180表现为竖屏模式；</p>
+<pre><code>window.onorientationchange = function(){
+            switch(window.orientation){
+                case -90:
+                case 90:
+                alert(&quot;横屏:&quot; + window.orientation);
+                case 0:
+                case 180:
+                alert(&quot;竖屏:&quot; + window.orientation);
+                break;
+            }
+} 
+</code></pre><p><strong>样式</strong></p>
+<pre><code>//竖屏时使用的样式
+@media all and (orientation:portrait) {
+    .css{}
+}
+
+//横屏时使用的样式
+@media all and (orientation:landscape) {
+    .css{}
+}
+</code></pre><h4 id="22-audio元素和video元素在ios和andriod中无法自动播放"><a href="#22-audio元素和video元素在ios和andriod中无法自动播放" class="headerlink" title="22.audio元素和video元素在ios和andriod中无法自动播放"></a>22.audio元素和video元素在ios和andriod中无法自动播放</h4><p>应对方案：触屏即播</p>
+<pre><code>$(&#39;html&#39;).one(&#39;touchstart&#39;,function(){
+    audio.play()
+})
+</code></pre><h4 id="23-摇一摇功能"><a href="#23-摇一摇功能" class="headerlink" title="23.摇一摇功能"></a>23.摇一摇功能</h4><p>HTML5 deviceMotion：封装了运动传感器数据的事件，可以获取手机运动状态下的运动加速度等数据。</p>
+<h4 id="24-手机拍照和上传图片"><a href="#24-手机拍照和上传图片" class="headerlink" title="24.手机拍照和上传图片"></a>24.手机拍照和上传图片</h4><p><code>&lt;input type=&quot;file&quot;&gt;</code>的accept 属性</p>
+<pre><code>&lt;!-- 选择照片 --&gt;
+&lt;input type=file accept=&quot;image/*&quot;&gt;
+&lt;!-- 选择视频 --&gt;
+&lt;input type=file accept=&quot;video/*&quot;&gt;
+</code></pre><p>使用总结：</p>
+<ul>
+<li>ios 有拍照、录像、选取本地图片功能</li>
+<li>部分android只有选取本地图片功能</li>
+<li>winphone不支持</li>
+<li>input控件默认外观丑陋</li>
+</ul>
+<h4 id="25-消除transition闪屏"><a href="#25-消除transition闪屏" class="headerlink" title="25. 消除transition闪屏"></a>25. 消除transition闪屏</h4><pre><code>.css{
+    /*设置内嵌的元素在 3D 空间如何呈现：保留 3D*/
+    -webkit-transform-style: preserve-3d;
+    /*（设置进行转换的元素的背面在面对用户时是否可见：隐藏）*/
+    -webkit-backface-visibility: hidden;
+}
+</code></pre><p><strong>开启硬件加速</strong></p>
+<ul>
+<li>解决页面闪白</li>
+<li><p>保证动画流畅</p>
+<pre><code>  .css {
+     -webkit-transform: translate3d(0, 0, 0);
+     -moz-transform: translate3d(0, 0, 0);
+     -ms-transform: translate3d(0, 0, 0);
+     transform: translate3d(0, 0, 0);
+  }
+</code></pre></li>
+</ul>
+<p>设计高性能CSS3动画的几个要素</p>
+<ul>
+<li>尽可能地使用合成属性transform和opacity来设计CSS3动画，</li>
+<li>不使用position的left和top来定位</li>
+<li>利用translate3D开启GPU加速</li>
+</ul>
+<h4 id="26-android-上去掉语音输入按钮"><a href="#26-android-上去掉语音输入按钮" class="headerlink" title="26. android 上去掉语音输入按钮"></a>26. android 上去掉语音输入按钮</h4><pre><code>input::-webkit-input-speech-button {display: none}
+</code></pre><h3 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h3><h4 id="1-移动端基础框架"><a href="#1-移动端基础框架" class="headerlink" title="1. 移动端基础框架"></a>1. 移动端基础框架</h4><ul>
+<li><a href="http://zeptojs.com/" target="_blank" rel="external">zepto.js</a> 语法与jquery几乎一样，会jquery基本会zepto~</li>
+<li><p><a href="http://cubiq.org/iscroll-5" target="_blank" rel="external">iscroll.js</a> 解决页面不支持弹性滚动，不支持fixed引起的问题~ 实现下拉刷新，滑屏，缩放等功能~</p>
+</li>
+<li><p><a href="http://underscorejs.org/" target="_blank" rel="external">underscore.js</a> 该库提供了一整套函数式编程的实用功能，但是没有扩展任何JavaScript内置对象。</p>
+</li>
+<li><a href="https://github.com/ftlabs/fastclick" target="_blank" rel="external">fastclick</a> 加快移动端点击响应时间</li>
+<li><p><a href="http://daneden.github.io/animate.css/" target="_blank" rel="external">animate.css</a> CSS3动画效果库</p>
+</li>
+<li><p><a href="http://jerryzou.com/posts/aboutNormalizeCss/" target="_blank" rel="external">Normalize.css</a> Normalize.css是一种现代的、CSS reset为HTML5准备的优质替代方案</p>
+</li>
+</ul>
+<h4 id="2-滑屏框架"><a href="#2-滑屏框架" class="headerlink" title="2. 滑屏框架"></a>2. 滑屏框架</h4><p>适合上下滑屏、左右滑屏等滑屏切换页面的效果</p>
+<ul>
+<li><a href="https://github.com/peunzhang/slip.js" target="_blank" rel="external">slip.js</a></li>
+<li><a href="https://github.com/peunzhang/iSlider" target="_blank" rel="external">iSlider.js</a></li>
+<li><a href="https://github.com/peunzhang/fullpage" target="_blank" rel="external">fullpage.js</a></li>
+<li><a href="http://www.idangero.us/swiper/#.VX_H72Sqqkq" target="_blank" rel="external">swiper</a></li>
+</ul>
+<h4 id="3-瀑布流框架"><a href="#3-瀑布流框架" class="headerlink" title="3.瀑布流框架"></a>3.瀑布流框架</h4><ul>
+<li><a href="http://masonry.desandro.com/" target="_blank" rel="external">masonry</a></li>
+</ul>
+<h3 id="工具推荐"><a href="#工具推荐" class="headerlink" title="工具推荐"></a>工具推荐</h3><ul>
+<li><a href="http://caniuse.com/" target="_blank" rel="external">caniuse</a> 各浏览器支持html5属性查询</li>
+<li><a href="http://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF" target="_blank" rel="external">paletton</a> 调色搭配</li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/Web技术/">Web技术</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/HTML5/">HTML5</a>, <a href="/tags/CSS3/">CSS3</a>, <a href="/tags/JavaScript/">JavaScript</a>
+  </div>
+
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+    
+    <div class="links">
+        <div class="links_title">推荐阅读</div>
+    
+            <li ><a href="/2015/12/26/chrome-dev-tools/" title="Chrome开发者工具的实用技巧(译)">Chrome开发者工具的实用技巧(译)</a></li>
+       
+            <li ><a href="/2015/10/23/front-develper-10-tools/" title="积攒10款前端开发工具，就可以召唤神龙了">积攒10款前端开发工具，就可以召唤神龙了</a></li>
+       
+            <li ><a href="/2016/04/27/progressive-web-app/" title="什么是PWA(Progressive Web App)?">什么是PWA(Progressive Web App)?</a></li>
+       
+            <li ><a href="/2017/02/08/how-to-read-a-book/" title="怎样读一本书V5.0 ?(译)">怎样读一本书V5.0 ?(译)</a></li>
+       
+    </div>
+    
+
+
+
+<section id="comment">
+    <div id="gitalk-container"></div>
+    <!--<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>-->
+    <!--<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>-->
+    <!--<script>-->
+        <!--var cloudTieConfig = {-->
+            <!--url: document.location.href,-->
+            <!--sourceId: "",-->
+            <!--productKey: "a65a1e5ea58d4c3a8ea1fef77d0371db",-->
+            <!--target: "cloud-tie-wrapper"-->
+        <!--};-->
+        <!--var yunManualLoad = true;-->
+        <!--Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);-->
+    <!--</script>-->
+    <!--PC和WAP自适应版-->
+    <!--<div id="SOHUCS" ></div>-->
+    <!--<script type="text/javascript">-->
+        <!--(function(){-->
+            <!--var appid = 'cyt6v35LM';-->
+            <!--var conf = 'prod_82a0b7686345b309fbcbcae5ae75c45e';-->
+            <!--var width = window.innerWidth || document.documentElement.clientWidth;-->
+            <!--if (width < 960) {-->
+                <!--window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>-->
+
+</section>
+<!--<script src="/js/gitment.browser.js"></script>-->
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<script>
+    // const gitment = new Gitment({
+    //     owner: 'ljinkai',
+    //     repo: 'ljinkai.github.io',
+    //     oauth: {
+    //         client_id: '1e0bbf087995295c53aa',
+    //         client_secret: '7aaf0001f26a5f16ddd7769384d549f317244720',
+    //     }
+    // })
+    // gitment.render('comment')
+
+    const gitalk = new Gitalk({
+        clientID: '1e0bbf087995295c53aa',
+        clientSecret: '7aaf0001f26a5f16ddd7769384d549f317244720',
+        repo: 'ljinkai.github.io',
+        owner: 'ljinkai',
+        admin: ['ljinkai'],
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    })
+
+    gitalk.render('gitalk-container')
+
+</script>
+
+
+
+
+
+</div>
+    </div>
+    <aside id="sidebar" class="alignright">
+  <div class="widget tag" style="padding: 16px;">
+
+      <div style="color: black;font-size: 16px;">
+          <div style="width: 100%;text-align: center;margin-bottom: 10px;margin-top: 0px;">我的知识星球</div>
+          
+          <a style="width: 100%;display: block;text-decoration: none;" href="https://mp.weixin.qq.com/s/LIzhjGGRqiqYnMhIxtFYAw" target="_blank"
+             onclick="ga('send', 'event', 'zsxq_11_blog', 'zsxq');">
+              <img src="https://qiniu.gafata.com/zsxq.jpeg" width="100%"/>
+          </a>
+          <div style="width: 100%;text-align: center;margin-bottom: 10px;margin-top: 0px;">我的在线课程</div>
+          <a style="width: 100%;display: block;text-decoration: none;" href="https://m.qlchat.com/wechat/page/channel-intro?channelId=2000018572922685" target="_blank"
+             onclick="ga('send', 'event', 'my_course', 'live_20170720');">
+              <img src="https://qiniu.gafata.com/chrome-extension-qianliao-2.png" width="100%"/>
+          </a>
+      </div>
+</div>
+
+
+  <div class="widget tag about_fix_none" id="about_fix">
+
+  <ul class="entry" style="text-align: center;font-size: 14px;font-weight: bold;">
+    <li>微信公众号：凯凯而谈</li>
+    <li style="font-weight: normal;font-size: 12px;">这里有我的分享和思考，我们一起知道做到</li>
+    <li><img src='http://qiniu.gafata.com/2019-03-17-web-bear.jpg?imageView2/2/w/600' width='180px' style="margin: 0px auto;display: block;"></li>
+  </ul>
+</div>
+<div class="widget tag">
+  <div class="about_banner">
+    <div class="about_profile">
+      <a href="/2015/02/28/new/">
+        <img class="about_img" src="http://qiniu.gafata.com/2019-03-25-WechatIMG1128.jpeg?imageView2/2/w/200">
+      </a>
+    </div>
+  </div>
+  <ul class="entry" style="text-align: center;">
+    <li>认知、技术、变现</li>
+    <li>微博：<a href="http://weibo.com/jieyingbei" target="_blank" onclick="ga('send', 'event', 'widget_about', 'weibo')">@凯凯刘</a></li>
+    <li>微信公众号：凯凯而谈</li>
+    <li><img src='http://qiniu.gafata.com/2019-03-17-web-bear.jpg?imageView2/2/w/600' width='160px' style="margin: 0px auto;display: block;"></li>
+    <li>Web、Indie Maker</li>
+  </ul>
+  <script>
+    function getPageTopLeft(el) {
+      var rect = el.getBoundingClientRect();
+      var docEl = document.documentElement;
+      return {
+        left: rect.left + (window.pageXOffset || docEl.scrollLeft || 0),
+        top: rect.top + (window.pageYOffset || docEl.scrollTop || 0)
+      };
+    }
+    // window.addEventListener('scroll',function() {
+    //   var winWid = document.body.clientWidth;
+    //   if (winWid > 900) {
+    //     var anchorTop = getPageTopLeft(document.getElementById("anchorTop")).top;
+    //     var scrollTop = window.pageYOffset|| document.documentElement.scrollTop || document.body.scrollTop;
+
+    //     if (anchorTop < scrollTop) {
+    //       document.getElementById("about_fix").className = "widget tag about_fix";
+    //     } else {
+    //       document.getElementById("about_fix").className = "widget tag about_fix_none";
+    //     }
+    //   }
+    // });
+  </script>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/Indie-Maker/" onclick="ga('send', 'event', 'widget_category', 'Indie Maker');">Indie Maker</a><small>20</small></li>
+  
+    <li><a href="/categories/Shopify/" onclick="ga('send', 'event', 'widget_category', 'Shopify');">Shopify</a><small>1</small></li>
+  
+    <li><a href="/categories/Web工具/" onclick="ga('send', 'event', 'widget_category', 'Web工具');">Web工具</a><small>19</small></li>
+  
+    <li><a href="/categories/Web技术/" onclick="ga('send', 'event', 'widget_category', 'Web技术');">Web技术</a><small>51</small></li>
+  
+    <li><a href="/categories/产品/" onclick="ga('send', 'event', 'widget_category', '产品');">产品</a><small>6</small></li>
+  
+    <li><a href="/categories/区块链/" onclick="ga('send', 'event', 'widget_category', '区块链');">区块链</a><small>8</small></li>
+  
+    <li><a href="/categories/变现/" onclick="ga('send', 'event', 'widget_category', '变现');">变现</a><small>12</small></li>
+  
+    <li><a href="/categories/工具/" onclick="ga('send', 'event', 'widget_category', '工具');">工具</a><small>3</small></li>
+  
+    <li><a href="/categories/极客番茄/" onclick="ga('send', 'event', 'widget_category', '极客番茄');">极客番茄</a><small>7</small></li>
+  
+    <li><a href="/categories/流量/" onclick="ga('send', 'event', 'widget_category', '流量');">流量</a><small>3</small></li>
+  
+    <li><a href="/categories/浏览器扩展插件/" onclick="ga('send', 'event', 'widget_category', '浏览器扩展插件');">浏览器扩展插件</a><small>3</small></li>
+  
+    <li><a href="/categories/清单/" onclick="ga('send', 'event', 'widget_category', '清单');">清单</a><small>3</small></li>
+  
+    <li><a href="/categories/生活/" onclick="ga('send', 'event', 'widget_category', '生活');">生活</a><small>9</small></li>
+  
+    <li><a href="/categories/直播/" onclick="ga('send', 'event', 'widget_category', '直播');">直播</a><small>1</small></li>
+  
+    <li><a href="/categories/认知/" onclick="ga('send', 'event', 'widget_category', '认知');">认知</a><small>15</small></li>
+  
+    <li><a href="/categories/训练营/" onclick="ga('send', 'event', 'widget_category', '训练营');">训练营</a><small>1</small></li>
+  
+    <li><a href="/categories/读书/" onclick="ga('send', 'event', 'widget_category', '读书');">读书</a><small>4</small></li>
+  
+    <li><a href="/categories/课程/" onclick="ga('send', 'event', 'widget_category', '课程');">课程</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">标签</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/CSS3/">CSS3</a><small>4</small></li>
+  
+    <li><a href="/tags/Chrome/">Chrome</a><small>7</small></li>
+  
+    <li><a href="/tags/EOS/">EOS</a><small>1</small></li>
+  
+    <li><a href="/tags/ETH/">ETH</a><small>1</small></li>
+  
+    <li><a href="/tags/Facebook/">Facebook</a><small>1</small></li>
+  
+    <li><a href="/tags/Google/">Google</a><small>8</small></li>
+  
+    <li><a href="/tags/HTML5/">HTML5</a><small>15</small></li>
+  
+    <li><a href="/tags/HTTPS/">HTTPS</a><small>2</small></li>
+  
+    <li><a href="/tags/Hybrid-App/">Hybrid App</a><small>2</small></li>
+  
+    <li><a href="/tags/Indie-Maker/">Indie Maker</a><small>20</small></li>
+  
+    <li><a href="/tags/JavaScript/">JavaScript</a><small>12</small></li>
+  
+    <li><a href="/tags/Markdown/">Markdown</a><small>1</small></li>
+  
+    <li><a href="/tags/Node-js/">Node.js</a><small>2</small></li>
+  
+    <li><a href="/tags/PWA/">PWA</a><small>1</small></li>
+  
+    <li><a href="/tags/Shopify/">Shopify</a><small>1</small></li>
+  
+    <li><a href="/tags/github/">github</a><small>2</small></li>
+  
+    <li><a href="/tags/临界知识/">临界知识</a><small>1</small></li>
+  
+    <li><a href="/tags/产品/">产品</a><small>7</small></li>
+  
+    <li><a href="/tags/人工智能/">人工智能</a><small>2</small></li>
+  
+    <li><a href="/tags/健康/">健康</a><small>2</small></li>
+  
+    <li><a href="/tags/增长/">增长</a><small>7</small></li>
+  
+    <li><a href="/tags/工具/">工具</a><small>15</small></li>
+  
+    <li><a href="/tags/插件/">插件</a><small>9</small></li>
+  
+    <li><a href="/tags/方法论/">方法论</a><small>20</small></li>
+  
+    <li><a href="/tags/木匠/">木匠</a><small>2</small></li>
+  
+    <li><a href="/tags/极客番茄/">极客番茄</a><small>7</small></li>
+  
+    <li><a href="/tags/框架/">框架</a><small>6</small></li>
+  
+    <li><a href="/tags/案例/">案例</a><small>2</small></li>
+  
+    <li><a href="/tags/概念/">概念</a><small>3</small></li>
+  
+    <li><a href="/tags/比特币/">比特币</a><small>3</small></li>
+  
+    <li><a href="/tags/浏览器扩展插件/">浏览器扩展插件</a><small>3</small></li>
+  
+    <li><a href="/tags/游戏/">游戏</a><small>2</small></li>
+  
+    <li><a href="/tags/认知/">认知</a><small>7</small></li>
+  
+    <li><a href="/tags/训练营/">训练营</a><small>1</small></li>
+  
+    <li><a href="/tags/课程/">课程</a><small>3</small></li>
+  
+    <li><a href="/tags/资源/">资源</a><small>9</small></li>
+  
+    <li><a href="/tags/路线图/">路线图</a><small>2</small></li>
+  
+    <li><a href="/tags/面试题/">面试题</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  <div class="widget hot">
+  <h3 class="title">热文推荐</h3>
+  <ul class="entry">
+    <li><a href="/2017/06/01/start-small-stay-small/" title="《Start Small, Stay Small》着眼小众市场，程序员的微型创业项目指南">《Start Small, Stay Small》着眼小众市场，程序员的微型创业项目指南</a></li>
+    <li><a href="/2017/02/08/how-to-read-a-book/" title="怎样读一本书V5.0 ?(译)">怎样读一本书V5.0 ?(译)</a></li>
+    <li><a href="/2015/06/06/mobile-web-skill/" title="移动端web开发技巧">移动端web开发技巧</a></li>
+    <li><a href="/2017/12/09/gafata-online/" title="www.gafata.com上线">www.gafata.com上线</a></li>
+    <li><a href="/2017/04/19/deliberate-practice/" title="刻意练习">刻意练习</a></li>
+    <li><a href="/2016/04/27/progressive-web-app/" title="Web新技术：PWA-Progressive Web App">Web新技术：PWA-Progressive Web App</a></li>
+    <li><a href="/2017/08/16/bitcoin-mining-consensus/" title="比特币的挖矿与共识">比特币的挖矿与共识</a></li>
+  </ul>
+</div>
+
+
+  <div class="widget tag" style="width:270px;border-top: 0px red solid;line-height: 0px;">
+
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2015-2023 <a href="/2015/02/28/new/">凯凯刘</a>
+  
+  &nbsp;
+  <a href="http://www.ezindie.com/" target="_blank" title="Easy Indie">Ezindie</a>
+  <a href="http://www.qunheying.com" target="_blank" title="微信群合影" style="margin-left: 10px">微信群合影</a>
+  <a href="http://md2vid.com" target="_blank" title="Markdown转视频" style="margin-left: 10px">Markdown转视频</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="/atom.xml" class="menu_rss menu_rss_bottom" target="_blank" title="RSS订阅"></a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  Powered by <a href="http://hexo.io/">Hexo</a>
+</div>
+<div class="clearfix"></div>
+
+<!--<script>-->
+    <!--var _hmt = _hmt || [];-->
+    <!--(function() {-->
+        <!--var hm = document.createElement("script");-->
+        <!--hm.src = "//hm.baidu.com/hm.js?1e92fed8a761c1224623815e3b960447";-->
+        <!--var s = document.getElementsByTagName("script")[0];-->
+        <!--s.parentNode.insertBefore(hm, s);-->
+    <!--})();-->
+<!--</script>-->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-85358197-2', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+
+</footer>
+  <!--<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>-->
+<!--<script src="<- config.root >js/jquery.imagesloaded.min.js"></script>-->
+<!--<script src="<- config.root >js/gallery.js"></script>-->
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,980 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>web支付:Payment Request API集成指南 - 凯凯刘</title>
+  <meta name="author" content="凯凯刘">
+  
+  <meta name="description" content="在线购物非常方便，但通常存在令人沮丧的体验，在移动设备上购物尤其如此。虽然移动流量在不断增长，但移动购物转化率仅占所有已完成购物活动的三分之一。换言之，移动设备用户的购物放弃率是桌面设备用户的两倍。为何？">
+  
+  <meta name="keywords" content="Payment Request API,web支付,web payment">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="web支付:Payment Request API集成指南"/>
+  <meta property="og:site_name" content="凯凯刘"/>
+
+  
+    <meta property="og:image" content="/img/300L.png"/>
+  
+
+  <meta name="google-site-verification" content="iIzqxT8FAfRGM8f4sr97VvjhDsk3QJQ-a2LMdn0DtXU" />
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="alternate" href="/atom.xml" title="凯凯刘" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/styleNew.css?x=6" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/gitment.css">
+  <script src="/js/qrcode.min.js"></script>
+
+  <!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+  <!--<script>-->
+      <!--(adsbygoogle = window.adsbygoogle || []).push({-->
+          <!--google_ad_client: "ca-pub-3023100525130189",-->
+          <!--enable_page_level_ads: true-->
+      <!--});-->
+  <!--</script>-->
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+    <h1><a href="/">凯凯刘</a></h1>
+    <h2><a href="/">
+            
+            Indie Maker、认知、技术、变现
+            
+        </a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+    <ul>
+        
+        <li><a href="/" onclick="ga('send', 'event', 'nav_top', '首页');">首页</a></li>
+        
+        <li><a href="/categories/Web技术/" onclick="ga('send', 'event', 'nav_top', 'Web技术');">Web技术</a></li>
+        
+        <li><a href="/categories/浏览器扩展插件/" onclick="ga('send', 'event', 'nav_top', '浏览器扩展插件');">浏览器扩展插件</a></li>
+        
+        <li><a href="/categories/区块链/" onclick="ga('send', 'event', 'nav_top', '区块链');">区块链</a></li>
+        
+        <li><a href="/categories/%E8%AE%A4%E7%9F%A5/" onclick="ga('send', 'event', 'nav_top', '认知');">认知</a></li>
+        
+        <li><a href="/categories/%E8%AF%BB%E4%B9%A6/" onclick="ga('send', 'event', 'nav_top', '读书');">读书</a></li>
+        
+        <li><a href="/categories/%E6%B5%81%E9%87%8F/" onclick="ga('send', 'event', 'nav_top', '流量');">流量</a></li>
+        
+        <li><a href="/categories/%E5%8F%98%E7%8E%B0/" onclick="ga('send', 'event', 'nav_top', '变现');">变现</a></li>
+        
+        <li><a href="/categories/%E7%94%9F%E6%B4%BB/" onclick="ga('send', 'event', 'nav_top', '生活');">生活</a></li>
+        
+        <li><a href="/2015/03/01/link-friends/" onclick="ga('send', 'event', 'nav_top', '友链');">友链</a></li>
+        
+        <li><a href="/2015/02/28/new/" onclick="ga('send', 'event', 'nav_top', '关于');">关于</a></li>
+        
+        <li><a href="/atom.xml" class="menu_rss" target="_blank" title="RSS订阅"></a></li>
+    </ul>
+    <div class="clearfix"></div>
+    <!--<div class="nav_zhibo" style="position: absolute;top : 120px;left: 40px;color: blue;">-->
+        <!--<a style="color: blue;cursor: pointer;" href="https://m.qlchat.com/topic/360000033244498.htm?preview=Y&intoPreview=Y"-->
+           <!--onclick="ga('send', 'event', 'nav_zhibo', 'qianliao');"-->
+           <!--target="_blank">我的千聊直播(周三)：比特币的挖矿与共识-->
+        <!--</a>-->
+    <!--</div>-->
+
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft">
+
+      <div class="ads_banner">
+        <!--<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+        <!-- banner -->
+        <!--<ins class="adsbygoogle"-->
+             <!--style="display:block"-->
+             <!--data-ad-client="ca-pub-4018032316880050"-->
+             <!--data-ad-slot="3550377487"-->
+             <!--data-ad-format="auto"></ins>-->
+        <!--<script>-->
+          <!--(adsbygoogle = window.adsbygoogle || []).push({});-->
+        <!--</script>-->
+
+        <!-- <div>
+          <a href="https://t.zsxq.com/ybIuBaA" target="_blank">
+            <img style="width: 100%" src="http://qiniu.gafata.com/2019-06-11-indiemaker_dlbx_1800x180.jpg?imageView2/2/w/1800"/>
+          </a>
+        </div> -->
+
+        <div class="banner-top" style="background-color: #032535;color:white;padding: 15px;font-size: 15px;">
+          「每日看板-Tabhub」浏览器新标签页，独立变现、新闻、日历、待办、RSS、股票等丰富组件
+          <a href="https://www.tabhub.app/?utm_source=blog" target="_blank" style="word-break: break-all;background-color:#c2007c;margin-left:10px;display:inline-block;width: 70px;padding:4px 4px;border-radius: 4px;color:white;text-align: center;" 
+          onclick="ga('send', 'event', 'ads', 'tabhub');" >免费使用</a>
+          <!--星云开发者开放注册啦，提交一个DApp即可获得100个NAS(大约7000元）,更有周、月度大额奖金等你拿！开发者今年最大的机会, 会JavaScript即可。<br>-->
+          <!--注册链接：<a target="_blank" style="word-break: break-all;" onclick="ga('send', 'event', 'ads', 'nebulas');" href="https://incentive.nebulas.io/cn/signup.html?invite=HjuhT">https://incentive.nebulas.io/cn/signup.html?invite=HjuhT</a>-->
+          <!--<span style="color: red">阿里云双11红包来啦，拼购1折起, 官方推荐1折团！</span><a href="https://m.aliyun.com/act/team1111/#/share?params=N.qYnY8sp2fK.kkb39ote" target="_blank" style="" onclick="ga('send', 'event', 'ads', 'aliyun');">马上参团>></a>-->
+
+        </div>
+      </div>
+
+      <div id="wrapper">
+    
+    <div style="display: none">
+        <img src="/img/300L.png" />
+    </div>
+
+
+
+<article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+  
+    <h1 class="title">web支付:Payment Request API集成指南</h1>
+  
+
+      
+        <div class="icon"></div>
+        <div class="article_head_extend">
+          <time datetime="2017-03-07T08:29:15.000Z"><a href="/2017/03/07/payment-request-api-guide/">Mar 7 2017</a>
+            
+          </time>
+          <div class="qrcode_con">
+            <div class="qrcode_text">扫描二维码</div>
+            <div id="Tue Mar 07 2017 16:29:15 GMT+0800 (China Standard Time)" class="qrcode_img"></div>
+            <script>
+              var qrcode = new QRCode(document.getElementById("Tue Mar 07 2017 16:29:15 GMT+0800 (China Standard Time)"), {
+                width : 100,
+                height : 100
+              });
+              qrcode.makeCode("http://liujinkai.com//2017/03/07/payment-request-api-guide/?utm_medium=blog&utm_source=qrcode");
+            </script>
+          </div>
+        </div>
+
+      
+    </header>
+    <div></div>
+    <div class="entry">
+      
+        <p><em>Dogfood</em>：<code>PaymentRequest</code> 仍处于开发阶段。虽然我们认为其稳定性足以满足实现的要求，但可能仍需作出改动。 我们会持续更新本页，以时刻反映 API 的最新状况（<a href="https://docs.google.com/document/d/1I8ha1ySrPWhx80EB4CVPmThkD4ILFM017AfOA5gEFg4/edit#" target="_blank" rel="external">M56 变更</a>）。在此期间，为让您免于受到可能不具有向后兼容性的 API 变更的影响，我们提供了可嵌入网站的 shim。这个 shim 可平息两个主流 Chrome 版本的任何 API 差异。<br>在线购物非常方便，但通常存在令人沮丧的体验，在移动设备上购物尤其如此。虽然移动流量在不断增长，但移动购物转化率仅占所有已完成购物活动的三分之一。换言之，移动设备用户的购物放弃率是桌面设备用户的两倍。为何？</p>
+<p><img src="http://qiniu.gafata.com/2017-03-07-1_why_users_abandon.png?imageView2/2/w/600" alt=""><br><em><code>用户放弃移动设备购物单的原因</code></em>`</p>
+<p>在线购物单需要大量用户操作、难以使用，加载和刷新缓慢，并且需要多个步骤才能完成。这是因为在线支付的两大要素（即安全和便利）之间通常互为矛盾，左支右绌。<br><a id="more"></a></p>
+<p>导致用户放弃交易的大部分问题都均与购物单有着直接关系。每个应用或网站均有自己的数据输入和验证流程，用户通常发现，在每个应用的购物点他们都需要输入相同的信息。此外，应用开发者力求创建支持多种独特支付方式的购物流程；即使是支付方式要求的细小差异也可能导致表单填写和提交过程变得相当复杂。</p>
+<p>任何能或多或少改进这些问题的系统都值得提倡。我们已经尝试借助自动填充功能来帮助解决问题，但我们现在有了更全面的解决方案。</p>
+<h2 id="Payment-Request-API-简介"><a href="#Payment-Request-API-简介" class="headerlink" title="Payment Request API 简介"></a>Payment Request API 简介</h2><p>Payment Request API 是一个旨在消灭结账表单的系统。它显著改进了购物流程期间的用户工作流，为用户提供更一致的体验，并让电商公司能够轻松地利用各种完全不同的支付方式。Payment Request API 不是一种新的支付方式，也不与支付处理机构直接整合；它是一种旨在实现以下目标的处理层：</p>
+<ul>
+<li>让浏览器充当商家、用户和支付处理机构的中介</li>
+<li>尽可能标准化支付通信流程</li>
+<li>为不同的安全支付方式提供无缝支持</li>
+<li>适用于任何移动或非移动浏览器、设备或平台</li>
+</ul>
+<p>Payment Request API 是一种开放式的跨浏览器标准，可以取代传统的结账流程，让商家能够在单个 API 调用中请求和接受任何付款。Payment Request API 允许网页在用户提供输入时与用户代理交换信息，然后核准或拒绝支付请求。<br>最重要的是，浏览器起到中介作用，为实现快速结账所需的全部信息均能储存在浏览器中，因此用户只需点击一次便可确认支付。</p>
+<h3 id="支付交易流程"><a href="#支付交易流程" class="headerlink" title="支付交易流程"></a>支付交易流程</h3><p>利用 Payment Request API，可同时为用户和商家打造尽可能无缝的交易流程。<br><img src="http://qiniu.gafata.com/2017-03-07-2_the_payment_transaction_process.png?imageView2/2/w/400" alt=""></p>
+<p>流程一开始，商家网站首先创建新的 <code>PaymentRequest</code>，并将购买所需的全部信息传递给浏览器：应支付的金额、期望使用的货币，以及网站接受的支付方式。浏览器确定网站所接受的支付方式和用户在目标设备上安装的支付方式之间的兼容性。</p>
+<p>然后，浏览器向用户显示支付 UI，用户选择支付方式并授权执行交易。支付方式可以简单直接，比如使用浏览器已存储的信用卡，也可能冷僻难解，比如使用专门针对网站支付开发的第三方应用（此功能即将实现）。用户授权执行交易后，所有必要的支付详细信息都将直接发回网站。例如，对于信用卡支付，网站将返回卡号、持卡人姓名、有效期和银行卡验证码 (CVC)。</p>
+<p>Payment Request 也可以扩展为返回额外信息，例如收货地址和选项、付款人电子邮件和电话等。这样，无需要向用户显示结账表单，您即可获得完成支付所需的全部信息。</p>
+<p>新流程有三重好处：从用户角度看，请求、授权、支付和结果等以往所有冗长的交互现在可一步完成；从网站角度看，只需调用一次 JavaScript API；从支付方式角度看，流程没有发生任何变化。</p>
+<p><img src="http://qiniu.gafata.com/2017-03-07-3_payment_request_ui.png?imageView2/2/w/400" alt=""></p>
+<h2 id="使用-Payment-Request-API"><a href="#使用-Payment-Request-API" class="headerlink" title="使用 Payment Request API"></a>使用 Payment Request API</h2><h3 id="加载-Payment-Request-API-shim"><a href="#加载-Payment-Request-API-shim" class="headerlink" title="加载 Payment Request API shim"></a>加载 Payment Request API shim</h3><p>为减轻追赶这一现行标准 API 的压力，我们强烈建议在代码的 \<head\> 部分添加此 shim。 此 shim 将随 API 的变化而更新，并会尽力让代码能够至少在 Chrome 的 2 个主要版本上正常运行。</head\></p>
+<h3 id="创建-PaymentRequest"><a href="#创建-PaymentRequest" class="headerlink" title="创建 PaymentRequest"></a>创建 PaymentRequest</h3><p>创建 PaymentRequest 的第一步是通过调用 <a href="https://www.w3.org/TR/payment-request/#paymentrequest-constructor" target="_blank" rel="external">PaymentRequest</a> 构造函数创建一个 PaymentRequest 对象。此步骤通常（并非总是）与用户发起的、表示其想要执行购买的操作相关。对象使用包含所需数据的参数构造。</p>
+<pre><code>var request = new PaymentRequest(
+    methodData, // required payment method data
+    details,    // required information about transaction
+    options     // optional parameter for things like shipping, etc.
+);
+</code></pre><p><em><code>PaymentRequest 构造函数</code></em></p>
+<h3 id="methodData-参数"><a href="#methodData-参数" class="headerlink" title="methodData 参数"></a>methodData 参数</h3><p><code>methodData</code> 参数包含支持的支付方式列表，以及有关支付方式的额外信息（如相关）。此序列含有 <code>PaymentMethodData</code> 字典，其中包括与应用预期接受的支付方式相关的标准标识符，以及任何支付方式的特定数据。如需了解更多详情，请参见 <a href="https://w3c.github.io/browser-payment-api/specs/architecture.html" target="_blank" rel="external">Payment Request API</a> 架构。<br>目前，<code>PaymentRequest</code> 在 Chrome 中仅支持以下标准信用卡：“<code>amex</code>”、“<code>diners</code>”、“<code>discover</code>”、“<code>jcb</code>”、“<code>maestro</code>”、“<code>mastercard</code>”、“<code>unionpay</code>”和“<code>visa</code>”。</p>
+<pre><code>var methodData = [
+  {
+    supportedMethods: [&quot;visa&quot;, &quot;mastercard&quot;]
+  }
+]
+</code></pre><p><em><code>支付方式和数据</code></em></p>
+<h3 id="details-参数"><a href="#details-参数" class="headerlink" title="details 参数"></a>details 参数</h3><p><code>details</code>参数包含有关交易的信息。有两个主要元素：total，反映要支付的总额和要使用的货币；可选的 <code>displayItems</code> 集，显示最终金额包含哪些分项。此参数并非用作明细项目列表，而是订单主要组成部分的摘要：总价、折扣、税、运费等。</p>
+<p>需要注意的是，Payment Request API 不执行计算。也就是说，它不会也不能确保显示的分项总和等于应付总金额。这些计算由开发者负责。因此，您应始终确保分项之和与总金额一致。此外，PaymentRequest 不支持退款，因此金额应始终为正（但单独的分项可以为负，比如折扣）。</p>
+<p>浏览器将根据您的定义渲染标签，并根据用户的语言区域自动应用正确的货币格式。请注意，应使用与内容相同的语言渲染标签。</p>
+<p><img src="http://qiniu.gafata.com/2017-03-07-4_order_summary.png?imageView2/2/w/400" alt=""></p>
+<pre><code>var details = {
+  displayItems: [
+    {
+      label: &quot;Original donation amount&quot;,
+      amount: { currency: &quot;USD&quot;, value : &quot;65.00&quot; }, // US$65.00
+    },
+    {
+      label: &quot;Friends and family discount&quot;,
+      amount: { currency: &quot;USD&quot;, value : &quot;-10.00&quot; }, // -US$10.00
+      pending: true // The price is not determined yet
+    }
+  ],
+  total:  {
+    label: &quot;Total&quot;,
+    amount: { currency: &quot;USD&quot;, value : &quot;55.00&quot; }, // US$55.00
+  }
+}
+</code></pre><p><em><code>交易详情</code></em></p>
+<p><code>pending</code> 常用于显示运费或税额等取决于收货地址或收货选项的项目。Chrome 会在 UI 中指示支付请求的待定字段。<br><code>details</code> 中所使用的重复值或计算值可指定为字符串字面量或各字符串变量。</p>
+<pre><code>var currency = &quot;USD&quot;;
+var amount = &quot;65.00&quot;;
+var discount = &quot;-10.00&quot;;
+var total = &quot;55.00&quot;;
+</code></pre><p><em><code>PaymentRequest 变量</code></em></p>
+<h3 id="显示-PaymentRequest"><a href="#显示-PaymentRequest" class="headerlink" title="显示 PaymentRequest"></a>显示 PaymentRequest</h3><p>通过调用 <code>show()</code> 方法激活 PaymentRequest界面。此方法会调用一个原生 UI，让用户检查购物详情、添加或更改信息并最终进行支付。用户接受或拒绝支付请求时，将返回可解析 Promise（带有其 then() 方法和回调函数）。</p>
+<p><img src="http://qiniu.gafata.com/2017-03-07-5_display_payment_request.png?imageView2/2/w/400" alt=""></p>
+<pre><code>request.show().then(function(paymentResponse) {
+  // Process paymentResponse here
+  paymentResponse.complete(&quot;success&quot;);
+}).catch(function(err) {
+  console.error(&quot;Uh oh, something bad happened&quot;, err.message);
+});
+</code></pre><p><em><code>PaymentRequest show 方法</code></em></p>
+<h3 id="取消-PaymentRequest"><a href="#取消-PaymentRequest" class="headerlink" title="取消 PaymentRequest"></a>取消 PaymentRequest</h3><p>您可以通过调用 <code>abort()</code> 方法主动取消 PaymentRequest。这在购物会话超时或交易期间购物车中的商品售罄时特别有用。</p>
+<p>如果应用需要在调用 show() 方法之后、promise 尚未解析之前（例如，如果商品已下架，或者用户没有在指定时间内确认订单）取消支付请求，则可使用此方法。</p>
+<p>如果您取消请求，将需要创建一个新的 PaymentRequest 实例，才能再次调用 show()。</p>
+<pre><code>var paymentTimeout = window.setTimeout(function() {
+  window.clearTimeout(paymentTimeout);
+  request.abort().then(function() {
+    console.log(&#39;Payment timed out after 20 minutes.&#39;);
+  }).catch(function() {
+    console.log(&#39;Unable to abort.&#39;);
+  });
+}, 20 * 60 * 1000);  /* 20 minutes */
+</code></pre><p><em><code>PaymentRequest abort 方法</code></em></p>
+<h3 id="处理-PaymentResponse"><a href="#处理-PaymentResponse" class="headerlink" title="处理 PaymentResponse"></a>处理 PaymentResponse</h3><p>用户批准库款请求后，<code>show()</code> 方法的 promise 会立即解析，生成 PaymentResponse 对象。</p>
+<table>
+<thead>
+<tr>
+<th>PaymentResponse 具有下列字段</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>methodName</td>
+<td>表示所选支付方式的字符串（例如 visa）</td>
+</tr>
+<tr>
+<td>details</td>
+<td>含有 methodName 信息的字典</td>
+</tr>
+<tr>
+<td>shippingAddress</td>
+<td>用户的收货地址（如有请求）</td>
+</tr>
+<tr>
+<td>shippingOption</td>
+<td>所选发货选项的 ID（如有请求）</td>
+</tr>
+<tr>
+<td>payerEmail</td>
+<td>付款人的电子邮件地址（如有请求）</td>
+</tr>
+<tr>
+<td>payerPhone</td>
+<td>付款人的电话号码（如有请求）</td>
+</tr>
+<tr>
+<td>payerName</td>
+<td>付款人的姓名（如有请求）</td>
+</tr>
+</tbody>
+</table>
+<p>对于信用卡付款，响应为标准格式。对于非信用卡付款（例如 Android Pay），响应将由支付服务商提供文档说明。信用卡响应包含下列字典：<br><code>cardholderName</code> <code>cardNumber</code> <code>expiryMonth</code> <code>expiryYear</code> <code>cardSecurityCode</code> <code>billingAddress</code><br>接收支付信息后，应用需将支付信息提交给支付处理机构进行处理。发生请求时，UI 会显示一个转环。收到响应后，应用需调用 complete() 来关闭 UI。</p>
+<pre><code>request.show().then(paymentResponse =&gt; {
+  var paymentData = {
+    // payment method string, e.g. “visa”
+    method: paymentResponse.methodName,
+    // payment details as you requested
+    details: paymentResponse.details
+  };
+  return fetch(&#39;/pay&#39;, {
+    method: &#39;POST&#39;,
+    credentials: &#39;include&#39;,
+    headers: {
+      &#39;Content-Type&#39;: &#39;application/json&#39;
+    },
+    body: JSON.stringify(paymentData)
+  }).then(res =&gt; {
+    if (res.status === 200) {
+      return res.json();
+    } else {
+      throw &#39;Payment Error&#39;;
+    }
+  }).then(res =&gt; {
+    paymentResponse.complete(&quot;success&quot;);
+  }, err =&gt; {
+    paymentResponse.complete(&quot;fail&quot;);
+  });
+}).catch(err =&gt; {
+  console.error(&quot;Uh oh, something bad happened&quot;, err.message);
+});
+</code></pre><p><code>complete()</code> 方法告知 User Agent 用户交互已结束，并允许应用将结果通知用户以及处理剩余的 UI 元素。</p>
+<p><img src="http://qiniu.gafata.com/2017-03-07-6_card_verified.png?imageView2/2/w/400" alt=""></p>
+<pre><code>paymentResponse.complete(&#39;success&#39;).then(() =&gt; {
+  // Success UI
+}
+
+paymentResponse.complete(&#39;fail&#39;).then(() =&gt; {
+  // Error UI
+};
+</code></pre><p><em><code>PaymentRequest complete 方法</code></em></p>
+<h2 id="收集收货地址"><a href="#收集收货地址" class="headerlink" title="收集收货地址"></a>收集收货地址</h2><p>如果您是出售实体物品的商家，则可能需要通过 Payment Request API 收集用户的收货地址。这通过将 requestShipping: true 添加到 options 参数来实现。设置此参数后，“Shipping”将添加到 UI，用户可从已保存的地址列表中选择收货地址，也可以添加新的收货地址。<br>您也可以通过指定 shippingType 在 UI 中使用“Delivery”或“Pickup”替代“Shipping”。这仅作显示用途。</p>
+<p><img src="http://qiniu.gafata.com/2017-03-07-7_payment_request_ui.png?imageView2/2/w/400" alt=""></p>
+<p>注： <a href="https://www.w3.org/TR/payment-request/#paymentdetails-dictionary" target="_blank" rel="external">details</a>.shippingOptions 在初始化时必须为 undefined 或空数组才能接收<code>shippingaddresschange</code> 事件。否则事件将无法触发。</p>
+<pre><code>var options = {
+  requestShipping: true,
+  shippingType: &quot;shipping&quot; // &quot;shipping&quot;(default), &quot;delivery&quot; or &quot;pickup&quot;
+};
+
+var request = new PaymentRequest(methodData, details, options);
+</code></pre><p><em><code>交易选项</code></em></p>
+<p>用户选择或添加新的收货地址时，系统会动态计算发货选项。您可以添加 <code>shippingaddresschange</code> 事件的侦听器，它在用户选择收货地址时触发。然后，可以验证是否能够发货到该地址，计算发货选项并以新的发货选项和计价信息更新 <code>details.shippingOptions</code>。您可以通过将某一选项的 <code>selected</code> 设为 <code>true</code> 来提供默认发货选项。<br>如果要出于地区不受支持等原因而拒绝使用某一地址，可以向 <code>details.shippingOptions</code> 传递空数组。UI 会通知用户，所选地址无法用于收货。</p>
+<p><img src="http://qiniu.gafata.com/2017-03-07-8_address_rejected.png?imageView2/2/w/400" alt=""></p>
+<p>注：解析 <code>shippingaddresschange</code> 事件并保留 <code>details.shippingOptions</code> 的空数组状态也会导致地址遭拒（换言之，您无法发货到该地址）。请确保发货选项保持更新，并能匹配用户提供的地址。</p>
+<pre><code>request.addEventListener(&#39;shippingaddresschange&#39;, e =&gt; {
+  e.updateWith(((details, addr) =&gt; {
+    if (addr.country === &#39;US&#39;) {
+      var shippingOption = {
+        id: &#39;&#39;,
+        label: &#39;&#39;,
+        amount: {currency: &#39;USD&#39;, value: &#39;0.00&#39;},
+        selected: true
+      };
+      if (addr.region === &#39;US&#39;) {
+        shippingOption.id = &#39;us&#39;;
+        shippingOption.label = &#39;Standard shipping in US&#39;;
+        shippingOption.amount.value = &#39;0.00&#39;;
+        details.total.amount.value = &#39;55.00&#39;;
+      } else {
+        shippingOption.id = &#39;others&#39;;
+        shippingOption.label = &#39;International shipping&#39;;
+        shippingOption.amount.value = &#39;10.00&#39;;
+        details.total.amount.value = &#39;65.00&#39;;
+      }
+      if (details.displayItems.length === 2) {
+        details.displayItems.splice(1, 0, shippingOption);
+      } else {
+        details.displayItems.splice(1, 1, shippingOption);
+      }
+      details.shippingOptions = [shippingOption];
+    } else {
+      details.shippingOptions = [];
+    }
+    return Promise.resolve(details);
+  })(details, request.shippingAddress));
+});
+</code></pre><p>用户确认支付请求后，<a href="https://www.w3.org/TR/payment-request/#show" target="_blank" rel="external">show()</a> 方法的 promise 得到解析。应用可使用 PaymentResponse 对象的 <code>.shippingAddress</code> 属性，将收货地址和其他属性告知支付处理机构。</p>
+<p><img src="http://qiniu.gafata.com/2017-03-07-9_shipping_address.png?imageView2/2/w/400" alt=""><br>支付请求界面</p>
+<pre><code>request.show().then(paymentResponse =&gt; {
+  var paymentData = {
+    // payment method string
+    method: paymentResponse.methodName,
+    // payment details as you requested
+    details: paymentResponse.details.toJSON(),
+    // shipping address information
+    address: paymentResponse.shippingAddress.toJSON()
+  };
+  // Send information to the server
+});
+</code></pre><h2 id="添加发货选项"><a href="#添加发货选项" class="headerlink" title="添加发货选项"></a>添加发货选项</h2><p>如果您的服务允许用户选择“free”、“standard”或“express”等发货选项，可以通过 Payment Request UI 来实现。要提供此类选项，请添加 <a href="https://www.w3.org/TR/payment-request/#paymentshippingoption-dictionary" target="_blank" rel="external">shippingOptions</a> 属性及其选项至 <code>details</code> 对象。将一个选项设为 <code>selected: true</code> 后，UI 将其渲染为预设选项（这意味着您的总金额应反映该发货选项对应的价格）。</p>
+<pre><code>var details = {
+  total: {label: &#39;Donation&#39;, amount: {currency: &#39;USD&#39;, value: &#39;55.00&#39;}},
+  displayItems: [
+    {
+      label: &#39;Original donation amount&#39;,
+      amount: {currency: &#39;USD&#39;, value: &#39;65.00&#39;}
+    },
+    {
+      label: &#39;Friends and family discount&#39;,
+      amount: {currency: &#39;USD&#39;, value: &#39;-10.00&#39;}
+    }
+  ],
+  shippingOptions: [
+    {
+      id: &#39;standard&#39;,
+      label: &#39;Standard shipping&#39;,
+      amount: {currency: &#39;USD&#39;, value: &#39;0.00&#39;},
+      selected: true
+    },
+    {
+      id: &#39;express&#39;,
+      label: &#39;Express shipping&#39;,
+      amount: {currency: &#39;USD&#39;, value: &#39;12.00&#39;}
+    }
+  ]
+};
+var request = new PaymentRequest(methodData, details, options);
+</code></pre><p>注：如前所述， <code>details.shippingOptions</code> 在初始化时必须为 undefined 或空数组才能接收<code>shippingaddresschange</code> 事件。仅在发货选项不会随地址而变化的情况下（例如全球免费发货），才能在初始化时设置此值。<br>更改发货选项会导致价格变动。要添加运费并更改总价，可以为 <code>shippingoptionchange</code> 事件添加事件侦听器（用户选择发货选项时会触发该侦听器），这样您即可对选项数据执行程序化检查。您也可以根据收货地址更改运费。</p>
+<pre><code>request.addEventListener(&#39;shippingoptionchange&#39;, e =&gt; {
+  e.updateWith(((details, shippingOption) =&gt; {
+    var selectedShippingOption;
+    var otherShippingOption;
+    if (shippingOption === &#39;standard&#39;) {
+      selectedShippingOption = details.shippingOptions[0];
+      otherShippingOption = details.shippingOptions[1];
+      details.total.amount.value = &#39;55.00&#39;;
+    } else {
+      selectedShippingOption = details.shippingOptions[1];
+      otherShippingOption = details.shippingOptions[0];
+      details.total.amount.value = &#39;67.00&#39;;
+    }
+    if (details.displayItems.length === 2) {
+      details.displayItems.splice(1, 0, selectedShippingOption);
+    } else {
+      details.displayItems.splice(1, 1, selectedShippingOption);
+    }
+    selectedShippingOption.selected = true;
+    otherShippingOption.selected = false;
+    return Promise.resolve(details);
+  })(details, request.shippingOption));
+});
+</code></pre><p>用户确认支付请求后，<code>show()</code>方法的 promise 得到解析。应用可使用 PaymentResponse 对象的 <code>.shippingOption</code> 属性，将发货选项和其他属性告知支付处理机构。</p>
+<p><img src="http://qiniu.gafata.com/2017-03-07-10_shipping_options.png?imageView2/2/w/400" alt=""></p>
+<pre><code>request.show().then(paymentResponse =&gt; {
+  var paymentData = {
+    // payment method string
+    method: paymentResponse.methodName,
+    // payment details as you requested
+    details: paymentResponse.details.toJSON(),
+    // shipping address information
+    address: paymentResponse.shippingAddress.toJSON(),
+    // shipping option
+    shippingOption: paymentResponse.shippingOption
+  };
+  // Send information to the server
+});
+</code></pre><h2 id="添加可选联系信息"><a href="#添加可选联系信息" class="headerlink" title="添加可选联系信息"></a>添加可选联系信息</h2><p>您还可以通过配置 <code>options</code> 对象，收集用户的电子邮件地址、电话号码或姓名。</p>
+<pre><code>var options = {
+  requestPayerPhone: true,  // Request user&#39;s phone number
+  requestPayerEmail: true,  // Request user&#39;s email address
+  requestPayerName:  true   // Request user&#39;s name
+};
+
+var request = new PaymentRequest(methodData, details, options);
+</code></pre><p>用户确认支付请求后，show() 方法的 promise 得到解析。应用可使用 PaymentResponse 对象的 <code>.payerPhone</code>、<code>.payerEmail</code> 和/或 <code>.payerName</code> 属性，将用户的选择和其他属性告知支付处理机构。</p>
+<p><img src="http://qiniu.gafata.com/2017-03-07-11_contact_details.png?imageView2/2/w/400" alt=""></p>
+<pre><code>request.show().then(paymentResponse =&gt; {
+  var paymentData = {
+    // payment method string
+    method: paymentResponse.methodName,
+    // payment details as you requested
+    details: paymentResponse.details.toJSON(),
+    // shipping address information
+    address: paymentResponse.shippingAddress.toJSON(),
+    // shipping option string
+    shippingOption: paymentResponse.shippingOption,
+    // payer&#39;s phone number string
+    phone: paymentResponse.payerPhone,
+    // payer&#39;s email address string
+    email: paymentResponse.payerEmail,
+    // payer&#39;s name string
+    name: paymentResponse.payerName
+  };
+  // Send information to the server
+});
+</code></pre><h2 id="让-PaymentRequest-获得渐进式增强"><a href="#让-PaymentRequest-获得渐进式增强" class="headerlink" title="让 PaymentRequest 获得渐进式增强"></a>让 PaymentRequest 获得渐进式增强</h2><p>由于 Payment Request API 是一项新兴功能，许多浏览器尚未对其提供支持。要确定该功能是否可用，请查询 <code>window.PaymentRequest</code>。</p>
+<pre><code>if (window.PaymentRequest) {
+  // PaymentRequest supported
+  // Continue with PaymentRequest API
+} else {
+  // PaymentRequest NOT supported
+  // Continue with existing form based solution
+}
+</code></pre><p>注：最好使用普通的常规结账流程链接。然后使用 JavaScript 在支持 PaymentRequest 的情况下阻止导航。</p>
+<h2 id="汇总"><a href="#汇总" class="headerlink" title="汇总"></a>汇总</h2><pre><code>function onBuyClicked(event) {
+  if (!window.PaymentRequest) {
+    return;
+  }
+  // Payment Request API is available.
+  // Stop the default anchor redirect.
+  event.preventDefault();
+
+  var supportedInstruments = [{
+    supportedMethods: [
+      &#39;visa&#39;, &#39;mastercard&#39;, &#39;amex&#39;, &#39;discover&#39;, &#39;maestro&#39;,
+      &#39;diners&#39;, &#39;jcb&#39;, &#39;unionpay&#39;, &#39;bitcoin&#39;
+    ]
+  }];
+
+  var details = {
+    displayItems: [{
+      label: &#39;Original donation amount&#39;,
+      amount: { currency: &#39;USD&#39;, value: &#39;65.00&#39; }
+    }, {
+      label: &#39;Friends and family discount&#39;,
+      amount: { currency: &#39;USD&#39;, value: &#39;-10.00&#39; }
+    }],
+    total: {
+      label: &#39;Total due&#39;,
+      amount: { currency: &#39;USD&#39;, value : &#39;55.00&#39; }
+    }
+  };
+
+  var options = {
+    requestShipping: true,
+    requestPayerEmail: true,
+    requestPayerPhone: true,
+    requestPayerName: true
+  };
+
+  // Initialization
+  var request = new PaymentRequest(supportedInstruments, details, options);
+
+  // When user selects a shipping address
+  request.addEventListener(&#39;shippingaddresschange&#39;, e =&gt; {
+    e.updateWith(((details, addr) =&gt; {
+      var shippingOption = {
+        id: &#39;&#39;,
+        label: &#39;&#39;,
+        amount: { currency: &#39;USD&#39;, value: &#39;0.00&#39; },
+        selected: true
+      };
+      // Shipping to US is supported
+      if (addr.country === &#39;US&#39;) {
+        shippingOption.id = &#39;us&#39;;
+        shippingOption.label = &#39;Standard shipping in US&#39;;
+        shippingOption.amount.value = &#39;0.00&#39;;
+        details.total.amount.value = &#39;55.00&#39;;
+      // Shipping to JP is supported
+      } else if (addr.country === &#39;JP&#39;) {
+        shippingOption.id = &#39;jp&#39;;
+        shippingOption.label = &#39;International shipping&#39;;
+        shippingOption.amount.value = &#39;10.00&#39;;
+        details.total.amount.value = &#39;65.00&#39;;
+      // Shipping to elsewhere is unsupported
+      } else {
+        // Empty array indicates rejection of the address
+        details.shippingOptions = [];
+        return Promise.resolve(details);
+      }
+      // Hardcode for simplicity
+      if (details.displayItems.length === 2) {
+        details.displayItems[2] = shippingOption;
+      } else {
+        details.displayItems.push(shippingOption);
+      }
+      details.shippingOptions = [shippingOption];
+
+      return Promise.resolve(details);
+    })(details, request.shippingAddress));
+  });
+
+  // When user selects a shipping option
+  request.addEventListener(&#39;shippingoptionchange&#39;, e =&gt; {
+    e.updateWith(((details) =&gt; {
+      // There should be only one option. Do nothing.
+      return Promise.resolve(details);
+    })(details));
+  });
+
+  // Show UI then continue with user payment info
+  request.show().then(result =&gt; {
+    // POST the result to the server
+    return fetch(&#39;/pay&#39;, {
+      method: &#39;POST&#39;,
+      credentials: &#39;include&#39;,
+      headers: {
+        &#39;Content-Type&#39;: &#39;application/json&#39;
+      },
+      body: JSON.stringify(result.toJSON())
+    }).then(res =&gt; {
+      // Only if successful
+      if (res.status === 200) {
+        return res.json();
+      } else {
+        throw &#39;Failure&#39;;
+      }
+    }).then(response =&gt; {
+      // You should have received a JSON object
+      if (response.success == true) {
+        return result.complete(&#39;success&#39;);
+      } else {
+        return result.complete(&#39;fail&#39;);
+      }
+    }).then(() =&gt; {
+      console.log(&#39;Thank you!&#39;,
+          result.shippingAddress.toJSON(),
+          result.methodName,
+          result.details.toJSON());
+    }).catch(() =&gt; {
+      return result.complete(&#39;fail&#39;);
+    });
+  }).catch(function(err) {
+    console.error(&#39;Uh oh, something bad happened: &#39; + err.message);
+  });
+}
+
+// Assuming an anchor is the target for the event listener.
+document.querySelector(&#39;#start&#39;).addEventListener(&#39;click&#39;, onBuyClicked);
+</code></pre><p><a href="https://developers.google.com/web/fundamentals/discovery-and-monetization/payment-request/" target="_blank" rel="external">原文地址</a></p>
+
+      
+    </div>
+    <footer>
+      
+        
+  
+  <div class="categories">
+    <a href="/categories/Web技术/">Web技术</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/Google/">Google</a>
+  </div>
+
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+    
+    <div class="links">
+        <div class="links_title">推荐阅读</div>
+    
+            <li ><a href="undefined" title="日拱一卒">日拱一卒</a></li>
+       
+            <li ><a href="/2017/02/15/everyday-move/" title=" 功不唐捐"> 功不唐捐</a></li>
+       
+            <li ><a href="/2016/04/27/progressive-web-app/" title="什么是Progressive Web App?">什么是Progressive Web App?</a></li>
+       
+            <li ><a href="/2017/02/05/what-is-physical-web/" title="什么是Physical Web ？">什么是Physical Web ？</a></li>
+       
+            <li ><a href="/2017/02/08/how-to-read-a-book/" title="怎样读一本书V5.0 ?(译)">怎样读一本书V5.0 ?(译)</a></li>
+       
+            <li ><a href="/2016/12/11/programmer-health/" title="程序员健康生活指南总目录（整理版）">程序员健康生活指南总目录（整理版）</a></li>
+       
+    </div>
+    
+
+
+
+<section id="comment">
+    <div id="gitalk-container"></div>
+    <!--<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>-->
+    <!--<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>-->
+    <!--<script>-->
+        <!--var cloudTieConfig = {-->
+            <!--url: document.location.href,-->
+            <!--sourceId: "",-->
+            <!--productKey: "a65a1e5ea58d4c3a8ea1fef77d0371db",-->
+            <!--target: "cloud-tie-wrapper"-->
+        <!--};-->
+        <!--var yunManualLoad = true;-->
+        <!--Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);-->
+    <!--</script>-->
+    <!--PC和WAP自适应版-->
+    <!--<div id="SOHUCS" ></div>-->
+    <!--<script type="text/javascript">-->
+        <!--(function(){-->
+            <!--var appid = 'cyt6v35LM';-->
+            <!--var conf = 'prod_82a0b7686345b309fbcbcae5ae75c45e';-->
+            <!--var width = window.innerWidth || document.documentElement.clientWidth;-->
+            <!--if (width < 960) {-->
+                <!--window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>-->
+
+</section>
+<!--<script src="/js/gitment.browser.js"></script>-->
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<script>
+    // const gitment = new Gitment({
+    //     owner: 'ljinkai',
+    //     repo: 'ljinkai.github.io',
+    //     oauth: {
+    //         client_id: '1e0bbf087995295c53aa',
+    //         client_secret: '7aaf0001f26a5f16ddd7769384d549f317244720',
+    //     }
+    // })
+    // gitment.render('comment')
+
+    const gitalk = new Gitalk({
+        clientID: '1e0bbf087995295c53aa',
+        clientSecret: '7aaf0001f26a5f16ddd7769384d549f317244720',
+        repo: 'ljinkai.github.io',
+        owner: 'ljinkai',
+        admin: ['ljinkai'],
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    })
+
+    gitalk.render('gitalk-container')
+
+</script>
+
+
+
+
+
+</div>
+    </div>
+    <aside id="sidebar" class="alignright">
+  <div class="widget tag" style="padding: 16px;">
+
+      <div style="color: black;font-size: 16px;">
+          <div style="width: 100%;text-align: center;margin-bottom: 10px;margin-top: 0px;">我的知识星球</div>
+          
+          <a style="width: 100%;display: block;text-decoration: none;" href="https://mp.weixin.qq.com/s/LIzhjGGRqiqYnMhIxtFYAw" target="_blank"
+             onclick="ga('send', 'event', 'zsxq_11_blog', 'zsxq');">
+              <img src="https://qiniu.gafata.com/zsxq.jpeg" width="100%"/>
+          </a>
+          <div style="width: 100%;text-align: center;margin-bottom: 10px;margin-top: 0px;">我的在线课程</div>
+          <a style="width: 100%;display: block;text-decoration: none;" href="https://m.qlchat.com/wechat/page/channel-intro?channelId=2000018572922685" target="_blank"
+             onclick="ga('send', 'event', 'my_course', 'live_20170720');">
+              <img src="https://qiniu.gafata.com/chrome-extension-qianliao-2.png" width="100%"/>
+          </a>
+      </div>
+</div>
+
+
+  <div class="widget tag about_fix_none" id="about_fix">
+
+  <ul class="entry" style="text-align: center;font-size: 14px;font-weight: bold;">
+    <li>微信公众号：凯凯而谈</li>
+    <li style="font-weight: normal;font-size: 12px;">这里有我的分享和思考，我们一起知道做到</li>
+    <li><img src='http://qiniu.gafata.com/2019-03-17-web-bear.jpg?imageView2/2/w/600' width='180px' style="margin: 0px auto;display: block;"></li>
+  </ul>
+</div>
+<div class="widget tag">
+  <div class="about_banner">
+    <div class="about_profile">
+      <a href="/2015/02/28/new/">
+        <img class="about_img" src="http://qiniu.gafata.com/2019-03-25-WechatIMG1128.jpeg?imageView2/2/w/200">
+      </a>
+    </div>
+  </div>
+  <ul class="entry" style="text-align: center;">
+    <li>认知、技术、变现</li>
+    <li>微博：<a href="http://weibo.com/jieyingbei" target="_blank" onclick="ga('send', 'event', 'widget_about', 'weibo')">@凯凯刘</a></li>
+    <li>微信公众号：凯凯而谈</li>
+    <li><img src='http://qiniu.gafata.com/2019-03-17-web-bear.jpg?imageView2/2/w/600' width='160px' style="margin: 0px auto;display: block;"></li>
+    <li>Web、Indie Maker</li>
+  </ul>
+  <script>
+    function getPageTopLeft(el) {
+      var rect = el.getBoundingClientRect();
+      var docEl = document.documentElement;
+      return {
+        left: rect.left + (window.pageXOffset || docEl.scrollLeft || 0),
+        top: rect.top + (window.pageYOffset || docEl.scrollTop || 0)
+      };
+    }
+    // window.addEventListener('scroll',function() {
+    //   var winWid = document.body.clientWidth;
+    //   if (winWid > 900) {
+    //     var anchorTop = getPageTopLeft(document.getElementById("anchorTop")).top;
+    //     var scrollTop = window.pageYOffset|| document.documentElement.scrollTop || document.body.scrollTop;
+
+    //     if (anchorTop < scrollTop) {
+    //       document.getElementById("about_fix").className = "widget tag about_fix";
+    //     } else {
+    //       document.getElementById("about_fix").className = "widget tag about_fix_none";
+    //     }
+    //   }
+    // });
+  </script>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/Indie-Maker/" onclick="ga('send', 'event', 'widget_category', 'Indie Maker');">Indie Maker</a><small>20</small></li>
+  
+    <li><a href="/categories/Shopify/" onclick="ga('send', 'event', 'widget_category', 'Shopify');">Shopify</a><small>1</small></li>
+  
+    <li><a href="/categories/Web工具/" onclick="ga('send', 'event', 'widget_category', 'Web工具');">Web工具</a><small>19</small></li>
+  
+    <li><a href="/categories/Web技术/" onclick="ga('send', 'event', 'widget_category', 'Web技术');">Web技术</a><small>51</small></li>
+  
+    <li><a href="/categories/产品/" onclick="ga('send', 'event', 'widget_category', '产品');">产品</a><small>6</small></li>
+  
+    <li><a href="/categories/区块链/" onclick="ga('send', 'event', 'widget_category', '区块链');">区块链</a><small>8</small></li>
+  
+    <li><a href="/categories/变现/" onclick="ga('send', 'event', 'widget_category', '变现');">变现</a><small>12</small></li>
+  
+    <li><a href="/categories/工具/" onclick="ga('send', 'event', 'widget_category', '工具');">工具</a><small>3</small></li>
+  
+    <li><a href="/categories/极客番茄/" onclick="ga('send', 'event', 'widget_category', '极客番茄');">极客番茄</a><small>7</small></li>
+  
+    <li><a href="/categories/流量/" onclick="ga('send', 'event', 'widget_category', '流量');">流量</a><small>3</small></li>
+  
+    <li><a href="/categories/浏览器扩展插件/" onclick="ga('send', 'event', 'widget_category', '浏览器扩展插件');">浏览器扩展插件</a><small>3</small></li>
+  
+    <li><a href="/categories/清单/" onclick="ga('send', 'event', 'widget_category', '清单');">清单</a><small>3</small></li>
+  
+    <li><a href="/categories/生活/" onclick="ga('send', 'event', 'widget_category', '生活');">生活</a><small>9</small></li>
+  
+    <li><a href="/categories/直播/" onclick="ga('send', 'event', 'widget_category', '直播');">直播</a><small>1</small></li>
+  
+    <li><a href="/categories/认知/" onclick="ga('send', 'event', 'widget_category', '认知');">认知</a><small>15</small></li>
+  
+    <li><a href="/categories/训练营/" onclick="ga('send', 'event', 'widget_category', '训练营');">训练营</a><small>1</small></li>
+  
+    <li><a href="/categories/读书/" onclick="ga('send', 'event', 'widget_category', '读书');">读书</a><small>4</small></li>
+  
+    <li><a href="/categories/课程/" onclick="ga('send', 'event', 'widget_category', '课程');">课程</a><small>3</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">标签</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/CSS3/">CSS3</a><small>4</small></li>
+  
+    <li><a href="/tags/Chrome/">Chrome</a><small>7</small></li>
+  
+    <li><a href="/tags/EOS/">EOS</a><small>1</small></li>
+  
+    <li><a href="/tags/ETH/">ETH</a><small>1</small></li>
+  
+    <li><a href="/tags/Facebook/">Facebook</a><small>1</small></li>
+  
+    <li><a href="/tags/Google/">Google</a><small>8</small></li>
+  
+    <li><a href="/tags/HTML5/">HTML5</a><small>15</small></li>
+  
+    <li><a href="/tags/HTTPS/">HTTPS</a><small>2</small></li>
+  
+    <li><a href="/tags/Hybrid-App/">Hybrid App</a><small>2</small></li>
+  
+    <li><a href="/tags/Indie-Maker/">Indie Maker</a><small>20</small></li>
+  
+    <li><a href="/tags/JavaScript/">JavaScript</a><small>12</small></li>
+  
+    <li><a href="/tags/Markdown/">Markdown</a><small>1</small></li>
+  
+    <li><a href="/tags/Node-js/">Node.js</a><small>2</small></li>
+  
+    <li><a href="/tags/PWA/">PWA</a><small>1</small></li>
+  
+    <li><a href="/tags/Shopify/">Shopify</a><small>1</small></li>
+  
+    <li><a href="/tags/github/">github</a><small>2</small></li>
+  
+    <li><a href="/tags/临界知识/">临界知识</a><small>1</small></li>
+  
+    <li><a href="/tags/产品/">产品</a><small>7</small></li>
+  
+    <li><a href="/tags/人工智能/">人工智能</a><small>2</small></li>
+  
+    <li><a href="/tags/健康/">健康</a><small>2</small></li>
+  
+    <li><a href="/tags/增长/">增长</a><small>7</small></li>
+  
+    <li><a href="/tags/工具/">工具</a><small>15</small></li>
+  
+    <li><a href="/tags/插件/">插件</a><small>9</small></li>
+  
+    <li><a href="/tags/方法论/">方法论</a><small>20</small></li>
+  
+    <li><a href="/tags/木匠/">木匠</a><small>2</small></li>
+  
+    <li><a href="/tags/极客番茄/">极客番茄</a><small>7</small></li>
+  
+    <li><a href="/tags/框架/">框架</a><small>6</small></li>
+  
+    <li><a href="/tags/案例/">案例</a><small>2</small></li>
+  
+    <li><a href="/tags/概念/">概念</a><small>3</small></li>
+  
+    <li><a href="/tags/比特币/">比特币</a><small>3</small></li>
+  
+    <li><a href="/tags/浏览器扩展插件/">浏览器扩展插件</a><small>3</small></li>
+  
+    <li><a href="/tags/游戏/">游戏</a><small>2</small></li>
+  
+    <li><a href="/tags/认知/">认知</a><small>7</small></li>
+  
+    <li><a href="/tags/训练营/">训练营</a><small>1</small></li>
+  
+    <li><a href="/tags/课程/">课程</a><small>3</small></li>
+  
+    <li><a href="/tags/资源/">资源</a><small>9</small></li>
+  
+    <li><a href="/tags/路线图/">路线图</a><small>2</small></li>
+  
+    <li><a href="/tags/面试题/">面试题</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  <div class="widget hot">
+  <h3 class="title">热文推荐</h3>
+  <ul class="entry">
+    <li><a href="/2017/06/01/start-small-stay-small/" title="《Start Small, Stay Small》着眼小众市场，程序员的微型创业项目指南">《Start Small, Stay Small》着眼小众市场，程序员的微型创业项目指南</a></li>
+    <li><a href="/2017/02/08/how-to-read-a-book/" title="怎样读一本书V5.0 ?(译)">怎样读一本书V5.0 ?(译)</a></li>
+    <li><a href="/2015/06/06/mobile-web-skill/" title="移动端web开发技巧">移动端web开发技巧</a></li>
+    <li><a href="/2017/12/09/gafata-online/" title="www.gafata.com上线">www.gafata.com上线</a></li>
+    <li><a href="/2017/04/19/deliberate-practice/" title="刻意练习">刻意练习</a></li>
+    <li><a href="/2016/04/27/progressive-web-app/" title="Web新技术：PWA-Progressive Web App">Web新技术：PWA-Progressive Web App</a></li>
+    <li><a href="/2017/08/16/bitcoin-mining-consensus/" title="比特币的挖矿与共识">比特币的挖矿与共识</a></li>
+  </ul>
+</div>
+
+
+  <div class="widget tag" style="width:270px;border-top: 0px red solid;line-height: 0px;">
+
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2015-2023 <a href="/2015/02/28/new/">凯凯刘</a>
+  
+  &nbsp;
+  <a href="http://www.ezindie.com/" target="_blank" title="Easy Indie">Ezindie</a>
+  <a href="http://www.qunheying.com" target="_blank" title="微信群合影" style="margin-left: 10px">微信群合影</a>
+  <a href="http://md2vid.com" target="_blank" title="Markdown转视频" style="margin-left: 10px">Markdown转视频</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="/atom.xml" class="menu_rss menu_rss_bottom" target="_blank" title="RSS订阅"></a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  Powered by <a href="http://hexo.io/">Hexo</a>
+</div>
+<div class="clearfix"></div>
+
+<!--<script>-->
+    <!--var _hmt = _hmt || [];-->
+    <!--(function() {-->
+        <!--var hm = document.createElement("script");-->
+        <!--hm.src = "//hm.baidu.com/hm.js?1e92fed8a761c1224623815e3b960447";-->
+        <!--var s = document.getElementsByTagName("script")[0];-->
+        <!--s.parentNode.insertBefore(hm, s);-->
+    <!--})();-->
+<!--</script>-->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-85358197-2', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+
+</footer>
+  <!--<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>-->
+<!--<script src="<- config.root >js/jquery.imagesloaded.min.js"></script>-->
+<!--<script src="<- config.root >js/gallery.js"></script>-->
+
+
+
+
+</body>
+</html>
